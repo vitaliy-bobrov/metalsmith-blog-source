@@ -1,0 +1,88 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "hexo-material",
+        "scope": null,
+        "escapedName": "hexo-material",
+        "name": "hexo-material",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/bobrov1989/Projects/blog"
+    ]
+  ],
+  "_from": "hexo-material@latest",
+  "_id": "hexo-material@1.2.4",
+  "_inCache": true,
+  "_location": "/hexo-material",
+  "_nodeVersion": "6.9.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/hexo-material-1.2.4.tgz_1481440126833_0.8543545485008508"
+  },
+  "_npmUser": {
+    "name": "viosey",
+    "email": "imviosey@gmail.com"
+  },
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "hexo-material",
+    "scope": null,
+    "escapedName": "hexo-material",
+    "name": "hexo-material",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/hexo-material/-/hexo-material-1.2.4.tgz",
+  "_shasum": "57457dcded208d71f30243a0fb2d1fdb1b7ccdee",
+  "_shrinkwrap": null,
+  "_spec": "hexo-material",
+  "_where": "/Users/bobrov1989/Projects/blog",
+  "author": {
+    "name": "Viosey"
+  },
+  "bugs": {
+    "url": "https://github.com/viosey/hexo-theme-material/issues"
+  },
+  "dependencies": {},
+  "description": "Material Design Theme for Hexo",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "57457dcded208d71f30243a0fb2d1fdb1b7ccdee",
+    "tarball": "https://registry.npmjs.org/hexo-material/-/hexo-material-1.2.4.tgz"
+  },
+  "gitHead": "191126b174fe89ccab252eb0ba21e10077e7715d",
+  "homepage": "https://github.com/viosey/hexo-theme-material#readme",
+  "keywords": [
+    "hexo",
+    "theme",
+    "material"
+  ],
+  "license": "GPL-3.0",
+  "maintainers": [
+    {
+      "name": "viosey",
+      "email": "imviosey@gmail.com"
+    }
+  ],
+  "name": "hexo-material",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viosey/hexo-theme-material.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "version": "1.2.4"
+}
