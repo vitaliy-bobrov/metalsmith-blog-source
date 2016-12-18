@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{{ sitename }}</title>
+    {{> metatags }}
+
+    <!-- manifest.json -->
+    {{> manifest }}
+
+    <!-- Styles -->
+    {{> css }}
+  </head>
+  <body>
+    <!-- Header -->
+    {{> header }}
+
+    <!-- Content -->
+    <main>
+        {{{ contents }}}
+    </main>
+
+    <!-- Footer -->
+    {{> footer }}
+
+    <!-- Scripts -->
+    {{> js }}
+  </body>
+</html>

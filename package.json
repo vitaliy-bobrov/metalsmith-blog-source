@@ -1,0 +1,92 @@
+{
+  "name": "metalsthith-blog-source",
+  "version": "1.0.0",
+  "description": "My blog using metalsmith static generator.",
+  "main": "metalsmith.js",
+  "private": true,
+  "scripts": {
+    "build": "gulp && node ./metalsmith.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitaliy-bobrov/metalsmith-blog-source.git"
+  },
+  "author": "Vitaliy Bobrov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vitaliy-bobrov/metalsmith-blog-source/issues"
+  },
+  "homepage": "https://github.com/vitaliy-bobrov/metalsmith-blog-source#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.5.4",
+    "browser-sync": "^2.18.5",
+    "css-mqpacker": "^5.0.1",
+    "del": "^2.2.2",
+    "eslint-config-google": "^0.7.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-newer": "^1.3.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sass": "^3.0.0",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-webp": "^2.3.0",
+    "gulp-webpcss": "^1.1.1",
+    "handlebars": "^4.0.6",
+    "metalsmith": "^2.3.0",
+    "metalsmith-author": "^1.1.0",
+    "metalsmith-changed": "^3.1.0",
+    "metalsmith-collections": "^0.9.0",
+    "metalsmith-drafts": "0.0.1",
+    "metalsmith-layouts": "^1.7.0",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-permalinks": "^0.5.0",
+    "postcss-assets": "^4.1.0",
+    "postcss-mq-keyframes": "^0.3.0",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "material-design-lite": "^1.2.1"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "extends": [
+      "eslint:recommended",
+      "google"
+    ],
+    "rules": {
+      "arrow-parens": [
+        "error",
+        "as-needed"
+      ],
+      "comma-dangle": [
+        "error",
+        "never"
+      ],
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "info",
+            "warn",
+            "error"
+          ]
+        }
+      ]
+    },
+    "env": {
+      "browser": true
+    }
+  }
+}
