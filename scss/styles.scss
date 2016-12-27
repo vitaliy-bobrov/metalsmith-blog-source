@@ -1,0 +1,103 @@
+@charset 'UTF-8';
+
+@import '../node_modules/material-design-lite/src/color-definitions';
+@import 'config/colors';
+
+// MDL customizations.
+@import 'config/mdl';
+
+// MDL.
+@import '../node_modules/material-design-lite/src/material-design-lite';
+
+// MDL-Ext dark theme.
+@import '../node_modules/mdl-ext/src/variables';
+@import '../node_modules/mdl-ext/src/mixins';
+@import '../node_modules/mdl-ext/src/color-themes/dark-color-theme';
+
+// MDL Overrides.
+@import 'config/mdl-overrides';
+
+// Base.
+@import 'base';
+
+// MDL overrides.
+
+// Components.
+@import 'components/logos/site';
+@import 'components/layout/to-top';
+@import 'components/layout/copyright';
+@import 'components/post/avatar';
+
+.posts-grid {
+  max-width: 1210px;
+  width: calc(100% - 56px);
+}
+
+.post-teaser {
+  &__title {
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    @include typo-display-1;
+  }
+
+  &__media {
+    display: flex;
+    align-items: flex-end;
+    min-height: 284px;
+    padding: 24px;
+    position: relative;
+  }
+
+  &__picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    object-fit: cover;
+  }
+
+  &__intro {
+    width: 100%;
+    text-align: right;
+    border-top: 1px solid $mdlext-dark-divider-color;
+  }
+
+  &__intro-text {
+    font-style: italic;
+    text-align: left;
+  }
+}
+
+.post-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  font-size: 1rem;
+  line-height: 18px;
+
+  &__avatar {
+    margin-right: 16px;
+    object-fit: contain;
+  }
+
+  &__author + .post-info__date {
+    margin-top: 8px;
+  }
+
+  &__date {
+    display: block;
+    color: $mdlext-dark-text-color-secondary;
+  }
+
+  &__data {
+    display: flex;
+    align-items: center;
+  }
+
+  &__categories {
+    align-self: flex-end;
+  }
+}

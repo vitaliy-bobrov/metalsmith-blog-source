@@ -1,0 +1,10 @@
+.to-top {
+  position: absolute;
+  top: -20px;
+  right: 16px;
+  z-index: 1;
+
+  &__icon {
+    color: $mdlext-dark-text-color-primary;
+  }
+}

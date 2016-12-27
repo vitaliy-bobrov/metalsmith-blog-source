@@ -1,0 +1,44 @@
+{
+    ".DS_Store": {
+        "filename": ".DS_Store",
+        "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
+        "created": "2016-12-27T21:25:14.921Z",
+        "updated": "2016-12-27T21:25:14.921Z"
+    },
+    "browserconfig.xml": {
+        "filename": "browserconfig.xml",
+        "hash": "ce1a0c53657f9abbd6fae862c1a25870",
+        "created": "2016-12-27T21:25:14.921Z",
+        "updated": "2016-12-27T21:25:14.921Z"
+    },
+    "favicon.ico": {
+        "filename": "favicon.ico",
+        "hash": "65aea487ae958bc0f6d871e35b9425ac",
+        "created": "2016-12-27T21:25:14.921Z",
+        "updated": "2016-12-27T21:25:14.921Z"
+    },
+    "index.md": {
+        "filename": "index.md",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e",
+        "created": "2016-12-27T21:25:14.921Z",
+        "updated": "2016-12-27T21:25:14.921Z"
+    },
+    "manifest.json": {
+        "filename": "manifest.json",
+        "hash": "8ce9c8e29d78161c26c85b83d5864263",
+        "created": "2016-12-27T21:25:14.921Z",
+        "updated": "2016-12-27T21:25:14.921Z"
+    },
+    "blog/tasks-from-interviews-yandex.md": {
+        "filename": "blog/tasks-from-interviews-yandex.md",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e",
+        "created": "2016-12-27T21:25:14.921Z",
+        "updated": "2016-12-27T21:25:14.921Z"
+    },
+    "blog/hello-world.md": {
+        "filename": "blog/hello-world.md",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e",
+        "created": "2016-12-26T21:25:14.921Z",
+        "updated": "2016-12-26T21:25:14.921Z"
+    }
+}

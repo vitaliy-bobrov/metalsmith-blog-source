@@ -1,0 +1,27 @@
+.bb-site-logo {
+  width: 124px;
+  height: 124px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #b2ebf2;
+  border-radius: 50%;
+  @include shadow-3dp();
+
+  &:hover,
+  &:focus {
+    filter: grayscale(.7);
+  }
+
+  &__picture {
+    display: block;
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

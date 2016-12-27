@@ -1,3 +1,23 @@
-<header role="banner">
-
+<header class="mdl-layout__header mdl-layout--fixed-header is-casting-shadow" role="banner">
+  <div class="mdl-layout__header-row">
+    <!-- Title -->
+    <span class="mdl-layout-title">{{ sitename }}</span>
+    <!-- Add spacer, to align navigation to the right -->
+    <div class="mdl-layout-spacer">
+      <a href="/" class="bb-site-logo" title="{{ sitename }}">
+        <picture class="bb-site-logo__picture">
+          <source srcset="{{ sitelogo }}.webp 1x, {{ sitelogo }}@2x.webp 2x"
+                type="image/webp">
+          <source srcset="{{ sitelogo }}.png 1x, {{ sitelogo }}@2x.png 2x">
+          <img src="{{ sitelogo }}.png" alt="{{ sitename }} Logo" class="bb-site-logo__img">
+        </picture>
+      </a>
+    </div>
+    <!-- Navigation. We hide it in small screens. -->
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="/">Блог</a>
+      <!-- <a class="mdl-navigation__link" href="/categories">Categories</a>
+      <a class="mdl-navigation__link" href="/about">About</a> -->
+    </nav>
+  </div>
 </header>

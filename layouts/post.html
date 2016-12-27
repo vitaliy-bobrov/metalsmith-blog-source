@@ -1,26 +1,27 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>{{ sitename }}</title>
+    <title>{{ title }} | {{ sitename }}</title>
     {{> metatags }}
 
-    <!-- manifest.json -->
     {{> manifest }}
 
     <!-- Styles -->
     {{> css }}
   </head>
-  <body>
-    <!-- Header -->
-    {{> header }}
+  <body class="mdlext-dark-color-theme">
+    <div class="mdl-layout mdl-layout--no-desktop-drawer-button mdl-js-layout">
+      <!-- Header -->
+      {{> header }}
 
-    <!-- Content -->
-    <main>
-        {{{ contents }}}
-    </main>
+      <!-- Content -->
+      <main class="mdl-layout__content">
+          {{{ contents }}}
+      </main>
 
-    <!-- Footer -->
-    {{> footer }}
+      <!-- Footer -->
+      {{> footer }}
+    </div>
 
     <!-- Scripts -->
     {{> js }}

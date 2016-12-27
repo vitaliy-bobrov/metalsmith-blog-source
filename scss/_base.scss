@@ -1,0 +1,25 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+a,
+button {
+  transition: all .3s $animation-curve-linear-out-slow-in;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $mdlext-dark-color-primary;
+  }
+}

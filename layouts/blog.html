@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <title>{{ sitename }}</title>
+    {{> metatags }}
+
+    {{> manifest }}
+
+    <!-- Styles -->
+    {{> css }}
+  </head>
+  <body class="mdlext-dark-color-theme">
+    {{> sprite }}
+    <div class="mdl-layout mdl-layout--no-desktop-drawer-button mdl-js-layout">
+      <!-- Header -->
+      {{> header }}
+
+      <!-- Content -->
+      <main class="mdl-layout__content js-to-top-container">
+        <section class="mdl-grid posts-grid">
+          {{#each collections.posts as |post|}}
+            <article class="mdl-card mdl-shadow--2dp mdl-cell post-teaser {{postCell @index}}">
+              <header class="mdl-card__media post-teaser__media">
+                <picture class="post-teaser__picture">
+                  <source srcset="{{ post.tumb }}.webp 1x, {{ post.tumb }}@2x.webp 2x"
+                type="image/webp">
+                  <source srcset="{{ post.tumb }}.jpg 1x, {{ post.tumb }}@2x.jpg 2x">
+                  <img src="{{ post.tumb }}.jpg" alt="{{ post.title }}">
+                </picture>
+                <h2 class="post-teaser__title">
+                  <a href="{{ post.path }}" class="post-teaser__title-link">{{ post.title }}</a>
+                </h2>
+              </header>
+
+              <section class="post-teaser__info post-info">
+                <div class="post-info__data">
+                  <img src="{{ gitAvatar post.author.github 48 }}"
+                       alt="{{ post.author.name }} Avatar"
+                       class="post-info__avatar user-avatar">
+
+                  <div class="post-info__data-wrapper">
+                    <div class="post-info__author">
+                      {{ post.author.name }}
+                    </div>
+                    {{#if post.modified}}
+                      <time date-time="{{ moment post.updated format='YYYY-MM-DDThh:mm:ssZ' }}"
+                            class="post-info__date">
+                        {{ moment post.updated lang='ru' format='D MMMM YYYY' }}
+                      </time>
+                    {{else}}
+                      <time date-time="{{ moment post.created format='YYYY-MM-DDThh:mm:ssZ' }}"
+                            class="post-info__date">
+                        {{ moment post.created lang='ru' format='D MMMM YYYY' }}
+                      </time>
+                    {{/if}}
+                  </div>
+                </div>
+
+                <div class="post-info__categories">
+                  {{#each post.categories as |category|}}
+                    <span class="mdl-chip">
+                        <span class="mdl-chip__text">{{ category }}</span>
+                    </span>
+                  {{/each}}
+                </div>
+              </section>
+
+              <section class="mdl-card__supporting-text post-teaser__intro">
+                <div class="post-teaser__intro-text">{{ post.excerpt }}</div>
+
+                <a href="{{ post.path }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+                  Читать далее
+                </a>
+              </section>
+            </article>
+          {{/each}}
+        </section>
+      </main>
+
+      <!-- Footer -->
+      {{> footer }}
+    </div>
+
+    <!-- Scripts -->
+    {{> js }}
+  </body>
+</html>

@@ -5,7 +5,9 @@
   "main": "metalsmith.js",
   "private": true,
   "scripts": {
-    "build": "gulp && node ./metalsmith.js"
+    "start": "gulp && gulp serve",
+    "build": "gulp",
+    "deploy": "gulp && gulp deploy"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,8 @@
   },
   "homepage": "https://github.com/vitaliy-bobrov/metalsmith-blog-source#readme",
   "devDependencies": {
-    "autoprefixer": "^6.5.4",
+    "autoprefixer": "^6.6.0",
+    "babel-preset-es2015": "^6.18.0",
     "browser-sync": "^2.18.5",
     "css-mqpacker": "^5.0.1",
     "del": "^2.2.2",
@@ -29,32 +32,47 @@
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-eslint": "^3.0.1",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.1.1",
     "gulp-load-plugins": "^1.4.0",
     "gulp-newer": "^1.3.0",
+    "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.2.0",
     "gulp-sass": "^3.0.0",
     "gulp-size": "^2.1.0",
     "gulp-sourcemaps": "^1.9.1",
+    "gulp-svg-sprite": "^1.3.6",
     "gulp-uglify": "^2.0.0",
     "gulp-webp": "^2.3.0",
     "gulp-webpcss": "^1.1.1",
     "handlebars": "^4.0.6",
+    "helper-moment": "^0.1.0",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-webp": "^4.0.0",
     "metalsmith": "^2.3.0",
     "metalsmith-author": "^1.1.0",
     "metalsmith-changed": "^3.1.0",
+    "metalsmith-code-highlight": "0.0.3",
     "metalsmith-collections": "^0.9.0",
+    "metalsmith-collections-paginate": "^2.0.1",
     "metalsmith-drafts": "0.0.1",
+    "metalsmith-excerptor": "0.0.1",
+    "metalsmith-headings": "^0.1.0",
     "metalsmith-layouts": "^1.7.0",
+    "metalsmith-mapsite": "^1.0.4",
     "metalsmith-markdown": "^0.2.1",
+    "metalsmith-open-graph": "0.0.3",
     "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-register-helpers": "^0.2.0",
+    "metalsmith-updated": "^0.1.4",
     "postcss-assets": "^4.1.0",
     "postcss-mq-keyframes": "^0.3.0",
     "run-sequence": "^1.2.2"
   },
   "dependencies": {
-    "material-design-lite": "^1.2.1"
+    "material-design-lite": "^1.3.0",
+    "mdl-ext": "^0.13.10"
   },
   "eslintConfig": {
     "parserOptions": {
