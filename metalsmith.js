@@ -31,7 +31,7 @@ Metalsmith(__dirname)
   })
   .source('./source')
   .destination('./build')
-  .clean(true)
+  .clean(false)
   // .use(changed({
   //   forcePattern: [
   //     '**/index.md'

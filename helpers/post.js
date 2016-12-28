@@ -24,7 +24,7 @@ const postCell = index => {
       break;
   }
 
-  return `mdl-cell--${desktop}-col-desktop`;
+  return `mdl-cell--${desktop}-col-desktop mdl-cell--6-col-tablet mdl-cell--12-col-phone`;
 };
 
 module.exports = {

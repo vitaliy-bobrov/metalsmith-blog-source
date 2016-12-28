@@ -44,20 +44,23 @@ gulp.task('webp', () => gulp.src([
     'images/**/*.{jpg,jpeg,png,gif}',
     '!images/icons/**.*'
   ])
-  .pipe($.cache($.webp()))
+  .pipe($.webp())
   .pipe(gulp.dest('images'))
 );
 
 // Optimize images
 gulp.task('images', ['webp'], () => gulp.src('images/**/*.{jpg,jpeg,png,gif,webp}')
-    .pipe($.cache($.imagemin({
+    .pipe($.imagemin({
       progressive: true,
       interlaced: true,
       use: [
+        $.imagemin.gifsicle(),
         imageminMozjpeg(),
-        imageminWebp()
+        imageminWebp(),
+        $.imagemin.optipng(),
+        $.imagemin.svgo()
       ]
-    })))
+    }))
     .pipe(gulp.dest('build/images'))
     .pipe($.size({title: 'images'}))
 );
