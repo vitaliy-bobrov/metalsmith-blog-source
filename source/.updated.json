@@ -25,9 +25,9 @@
     },
     "manifest.json": {
         "filename": "manifest.json",
-        "hash": "8ce9c8e29d78161c26c85b83d5864263",
+        "hash": "7029a585642e8ca4e0062084855606aa",
         "created": "2016-12-27T21:25:14.921Z",
-        "updated": "2016-12-27T21:25:14.921Z"
+        "updated": "2016-12-28T11:37:44.779Z"
     },
     "blog/tasks-from-interviews-yandex.md": {
         "filename": "blog/tasks-from-interviews-yandex.md",
@@ -40,5 +40,17 @@
         "hash": "d41d8cd98f00b204e9800998ecf8427e",
         "created": "2016-12-26T21:25:14.921Z",
         "updated": "2016-12-26T21:25:14.921Z"
+    },
+    "blog\\tasks-from-interviews-yandex.md": {
+        "filename": "blog\\tasks-from-interviews-yandex.md",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e",
+        "created": "2016-12-28T11:37:44.779Z",
+        "updated": "2016-12-28T11:37:44.779Z"
+    },
+    "blog\\hello-world.md": {
+        "filename": "blog\\hello-world.md",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e",
+        "created": "2016-12-28T11:37:44.779Z",
+        "updated": "2016-12-28T11:37:44.779Z"
     }
 }

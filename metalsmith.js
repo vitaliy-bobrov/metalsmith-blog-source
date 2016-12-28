@@ -31,7 +31,7 @@ Metalsmith(__dirname)
   })
   .source('./source')
   .destination('./build')
-  .clean(false)
+  .clean(true)
   // .use(changed({
   //   forcePattern: [
   //     '**/index.md'
@@ -98,7 +98,8 @@ Metalsmith(__dirname)
     siteurl,
     title: 'ogtitle',
     description: 'ogdescr',
-    image: 'ogimage'
+    image: 'ogimage',
+    decodeEntities: false
   }))
   .use(sitemap({
     hostname: siteurl
