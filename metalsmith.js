@@ -3,7 +3,7 @@ const updated          = require('metalsmith-updated');
 const changed          = require('metalsmith-changed');
 const drafts           = require('metalsmith-drafts');
 const collections      = require('metalsmith-collections');
-const paginate         = require('metalsmith-collections-paginate');
+const pagination       = require('metalsmith-pagination');
 const author           = require('metalsmith-author');
 const registerHelpers  = require('metalsmith-register-helpers');
 const headings         = require('metalsmith-headings');
@@ -61,15 +61,16 @@ Metalsmith(__dirname)
       }
     }
   }))
-  // .use(paginate({
-  //   posts: {
-  //     perPage: 8,
-  //     template: 'blog.html',
-  //     first: 'index.html',
-  //     path: 'blog/page/:num/index.html',
-  //     pageMetadata: {}
-  //   }
-  // }))
+  .use(pagination({
+    'collections.posts': {
+      perPage: 8,
+      layout: 'blog.html',
+      first: 'index.html',
+      noPageOne: true,
+      path: 'blog/page/:num/index.html',
+      pageMetadata: {}
+    }
+  }))
   .use(headings('h2'))
   .use(markdown())
   .use(highlight({
