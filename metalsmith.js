@@ -94,6 +94,9 @@ Metalsmith(__dirname)
     default: 'post.html',
     partials: './partials'
   }))
+  .use(disqus({
+    shortname: 'bobrov-blog'
+  }))
   .use(openGraph({
     sitename,
     siteurl,
