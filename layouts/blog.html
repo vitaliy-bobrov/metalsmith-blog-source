@@ -21,11 +21,12 @@
           {{#each collections.posts as |post|}}
             <article class="mdl-card mdl-shadow--2dp mdl-cell post-teaser {{postCell @index}}">
               <header class="mdl-card__media post-teaser__media">
+                <div class="post-teaser__gradient"></div>
                 <picture class="post-teaser__picture">
                   <source srcset="{{ post.tumb }}.webp 1x, {{ post.tumb }}@2x.webp 2x"
                 type="image/webp">
                   <source srcset="{{ post.tumb }}.jpg 1x, {{ post.tumb }}@2x.jpg 2x">
-                  <img src="{{ post.tumb }}.jpg" alt="{{ post.title }}">
+                  <img src="{{ post.tumb }}.jpg" alt="{{ post.title }}" class="post-teaser__img">
                 </picture>
                 <h2 class="post-teaser__title">
                   <a href="{{ post.path }}" class="post-teaser__title-link">{{ post.title }}</a>
