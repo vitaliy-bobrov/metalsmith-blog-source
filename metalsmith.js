@@ -56,7 +56,7 @@ Metalsmith(__dirname)
     collection: 'posts',
     authors: {
       me: {
-        name: 'Vitaliy Bobrov',
+        name: 'Виталий Бобров',
         url: siteurl,
         github: 'https://github.com/vitaliy-bobrov',
         twitter: 'https://twitter.com/bobrov1989',
