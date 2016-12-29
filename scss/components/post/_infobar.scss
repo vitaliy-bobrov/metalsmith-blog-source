@@ -1,0 +1,56 @@
+.post-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  font-size: 1rem;
+  line-height: 18px;
+
+  &__avatar {
+    margin-right: 16px;
+    object-fit: contain;
+  }
+
+  &__author {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 12px;
+
+    & + .post-info__date {
+      margin-top: 8px;
+    }
+  }
+
+  &__date {
+    display: block;
+    color: $mdlext-dark-text-color-secondary;
+  }
+
+  &__data {
+    display: flex;
+    align-items: center;
+  }
+
+  &__side {
+    align-self: flex-end;
+  }
+
+  &__comments {
+    margin-bottom: 16px;
+    color: $mdlext-dark-color-accent;
+  }
+
+  &__comments-icon {
+    fill: $mdlext-dark-color-accent;
+  }
+
+  &__comments-counter {
+    display: inline-block;
+    vertical-align: bottom;
+    line-height: 22px;
+    font-weight: 300;
+  }
+
+  &__categories {
+    text-align: right;
+  }
+}

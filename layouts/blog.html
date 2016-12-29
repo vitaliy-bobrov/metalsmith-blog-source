@@ -35,7 +35,7 @@
 
               <section class="post-teaser__info post-info">
                 <div class="post-info__data">
-                  <img src="{{ gitAvatar post.author.github 48 }}"
+                  <img src="{{ gitAvatar post.author.github 64 }}"
                        alt="{{ post.author.name }} Avatar"
                        class="post-info__avatar user-avatar">
 
@@ -57,18 +57,28 @@
                   </div>
                 </div>
 
-                <div class="post-info__categories">
-                  <span class="disqus-comment-count" data-disqus-key="{{post.title}}"></span>
-                  {{#each post.categories as |category|}}
-                    <span class="mdl-chip">
-                        <span class="mdl-chip__text">{{ category }}</span>
-                    </span>
-                  {{/each}}
+                <div class="post-info__side">
+                  {{#if post.comments}}
+                    <div class="post-info__comments">
+                      <svg class="mdl-svg post-info__comments-icon">
+                        <use xlink:href="#comment"></use>
+                      </svg>
+                      <span class="disqus-comment-count post-info__comments-counter" data-disqus-key="{{post.title}}"></span>
+                    </div>
+                  {{/if}}
+
+                  <div class="post-info__categories">
+                    {{#each post.categories as |category|}}
+                      <span class="mdl-chip post-info__category">
+                          <span class="mdl-chip__text">{{ category }}</span>
+                      </span>
+                    {{/each}}
+                  </div>
                 </div>
               </section>
 
               <section class="mdl-card__supporting-text post-teaser__intro">
-                <div class="post-teaser__intro-text">{{ post.excerpt }}</div>
+                <div class="post-teaser__intro-text">{{{ post.excerpt }}}</div>
 
                 <a href="/{{ post.path }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
                   Читать далее

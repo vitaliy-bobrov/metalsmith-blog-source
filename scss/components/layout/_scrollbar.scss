@@ -1,0 +1,13 @@
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba($black, .54) inset;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: $mdl-scroll;
+}
