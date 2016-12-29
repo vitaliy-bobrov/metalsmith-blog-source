@@ -85,7 +85,7 @@ Metalsmith(__dirname)
     relative: false
   }))
   .use(excerptor({
-    maxLength: 400,
+    maxLength: 300,
     keepImageTag: false,
     ellipsis: '…'
   }))
