@@ -5,4 +5,5 @@ author: me
 draft: false
 categories:
 - Блог
+comments: true
 ---

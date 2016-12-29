@@ -58,6 +58,7 @@
                 </div>
 
                 <div class="post-info__categories">
+                  <span class="disqus-comment-count" data-disqus-key="{{post.title}}"></span>
                   {{#each post.categories as |category|}}
                     <span class="mdl-chip">
                         <span class="mdl-chip__text">{{ category }}</span>

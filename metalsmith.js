@@ -14,6 +14,8 @@ const permalinks       = require('metalsmith-permalinks');
 const excerptor        = require('metalsmith-excerptor');
 const openGraph        = require('metalsmith-open-graph');
 const sitemap          = require('metalsmith-mapsite');
+const debug            = require('metalsmith-debug');
+const disqus           = require('metalsmith-disqus');
 
 // Site Variables.
 const sitename = 'Bobrov Blog';
@@ -32,6 +34,7 @@ Metalsmith(__dirname)
   .source('./source')
   .destination('./build')
   .clean(false)
+  // .use(debug())
   // .use(changed({
   //   forcePattern: [
   //     '**/index.md'
@@ -95,6 +98,7 @@ Metalsmith(__dirname)
     partials: './partials'
   }))
   .use(disqus({
+    siteurl,
     shortname: 'bobrov-blog'
   }))
   .use(openGraph({
