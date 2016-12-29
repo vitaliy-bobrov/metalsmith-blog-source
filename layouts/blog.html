@@ -29,7 +29,7 @@
                   <img src="{{ post.tumb }}.jpg" alt="{{ post.title }}" class="post-teaser__img">
                 </picture>
                 <h2 class="post-teaser__title">
-                  <a href="{{ post.path }}" class="post-teaser__title-link">{{ post.title }}</a>
+                  <a href="/{{ post.path }}" class="post-teaser__title-link">{{ post.title }}</a>
                 </h2>
               </header>
 
@@ -70,7 +70,7 @@
               <section class="mdl-card__supporting-text post-teaser__intro">
                 <div class="post-teaser__intro-text">{{ post.excerpt }}</div>
 
-                <a href="{{ post.path }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+                <a href="/{{ post.path }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
                   Читать далее
                 </a>
               </section>
