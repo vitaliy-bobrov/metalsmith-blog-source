@@ -42,7 +42,8 @@ gulp.task('lint', () => gulp.src([
 
 gulp.task('webp', () => gulp.src([
     'images/**/*.{jpg,jpeg,png,gif}',
-    '!images/icons/**.*'
+    '!images/icons/**.*',
+    '!images/**/*-og.jpg'
   ])
   .pipe($.webp())
   .pipe(gulp.dest('images'))

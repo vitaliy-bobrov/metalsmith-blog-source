@@ -1,10 +1,12 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <title>{{ title }} | {{ sitename }}</title>
     {{> metatags }}
 
     {{> manifest }}
+
+    {{> og-image-props }}
 
     <!-- Styles -->
     {{> css }}
@@ -17,8 +19,70 @@
 
       <!-- Content -->
       <main class="mdl-layout__content js-to-top-container">
-        {{{ contents }}}
-        <div id="disqus_thread"></div>
+        <section class="mdl-grid posts-grid">
+          <article class="mdl-card mdl-shadow--3dp mdl-cell post mdl-cell--12-col">
+            <header class="mdl-card__media post__media">
+                <div class="post__gradient"></div>
+                <picture class="post__picture">
+                  <source srcset="{{ tumb }}.webp 1x, {{ tumb }}@2x.webp 2x"
+                type="image/webp">
+                  <source srcset="{{ tumb }}.jpg 1x, {{ tumb }}@2x.jpg 2x">
+                  <img src="{{ tumb }}.jpg" alt="{{ title }}" class="post__img">
+                </picture>
+                <h2 class="post__title">
+                  {{ title }}
+                </h2>
+              </header>
+
+              <section class="post__info post-info">
+                <div class="post-info__data">
+                  {{#if author}}
+                  <img src="{{ gitAvatar author.github 64 }}"
+                       alt="{{ author.name }} Photo"
+                       class="post-info__avatar user-avatar">
+                  {{/if}}
+
+                  <div class="post-info__data-wrapper">
+                    <div class="post-info__author">
+                      {{ author.name }}
+                    </div>
+
+                    {{#if modified}}
+                      <time date-time="{{ moment updated format='YYYY-MM-DDThh:mm:ssZ' }}"
+                            class="post-info__date">
+                        {{ moment updated format='D MMMM YYYY' }}
+                      </time>
+                    {{else}}
+                      <time date-time="{{ moment created format='YYYY-MM-DDThh:mm:ssZ' }}"
+                            class="post-info__date">
+                        {{ moment created format='D MMMM YYYY' }}
+                      </time>
+                    {{/if}}
+
+                  </div>
+                </div>
+
+                <div class="post-info__side">
+                  <div class="post-info__categories">
+                    {{#each this.categories as |category|}}
+                      <span class="mdl-chip post-info__category">
+                          <span class="mdl-chip__text">{{ category }}</span>
+                      </span>
+                    {{/each}}
+                  </div>
+                </div>
+              </section>
+
+              <section class="post__contents">
+                {{{ contents }}}
+              </section>
+          </article>
+
+          {{#if this.comments}}
+            <div id="disqus_thread" class="mdl-card mdl-shadow--3dp mdl-cell mdl-cell--12-col comments-widget"></div>
+          {{/if}}
+
+        </section>
       </main>
 
       <!-- Footer -->

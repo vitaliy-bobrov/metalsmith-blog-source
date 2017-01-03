@@ -1,0 +1,16 @@
+.mdl-layout__header {
+  background: $mdl-dark-header;
+}
+
+.mdl-navigation__link {
+  font-weight: 500;
+  text-transform: uppercase;
+  border-bottom: 3px solid transparent;
+
+  &:hover,
+  &:focus,
+  &_active {
+    background-color: $mdlext-dark-content-background-color;
+    border-bottom-color: $mdlext-dark-color-primary;
+  }
+}

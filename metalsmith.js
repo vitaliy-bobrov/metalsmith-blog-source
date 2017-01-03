@@ -26,7 +26,8 @@ Metalsmith(__dirname)
     sitename,
     siteurl,
     sitelogo: '/images/logo',
-    description: 'Блог о программировании и не только...',
+    siteogimg: 'images/blog-og.jpg',
+    description: 'Blog about web development, but not only...',
     themeColor: '#00bcd4',
     generatorname: 'Metalsmith',
     generatorurl: 'http://metalsmith.io/'
@@ -56,7 +57,7 @@ Metalsmith(__dirname)
     collection: 'posts',
     authors: {
       me: {
-        name: 'Виталий Бобров',
+        name: 'Vitaliy Bobrov',
         url: siteurl,
         github: 'https://github.com/vitaliy-bobrov',
         twitter: 'https://twitter.com/bobrov1989',

@@ -1,23 +1,17 @@
 .post-info {
   display: flex;
   justify-content: space-between;
-  padding: 16px;
+  padding: 16px 24px;
   font-size: 1rem;
   line-height: 18px;
 
   &__avatar {
-    margin-right: 16px;
+    margin-right: 24px;
     object-fit: contain;
   }
 
   &__author {
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: 12px;
-
-    & + .post-info__date {
-      margin-top: 8px;
-    }
+    @include typo-subhead-2;
   }
 
   &__date {

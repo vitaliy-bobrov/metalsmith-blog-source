@@ -47,7 +47,7 @@
     "gulp-webp": "^2.3.0",
     "gulp-webpcss": "^1.1.1",
     "handlebars": "^4.0.6",
-    "helper-moment": "^0.1.0",
+    "helper-moment": "0.1.0",
     "imagemin-mozjpeg": "^6.0.0",
     "imagemin-webp": "^4.0.0",
     "metalsmith": "^2.3.0",

@@ -1,9 +1,9 @@
-.post-teaser {
+.post {
   &__title {
     margin: 0;
     position: relative;
     z-index: 2;
-    @include typo-display-1;
+    @include typo-display-3;
   }
 
   &__media {
@@ -44,15 +44,22 @@
     z-index: 1;
   }
 
-  &__intro {
-    width: 100%;
-    padding: 16px 24px;
-    text-align: right;
-    border-top: 1px solid $mdlext-dark-divider-color;
+  &__info {
+    border-bottom: 1px solid $mdlext-dark-divider-color;
   }
 
-  &__intro-text {
-    font-style: italic;
-    text-align: left;
+  &__contents {
+    max-width: 648px;
+    margin: 24px auto;
+
+    p,
+    li {
+      @include typo-subhead-2;
+    }
+
+    h2 {
+      margin-bottom: 8px;
+      @include typo-display-1;
+    }
   }
 }

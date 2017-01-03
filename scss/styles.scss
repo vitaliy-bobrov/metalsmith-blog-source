@@ -25,9 +25,18 @@
 // Components.
 @import 'components/logos/site';
 @import 'components/layout/scrollbar';
+@import 'components/layout/header';
+@import 'components/layout/content';
+@import 'components/layout/footer';
+@import 'components/layout/svg';
 @import 'components/layout/posts-grid';
 @import 'components/layout/to-top';
 @import 'components/layout/copyright';
 @import 'components/post/avatar';
 @import 'components/post/teaser';
+@import 'components/post/post';
 @import 'components/post/infobar';
+
+.comments-widget {
+  padding: 24px;
+}

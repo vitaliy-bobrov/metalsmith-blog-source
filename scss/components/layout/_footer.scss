@@ -1,0 +1,17 @@
+.page-footer {
+  min-height: 88px;
+  position: relative;
+
+  &__left-section,
+  &__right-section {
+    flex-grow: 1;
+  }
+
+  &__right-section {
+    text-align: right;
+  }
+
+  p {
+    margin: 0;
+  }
+}

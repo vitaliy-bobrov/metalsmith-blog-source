@@ -1,10 +1,17 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <title>{{ sitename }}</title>
     {{> metatags }}
 
     {{> manifest }}
+
+    <meta property="og:url" content="{{ siteurl }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ sitename }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:image:url" content="{{ siteurl }}{{ siteogimg }}" />
+    {{> og-image-props }}
 
     <!-- Styles -->
     {{> css }}
@@ -19,7 +26,7 @@
       <main class="mdl-layout__content js-to-top-container">
         <section class="mdl-grid posts-grid">
           {{#each collections.posts as |post|}}
-            <article class="mdl-card mdl-shadow--2dp mdl-cell post-teaser {{postCell @index}}">
+            <article class="mdl-card mdl-shadow--3dp mdl-cell post-teaser {{postCell @index}}">
               <header class="mdl-card__media post-teaser__media">
                 <div class="post-teaser__gradient"></div>
                 <picture class="post-teaser__picture">
@@ -29,14 +36,14 @@
                   <img src="{{ post.tumb }}.jpg" alt="{{ post.title }}" class="post-teaser__img">
                 </picture>
                 <h2 class="post-teaser__title">
-                  <a href="/{{ post.path }}" class="post-teaser__title-link">{{ post.title }}</a>
+                  <a href="/{{ post.path }}/" class="post-teaser__title-link">{{ post.title }}</a>
                 </h2>
               </header>
 
               <section class="post-teaser__info post-info">
                 <div class="post-info__data">
                   <img src="{{ gitAvatar post.author.github 64 }}"
-                       alt="{{ post.author.name }} Avatar"
+                       alt="{{ post.author.name }} Photo"
                        class="post-info__avatar user-avatar">
 
                   <div class="post-info__data-wrapper">
@@ -46,12 +53,12 @@
                     {{#if post.modified}}
                       <time date-time="{{ moment post.updated format='YYYY-MM-DDThh:mm:ssZ' }}"
                             class="post-info__date">
-                        {{ moment post.updated lang='ru' format='D MMMM YYYY' }}
+                        {{ moment post.updated format='D MMMM YYYY' }}
                       </time>
                     {{else}}
                       <time date-time="{{ moment post.created format='YYYY-MM-DDThh:mm:ssZ' }}"
                             class="post-info__date">
-                        {{ moment post.created lang='ru' format='D MMMM YYYY' }}
+                        {{ moment post.created format='D MMMM YYYY' }}
                       </time>
                     {{/if}}
                   </div>
@@ -80,8 +87,8 @@
               <section class="mdl-card__supporting-text post-teaser__intro">
                 <div class="post-teaser__intro-text">{{{ post.excerpt }}}</div>
 
-                <a href="/{{ post.path }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
-                  Читать далее
+                <a href="/{{ post.path }}/" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+                  Read more
                 </a>
               </section>
             </article>
