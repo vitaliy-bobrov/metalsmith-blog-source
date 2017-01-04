@@ -10,7 +10,7 @@ const layouts          = require('metalsmith-layouts');
 const markdown         = require('metalsmith-markdown');
 const highlight        = require('metalsmith-code-highlight');
 const permalinks       = require('metalsmith-permalinks');
-const excerptor        = require('metalsmith-excerptor');
+const excerpts        = require('metalsmith-excerpts');
 const openGraph        = require('metalsmith-open-graph');
 const sitemap          = require('metalsmith-mapsite');
 const debug            = require('metalsmith-debug');
@@ -80,11 +80,7 @@ Metalsmith(__dirname)
   .use(permalinks({
     relative: false
   }))
-  .use(excerptor({
-    maxLength: 300,
-    keepImageTag: false,
-    ellipsis: '…'
-  }))
+  .use(excerpts())
   .use(registerHelpers({
     directory: './helpers'
   }))

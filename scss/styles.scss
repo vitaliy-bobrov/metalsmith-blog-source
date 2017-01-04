@@ -41,6 +41,6 @@
 @import 'components/post/infobar';
 @import 'components/widgets/comments';
 
-.site-link {
-  color: $white;
+.mdlext-dark-color-theme .site-link {
+  color: $mdlext-dark-text-color-primary;
 }
