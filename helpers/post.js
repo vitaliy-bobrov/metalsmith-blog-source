@@ -27,6 +27,15 @@ const postCell = index => {
   return `mdl-cell--${desktop}-col-desktop mdl-cell--6-col-tablet mdl-cell--12-col-phone`;
 };
 
+const postIllustration = (tumb, alt) => `
+    <picture class="safe-picture">
+      <source srcset="${tumb}.webp 1x, ${tumb}@2x.webp 2x"
+              type="image/webp">
+      <source srcset="${tumb}.jpg 1x, ${tumb}@2x.jpg 2x">
+      <img src="${tumb}.jpg" alt="${alt}" class="safe-picture__img">
+    </picture>`;
+
 module.exports = {
-  postCell
+  postCell,
+  postIllustration
 };

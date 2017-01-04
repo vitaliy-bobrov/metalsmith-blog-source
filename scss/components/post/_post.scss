@@ -2,7 +2,7 @@
   &__title {
     margin: 0;
     position: relative;
-    z-index: 2;
+    z-index: $post-title;
     @include typo-display-3;
   }
 
@@ -12,36 +12,6 @@
     min-height: 284px;
     padding: 24px;
     position: relative;
-  }
-
-  &__picture,
-  &__gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  &__picture {
-    z-index: 0;
-  }
-
-  &__img {
-    max-width: 100%;
-    height: auto;
-
-    @supports(object-fit: cover) {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-  }
-
-  &__gradient {
-    background-image: linear-gradient(to bottom, transparent 0%, rgba($black, .25) 70%, rgba($black, .5) 100%);
-    z-index: 1;
   }
 
   &__info {

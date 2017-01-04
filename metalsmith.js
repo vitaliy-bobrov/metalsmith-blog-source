@@ -1,6 +1,5 @@
 const Metalsmith       = require('metalsmith');
 const updated          = require('metalsmith-updated');
-const changed          = require('metalsmith-changed');
 const drafts           = require('metalsmith-drafts');
 const collections      = require('metalsmith-collections');
 const pagination       = require('metalsmith-pagination');
@@ -23,6 +22,7 @@ const siteurl = 'https://vitaliy-bobrov.github.io/';
 
 Metalsmith(__dirname)
   .metadata({
+    locale: 'en',
     sitename,
     siteurl,
     sitelogo: '/images/logo',
@@ -36,11 +36,6 @@ Metalsmith(__dirname)
   .destination('./build')
   .clean(false)
   // .use(debug())
-  // .use(changed({
-  //   forcePattern: [
-  //     '**/index.md'
-  //   ]
-  // }))
   .use(updated())
   .use(drafts())
   .use(collections({
@@ -115,7 +110,7 @@ Metalsmith(__dirname)
   }))
   .build(function(err) {
     if (err) {
-    console.error(err);
+      console.error(err);
     } else {
       console.log('Metalsmith build completed')
     }

@@ -1,0 +1,5 @@
+.safe-gradient {
+  background-image: linear-gradient(to bottom, transparent 0%, rgba($black, .25) 70%, rgba($black, .5) 100%);
+  z-index: $above-content;
+  @extend %shrink-to-container;
+}

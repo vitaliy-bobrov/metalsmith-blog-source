@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ locale }}">
   <head>
     <title>{{ title }} | {{ sitename }}</title>
     {{> metatags }}
@@ -22,13 +22,10 @@
         <section class="mdl-grid posts-grid">
           <article class="mdl-card mdl-shadow--3dp mdl-cell post mdl-cell--12-col">
             <header class="mdl-card__media post__media">
-                <div class="post__gradient"></div>
-                <picture class="post__picture">
-                  <source srcset="{{ tumb }}.webp 1x, {{ tumb }}@2x.webp 2x"
-                type="image/webp">
-                  <source srcset="{{ tumb }}.jpg 1x, {{ tumb }}@2x.jpg 2x">
-                  <img src="{{ tumb }}.jpg" alt="{{ title }}" class="post__img">
-                </picture>
+                {{ postIllustration tumb title }}
+
+                <div class="safe-gradient"></div>
+
                 <h2 class="post__title">
                   {{ title }}
                 </h2>

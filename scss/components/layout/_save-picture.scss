@@ -1,0 +1,16 @@
+.safe-picture {
+  z-index: $content;
+  @extend %shrink-to-container;
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+
+    @supports(object-fit: cover) {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

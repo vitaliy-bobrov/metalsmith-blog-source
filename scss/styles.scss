@@ -2,6 +2,7 @@
 
 @import '../node_modules/material-design-lite/src/color-definitions';
 @import 'config/colors';
+@import 'config/z-index';
 
 // MDL customizations.
 @import 'config/mdl';
@@ -19,6 +20,7 @@
 
 // Base.
 @import 'base';
+@import 'config/placeholders';
 
 // MDL overrides.
 
@@ -30,13 +32,11 @@
 @import 'components/layout/footer';
 @import 'components/layout/svg';
 @import 'components/layout/posts-grid';
+@import 'components/layout/safe-picture';
 @import 'components/layout/to-top';
 @import 'components/layout/copyright';
 @import 'components/post/avatar';
 @import 'components/post/teaser';
 @import 'components/post/post';
 @import 'components/post/infobar';
-
-.comments-widget {
-  padding: 24px;
-}
+@import 'components/widgets/comments';
