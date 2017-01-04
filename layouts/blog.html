@@ -26,7 +26,7 @@
       <main class="mdl-layout__content js-to-top-container">
         <section class="mdl-grid posts-grid">
           {{#each collections.posts as |post|}}
-            <article class="mdl-card mdl-shadow--3dp mdl-cell post-teaser {{ postCell @index }}">
+            <article class="mdl-card mdl-shadow--3dp mdl-cell post-teaser {{ postCell @index ../collections.posts.length }}">
               <header class="mdl-card__media post-teaser__media">
                 {{ postIllustration post.tumb post.title }}
 

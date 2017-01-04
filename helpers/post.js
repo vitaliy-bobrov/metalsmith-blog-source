@@ -1,30 +1,59 @@
-const postCell = index => {
+const postCell = (index, length) => {
   let desktop;
+  let tablet;
+
+  if (length < 8 && (index === length - 1 || index === length - 2)) {
+    index = index - length;
+  }
 
   switch (index) {
+    case 0:
+      desktop = 12;
+      tablet = 6;
+      break;
+
     case 1:
+      desktop = 6;
+      tablet = 6;
+      break;
+
     case 2:
       desktop = 6;
+      tablet = 12;
+      break;
+
+    case 3:
+      desktop = 12;
+      tablet = 6;
       break;
 
     case 4:
-    case 7:
       desktop = 7;
+      tablet = 6;
       break;
 
     case 5:
-    case 6:
       desktop = 5;
+      tablet = 12;
       break;
 
-    case 0:
-    case 3:
+    case 6:
+      desktop = 5;
+      tablet = 6;
+      break;
+
+    case 7:
+      desktop = 7;
+      tablet = 6;
+      break;
+
     default:
       desktop = 12;
+      tablet = 12;
       break;
   }
 
-  return `mdl-cell--${desktop}-col-desktop mdl-cell--6-col-tablet mdl-cell--12-col-phone`;
+  return `mdl-cell--${desktop}-col-desktop mdl-cell--${tablet}-col-tablet mdl-cell--12-col-phone`;
 };
 
 const postIllustration = (tumb, alt) => `
