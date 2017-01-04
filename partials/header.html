@@ -1,8 +1,10 @@
 <header class="mdl-layout__header mdl-layout--fixed-header is-casting-shadow" role="banner">
   <div class="mdl-layout__header-row">
     <!-- Title -->
-    <span class="mdl-layout-title">{{ sitename }}</span>
-    <!-- Add spacer, to align navigation to the right -->
+    <span class="mdl-layout-title">
+      <a href="/" class="site-link">{{ sitename }}</a>
+    </span>
+
     <div class="mdl-layout-spacer">
       <a href="/" class="site-logo" title="{{ sitename }}">
         <picture class="site-logo__picture">
@@ -13,11 +15,14 @@
         </picture>
       </a>
     </div>
+
     <!-- Navigation. We hide it in small screens. -->
     <nav class="mdl-navigation mdl-layout--large-screen-only">
       <a class="mdl-navigation__link" href="/">Home</a>
-      <!-- <a class="mdl-navigation__link" href="/categories">Categories</a>
-      <a class="mdl-navigation__link" href="/about">About</a> -->
+
+      {{#each collections.pages as |page|}}
+        <a class="mdl-navigation__link" href="/{{ page.path }}/">{{ page.title }}</a>
+      {{/each}}
     </nav>
   </div>
 </header>
@@ -25,5 +30,9 @@
   <span class="mdl-layout-title">{{ sitename }}</span>
   <nav class="mdl-navigation">
     <a class="mdl-navigation__link" href="/">Home</a>
+
+    {{#each collections.pages as |page|}}
+      <a class="mdl-navigation__link" href="/{{ page.path }}/">{{ page.title }}</a>
+    {{/each}}
   </nav>
 </div>
