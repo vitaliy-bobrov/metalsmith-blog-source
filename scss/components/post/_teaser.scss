@@ -17,12 +17,12 @@
   &__intro {
     width: 100%;
     padding: 16px 24px;
-    text-align: right;
     border-top: 1px solid $mdlext-dark-divider-color;
+    font-style: italic;
   }
 
-  &__intro-text {
-    font-style: italic;
-    text-align: left;
+  &__actions {
+    padding-right: 24px;
+    text-align: right;
   }
 }
