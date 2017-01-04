@@ -5,6 +5,7 @@
   &__left-section,
   &__right-section {
     flex-grow: 1;
+    flex-basis: 0;
   }
 
   &__right-section {

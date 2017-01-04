@@ -1,7 +1,12 @@
 .mdl-layout__content {
-  padding: 84px 0;
-  background-image: resolve('bg-desktop.jpg');
+  padding: 64px 0;
+  background-image: resolve('bg-tablet.jpg');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+
+  @media screen and (min-width: 1025px) {
+    padding: 84px 0;
+    background-image: resolve('bg-desktop.jpg');
+  }
 }

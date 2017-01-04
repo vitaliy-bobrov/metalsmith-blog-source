@@ -33,6 +33,7 @@
 @import 'components/layout/svg';
 @import 'components/layout/posts-grid';
 @import 'components/layout/safe-picture';
+@import 'components/layout/safe-gradient';
 @import 'components/layout/to-top';
 @import 'components/layout/copyright';
 @import 'components/post/avatar';
@@ -43,4 +44,9 @@
 
 .mdlext-dark-color-theme .site-link {
   color: $mdlext-dark-text-color-primary;
+}
+
+.drawer-icon {
+  fill: $mdlext-dark-text-color-primary;
+  @extend %absolute-center;
 }

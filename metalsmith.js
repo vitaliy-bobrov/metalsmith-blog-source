@@ -35,7 +35,6 @@ Metalsmith(__dirname)
   .source('./source')
   .destination('./build')
   .clean(false)
-  // .use(debug())
   .use(updated())
   .use(drafts())
   .use(collections({
@@ -43,7 +42,7 @@ Metalsmith(__dirname)
       pattern: 'pages/*.md'
     },
     posts: {
-      pattern: 'blog/*.md',
+      pattern: 'blog/**/*.md',
       sortBy: 'created',
       reverse: true
     }

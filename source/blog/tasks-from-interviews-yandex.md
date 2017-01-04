@@ -6,7 +6,7 @@ ogdescr: Resolving tasks received before Yandex interview on JavaScript develope
 ogimage: images/posts/tasks-from-interviews-yandex-og.jpg
 tumb: /images/posts/tasks-from-interviews-yandex
 author: me
-draft: true
+draft: false
 categories:
 - Tasks
 tags:
