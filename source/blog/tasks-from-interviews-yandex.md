@@ -19,7 +19,54 @@ A lot of companies provide interviewers with some programming tasks to solve bef
 I want to share some tasks that I've received before Skype interview in big company called Yandex on position of JavaScript developer. Of course my solution may not be that best one, if you have any concerns about it feel free to add yours in the comments to this post.
 
 ## Task 1
-Display to browser developer consolethe phrase: "I can count: 1, 2, 3" without using digits and property `length` in your code. Few variants решения will be a plus.
+> Display to browser developer console the phrase: "I can count: 1, 2, 3" without using digits and property `length` in your code. Few solution variants will be a plus.
+
+So as we are limited to this rules, first of all I consider to create some function that takes zero and outputs needed string:
+
+```js
+function countToConsole(zero) {
+  var count = [++zero, ++zero, ++zero].join(', ');
+
+  console.log('I can count: ' + count);
+}
+```
+
+As you can see the code is pretty simple. It creates array with incremented zero values, than creates string from it. Next thing to do is to create zero without numbers and `length` property. My first idea was to use JavaScript types convertion:
+
+```js
+var zeroFromBool = + false;
+var zeroFromString = + '';
+var zeroFromUndefined = !!undefined;
+var zeroFromNull = + null;
+var zeroFromNaN = + !!NaN;
+```
+
+It is realy simple, but notice that we can't use construction `+ undefined`, because it return `NaN`. Next idea was to use `Number` constructor:
+
+```js
+var zeroNumberString = Number('');
+var zeroNulmberNull = Number(null);
+```
+
+Another variant wasn't so trivial in my taste. I decided to use `Math`:
+
+```js
+var zeroFromMath = Math.floor(Math.random());
+```
+
+Also as we limited only not to use `length`, we can use method that return numbers:
+
+```js
+var zeroFromIndexOf = 'a'.indexOf('a');
+```
+
+Even there are something from ES2015 that can be used:
+
+```js
+var zeroFromMap = new Map().size;
+```
+
+This was fun, but I think you'll never use such things in real project. I hope :)
 
 ## Task 2
 
