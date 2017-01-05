@@ -1,20 +1,8 @@
 const Metalsmith       = require('metalsmith');
-const updated          = require('metalsmith-updated');
-const drafts           = require('metalsmith-drafts');
-const collections      = require('metalsmith-collections');
-const pagination       = require('metalsmith-pagination');
-const author           = require('metalsmith-author');
-const registerHelpers  = require('metalsmith-register-helpers');
-const headings         = require('metalsmith-headings');
-const layouts          = require('metalsmith-layouts');
-const markdown         = require('metalsmith-markdown');
-const highlight        = require('metalsmith-code-highlight');
-const permalinks       = require('metalsmith-permalinks');
-const excerptor        = require('metalsmith-excerptor');
-const openGraph        = require('metalsmith-open-graph');
-const sitemap          = require('metalsmith-mapsite');
-const debug            = require('metalsmith-debug');
-const disqus           = require('metalsmith-disqus');
+const pkg              = require('./package.json');
+const loadPlugins      = require('./load-plugins');
+
+const $ = loadPlugins(pkg, 'devDependencies', 'metalsmith-');
 
 // Site Variables.
 const sitename = 'Bobrov Blog';
@@ -36,9 +24,9 @@ Metalsmith(__dirname)
   .destination('./build')
   .clean(false)
   // .use(debug())
-  .use(updated())
-  .use(drafts())
-  .use(collections({
+  .use($.updated())
+  .use($.drafts())
+  .use($.collections({
     pages: {
       pattern: 'pages/*.md'
     },
@@ -48,7 +36,7 @@ Metalsmith(__dirname)
       reverse: true
     }
   }))
-  .use(author({
+  .use($.author({
     collection: 'posts',
     authors: {
       me: {
@@ -60,7 +48,7 @@ Metalsmith(__dirname)
       }
     }
   }))
-  .use(pagination({
+  .use($.pagination({
     'collections.posts': {
       perPage: 8,
       layout: 'blog.html',
@@ -70,34 +58,34 @@ Metalsmith(__dirname)
       pageMetadata: {}
     }
   }))
-  .use(headings('h2'))
-  .use(markdown())
-  .use(highlight({
+  .use($.headings('h2'))
+  .use($.markdown())
+  .use($.codeHighlight({
     tabReplace: '  ',
     classPrefix: '',
     languages: ['js', 'html', 'css']
   }))
-  .use(permalinks({
+  .use($.permalinks({
     relative: false
   }))
-  .use(excerptor({
+  .use($.excerptor({
     maxLength: 300,
     keepImageTag: false,
     ellipsis: '…'
   }))
-  .use(registerHelpers({
+  .use($.registerHelpers({
     directory: './helpers'
   }))
-  .use(layouts({
+  .use($.layouts({
     engine: 'handlebars',
     default: 'post.html',
     partials: './partials'
   }))
-  .use(disqus({
+  .use($.disqus({
     siteurl,
     shortname: 'bobrov-blog'
   }))
-  .use(openGraph({
+  .use($.openGraph({
     sitename,
     siteurl,
     title: 'ogtitle',
@@ -105,7 +93,7 @@ Metalsmith(__dirname)
     image: 'ogimage',
     decodeEntities: false
   }))
-  .use(sitemap({
+  .use($.mapsite({
     hostname: siteurl
   }))
   .build(function(err) {
