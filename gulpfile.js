@@ -13,6 +13,7 @@ const autoprefixer     = require('autoprefixer');
 const mqpacker         = require('css-mqpacker');
 const mqkeyframes      = require('postcss-mq-keyframes');
 const exec             = require('child_process').exec;
+const ngrok            = require('ngrok');
 const pkg              = require('./package.json');
 
 const $ = gulpLoadPlugins();
@@ -22,6 +23,10 @@ const onError = function(error) {
   console.log(error.toString());
   this.emit('end');
 };
+
+const LOCAL_PORT = 3000;
+
+let tunnelUrl;
 
 gulp.task('metalsmith', ['svg'], callback => exec('node ./metalsmith.js',
   (err, stdout, stderr) => {
@@ -155,25 +160,39 @@ gulp.task('clean', () => del([
   ], {dot: true}));
 
 // Watch files for changes & reload
-gulp.task('serve', ['scripts', 'styles'], () => {
+gulp.task('serve', () => {
   browserSync({
     notify: false,
-    // Customize the Browsersync console logging prefix
-    logPrefix: 'WSK',
-    // Allow scroll syncing across breakpoints
+    logPrefix: 'MetalSync',
     scrollElementMapping: ['main', '.mdl-layout'],
-    // Run as an https by uncommenting 'https: true'
-    // Note: this uses an unsigned certificate which on first access
-    //       will present a certificate warning in the browser.
     // https: true,
     server: ['.tmp', 'build'],
-    port: 3000
+    port: LOCAL_PORT
   });
 
   gulp.watch(['layouts/**/*.html', 'partials/**/*.html', 'images/**/*.svg'], ['metalsmith', reload]);
   gulp.watch(['scss/**/*.scss'], ['styles', reload]);
   gulp.watch(['js/**/*.js'], ['lint', 'scripts', reload]);
   gulp.watch(['images/**/*'], reload);
+});
+
+const ngrokOptions = {
+  addr: LOCAL_PORT,
+  region: 'eu'
+};
+
+gulp.task('tunel', ['default'], cb => {
+  ngrok.connect(ngrokOptions, (err, url) => {
+    tunnelUrl = url;
+
+    console.log('ngrok tunnel: %s', url);
+    cb(err);
+  });
+});
+
+gulp.task('stop-tunel', () => {
+  ngrok.disconnect();
+  process.kill(0);
 });
 
 gulp.task('deploy', () => gulp.src('build/**/*')
@@ -187,6 +206,7 @@ gulp.task('deploy', () => gulp.src('build/**/*')
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    ['metalsmith', 'lint', 'scripts', 'images']
+    ['metalsmith', 'lint', 'scripts', 'images'],
+    cb
   )
 );
