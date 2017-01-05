@@ -181,7 +181,7 @@ const ngrokOptions = {
   region: 'eu'
 };
 
-gulp.task('tunel', ['default'], cb => {
+gulp.task('tunel', cb => {
   ngrok.connect(ngrokOptions, (err, url) => {
     tunnelUrl = url;
 
