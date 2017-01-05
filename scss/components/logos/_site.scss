@@ -1,6 +1,6 @@
 .site-logo {
-  width: 124px;
-  height: 124px;
+  width: 80px;
+  height: 80px;
   position: absolute;
   top: 8px;
   left: 50%;
@@ -8,6 +8,11 @@
   background-color: #b2ebf2;
   border-radius: 50%;
   @include shadow-3dp();
+
+  @media screen and (min-width: 1025px) {
+    width: 124px;
+    height: 124px;
+  }
 
   &:hover,
   &:focus {

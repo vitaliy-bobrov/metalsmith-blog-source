@@ -25,9 +25,9 @@
     },
     "manifest.json": {
         "filename": "manifest.json",
-        "hash": "8ce9c8e29d78161c26c85b83d5864263",
+        "hash": "7029a585642e8ca4e0062084855606aa",
         "created": "2016-12-27T21:25:14.921Z",
-        "updated": "2017-01-02T20:40:21.619Z"
+        "updated": "2017-01-05T09:14:05.704Z"
     },
     "blog/tasks-from-interviews-yandex.md": {
         "filename": "blog/tasks-from-interviews-yandex.md",
@@ -41,16 +41,16 @@
         "created": "2016-12-26T21:25:14.921Z",
         "updated": "2017-01-03T21:12:20.308Z"
     },
-    "blog\\tasks-from-interviews-yandex.md": {
-        "filename": "blog\\tasks-from-interviews-yandex.md",
-        "hash": "d41d8cd98f00b204e9800998ecf8427e",
-        "created": "2016-12-28T11:37:44.779Z",
-        "updated": "2016-12-28T11:37:44.779Z"
-    },
     "blog\\hello-world.md": {
         "filename": "blog\\hello-world.md",
-        "hash": "b63ffa85b664e17a8c7481d2982faac4",
-        "created": "2016-12-28T11:37:44.779Z",
-        "updated": "2016-12-30T10:21:13.655Z"
+        "hash": "2c1406066b7aa9fd66ec36b243c719bf",
+        "created": "2017-01-05T09:14:05.704Z",
+        "updated": "2017-01-05T09:14:05.704Z"
+    },
+    "blog\\tasks-from-interviews-yandex.md": {
+        "filename": "blog\\tasks-from-interviews-yandex.md",
+        "hash": "39a224ff4b51cafeac988260d41dd94f",
+        "created": "2017-01-05T09:14:05.704Z",
+        "updated": "2017-01-05T09:14:05.704Z"
     }
 }

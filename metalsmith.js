@@ -23,7 +23,6 @@ Metalsmith(__dirname)
   .source('./source')
   .destination('./build')
   .clean(false)
-  // .use(debug())
   .use($.updated())
   .use($.drafts())
   .use($.collections({
@@ -31,7 +30,7 @@ Metalsmith(__dirname)
       pattern: 'pages/*.md'
     },
     posts: {
-      pattern: 'blog/*.md',
+      pattern: 'blog/**/*.md',
       sortBy: 'created',
       reverse: true
     }
@@ -68,11 +67,7 @@ Metalsmith(__dirname)
   .use($.permalinks({
     relative: false
   }))
-  .use($.excerptor({
-    maxLength: 300,
-    keepImageTag: false,
-    ellipsis: '…'
-  }))
+  .use($.excerpts())
   .use($.registerHelpers({
     directory: './helpers'
   }))
