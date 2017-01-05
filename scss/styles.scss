@@ -26,8 +26,10 @@
 
 // Components.
 @import 'components/logos/site';
+@import 'components/logos/link';
 @import 'components/layout/scrollbar';
 @import 'components/layout/header';
+@import 'components/layout/drawer';
 @import 'components/layout/content';
 @import 'components/layout/footer';
 @import 'components/layout/svg';
@@ -41,12 +43,3 @@
 @import 'components/post/post';
 @import 'components/post/infobar';
 @import 'components/widgets/comments';
-
-.mdlext-dark-color-theme .site-link {
-  color: $mdlext-dark-text-color-primary;
-}
-
-.drawer-icon {
-  fill: $mdlext-dark-text-color-primary;
-  @extend %absolute-center;
-}

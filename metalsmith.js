@@ -61,7 +61,6 @@ Metalsmith(__dirname)
   .use($.markdown())
   .use($.codeHighlight({
     tabReplace: '  ',
-    classPrefix: '',
     languages: ['js', 'html', 'css']
   }))
   .use($.permalinks({
