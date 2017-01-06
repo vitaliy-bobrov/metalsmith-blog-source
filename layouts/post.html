@@ -34,9 +34,14 @@
               <section class="post__info post-info">
                 <div class="post-info__data">
                   {{#if author}}
-                  <img src="{{ gitAvatar author.github 64 }}"
+                  <picture class="post-info__avatar">
+                    <source srcset="{{ author.avatar }}.webp 1x, {{ author.avatar }}@2x.webp 2x"
+                            type="image/webp">
+                    <source srcset="{{ author.avatar }}.jpg 1x, {{ author.avatar }}@2x.jpg 2x">
+                    <img src="{{ author.avatar }}.jpg"
                        alt="{{ author.name }} Photo"
-                       class="post-info__avatar user-avatar">
+                       class="mdl-list__item-avatar">
+                  </picture>
                   {{/if}}
 
                   <div class="post-info__data-wrapper">

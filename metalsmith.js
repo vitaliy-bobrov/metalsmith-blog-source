@@ -41,6 +41,7 @@ Metalsmith(__dirname)
       me: {
         name: 'Vitaliy Bobrov',
         url: siteurl,
+        avatar: '/images/authors/bobrov/avatar',
         github: 'https://github.com/vitaliy-bobrov',
         twitter: 'https://twitter.com/bobrov1989',
         linkedin: 'https://www.linkedin.com/in/vitaliybobrov'

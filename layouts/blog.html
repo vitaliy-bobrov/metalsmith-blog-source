@@ -39,9 +39,14 @@
 
               <section class="post-teaser__info post-info">
                 <div class="post-info__data">
-                  <img src="{{ gitAvatar post.author.github 64 }}"
+                  <picture class="post-info__avatar">
+                    <source srcset="{{ post.author.avatar }}.webp 1x, {{ post.author.avatar }}@2x.webp 2x"
+                            type="image/webp">
+                    <source srcset="{{ post.author.avatar }}.jpg 1x, {{ post.author.avatar }}@2x.jpg 2x">
+                    <img src="{{ post.author.avatar }}.jpg"
                        alt="{{ post.author.name }} Photo"
-                       class="post-info__avatar user-avatar">
+                       class="mdl-list__item-avatar">
+                  </picture>
 
                   <div class="post-info__data-wrapper">
                     <div class="post-info__author">
