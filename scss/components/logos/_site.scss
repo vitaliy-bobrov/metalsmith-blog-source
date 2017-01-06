@@ -1,13 +1,20 @@
 .site-logo {
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 16px;
   background-color: #b2ebf2;
   border-radius: 50%;
   @include shadow-3dp();
+
+  @media screen and (min-width: 768px) {
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
 
   @media screen and (min-width: 1025px) {
     width: 124px;

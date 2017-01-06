@@ -1,4 +1,7 @@
 .posts-grid {
   max-width: 1210px;
-  width: calc(100% - 56px);
+
+  @media screen and (min-width: 769px) {
+    width: calc(100% - 92px);
+  }
 }

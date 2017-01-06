@@ -25,15 +25,15 @@
     },
     "manifest.json": {
         "filename": "manifest.json",
-        "hash": "7029a585642e8ca4e0062084855606aa",
+        "hash": "8ce9c8e29d78161c26c85b83d5864263",
         "created": "2016-12-27T21:25:14.921Z",
-        "updated": "2017-01-05T09:14:05.704Z"
+        "updated": "2017-01-06T20:36:34.981Z"
     },
     "blog/tasks-from-interviews-yandex.md": {
         "filename": "blog/tasks-from-interviews-yandex.md",
-        "hash": "420561bbe2f597ff6c8eef28c2b6281d",
+        "hash": "ac789c53d0fdbe503e2cf428f57919ff",
         "created": "2016-12-27T21:25:14.921Z",
-        "updated": "2017-01-03T21:12:20.308Z"
+        "updated": "2017-01-06T20:36:34.981Z"
     },
     "blog/hello-world.md": {
         "filename": "blog/hello-world.md",

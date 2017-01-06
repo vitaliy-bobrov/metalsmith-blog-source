@@ -1,12 +1,12 @@
 .post-info {
   display: flex;
   justify-content: space-between;
-  padding: 16px 24px;
+  padding: 16px;
   font-size: 1rem;
   line-height: 18px;
 
   &__avatar {
-    margin-right: 24px;
+    margin-right: 16px;
     object-fit: contain;
   }
 
@@ -29,7 +29,7 @@
   }
 
   &__comments {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     color: $mdlext-dark-color-accent;
   }
 
