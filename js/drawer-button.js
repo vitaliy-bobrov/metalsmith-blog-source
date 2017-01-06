@@ -11,9 +11,9 @@
           <use xlink:href="#menu"></use>
         </svg>`;
     } else {
-      timeoutId = setTimeout(mdlCahngeIcon, 0);
+      timeoutId = setTimeout(mdlCahngeIcon, 100);
     }
   };
 
-  timeoutId = setTimeout(mdlCahngeIcon, 0);
+  timeoutId = setTimeout(mdlCahngeIcon, 100);
 })(document);
