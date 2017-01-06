@@ -19,7 +19,7 @@ A lot of companies provide interviewers with some programming tasks to solve bef
 I want to share some tasks that I've received before Skype interview in big company called Yandex on position of JavaScript developer. Of course my solution may not be that best one, if you have any concerns about it feel free to add yours in the comments to this post.
 
 ## Task 1
-> Display to browser developer console the phrase: "I can count: 1, 2, 3" without using digits and property `length` in your code. Few solution variants will be a plus.
+_**Display to browser developer console the phrase: "I can count: 1, 2, 3" without using digits and property length in your code. Few solution variants will be a plus.**_
 
 So as we are limited to this rules, first of all I consider to create some function that takes zero and outputs needed string:
 
@@ -36,7 +36,7 @@ As you can see the code is pretty simple. It creates array with incremented zero
 ```js
 var zeroFromBool = + false;
 var zeroFromString = + '';
-var zeroFromUndefined = !!undefined;
+var zeroFromUndefined = + !!undefined;
 var zeroFromNull = + null;
 var zeroFromNaN = + !!NaN;
 ```
