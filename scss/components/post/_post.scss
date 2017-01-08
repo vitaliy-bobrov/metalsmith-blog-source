@@ -36,6 +36,11 @@
       padding: 24px;
     }
 
+    &:first-letter {
+      font-size: 150%;
+      color: $mdlext-dark-color-accent;
+    }
+
     p,
     li {
       @include typo-subhead-2;
