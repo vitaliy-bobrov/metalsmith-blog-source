@@ -19,7 +19,7 @@ A lot of companies provide interviewers with some programming tasks to solve bef
 I want to share some tasks that I've received before Skype interview in big company called Yandex on position of JavaScript developer. Of course my solution may not be that best one, if you have any concerns about it feel free to add yours in the comments to this post.
 
 ## Task 1
-_**Display to browser developer console the phrase: "I can count: 1, 2, 3" without using digits and property length in your code. Few solution variants will be a plus.**_
+_**Display to browser developer console the phrase: "I can count: 1, 2, 3" without using digits and property `length` in your code. Few solution variants will be a plus.**_
 
 So as we are limited to this rules, first of all I consider to create some function that takes zero and outputs needed string:
 
@@ -69,5 +69,24 @@ var zeroFromMap = new Map().size;
 This was fun, but I think you'll never use such things in real project. I hope :)
 
 ## Task 2
+_**Provide implementation of function `getNumbers`, that will output such results after call:**_
+```js
+getNumbers();     // 1
+getNumbers()();   // 2
+getNumbers()()(); // 3
+```
+
+```js
+function getNumbers() {
+  return (function counterMaker(sum, n) {
+
+    console.log(sum + n);
+
+    return function counter() {
+      return counterMaker(n);
+    }
+  })(0, 1);
+}
+```
 
 ## Task 3

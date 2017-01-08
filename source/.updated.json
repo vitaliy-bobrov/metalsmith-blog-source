@@ -25,20 +25,26 @@
     },
     "manifest.json": {
         "filename": "manifest.json",
-        "hash": "8ce9c8e29d78161c26c85b83d5864263",
+        "hash": "63ded21aea3ccf74da06be4c78ad9bba",
         "created": "2016-12-27T21:25:14.921Z",
-        "updated": "2017-01-06T20:36:34.981Z"
+        "updated": "2017-01-08T14:12:33.877Z"
     },
     "blog/tasks-from-interviews-yandex.md": {
         "filename": "blog/tasks-from-interviews-yandex.md",
-        "hash": "d40833fd63ad925c7291552aa8c7366f",
+        "hash": "73c695efec06f03be1c97b4e8ca02aee",
         "created": "2016-12-27T21:25:14.921Z",
-        "updated": "2017-01-06T21:55:38.655Z"
+        "updated": "2017-01-08T14:56:18.427Z"
     },
     "blog/hello-world.md": {
         "filename": "blog/hello-world.md",
         "hash": "96cbdca881a1f341f5439f1a39d7b6ee",
         "created": "2016-12-26T21:25:14.921Z",
         "updated": "2017-01-03T21:12:20.308Z"
+    },
+    "robots.txt": {
+        "filename": "robots.txt",
+        "hash": "00733c197e59662cf705a2ec6d881d44",
+        "created": "2017-01-08T14:12:33.877Z",
+        "updated": "2017-01-08T14:12:33.877Z"
     }
 }
