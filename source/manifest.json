@@ -1,17 +1,26 @@
 {
-	"name": "Bobrov Blog",
-	"icons": [
-		{
-			"src": "\/android-chrome-192x192.png",
-			"sizes": "192x192",
-			"type": "image\/png"
-		},
-		{
-			"src": "\/android-chrome-512x512.png",
-			"sizes": "512x512",
-			"type": "image\/png"
-		}
-	],
-	"theme_color": "#2196f3",
-	"display": "standalone"
+  "lang": "en-US",
+  "name": "Bobrov Blog",
+  "short_name": "BB",
+  "icons": [
+    {
+      "src": "images/icons/apple-touch-icon.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/mstile-150x150.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html?homescreen=1",
+  "background_color": "#424242",
+  "theme_color": "#00bcd4",
+  "display": "standalone"
 }
