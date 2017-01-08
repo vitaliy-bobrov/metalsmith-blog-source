@@ -168,7 +168,12 @@ gulp.task('serve', () => {
     port: LOCAL_PORT
   });
 
-  gulp.watch(['layouts/**/*.html', 'partials/**/*.html', 'images/**/*.svg'], ['metalsmith', reload]);
+  gulp.watch([
+      'layouts/**/*.html',
+      'partials/**/*.html',
+      'images/**/*.svg',
+      'source/**/*.md'
+    ], ['metalsmith', reload]);
   gulp.watch(['scss/**/*.scss'], ['styles', reload]);
   gulp.watch(['js/**/*.js'], ['lint', 'scripts', reload]);
   gulp.watch(['images/**/*'], reload);
