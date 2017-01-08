@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ locale }}">
   <head>
     <title>{{ title }} | {{ sitename }}</title>
     {{> metatags }}
@@ -13,13 +13,27 @@
   </head>
   <body class="mdlext-dark-color-theme">
     {{> sprite }}
-    <div class="mdl-layout mdl-layout--no-desktop-drawer-button mdl-js-layout">
+    <div class="mdl-layout mdl-layout--no-desktop-drawer-button mdl-layout--fixed-header mdl-js-layout">
       <!-- Header -->
       {{> header }}
 
       <!-- Content -->
       <main class="mdl-layout__content js-to-top-container">
-        {{{ contents }}}
+        <section class="mdl-grid posts-grid">
+          <article class="mdl-card mdl-shadow--3dp mdl-cell post mdl-cell--12-col">
+            <header class="mdl-card__media post__media">
+
+                <h2 class="post__title">
+                  {{ title }}
+                </h2>
+              </header>
+
+              <section class="post__contents">
+                {{{ contents }}}
+              </section>
+          </article>
+
+        </section>
       </main>
 
       <!-- Footer -->
