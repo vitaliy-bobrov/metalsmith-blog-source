@@ -1,15 +1,23 @@
 .post__contents pre code {
   display: block;
   overflow-x: auto;
-  padding: 16px;
+  padding: 8px;
   background: #23241f;
   border-radius: 2px;
   @include shadow-2dp();
+
+  @media screen and (min-width: 768px) {
+    padding: 16px;
+  }
 }
 
 .post__contents code {
-  padding: 0 4px;
+  padding: 0 2px;
   background: #23241f;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 4px;
+  }
 }
 
 .hljs,

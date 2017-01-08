@@ -8,23 +8,3 @@
     text-decoration: none;
   }
 }
-
-.mdl-mini-footer--social-btn {
-  display: inline-block;
-  vertical-align: top;
-  width: 24px;
-  height: 24px;
-  border-radius: 2px;
-  font-size: 0;
-
-  &:not(:last-child) {
-    margin-right: 1rem;
-  }
-
-  &__icon {
-    width: 20px;
-    height: 20px;
-    margin: 2px;
-    fill: rgba($black, .54);
-  }
-}

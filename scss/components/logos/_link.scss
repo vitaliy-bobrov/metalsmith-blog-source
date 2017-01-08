@@ -1,3 +1,8 @@
 .mdlext-dark-color-theme .site-link {
   color: $mdlext-dark-text-color-primary;
+
+  &:hover,
+  &:focus {
+    color: $mdlext-dark-color-primary;
+  }
 }

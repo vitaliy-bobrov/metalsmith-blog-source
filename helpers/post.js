@@ -58,9 +58,19 @@ const postCell = (index, length) => {
 
 const postIllustration = (tumb, alt) => `
     <picture class="safe-picture">
-      <source srcset="${tumb}.webp 1x, ${tumb}@2x.webp 2x"
+      <source media="(min-width: 1025px)"
+              srcset="${tumb}.webp 1x, ${tumb}@2x.webp 2x"
               type="image/webp">
-      <source srcset="${tumb}.jpg 1x, ${tumb}@2x.jpg 2x">
+      <source media="(min-width: 1025px)"
+              srcset="${tumb}.jpg 1x, ${tumb}@2x.jpg 2x">
+      <source media="(min-width: 768px)"
+              srcset="${tumb}-tablet.webp 1x, ${tumb}-tablet@2x.webp 2x"
+              type="image/webp">
+      <source media="(min-width: 768px)"
+              srcset="${tumb}-tablet.jpg 1x, ${tumb}-tablet@2x.jpg 2x">
+      <source srcset="${tumb}-mobile.webp 1x, ${tumb}-mobile@2x.webp 2x"
+              type="image/webp">
+      <source srcset="${tumb}-mobile.jpg 1x, ${tumb}-mobile@2x.jpg 2x">
       <img src="${tumb}.jpg" alt="${alt}" class="safe-picture__img">
     </picture>`;
 

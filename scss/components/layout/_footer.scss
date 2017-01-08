@@ -1,6 +1,13 @@
 .page-footer {
-  min-height: 88px;
+  align-items: center;
+  min-height: 64px;
+  padding: 16px;
   position: relative;
+
+  @media screen and (min-width: 768px) {
+    min-height: 88px;
+    padding: 32px 16px;
+  }
 
   &__left-section,
   &__right-section {
@@ -14,5 +21,41 @@
 
   p {
     margin: 0;
+    font-size: 12px;
+    line-height: 14px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+.mdl-mini-footer--social-btn {
+  display: inline-block;
+  vertical-align: top;
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  font-size: 0;
+
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgba($white, .2);
+
+    .mdl-mini-footer--social-btn__icon {
+      fill: $mdlext-dark-color-primary;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    fill: rgba($black, .54);
   }
 }
