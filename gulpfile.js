@@ -7,7 +7,6 @@ const runSequence      = require('run-sequence');
 const browserSync      = require('browser-sync');
 const gulpLoadPlugins  = require('gulp-load-plugins');
 const imageminMozjpeg  = require('imagemin-mozjpeg');
-const imageminWebp     = require('imagemin-webp');
 const assets           = require('postcss-assets');
 const autoprefixer     = require('autoprefixer');
 const mqpacker         = require('css-mqpacker');
@@ -62,7 +61,6 @@ gulp.task('images', ['webp'], () => gulp.src('images/**/*.{jpg,jpeg,png,gif,webp
       use: [
         $.imagemin.gifsicle(),
         imageminMozjpeg(),
-        imageminWebp(),
         $.imagemin.optipng(),
         $.imagemin.svgo()
       ]
