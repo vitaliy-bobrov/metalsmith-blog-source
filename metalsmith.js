@@ -8,6 +8,10 @@ const $ = loadPlugins(pkg, 'devDependencies', 'metalsmith-');
 const sitename = 'Bobrov Blog';
 const siteurl = 'https://vitaliy-bobrov.github.io/';
 
+// Content variables.
+const pagesPattern = 'pages/*.md';
+const postsPattern = 'blog/**/*.md';
+
 Metalsmith(__dirname)
   .metadata({
     locale: 'en',
@@ -23,14 +27,31 @@ Metalsmith(__dirname)
   .source('./source')
   .destination('./build')
   .clean(false)
-  .use($.updated())
+  //.use($.updated())
+  .use($.defaultValues([
+    {
+      pattern : pagesPattern,
+      defaults: {
+        layout: 'page.html',
+      }
+    },
+    {
+      pattern : postsPattern,
+      defaults: {
+        draft: false,
+        author: 'me',
+        comments: true,
+        twitter: true
+      }
+    }
+  ]))
   .use($.drafts())
   .use($.collections({
     pages: {
-      pattern: 'pages/*.md'
+      pattern: pagesPattern
     },
     posts: {
-      pattern: 'blog/**/*.md',
+      pattern: postsPattern,
       sortBy: 'created',
       reverse: true
     }
@@ -58,7 +79,6 @@ Metalsmith(__dirname)
       pageMetadata: {}
     }
   }))
-  .use($.headings('h2'))
   .use($.markdown())
   .use($.codeHighlight({
     tabReplace: '  ',
@@ -87,6 +107,14 @@ Metalsmith(__dirname)
     description: 'ogdescr',
     image: 'ogimage',
     decodeEntities: false
+  }))
+  .use($.twitterCard({
+    siteurl,
+    card: 'summary_large_image',
+    site: '@bobrov1989',
+    title: 'title',
+    description: 'description',
+    'image:alt': 'title'
   }))
   .use($.mapsite({
     hostname: siteurl
