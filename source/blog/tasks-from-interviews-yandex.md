@@ -78,14 +78,9 @@ getNumbers()()(); // 3
 
 ```js
 function getNumbers() {
-  return (function counterMaker(sum, n) {
-
-    console.log(sum + n);
-
-    return function counter() {
-      return counterMaker(n);
-    }
-  })(0, 1);
+  return function counter() {
+    return
+  };
 }
 ```
 
