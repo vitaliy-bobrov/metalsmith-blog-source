@@ -8,6 +8,10 @@ const $ = loadPlugins(pkg, 'devDependencies', 'metalsmith-');
 const sitename = 'Bobrov Blog';
 const siteurl = 'https://vitaliy-bobrov.github.io/';
 
+// Content variables.
+const pagesPattern = 'pages/*.md';
+const postsPattern = 'blog/**/*.md';
+
 Metalsmith(__dirname)
   .metadata({
     locale: 'en',
@@ -24,13 +28,30 @@ Metalsmith(__dirname)
   .destination('./build')
   .clean(false)
   //.use($.updated())
+  .use($.defaultValues([
+    {
+      pattern : pagesPattern,
+      defaults: {
+        layout: 'page.html',
+      }
+    },
+    {
+      pattern : postsPattern,
+      defaults: {
+        draft: false,
+        author: 'me',
+        comments: true,
+        twitter: true
+      }
+    }
+  ]))
   .use($.drafts())
   .use($.collections({
     pages: {
-      pattern: 'pages/*.md'
+      pattern: pagesPattern
     },
     posts: {
-      pattern: 'blog/**/*.md',
+      pattern: postsPattern,
       sortBy: 'created',
       reverse: true
     }
