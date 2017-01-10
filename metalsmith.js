@@ -23,7 +23,7 @@ Metalsmith(__dirname)
   .source('./source')
   .destination('./build')
   .clean(false)
-  .use($.updated())
+  //.use($.updated())
   .use($.drafts())
   .use($.collections({
     pages: {
@@ -87,6 +87,14 @@ Metalsmith(__dirname)
     description: 'ogdescr',
     image: 'ogimage',
     decodeEntities: false
+  }))
+  .use($.twitterCard({
+    siteurl,
+    card: 'summary_large_image',
+    site: '@bobrov1989',
+    title: 'title',
+    description: 'description',
+    'image:alt': 'title'
   }))
   .use($.mapsite({
     hostname: siteurl
