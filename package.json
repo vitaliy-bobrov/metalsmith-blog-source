@@ -57,7 +57,6 @@
     "metalsmith-disqus": "^1.2.0",
     "metalsmith-drafts": "0.0.1",
     "metalsmith-excerpts": "^1.1.0",
-    "metalsmith-headings": "^0.1.0",
     "metalsmith-layouts": "^1.7.0",
     "metalsmith-mapsite": "^1.0.4",
     "metalsmith-markdown": "^0.2.1",

@@ -58,7 +58,6 @@ Metalsmith(__dirname)
       pageMetadata: {}
     }
   }))
-  .use($.headings('h2'))
   .use($.markdown())
   .use($.codeHighlight({
     tabReplace: '  ',
