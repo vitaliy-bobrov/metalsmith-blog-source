@@ -6,7 +6,7 @@ const $ = loadPlugins(pkg, 'devDependencies', 'metalsmith-');
 
 // Site Variables.
 const sitename = 'Bobrov Blog';
-const siteurl = 'https://14a78092.eu.ngrok.io/';
+const siteurl = 'https://vitaliy-bobrov.github.io/';
 const facebookAppId = 393821434298248;
 
 // Content variables.
