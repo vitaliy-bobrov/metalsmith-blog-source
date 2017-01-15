@@ -1,8 +1,6 @@
 ---
 title: Tasks from interviews - Yandex
 description: Resolving tasks received before Yandex interview on JavaScript developer position.
-ogtitle: Tasks from interviewsи - Yandex
-ogdescr: Resolving tasks received before Yandex interview on JavaScript developer position.
 ogimage: images/posts/tasks-from-interviews-yandex-og.jpg
 tumb: /images/posts/tasks-from-interviews-yandex
 categories:

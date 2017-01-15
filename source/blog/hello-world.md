@@ -1,9 +1,7 @@
 ---
 title: Hello World
 description: Bobrov Blog's "Hello World"
-ogtitle: Hello World
-ogdescr: Bobrov Blog's "Hello World"
-ogimage: /images/posts/hello-world-og.jpg
+ogimage: images/posts/hello-world-og.jpg
 tumb: /images/posts/hello-world
 categories:
 - Blog
