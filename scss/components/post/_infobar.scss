@@ -60,6 +60,13 @@
   }
 
   &__categories {
+    font-size: 0;
     text-align: right;
+  }
+
+  &__category {
+    &:not(:last-of-type) {
+      margin-right: 8px;
+    }
   }
 }

@@ -52,5 +52,11 @@
         "hash": "04c1d78392a746d7c9b4efb30fd54311",
         "created": "2017-01-15T20:11:17.617Z",
         "updated": "2017-01-15T21:44:48.554Z"
+    },
+    "blog/five-reasons-choose-metalsmith.md": {
+        "filename": "blog/five-reasons-choose-metalsmith.md",
+        "hash": "3b274f249005e0a467edfe9f97a90bfb",
+        "created": "2017-01-15T21:53:01.326Z",
+        "updated": "2017-01-15T22:41:22.808Z"
     }
 }
