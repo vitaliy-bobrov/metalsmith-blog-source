@@ -29,7 +29,7 @@ Metalsmith(__dirname)
   .source('./source')
   .destination('./build')
   .clean(false)
-  //.use($.updated())
+  .use($.updated())
   .use($.defaultValues([
     {
       pattern : pagesPattern,
