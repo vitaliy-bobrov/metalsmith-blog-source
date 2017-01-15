@@ -56,11 +56,14 @@ gulp.task('webp', () => gulp.src([
 // Optimize images
 gulp.task('images', ['webp'], () => gulp.src('images/**/*.{jpg,jpeg,png,gif,webp}')
     .pipe($.imagemin({
-      progressive: true,
+      progressive: false,
       interlaced: true,
       use: [
         $.imagemin.gifsicle(),
-        imageminMozjpeg(),
+        imageminMozjpeg({
+          quality: 75,
+          progressive: false
+        }),
         $.imagemin.optipng(),
         $.imagemin.svgo()
       ]
