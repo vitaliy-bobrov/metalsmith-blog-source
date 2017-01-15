@@ -16,7 +16,7 @@ My talks on community events:
   [Slides](https://docs.google.com/presentation/d/1pyzEy60eYgdmtaX7JlEPFHHcsF2IwYyE6pZT05qbDfE/edit?usp=sharing)
 - Experts Fridays (Odessa, Ukraine)
   [Slides](https://docs.google.com/presentation/d/1NQkPvKJn_aVm3QH5X6AGUZpBua25fBlYbPXm2Mhau8o/edit?usp=sharing)
-- WebCamp: Frone-End (Odessa, Ukraine)
+- WebCamp: Front-End (Odessa, Ukraine)
   [Slides](https://docs.google.com/presentation/d/15_dfnWqU-bpWUVb0ISP_CDg0fgdQWrDjnVsd5jfiGdA/edit?usp=sharing)
   [Video](https://youtu.be/6AKG7goUqDQ)
 
