@@ -201,12 +201,17 @@ gulp.task('stop-tunel', () => {
   process.kill(0);
 });
 
-gulp.task('deploy', () => gulp.src('build/**/*')
-  .pipe($.ghPages({
-    remoteUrl: 'git@github.com:vitaliy-bobrov/vitaliy-bobrov.github.io.git',
-    branch: 'master',
-    message: 'Updates blog content [timestamp]'
-  })));
+gulp.task('deploy', () => {
+  let date = new Date();
+  let formattedDate = date.toUTCString();
+
+  return gulp.src('build/**/*')
+    .pipe($.ghPages({
+      remoteUrl: 'git@github.com:vitaliy-bobrov/vitaliy-bobrov.github.io.git',
+      branch: 'master',
+      message: `Updates blog content ${formattedDate}`
+    }))
+});
 
 // Build production files, the default task
 gulp.task('default', ['clean'], cb =>

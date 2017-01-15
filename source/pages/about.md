@@ -3,7 +3,7 @@ title: About
 description: About me and contact info.
 ogimage: images/pages/about-og.jpg
 layout: page.html
-priority: 0.4
+priority: 0.8
 twitter: true
 ---
 I’m Vitaliy, a 27-year-old front-end engineer from Mykolaiv, Ukraine. But currently, I live and work in Wroclaw, Poland. As a developer, I'm really excited about all new technologies and fall in love with open source community.
