@@ -88,7 +88,15 @@ Metalsmith(__dirname)
     languages: ['js', 'html', 'css']
   }))
   .use($.permalinks({
-    relative: false
+    relative: false,
+    linksets: [
+      {
+        match: {
+          collection: 'pages'
+        },
+        pattern: ':title'
+      }
+    ]
   }))
   .use($.excerpts())
   .use($.registerHelpers({

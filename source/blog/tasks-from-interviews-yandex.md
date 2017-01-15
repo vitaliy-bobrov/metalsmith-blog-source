@@ -109,7 +109,7 @@ isPalindrome('Do geese see God?');   // true
 isPalindrome('programmer');          // false
 ```
 
-This one is the simple one. We need to convert a string to one case, remove all special characters and then compare with its reversed version. In my case, I decided to convert a string to lower case. Then I lived only letter characters in it. And finally convert it to `Array`, reverse and convert back to `String`. Here is resulting function:
+This one is the simple one. We need to convert a string to one case, remove all special characters and then compare with its reversed version. In my case, I decided to convert a string to lower case. Then I leaved only letter characters in it. And finally convert it to `Array`, reverse and convert back to `String`. Here is resulting function:
 
 ```js
 function isPalindrome(text) {

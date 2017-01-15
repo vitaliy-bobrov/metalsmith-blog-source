@@ -1,0 +1,35 @@
+.page {
+  &__title {
+    text-align: center;
+    @include typo-display-1;
+
+    @media screen and (min-width: 768px) {
+      @include typo-display-2;
+    }
+
+    @media screen and (min-width: 1024px) {
+      @include typo-display-3;
+    }
+  }
+
+  &__contents {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 16px;
+
+    @media screen and (min-width: 768px) {
+      padding: 24px;
+    }
+
+    p,
+    li {
+      @include typo-subhead-2;
+    }
+
+    h2 {
+      margin-bottom: 8px;
+      @include typo-display-1;
+    }
+  }
+}
