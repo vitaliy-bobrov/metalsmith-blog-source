@@ -211,7 +211,16 @@ gulp.task('tunel:stop', () => {
   process.kill(0);
 });
 
-gulp.task('deploy', () => {
+gulp.task('html:prod', () => gulp.src('build/**/*.html')
+  .pipe($.htmlmin({
+    collapseBooleanAttributes: true,
+    collapseWhitespace: true,
+    quoteCharacter: '"',
+    removeComments: true
+  }))
+  .pipe(gulp.dest('build')));
+
+gulp.task('deploy', ['html:prod'], () => {
   let date = new Date();
   let formattedDate = date.toUTCString();
 
