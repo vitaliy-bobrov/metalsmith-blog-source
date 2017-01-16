@@ -7,7 +7,8 @@
   "scripts": {
     "start": "gulp && gulp serve:dev",
     "build": "gulp",
-    "deploy": "gulp && gulp deploy"
+    "deploy": "gulp && gulp deploy && gulp seo",
+    "tunel": "gulp tunel"
   },
   "repository": {
     "type": "git",

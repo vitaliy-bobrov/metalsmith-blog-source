@@ -13,6 +13,8 @@ const mqpacker         = require('css-mqpacker');
 const mqkeyframes      = require('postcss-mq-keyframes');
 const exec             = require('child_process').exec;
 const ngrok            = require('ngrok');
+const request          = require('request');
+const url              = require('url');
 const pkg              = require('./package.json');
 
 const $ = gulpLoadPlugins();
@@ -24,8 +26,10 @@ const onError = function(error) {
 };
 
 const LOCAL_PORT = 3000;
+const PROD_URL = 'https://vitaliy-bobrov.github.io/';
+const SITEMAP_URL = url.resolve(PROD_URL, 'sitemap.xml');
 
-let tunnelUrl = '';
+let tunnelUrl = PROD_URL;
 
 gulp.task('metalsmith', ['svg'], callback => exec(`node ./metalsmith.js --url=${tunnelUrl}`,
   (err, stdout, stderr) => {
@@ -230,6 +234,12 @@ gulp.task('deploy', ['html:prod'], () => {
       branch: 'master',
       message: `Updates blog content ${formattedDate}`
     }));
+});
+
+gulp.task('seo', cb => {
+  request(`http://www.google.com/webmasters/tools/ping?sitemap=${SITEMAP_URL}`);
+  request(`http://www.bing.com/webmaster/ping.aspx?siteMap=${SITEMAP_URL}`);
+  cb();
 });
 
 gulp.task('assets', ['clean'], cb => runSequence(
