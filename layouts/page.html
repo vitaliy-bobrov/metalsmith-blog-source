@@ -6,6 +6,7 @@
 
     {{> manifest }}
 
+    {{> og-page-props }}
     {{> og-image-props }}
 
     <!-- Styles -->
@@ -20,17 +21,14 @@
       <!-- Content -->
       <main class="mdl-layout__content js-to-top-container">
         <section class="mdl-grid posts-grid">
-          <article class="mdl-card mdl-shadow--3dp mdl-cell post mdl-cell--12-col">
-            <header class="mdl-card__media post__media">
+          <article class="mdl-card mdl-shadow--3dp mdl-cell page mdl-cell--12-col">
+            <h1 class="page__title">
+              {{ title }}
+            </h1>
 
-                <h2 class="post__title">
-                  {{ title }}
-                </h2>
-              </header>
-
-              <section class="post__contents">
-                {{{ contents }}}
-              </section>
+            <section class="page__contents">
+              {{{ contents }}}
+            </section>
           </article>
 
         </section>
@@ -42,5 +40,6 @@
 
     <!-- Scripts -->
     {{> js }}
+    {{> ga }}
   </body>
 </html>

@@ -25,26 +25,38 @@
     },
     "manifest.json": {
         "filename": "manifest.json",
-        "hash": "1826c3941119cb0c47fad9acd3f9e971",
+        "hash": "63ded21aea3ccf74da06be4c78ad9bba",
         "created": "2016-12-27T21:25:14.921Z",
-        "updated": "2017-01-09T12:59:04.407Z"
+        "updated": "2017-01-15T16:44:40.147Z"
     },
     "blog/tasks-from-interviews-yandex.md": {
         "filename": "blog/tasks-from-interviews-yandex.md",
-        "hash": "73c695efec06f03be1c97b4e8ca02aee",
+        "hash": "839b64fc7d48128f1f1919b095793592",
         "created": "2016-12-27T21:25:14.921Z",
-        "updated": "2017-01-08T14:56:18.427Z"
+        "updated": "2017-01-15T20:39:39.249Z"
     },
     "blog/hello-world.md": {
         "filename": "blog/hello-world.md",
         "hash": "96cbdca881a1f341f5439f1a39d7b6ee",
         "created": "2016-12-26T21:25:14.921Z",
-        "updated": "2017-01-03T21:12:20.308Z"
+        "updated": "2017-01-14T21:12:20.308Z"
     },
     "robots.txt": {
         "filename": "robots.txt",
-        "hash": "6f94032faf83ae58741013c8fee07cb3",
+        "hash": "fbeaa5e120bfeb20d4b1a126ad65fbd4",
         "created": "2017-01-08T14:12:33.877Z",
-        "updated": "2017-01-09T12:59:04.407Z"
+        "updated": "2017-01-15T16:44:40.147Z"
+    },
+    "pages/about.md": {
+        "filename": "pages/about.md",
+        "hash": "04c1d78392a746d7c9b4efb30fd54311",
+        "created": "2017-01-15T20:11:17.617Z",
+        "updated": "2017-01-15T21:44:48.554Z"
+    },
+    "blog/five-reasons-choose-metalsmith.md": {
+        "filename": "blog/five-reasons-choose-metalsmith.md",
+        "hash": "3b274f249005e0a467edfe9f97a90bfb",
+        "created": "2017-01-15T21:53:01.326Z",
+        "updated": "2017-01-15T22:41:22.808Z"
     }
 }

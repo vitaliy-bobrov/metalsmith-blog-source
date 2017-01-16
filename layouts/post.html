@@ -6,6 +6,7 @@
 
     {{> manifest }}
 
+    {{> og-post-props }}
     {{> og-image-props }}
 
     <!-- Styles -->
@@ -75,6 +76,8 @@
                 </div>
               </section>
 
+              {{{ postShare siteurl path }}}
+
               <section class="post__contents">
                 {{{ contents }}}
               </section>
@@ -93,5 +96,6 @@
 
     <!-- Scripts -->
     {{> js }}
+    {{> ga }}
   </body>
 </html>

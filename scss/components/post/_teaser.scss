@@ -3,7 +3,11 @@
     margin: 0;
     position: relative;
     z-index: $post-title;
-    @include typo-display-1;
+    @include typo-headline;
+
+    @media screen and (min-width: 380px) {
+      @include typo-display-1;
+    }
   }
 
   &__media {

@@ -14,3 +14,11 @@
     border-bottom-color: $mdlext-dark-color-primary;
   }
 }
+
+.mdl-navigation.mdl-layout--large-screen-only {
+  display: none;
+
+  @media screen and (min-width: 1025px) {
+    display: flex;
+  }
+}

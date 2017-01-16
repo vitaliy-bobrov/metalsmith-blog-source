@@ -1,9 +1,14 @@
 .post-info {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 16px;
   font-size: 1rem;
   line-height: 18px;
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+  }
 
   &__avatar {
     margin-right: 16px;
@@ -25,11 +30,21 @@
   }
 
   &__side {
+    width: 100%;
+    padding-top: 16px;
     align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 380px) {
+      width: auto;
+      padding-top: 0;
+      flex-direction: column;
+    }
   }
 
   &__comments {
-    margin-bottom: 8px;
     color: $mdlext-dark-color-accent;
   }
 
@@ -45,6 +60,13 @@
   }
 
   &__categories {
+    font-size: 0;
     text-align: right;
+  }
+
+  &__category {
+    &:not(:last-of-type) {
+      margin-right: 8px;
+    }
   }
 }

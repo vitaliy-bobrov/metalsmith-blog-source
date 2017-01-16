@@ -1,0 +1,30 @@
+.post-share {
+  z-index: $share;
+
+  &__icon {
+    fill: $mdlext-dark-text-color-primary;
+    @extend %absolute-center;
+  }
+}
+
+.share-menu {
+  &__link {
+    display: block;
+
+    .mdlext-dark-color-theme & {
+      color: $mdlext-dark-text-color-primary;
+
+      &:hover,
+      &:focus {
+        color: $mdl-share;
+      }
+    }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    fill: $mdl-share;
+  }
+}

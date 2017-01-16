@@ -28,10 +28,10 @@
 
     <!-- Navigation. We hide it in small screens. -->
     <nav class="mdl-navigation mdl-layout--large-screen-only">
-      <a class="mdl-navigation__link" href="/">Home</a>
+      <a class="mdl-navigation__link {{ activeLink path ''}}" href="/">Blog</a>
 
       {{#each collections.pages as |page|}}
-        <a class="mdl-navigation__link" href="/{{ page.path }}/">{{ page.title }}</a>
+        <a class="mdl-navigation__link {{ activeLink ../path page.path }}" href="/{{ page.path }}/">{{ page.title }}</a>
       {{/each}}
     </nav>
   </div>
@@ -39,7 +39,7 @@
 <div class="mdl-layout__drawer">
   <span class="mdl-layout-title">{{ sitename }}</span>
   <nav class="mdl-navigation">
-    <a class="mdl-navigation__link" href="/">Home</a>
+    <a class="mdl-navigation__link" href="/">Blog</a>
 
     {{#each collections.pages as |page|}}
       <a class="mdl-navigation__link" href="/{{ page.path }}/">{{ page.title }}</a>

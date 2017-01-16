@@ -1,8 +1,6 @@
-.post {
+.page {
   &__title {
-    margin: 0;
-    position: relative;
-    z-index: $post-title;
+    text-align: center;
     @include typo-display-1;
 
     @media screen and (min-width: 768px) {
@@ -12,18 +10,6 @@
     @media screen and (min-width: 1024px) {
       @include typo-display-3;
     }
-  }
-
-  &__media {
-    display: flex;
-    align-items: flex-end;
-    min-height: 284px;
-    padding: 24px;
-    position: relative;
-  }
-
-  &__info {
-    border-bottom: 1px solid $mdlext-dark-divider-color;
   }
 
   &__contents {

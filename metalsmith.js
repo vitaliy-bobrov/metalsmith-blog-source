@@ -7,6 +7,7 @@ const $ = loadPlugins(pkg, 'devDependencies', 'metalsmith-');
 // Site Variables.
 const sitename = 'Bobrov Blog';
 const siteurl = 'https://vitaliy-bobrov.github.io/';
+const facebookAppId = 393821434298248;
 
 // Content variables.
 const pagesPattern = 'pages/*.md';
@@ -17,6 +18,7 @@ Metalsmith(__dirname)
     locale: 'en',
     sitename,
     siteurl,
+    facebookAppId,
     sitelogo: '/images/logo',
     siteogimg: 'images/blog-og.jpg',
     description: 'Blog about web development, but not only...',
@@ -27,7 +29,7 @@ Metalsmith(__dirname)
   .source('./source')
   .destination('./build')
   .clean(false)
-  //.use($.updated())
+  .use($.updated())
   .use($.defaultValues([
     {
       pattern : pagesPattern,
@@ -65,7 +67,8 @@ Metalsmith(__dirname)
         avatar: '/images/authors/bobrov/avatar',
         github: 'https://github.com/vitaliy-bobrov',
         twitter: 'https://twitter.com/bobrov1989',
-        linkedin: 'https://www.linkedin.com/in/vitaliybobrov'
+        linkedin: 'https://www.linkedin.com/in/vitaliybobrov',
+        facebook: 'https://www.facebook.com/bobrov1989'
       }
     }
   }))
@@ -85,7 +88,15 @@ Metalsmith(__dirname)
     languages: ['js', 'html', 'css']
   }))
   .use($.permalinks({
-    relative: false
+    relative: false,
+    linksets: [
+      {
+        match: {
+          collection: 'pages'
+        },
+        pattern: ':title'
+      }
+    ]
   }))
   .use($.excerpts())
   .use($.registerHelpers({
@@ -99,14 +110,6 @@ Metalsmith(__dirname)
   .use($.disqus({
     siteurl,
     shortname: 'bobrov-blog'
-  }))
-  .use($.openGraph({
-    sitename,
-    siteurl,
-    title: 'ogtitle',
-    description: 'ogdescr',
-    image: 'ogimage',
-    decodeEntities: false
   }))
   .use($.twitterCard({
     siteurl,
