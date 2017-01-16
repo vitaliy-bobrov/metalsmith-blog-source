@@ -1,8 +1,8 @@
 ---
-title: 5 Reasons To Choose Metalsmith
+title: 5 Reasons to Choose Metalsmith
 description: Why you midht choose static site generator for your next project?
-ogimage: images/posts/five-reasons-choose-metalsmith-og.jpg
-tumb: /images/posts/five-reasons-choose-metalsmith
+ogimage: images/posts/five-reasons-choose-metalsmith/five-reasons-choose-metalsmith-og.jpg
+tumb: /images/posts/five-reasons-choose-metalsmith/five-reasons-choose-metalsmith
 categories:
 - Metalsmith
 - Blog
@@ -20,8 +20,12 @@ Another platform that I tried to use for blogging was Drupal 7. It is flexible, 
 
 My hope was a completely new Drupal 8. Based on Symfony with Twig as template engine, it promised to be flexible on frone-end. Even the core team wrote about completely new and modern theming system. But the wonder won't happen. To be somehow backward compatible with Drupal 7, they decided to leave theming hooks/preproccessors in Drupal 8. Of course it become much more simplier to modify, but developer need to know from which part of applications come some class name, part of markup etc. So Drupal got a hard view layer again. Hope on Drupal 9...
 
-## Harcore way - custom project.
+## Harcore way - custom project
 Another not so good idea to create blog was to write everithing from scratch on NodeJS. In this case I can do what I want and have full controll on project. I planned to use Express on back-end and Polymer on client-side. But this variant requires a lot of free time, that I haven't. I'm only human, working in the office full-time, have a family and need time to spend with them. Also NodeJS is not about such static project as blogs. Each task has its own best instruments, and Node is great for some interactive projects, that need a lot of user interaction. According to blog it can be just a comments, but in my opinion it is not good idea to build such project with it.
 
 ## Static web-site
 After all my attempts, I've read tutorial about Jekyll.
+
+## Metalsmith
+
+### 1st reason

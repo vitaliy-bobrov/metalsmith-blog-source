@@ -41,9 +41,17 @@
       @include typo-subhead-2;
     }
 
-    h2 {
+    h2,
+    h3 {
       margin-bottom: 8px;
+    }
+
+    h2 {
       @include typo-display-1;
+    }
+
+    h3 {
+      @include typo-headline;
     }
   }
 }

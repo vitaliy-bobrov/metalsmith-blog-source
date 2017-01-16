@@ -6,7 +6,6 @@ const del              = require('del');
 const runSequence      = require('run-sequence');
 const browserSync      = require('browser-sync');
 const gulpLoadPlugins  = require('gulp-load-plugins');
-const imageminMozjpeg  = require('imagemin-mozjpeg');
 const assets           = require('postcss-assets');
 const autoprefixer     = require('autoprefixer');
 const mqpacker         = require('css-mqpacker');
@@ -58,7 +57,7 @@ gulp.task('webp', () => gulp.src([
 );
 
 // Optimize images
-gulp.task('images', ['webp'], () => gulp.src('images/**/*.{jpg,jpeg,png,gif,webp}')
+gulp.task('images', ['webp'], () => gulp.src('./images/**/*.{jpg,jpeg,png,gif,webp}')
     .pipe($.imagemin({
       progressive: true,
       interlaced: true
@@ -93,8 +92,7 @@ gulp.task('styles', () => {
     assets({
       basePath: './',
       baseUrl: '../',
-      loadPaths: ['images/'],
-      cachebuster: true
+      loadPaths: ['images/']
     }),
     autoprefixer,
     mqpacker({sort: true}),
