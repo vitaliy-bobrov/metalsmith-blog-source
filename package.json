@@ -51,7 +51,6 @@
     "gulp-webpcss": "^1.1.1",
     "handlebars": "^4.0.6",
     "helper-moment": "0.1.0",
-    "imagemin-mozjpeg": "^6.0.0",
     "metalsmith": "^2.3.0",
     "metalsmith-author": "^1.1.0",
     "metalsmith-code-highlight": "0.0.3",

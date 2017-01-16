@@ -60,17 +60,8 @@ gulp.task('webp', () => gulp.src([
 // Optimize images
 gulp.task('images', ['webp'], () => gulp.src('images/**/*.{jpg,jpeg,png,gif,webp}')
     .pipe($.imagemin({
-      progressive: false,
-      interlaced: true,
-      use: [
-        $.imagemin.gifsicle(),
-        imageminMozjpeg({
-          quality: 75,
-          progressive: false
-        }),
-        $.imagemin.optipng(),
-        $.imagemin.svgo()
-      ]
+      progressive: true,
+      interlaced: true
     }))
     .pipe(gulp.dest('build/images'))
     .pipe($.size({title: 'images'}))
@@ -111,7 +102,6 @@ gulp.task('styles', () => {
   ];
 
   return gulp.src('scss/**/*.scss')
-    .pipe($.newer('.tmp/styles'))
     .pipe($.plumber({
       errorHandler: onError
     }))
@@ -126,12 +116,10 @@ gulp.task('styles', () => {
     }).on('error', $.sass.logError))
     .pipe($.postcss(processors))
     .pipe($.webpcss())
-    .pipe(gulp.dest('.tmp/styles'))
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.size({title: 'styles'}))
     .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest('build/css'))
-    .pipe(gulp.dest('.tmp/styles'));
+    .pipe(gulp.dest('build/css'));
 });
 
 // Concatenate and minify JavaScript.
@@ -140,25 +128,20 @@ gulp.task('scripts', () =>
       'js/*.js',
       'node_modules/material-design-lite/dist/material.js'
     ])
-      .pipe($.newer('.tmp/scripts'))
       .pipe($.plumber({
         errorHandler: onError
       }))
       .pipe($.sourcemaps.init())
       .pipe($.babel())
       .pipe($.sourcemaps.write())
-      .pipe(gulp.dest('.tmp/scripts'))
       .pipe($.concat('main.min.js'))
       .pipe($.uglify())
       .pipe($.size({title: 'scripts'}))
       .pipe($.sourcemaps.write('.'))
-      .pipe(gulp.dest('build/js'))
-      .pipe(gulp.dest('.tmp/scripts'))
-);
+      .pipe(gulp.dest('build/js')));
 
 // Clean output directory
 gulp.task('clean', () => del([
-  '.tmp',
   'build/images',
   'build/js',
   'build/css'
@@ -170,7 +153,7 @@ gulp.task('serve:dev', () => {
     notify: false,
     logPrefix: 'MetalSync',
     scrollElementMapping: ['main', '.mdl-layout'],
-    server: ['.tmp', 'build'],
+    server: ['build'],
     port: LOCAL_PORT
   });
 
@@ -191,7 +174,7 @@ gulp.task('serve:tunel', () => {
     open: false,
     logPrefix: 'MetalSync',
     scrollElementMapping: ['main', '.mdl-layout'],
-    server: ['.tmp', 'build'],
+    server: ['build'],
     port: LOCAL_PORT
   });
 });
