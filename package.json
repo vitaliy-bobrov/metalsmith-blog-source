@@ -5,7 +5,7 @@
   "main": "metalsmith.js",
   "private": true,
   "scripts": {
-    "start": "gulp && gulp serve",
+    "start": "gulp && gulp serve:dev",
     "build": "gulp",
     "deploy": "gulp && gulp deploy"
   },
@@ -66,6 +66,7 @@
     "metalsmith-register-helpers": "^0.2.0",
     "metalsmith-twitter-card": "^1.0.2",
     "metalsmith-updated": "^0.1.4",
+    "minimist": "^1.2.0",
     "ngrok": "^2.2.4",
     "postcss-assets": "^4.1.0",
     "postcss-mq-keyframes": "^0.3.0",

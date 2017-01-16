@@ -25,9 +25,9 @@ const onError = function(error) {
 
 const LOCAL_PORT = 3000;
 
-let tunnelUrl;
+let tunnelUrl = '';
 
-gulp.task('metalsmith', ['svg'], callback => exec('node ./metalsmith.js',
+gulp.task('metalsmith', ['svg'], callback => exec(`node ./metalsmith.js --url=${tunnelUrl}`,
   (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
@@ -161,12 +161,11 @@ gulp.task('clean', () => del([
   ], {dot: true}));
 
 // Watch files for changes & reload
-gulp.task('serve', () => {
+gulp.task('serve:dev', () => {
   browserSync({
     notify: false,
     logPrefix: 'MetalSync',
     scrollElementMapping: ['main', '.mdl-layout'],
-    // https: true,
     server: ['.tmp', 'build'],
     port: LOCAL_PORT
   });
@@ -182,12 +181,23 @@ gulp.task('serve', () => {
   gulp.watch(['images/**/*'], reload);
 });
 
+gulp.task('serve:tunel', () => {
+  browserSync({
+    notify: false,
+    open: false,
+    logPrefix: 'MetalSync',
+    scrollElementMapping: ['main', '.mdl-layout'],
+    server: ['.tmp', 'build'],
+    port: LOCAL_PORT
+  });
+});
+
 const ngrokOptions = {
   addr: LOCAL_PORT,
   region: 'eu'
 };
 
-gulp.task('tunel', cb => {
+gulp.task('tunel:start', cb => {
   ngrok.connect(ngrokOptions, (err, url) => {
     tunnelUrl = url;
 
@@ -196,7 +206,7 @@ gulp.task('tunel', cb => {
   });
 });
 
-gulp.task('stop-tunel', () => {
+gulp.task('tunel:stop', () => {
   ngrok.disconnect();
   process.kill(0);
 });
@@ -210,8 +220,23 @@ gulp.task('deploy', () => {
       remoteUrl: 'git@github.com:vitaliy-bobrov/vitaliy-bobrov.github.io.git',
       branch: 'master',
       message: `Updates blog content ${formattedDate}`
-    }))
+    }));
 });
+
+gulp.task('assets', ['clean'], cb => runSequence(
+    'styles',
+    ['scripts', 'images'],
+    cb
+  )
+);
+
+gulp.task('tunel', ['assets'], cb => runSequence(
+    'serve:tunel',
+    'tunel:start',
+    'metalsmith',
+    cb
+  )
+);
 
 // Build production files, the default task
 gulp.task('default', ['clean'], cb =>
