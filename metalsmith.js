@@ -87,7 +87,10 @@ const runMetalsmithBuild = url => {
         pageMetadata: {}
       }
     }))
-    .use($.markdown())
+    .use($.markdownRemarkable({
+      typographer: true,
+      quotes: '“”‘’'
+    }))
     .use($.codeHighlight({
       tabReplace: '  ',
       languages: ['js', 'html', 'css']
