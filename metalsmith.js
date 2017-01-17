@@ -32,7 +32,9 @@ const runMetalsmithBuild = url => {
     .source('./source')
     .destination('./build')
     .clean(false)
-    .use($.updated())
+    .use($.updated({
+      updatedFile: '../service-files/.updated.json'
+    }))
     .use($.defaultValues([
       {
         pattern : pagesPattern,
