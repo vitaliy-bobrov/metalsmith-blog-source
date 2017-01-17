@@ -53,5 +53,11 @@
     h3 {
       @include typo-headline;
     }
+
+    blockquote {
+      p {
+        display: inline;
+      }
+    }
   }
 }
