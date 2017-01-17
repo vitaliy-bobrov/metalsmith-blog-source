@@ -11,51 +11,42 @@ const postCell = (index, length) => {
   switch (index) {
     case 0:
       desktop = 12;
-      tablet = 6;
       break;
 
     case 1:
       desktop = 6;
-      tablet = 6;
       break;
 
     case 2:
       desktop = 6;
-      tablet = 12;
       break;
 
     case 3:
       desktop = 12;
-      tablet = 6;
       break;
 
     case 4:
       desktop = 7;
-      tablet = 6;
       break;
 
     case 5:
       desktop = 5;
-      tablet = 12;
       break;
 
     case 6:
       desktop = 5;
-      tablet = 6;
       break;
 
     case 7:
       desktop = 7;
-      tablet = 6;
       break;
 
     default:
       desktop = 12;
-      tablet = 12;
       break;
   }
 
-  return `mdl-cell--${desktop}-col-desktop mdl-cell--${tablet}-col-tablet mdl-cell--12-col-phone`;
+  return `mdl-cell--${desktop}-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone`;
 };
 
 const postIllustration = (tumb, alt) => `

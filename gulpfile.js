@@ -6,13 +6,12 @@ const del              = require('del');
 const runSequence      = require('run-sequence');
 const browserSync      = require('browser-sync');
 const gulpLoadPlugins  = require('gulp-load-plugins');
-const imageminMozjpeg  = require('imagemin-mozjpeg');
 const assets           = require('postcss-assets');
 const autoprefixer     = require('autoprefixer');
 const mqpacker         = require('css-mqpacker');
 const mqkeyframes      = require('postcss-mq-keyframes');
 const exec             = require('child_process').exec;
-const ngrok            = require('ngrok');
+// const ngrok            = require('ngrok');
 const request          = require('request');
 const url              = require('url');
 const pkg              = require('./package.json');
@@ -38,6 +37,9 @@ gulp.task('metalsmith', ['svg'], callback => exec(`node ./metalsmith.js --url=${
     callback(err);
   }));
 
+gulp.task('service-files', () => gulp.src(['service-files/**/*', '!service-files/.updated.json'])
+  .pipe(gulp.dest('build')));
+
 // Lint JavaScript
 gulp.task('lint', () => gulp.src([
     'js/**/*.js',
@@ -58,19 +60,10 @@ gulp.task('webp', () => gulp.src([
 );
 
 // Optimize images
-gulp.task('images', ['webp'], () => gulp.src('images/**/*.{jpg,jpeg,png,gif,webp}')
+gulp.task('images', ['webp'], () => gulp.src('./images/**/*.{jpg,jpeg,png,gif,webp}')
     .pipe($.imagemin({
-      progressive: false,
-      interlaced: true,
-      use: [
-        $.imagemin.gifsicle(),
-        imageminMozjpeg({
-          quality: 75,
-          progressive: false
-        }),
-        $.imagemin.optipng(),
-        $.imagemin.svgo()
-      ]
+      progressive: true,
+      interlaced: true
     }))
     .pipe(gulp.dest('build/images'))
     .pipe($.size({title: 'images'}))
@@ -102,8 +95,7 @@ gulp.task('styles', () => {
     assets({
       basePath: './',
       baseUrl: '../',
-      loadPaths: ['images/'],
-      cachebuster: true
+      loadPaths: ['images/']
     }),
     autoprefixer,
     mqpacker({sort: true}),
@@ -111,7 +103,6 @@ gulp.task('styles', () => {
   ];
 
   return gulp.src('scss/**/*.scss')
-    .pipe($.newer('.tmp/styles'))
     .pipe($.plumber({
       errorHandler: onError
     }))
@@ -126,12 +117,10 @@ gulp.task('styles', () => {
     }).on('error', $.sass.logError))
     .pipe($.postcss(processors))
     .pipe($.webpcss())
-    .pipe(gulp.dest('.tmp/styles'))
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.size({title: 'styles'}))
     .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest('build/css'))
-    .pipe(gulp.dest('.tmp/styles'));
+    .pipe(gulp.dest('build/css'));
 });
 
 // Concatenate and minify JavaScript.
@@ -140,25 +129,20 @@ gulp.task('scripts', () =>
       'js/*.js',
       'node_modules/material-design-lite/dist/material.js'
     ])
-      .pipe($.newer('.tmp/scripts'))
       .pipe($.plumber({
         errorHandler: onError
       }))
       .pipe($.sourcemaps.init())
       .pipe($.babel())
       .pipe($.sourcemaps.write())
-      .pipe(gulp.dest('.tmp/scripts'))
       .pipe($.concat('main.min.js'))
       .pipe($.uglify())
       .pipe($.size({title: 'scripts'}))
       .pipe($.sourcemaps.write('.'))
-      .pipe(gulp.dest('build/js'))
-      .pipe(gulp.dest('.tmp/scripts'))
-);
+      .pipe(gulp.dest('build/js')));
 
 // Clean output directory
 gulp.task('clean', () => del([
-  '.tmp',
   'build/images',
   'build/js',
   'build/css'
@@ -170,7 +154,7 @@ gulp.task('serve:dev', () => {
     notify: false,
     logPrefix: 'MetalSync',
     scrollElementMapping: ['main', '.mdl-layout'],
-    server: ['.tmp', 'build'],
+    server: ['build'],
     port: LOCAL_PORT
   });
 
@@ -191,7 +175,7 @@ gulp.task('serve:tunel', () => {
     open: false,
     logPrefix: 'MetalSync',
     scrollElementMapping: ['main', '.mdl-layout'],
-    server: ['.tmp', 'build'],
+    server: ['build'],
     port: LOCAL_PORT
   });
 });
@@ -244,7 +228,7 @@ gulp.task('seo', cb => {
 
 gulp.task('assets', ['clean'], cb => runSequence(
     'styles',
-    ['scripts', 'images'],
+    ['scripts', 'images', 'service-files'],
     cb
   )
 );
@@ -261,7 +245,7 @@ gulp.task('tunel', ['assets'], cb => runSequence(
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    ['metalsmith', 'lint', 'scripts', 'images'],
+    ['metalsmith', 'lint', 'scripts', 'images', 'service-files'],
     cb
   )
 );

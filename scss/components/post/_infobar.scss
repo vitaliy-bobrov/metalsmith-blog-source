@@ -32,6 +32,7 @@
   &__side {
     width: 100%;
     padding-top: 16px;
+    text-align: right;
     align-self: flex-end;
     display: flex;
     justify-content: space-between;
@@ -61,7 +62,6 @@
 
   &__categories {
     font-size: 0;
-    text-align: right;
   }
 
   &__category {
