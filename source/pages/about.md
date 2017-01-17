@@ -10,14 +10,14 @@ I’m Vitaliy, a 27-year-old front-end engineer from Mykolaiv, Ukraine. But curr
 
 ## Speaker
 My talks on community events:
-- Kyiv DrupalCamp 2015 (Kyiv, Ukraine)
+- Kyiv DrupalCamp 2015 (Kyiv, Ukraine) --
   [Slides](https://docs.google.com/presentation/d/193IXo4MN1qNJ9DixMxmNmZjuW0FyFi-BEck0hB0xlBk/edit?usp=sharing)
-- Lviv Euro DrupalCamp 2015 (Lviv, Ukraine)
+- Lviv Euro DrupalCamp 2015 (Lviv, Ukraine) --
   [Slides](https://docs.google.com/presentation/d/1pyzEy60eYgdmtaX7JlEPFHHcsF2IwYyE6pZT05qbDfE/edit?usp=sharing)
-- Experts Fridays (Odessa, Ukraine)
+- Experts Fridays (Odessa, Ukraine) --
   [Slides](https://docs.google.com/presentation/d/1NQkPvKJn_aVm3QH5X6AGUZpBua25fBlYbPXm2Mhau8o/edit?usp=sharing)
-- WebCamp: Front-End (Odessa, Ukraine)
-  [Slides](https://docs.google.com/presentation/d/15_dfnWqU-bpWUVb0ISP_CDg0fgdQWrDjnVsd5jfiGdA/edit?usp=sharing)
+- WebCamp: Front-End (Odessa, Ukraine) --
+  [Slides](https://docs.google.com/presentation/d/15_dfnWqU-bpWUVb0ISP_CDg0fgdQWrDjnVsd5jfiGdA/edit?usp=sharing) +
   [Video](https://youtu.be/6AKG7goUqDQ)
 
 ## Contact

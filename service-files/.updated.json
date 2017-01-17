@@ -1,26 +1,38 @@
 {
+    ".DS_Store": {
+        "filename": ".DS_Store",
+        "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
+        "created": "2017-01-17T22:47:51.835Z",
+        "updated": "2017-01-17T22:47:51.835Z"
+    },
     "index.md": {
         "filename": "index.md",
         "hash": "d41d8cd98f00b204e9800998ecf8427e",
-        "created": "2017-01-17T08:03:28.710Z",
-        "updated": "2017-01-17T08:03:28.710Z"
+        "created": "2017-01-17T22:47:51.835Z",
+        "updated": "2017-01-17T22:47:51.835Z"
     },
-    "blog\\hello-world.md": {
-        "filename": "blog\\hello-world.md",
-        "hash": "2c1406066b7aa9fd66ec36b243c719bf",
-        "created": "2017-01-17T08:03:28.710Z",
-        "updated": "2017-01-17T08:03:28.710Z"
+    "blog/five-reasons-choose-metalsmith.md": {
+        "filename": "blog/five-reasons-choose-metalsmith.md",
+        "hash": "70d0573a71b92e02edd073fc8002bd57",
+        "created": "2017-01-15T00:00:00.000Z",
+        "updated": "2017-01-15T00:00:00.000Z"
     },
-    "blog\\tasks-from-interviews-yandex.md": {
-        "filename": "blog\\tasks-from-interviews-yandex.md",
-        "hash": "c66d27a1700e542002feddfb0350c908",
-        "created": "2017-01-17T08:03:28.710Z",
-        "updated": "2017-01-17T08:03:28.710Z"
+    "blog/hello-world.md": {
+        "filename": "blog/hello-world.md",
+        "hash": "96cbdca881a1f341f5439f1a39d7b6ee",
+        "created": "2016-12-26T00:00:00.000Z",
+        "updated": "2017-01-14T00:00:00.000Z"
     },
-    "pages\\about.md": {
-        "filename": "pages\\about.md",
-        "hash": "b7f643f84c5fbebc074027e1d01a85c9",
-        "created": "2017-01-17T08:03:28.710Z",
-        "updated": "2017-01-17T08:03:28.710Z"
+    "blog/tasks-from-interviews-yandex.md": {
+        "filename": "blog/tasks-from-interviews-yandex.md",
+        "hash": "839b64fc7d48128f1f1919b095793592",
+        "created": "2016-12-27T00:00:00.000Z",
+        "updated": "2017-01-15T00:00:00.000Z"
+    },
+    "pages/about.md": {
+        "filename": "pages/about.md",
+        "hash": "83c94d59ca5627910c3c15d195ab56ec",
+        "created": "2017-01-17T22:47:51.835Z",
+        "updated": "2017-01-17T22:47:51.835Z"
     }
 }
