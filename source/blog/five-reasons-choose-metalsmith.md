@@ -34,4 +34,56 @@ After trying some of most popular static site generators, I fount most fittable 
 
 In general Metalsmith is the module that operates with JavaScript objects and produce files in the end. It is pretty easy. Generator reads you files (markdown, html, whatever), creates a  objects tree and fill them with files metadata -- simple key-value pairs. Metadata could be provided with a plugin or inside files (for example as [YAML front matter](http://assemble.io/docs/YAML-front-matter.html)). And that's it. You can do what you want and how you want. No limitations anymore.
 
-### 1st reason
+Metalsmith build to include plugins to generate output according to source files. It exposes two ways to write generator config: JavaScript and JSON. It is up to you what to use, but JavaScript if preferable as this way gives ability to generate parts of options on fly depending on your needs. Basic config looks like this:
+
+```js
+const Metalsmith = require('metalsmith');
+
+Metalsmith(__dirname)
+  .metadata({ // Any key-value pairs to be added to any file.
+    site: {
+      url: 'https://my-static-site.io',
+      title: 'My Static Site'
+    }
+  })
+  .source('./source')
+  .destination('./build')
+  .build(function(err) {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log('Metalsmith build completed')
+    }
+  });
+```
+
+Probably this build will only move your files from source directory to destination. Metalsmith API is pretty small and includes only 11 methods. All transformations will be done with plugins. When you are reading this article there are already more than 200 plugins listed on the official web-site. But some plugins aren't in this list yet. Event if you can't find any plugins that fits your project needs, nothing will stop you to write your own. Thanks to Metalsmith creator, plugin APi in simple as possible. Here is soma basic example:
+
+```js
+// Expose `plugin`.
+module.exports = plugin;
+
+const defaults = {
+  // Your plugin default configuration.
+}
+
+
+function plugin(opts) {
+  let config = Object.assign({}, defaults, opts)
+
+  return function (files, metalsmith, done) => {
+
+    setImmediate(done); // Put next plugin execution into execution stack.
+
+    Object.keys(files).forEach(file => {
+      let data = files[file];
+
+      if (data['my-metadata']) {
+        // Do something.
+      }
+    });
+
+  };
+}
+```
+
