@@ -29,7 +29,9 @@ That is why I start looking for similar tool as Jekyll, but written with my favo
 
 ## Metalsmith
 After trying some of most popular static site generators, I fount most fittable one -- [Metalsmith](http://www.metalsmith.io/). It is really simple, extremely simple. It is the first thing maintainers write about the project:
+
 > An extremely simple, _pluggable_ static site generator.
+
 In general Metalsmith is the module that operates with JavaScript objects and produce files in the end. It is pretty easy. Generator reads you files (markdown, html, whatever), creates a  objects tree and fill them with files metadata -- simple key-value pairs. Metadata could be provided with a plugin or inside files (for example as [YAML front matter](http://assemble.io/docs/YAML-front-matter.html)). And that's it. You can do what you want and how you want. No limitations anymore.
 
 ### 1st reason
