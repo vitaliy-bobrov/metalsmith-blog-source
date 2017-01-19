@@ -2,20 +2,26 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2017-01-19T19:24:02.062Z",
-        "updated": "2017-01-19T19:24:02.062Z"
+        "created": "2017-01-19T20:06:33.005Z",
+        "updated": "2017-01-19T20:06:33.005Z"
     },
     "index.md": {
         "filename": "index.md",
         "hash": "d41d8cd98f00b204e9800998ecf8427e",
-        "created": "2017-01-19T19:24:02.062Z",
-        "updated": "2017-01-19T19:24:02.062Z"
+        "created": "2017-01-19T20:06:33.005Z",
+        "updated": "2017-01-19T20:06:33.005Z"
+    },
+    "pages/about.md": {
+        "filename": "pages/about.md",
+        "hash": "83c94d59ca5627910c3c15d195ab56ec",
+        "created": "2017-01-19T20:06:33.005Z",
+        "updated": "2017-01-19T20:06:33.005Z"
     },
     "blog/five-reasons-choose-metalsmith.md": {
         "filename": "blog/five-reasons-choose-metalsmith.md",
-        "hash": "f3e1efc454214428ce12ac8459af0f5e",
+        "hash": "38c0c0207a7623d90389fb20f8c916ae",
         "created": "2017-01-15T00:00:00.000Z",
-        "updated": "2017-01-15T00:00:00.000Z"
+        "updated": "2017-01-19T00:00:00.000Z"
     },
     "blog/hello-world.md": {
         "filename": "blog/hello-world.md",
@@ -28,11 +34,5 @@
         "hash": "839b64fc7d48128f1f1919b095793592",
         "created": "2016-12-27T00:00:00.000Z",
         "updated": "2017-01-15T00:00:00.000Z"
-    },
-    "pages/about.md": {
-        "filename": "pages/about.md",
-        "hash": "83c94d59ca5627910c3c15d195ab56ec",
-        "created": "2017-01-19T19:24:02.062Z",
-        "updated": "2017-01-19T19:24:02.062Z"
     }
 }

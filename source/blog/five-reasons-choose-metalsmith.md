@@ -4,6 +4,7 @@ description: Why you midht choose static site generator for your next project?
 ogimage: images/posts/five-reasons-choose-metalsmith/five-reasons-choose-metalsmith-og.jpg
 tumb: /images/posts/five-reasons-choose-metalsmith/five-reasons-choose-metalsmith
 created: 2017-01-15
+updated: 2017-01-19
 categories:
 - Metalsmith
 - Blog
@@ -42,7 +43,7 @@ Most reasons to choose Metalsmith:
 5. Static site significantly fast
 
 ### Simple and quick configuration
-Metalsmith builds to include plugins to generate the output according to source files. It exposes two ways to write generator config: JavaScript and JSON. It is up to you what to use, but JavaScript if preferable as this way gives the ability to generate parts of options on the fly depending on your needs. Basic config looks like this:
+Metalsmith builds to include plugins to generate the output according to source files. It exposes two ways to write generator config: JavaScript and JSON. It is up to you what to use, but JavaScript is preferable as this way gives the ability to generate parts of options on the fly depending on your needs. Basic config looks like this:
 
 ```js
 const Metalsmith = require('metalsmith');
