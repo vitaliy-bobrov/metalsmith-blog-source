@@ -3,5 +3,5 @@ ie >= 11
 ff >= 49
 chrome >= 54
 safari >= 8
-ios >= 9
-android >= 5
+ios >= 8
+android >= 4.4

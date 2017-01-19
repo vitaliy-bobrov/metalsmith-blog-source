@@ -102,6 +102,8 @@ gulp.task('styles', () => {
     mqkeyframes
   ];
 
+  const prod = process.env.NODE_ENV === 'production';
+
   return gulp.src('scss/**/*.scss')
     .pipe($.plumber({
       errorHandler: onError
@@ -117,6 +119,17 @@ gulp.task('styles', () => {
     }).on('error', $.sass.logError))
     .pipe($.postcss(processors))
     .pipe($.webpcss())
+    .pipe($.if(prod, $.uncss({
+      html: ['build/**/*.html'],
+      ignore: [
+        /^\.js-.*/,
+        /.*-js-.*/,
+        /^.*is-.*/,
+        /^.*mdl-(layout|menu|button|button--fab|ripple).*/,
+        /^.*\.webp.*/,
+        '.drawer-icon'
+      ]
+    })))
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.size({title: 'styles'}))
     .pipe($.sourcemaps.write('./'))
