@@ -2,24 +2,18 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2017-01-18T23:13:47.702Z",
-        "updated": "2017-01-18T23:13:47.702Z"
+        "created": "2017-01-19T19:24:02.062Z",
+        "updated": "2017-01-19T19:24:02.062Z"
     },
     "index.md": {
         "filename": "index.md",
         "hash": "d41d8cd98f00b204e9800998ecf8427e",
-        "created": "2017-01-18T23:13:47.702Z",
-        "updated": "2017-01-18T23:13:47.702Z"
-    },
-    "pages/about.md": {
-        "filename": "pages/about.md",
-        "hash": "83c94d59ca5627910c3c15d195ab56ec",
-        "created": "2017-01-18T23:13:47.702Z",
-        "updated": "2017-01-18T23:13:47.702Z"
+        "created": "2017-01-19T19:24:02.062Z",
+        "updated": "2017-01-19T19:24:02.062Z"
     },
     "blog/five-reasons-choose-metalsmith.md": {
         "filename": "blog/five-reasons-choose-metalsmith.md",
-        "hash": "d69f3790f3995b451cfcaefe6276e207",
+        "hash": "f3e1efc454214428ce12ac8459af0f5e",
         "created": "2017-01-15T00:00:00.000Z",
         "updated": "2017-01-15T00:00:00.000Z"
     },
@@ -34,5 +28,11 @@
         "hash": "839b64fc7d48128f1f1919b095793592",
         "created": "2016-12-27T00:00:00.000Z",
         "updated": "2017-01-15T00:00:00.000Z"
+    },
+    "pages/about.md": {
+        "filename": "pages/about.md",
+        "hash": "83c94d59ca5627910c3c15d195ab56ec",
+        "created": "2017-01-19T19:24:02.062Z",
+        "updated": "2017-01-19T19:24:02.062Z"
     }
 }

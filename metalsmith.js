@@ -5,10 +5,6 @@ const loadPlugins      = require('./load-plugins');
 
 const $ = loadPlugins(pkg, 'devDependencies', 'metalsmith-');
 
-const extLink = state => {
-  console.log(state);
-}
-
 const remarkableExtLink = (md, options) => {
   const defaults = {
     target: '_blank',
@@ -29,7 +25,6 @@ const remarkableExtLink = (md, options) => {
     regexp = /href="([^"]*)"/;
 
     let url = regexp.exec(result)[1];
-    console.log(url);
 
     if (url.indexOf(config.host) === -1 || (url[0] === '/' && url.indexOf('//') !== 0)) {
       result = result.replace('>', ` target="${config.target}" rel="${config.rel}">`);
