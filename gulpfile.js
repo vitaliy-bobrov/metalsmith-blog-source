@@ -140,7 +140,13 @@ gulp.task('styles', () => {
 gulp.task('scripts', () =>
     gulp.src([
       'js/*.js',
-      'node_modules/material-design-lite/dist/material.js'
+      'node_modules/material-design-lite/src/mdlComponentHandler.js',
+      'node_modules/material-design-lite/src/button/button.js',
+      'node_modules/material-design-lite/src/icon-toggle/icon-toggle.js',
+      'node_modules/material-design-lite/src/menu/menu.js',
+      'node_modules/material-design-lite/src/tooltip/tooltip.js',
+      'node_modules/material-design-lite/src/layout/layout.js',
+      'node_modules/material-design-lite/src/ripple/ripple.js'
     ])
       .pipe($.plumber({
         errorHandler: onError
@@ -221,7 +227,7 @@ gulp.task('html:prod', () => gulp.src('build/**/*.html')
   }))
   .pipe(gulp.dest('build')));
 
-gulp.task('deploy', ['html:prod'], () => {
+gulp.task('deploy', ['html:prod', 'styles'], () => {
   let date = new Date();
   let formattedDate = date.toUTCString();
 
