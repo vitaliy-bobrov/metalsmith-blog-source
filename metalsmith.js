@@ -1,38 +1,12 @@
-const Metalsmith       = require('metalsmith');
-const argv             = require('minimist')(process.argv.slice(2));
-const pkg              = require('./package.json');
-const loadPlugins      = require('./load-plugins');
+const Metalsmith        = require('metalsmith');
+const argv              = require('minimist')(process.argv.slice(2));
+const pkg               = require('./package.json');
+const loadPlugins       = require('./load-plugins');
+
+const extlink = require('remarkable-extlink');
+const classy  = require('remarkable-classy');
 
 const $ = loadPlugins(pkg, 'devDependencies', 'metalsmith-');
-
-const remarkableExtLink = (md, options) => {
-  const defaults = {
-    target: '_blank',
-    rel: 'nofollow noreferrer noopener'
-  };
-  const config = Object.assign({}, defaults, options);
-
-  md.renderer.rules.extlink = () => '';
-
-  const originalRender = md.renderer.rules.link_open;
-
-  md.renderer.rules.link_open = function(tokens, idx, options, env) {
-    var result;
-
-    // first get the result as per the original method we replaced
-    result = originalRender.apply(null, arguments);
-
-    regexp = /href="([^"]*)"/;
-
-    let url = regexp.exec(result)[1];
-
-    if (url.indexOf(config.host) === -1 || (url[0] === '/' && url.indexOf('//') !== 0)) {
-      result = result.replace('>', ` target="${config.target}" rel="${config.rel}">`);
-    }
-
-    return result;
-  };
-};
 
 // Site Variables.
 const sitename = 'Bobrov Blog';
@@ -117,11 +91,12 @@ const runMetalsmithBuild = url => {
       }
     }))
     .use($.markdownRemarkable({
-      typographer: true
-    })
-    .use(remarkableExtLink, {
-      base: siteurl
-    }))
+        typographer: true
+      })
+      .use(classy)
+      .use(extlink, {
+        host: siteurl
+      }))
     .use($.codeHighlight({
       tabReplace: '  ',
       languages: ['js', 'html', 'css']

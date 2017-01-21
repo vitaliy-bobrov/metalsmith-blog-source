@@ -1,6 +1,10 @@
 .mdlext-dark-color-theme {
   .mdl-card {
-    background: $mdl-dark-card;
+    background-color: $mdl-dark-card;
+
+    &__media {
+      background-color: $mdl-dark-header;
+    }
   }
 
   .post-teaser__title-link {

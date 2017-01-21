@@ -71,6 +71,8 @@
     "ngrok": "^2.2.4",
     "postcss-assets": "^4.1.0",
     "postcss-mq-keyframes": "^0.3.0",
+    "remarkable-classy": "0.0.1",
+    "remarkable-extlink": "^1.0.0",
     "run-sequence": "^1.2.2"
   },
   "dependencies": {
