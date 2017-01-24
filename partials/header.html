@@ -31,7 +31,7 @@
       <a class="mdl-navigation__link {{ activeLink path ''}}" href="/">Blog</a>
 
       {{#each collections.pages as |page|}}
-        <a class="mdl-navigation__link {{ activeLink ../path page.path }}" href="/{{ page.path }}/">{{ page.title }}</a>
+        <a class="mdl-navigation__link {{ activeLink ../path page.path }}" href="/{{ page.path }}/" {{ currentLink ../path page.path }}>{{ page.title }}</a>
       {{/each}}
     </nav>
   </div>
