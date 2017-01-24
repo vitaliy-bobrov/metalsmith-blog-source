@@ -1,6 +1,6 @@
 ---
 title: Webpack 2 Migration Tips
-description: Stable version of webpack 2 has been just rleased, there are few tips to help migrate to newest version.
+description: Webpack 2 has been just released, it brings a lot of improvement and cool features, as well as breaking changes in configuration.
 ogimage: images/posts/webpack-2-migration-tips/webpack-2-migration-tips-og.jpg
 tumb: /images/posts/webpack-2-migration-tips/webpack-2-migration-tips
 created: 2017-01-19

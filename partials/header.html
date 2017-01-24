@@ -1,8 +1,13 @@
 <header class="mdl-layout__header" role="banner">
-  <div class="mdl-layout__header-row">
+  <div class="mdl-layout__header-row"
+       itemscope
+       itemtype="http://schema.org/Organization">
     <!-- Title -->
     <span class="mdl-layout-title">
-      <a href="/" class="site-link">{{ sitename }}</a>
+      <a class="site-link"
+         href="/"
+         itemprop="url"
+         itemprop="name">{{ sitename }}</a>
     </span>
 
     <div class="mdl-layout-spacer">
@@ -21,17 +26,21 @@
           <source srcset="{{ sitelogo }}-mobile.webp 1x, {{ sitelogo }}-mobile@2x.webp 2x"
                   type="image/webp">
           <source srcset="{{ sitelogo }}-mobile.png 1x, {{ sitelogo }}-mobile@2x.png 2x">
-          <img src="{{ sitelogo }}.png" alt="{{ sitename }} Logo" class="site-logo__img">
+          <img src="{{ sitelogo }}.png" alt="{{ sitename }} Logo" class="site-logo__img" itemprop="logo">
         </picture>
       </a>
     </div>
 
     <!-- Navigation. We hide it in small screens. -->
     <nav class="mdl-navigation mdl-layout--large-screen-only">
-      <a class="mdl-navigation__link {{ activeLink path ''}}" href="/">Blog</a>
+      <a class="mdl-navigation__link {{ activeLink path '' }}"
+         href="/"
+         {{{ currentLink path '' }}}>Blog</a>
 
       {{#each collections.pages as |page|}}
-        <a class="mdl-navigation__link {{ activeLink ../path page.path }}" href="/{{ page.path }}/" {{ currentLink ../path page.path }}>{{ page.title }}</a>
+        <a class="mdl-navigation__link {{ activeLink ../path page.path }}"
+           href="/{{ page.path }}/"
+           {{{ currentLink ../path page.path }}}>{{ page.title }}</a>
       {{/each}}
     </nav>
   </div>

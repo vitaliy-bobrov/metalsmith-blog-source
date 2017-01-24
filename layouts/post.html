@@ -21,13 +21,15 @@
       <!-- Content -->
       <main class="mdl-layout__content js-to-top-container">
         <section class="mdl-grid posts-grid">
-          <article class="mdl-card mdl-shadow--3dp mdl-cell post mdl-cell--12-col">
+          <article class="mdl-card mdl-shadow--3dp mdl-cell post mdl-cell--12-col"
+                   itemscope
+                   itemtype="http://schema.org/Article">
             <header class="mdl-card__media post__media">
                 {{{ postIllustration tumb title }}}
 
                 <div class="safe-gradient"></div>
 
-                <h1 class="post__title">
+                <h1 class="post__title" itemprop="headline">
                   {{ title }}
                 </h1>
               </header>
@@ -46,8 +48,11 @@
                   {{/if}}
 
                   <div class="post-info__data-wrapper">
-                    <div class="post-info__author">
-                      {{ author.name }}
+                    <div class="post-info__author"
+                         itemprop="author"
+                         itemscope
+                         itemtype="https://schema.org/Person">
+                      <span itemprop="name">{{ author.name }}</span>
                     </div>
 
                     {{#if modified}}
