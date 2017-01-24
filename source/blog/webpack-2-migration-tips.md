@@ -112,7 +112,10 @@ module: {
     {
       test: /\.(scss|sass)$/,
       use: [
-        ExtractTextPlugin.extract('style-loader'),
+        ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: 'style-loader'
+        }),
         {
           loader: 'css-loader',
           options: {
