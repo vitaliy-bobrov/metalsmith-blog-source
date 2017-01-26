@@ -1,0 +1,9 @@
+.star-me {
+  text-align: center;
+
+  a {
+    @extend .mdl-button;
+    @extend .mdl-button--raised;
+    @extend .mdl-button--colored;
+  }
+}

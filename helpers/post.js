@@ -4,44 +4,46 @@ const postCell = (index, length) => {
   let desktop;
   let tablet;
 
-  if (length === 8 || length === 4) {
-    switch (index) {
-      case 0:
-        desktop = 12;
-        break;
+  switch (index) {
+    case 0:
+      desktop = 12;
+      break;
 
-      case 1:
-        desktop = 6;
-        break;
+    case 1:
+      desktop = 6;
+      break;
 
-      case 2:
-        desktop = 6;
-        break;
+    case 2:
+      desktop = 6;
+      break;
 
-      case 3:
-        desktop = 12;
-        break;
+    case 3:
+      desktop = 12;
+      break;
 
-      case 4:
-        desktop = 7;
-        break;
+    case 4:
+      desktop = 7;
+      break;
 
-      case 5:
-        desktop = 5;
-        break;
+    case 5:
+      desktop = 5;
+      break;
 
-      case 6:
-        desktop = 5;
-        break;
+    case 6:
+      desktop = 5;
+      break;
 
-      case 7:
-        desktop = 7;
-        break;
+    case 7:
+      desktop = 7;
+      break;
 
-      default:
-        desktop = 12;
-        break;
-    }
+    default:
+      desktop = 12;
+      break;
+  }
+
+  if (length % 2 !== 0 && index === length - 1) {
+    desktop = 12;
   }
 
   return `mdl-cell--${desktop}-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone`;
