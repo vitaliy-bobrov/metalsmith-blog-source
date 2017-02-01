@@ -99,7 +99,7 @@ const runMetalsmithBuild = url => {
       }))
     .use($.codeHighlight({
       tabReplace: '  ',
-      languages: ['js', 'html', 'css', 'bash', 'json']
+      languages: ['js', 'html', 'css', 'bash', 'json', 'yaml']
     }))
     .use($.permalinks({
       relative: false,

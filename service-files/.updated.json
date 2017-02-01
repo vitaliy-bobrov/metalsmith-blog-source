@@ -1,15 +1,21 @@
 {
-    ".DS_Store": {
-        "filename": ".DS_Store",
-        "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2017-01-26T22:24:49.828Z",
-        "updated": "2017-01-26T22:24:49.828Z"
-    },
     "index.md": {
         "filename": "index.md",
         "hash": "d41d8cd98f00b204e9800998ecf8427e",
-        "created": "2017-01-26T22:24:49.828Z",
-        "updated": "2017-01-26T22:24:49.828Z"
+        "created": "2017-02-01T21:45:16.880Z",
+        "updated": "2017-02-01T21:45:16.880Z"
+    },
+    ".DS_Store": {
+        "filename": ".DS_Store",
+        "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
+        "created": "2017-02-01T21:45:16.880Z",
+        "updated": "2017-02-01T21:45:16.880Z"
+    },
+    "blog/adding-comments-to-metalsmith.md": {
+        "filename": "blog/adding-comments-to-metalsmith.md",
+        "hash": "739d3f704b21a26094151e08e4dfd715",
+        "created": "2017-01-30T00:00:00.000Z",
+        "updated": "2017-01-30T00:00:00.000Z"
     },
     "blog/five-reasons-choose-metalsmith.md": {
         "filename": "blog/five-reasons-choose-metalsmith.md",
@@ -17,23 +23,17 @@
         "created": "2017-01-15T00:00:00.000Z",
         "updated": "2017-01-19T00:00:00.000Z"
     },
-    "blog/add-comments-to-metalsmith-project.md": {
-        "filename": "blog/add-comments-to-metalsmith-project.md",
-        "hash": "a685362b7785ffcb0a1173112d704bb1",
-        "created": "2017-01-26T22:24:49.828Z",
-        "updated": "2017-01-26T22:24:49.828Z"
+    "blog/hello-world.md": {
+        "filename": "blog/hello-world.md",
+        "hash": "96cbdca881a1f341f5439f1a39d7b6ee",
+        "created": "2016-12-26T00:00:00.000Z",
+        "updated": "2017-01-14T00:00:00.000Z"
     },
     "blog/tasks-from-interviews-yandex.md": {
         "filename": "blog/tasks-from-interviews-yandex.md",
         "hash": "839b64fc7d48128f1f1919b095793592",
         "created": "2016-12-27T00:00:00.000Z",
         "updated": "2017-01-15T00:00:00.000Z"
-    },
-    "blog/hello-world.md": {
-        "filename": "blog/hello-world.md",
-        "hash": "96cbdca881a1f341f5439f1a39d7b6ee",
-        "created": "2016-12-26T00:00:00.000Z",
-        "updated": "2017-01-14T00:00:00.000Z"
     },
     "blog/webpack-2-migration-tips.md": {
         "filename": "blog/webpack-2-migration-tips.md",
@@ -44,7 +44,7 @@
     "pages/about.md": {
         "filename": "pages/about.md",
         "hash": "83c94d59ca5627910c3c15d195ab56ec",
-        "created": "2017-01-26T22:24:49.828Z",
-        "updated": "2017-01-26T22:24:49.828Z"
+        "created": "2017-02-01T21:45:16.880Z",
+        "updated": "2017-02-01T21:45:16.880Z"
     }
 }
