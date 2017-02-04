@@ -1,15 +1,15 @@
 {
-    "index.md": {
-        "filename": "index.md",
-        "hash": "d41d8cd98f00b204e9800998ecf8427e",
-        "created": "2017-02-01T21:45:16.880Z",
-        "updated": "2017-02-01T21:45:16.880Z"
-    },
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2017-02-01T21:45:16.880Z",
-        "updated": "2017-02-01T21:45:16.880Z"
+        "created": "2017-02-01T22:28:15.876Z",
+        "updated": "2017-02-01T22:28:15.876Z"
+    },
+    "index.md": {
+        "filename": "index.md",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e",
+        "created": "2017-02-01T22:28:15.876Z",
+        "updated": "2017-02-01T22:28:15.876Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
@@ -35,6 +35,12 @@
         "created": "2016-12-27T00:00:00.000Z",
         "updated": "2017-01-15T00:00:00.000Z"
     },
+    "blog/please-no-more-jquery.md": {
+        "filename": "blog/please-no-more-jquery.md",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e",
+        "created": "2017-02-01T22:28:15.876Z",
+        "updated": "2017-02-01T22:28:15.876Z"
+    },
     "blog/webpack-2-migration-tips.md": {
         "filename": "blog/webpack-2-migration-tips.md",
         "hash": "f85ff283340c4edd14899f49f39fb354",
@@ -44,7 +50,7 @@
     "pages/about.md": {
         "filename": "pages/about.md",
         "hash": "83c94d59ca5627910c3c15d195ab56ec",
-        "created": "2017-02-01T21:45:16.880Z",
-        "updated": "2017-02-01T21:45:16.880Z"
+        "created": "2017-02-01T22:28:15.876Z",
+        "updated": "2017-02-01T22:28:15.876Z"
     }
 }

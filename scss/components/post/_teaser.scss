@@ -29,6 +29,8 @@
   }
 
   &__actions {
+    align-self: flex-end;
+    margin-top: auto;
     border-top: 1px solid $mdlext-dark-divider-color;
     text-align: right;
   }
