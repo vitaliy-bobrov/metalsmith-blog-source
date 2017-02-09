@@ -4,7 +4,7 @@ description: Webpack 2 has been just released, it brings a lot of improvement an
 ogimage: images/posts/webpack-2-migration-tips/webpack-2-migration-tips-og.jpg
 tumb: /images/posts/webpack-2-migration-tips/webpack-2-migration-tips
 created: 2017-01-19
-updated: 2017-01-23
+updated: 2017-02-09
 categories:
 - Tools
 ---
@@ -101,7 +101,7 @@ Here you can also mention that if loader has no options, it could be declared as
 When this post was written `ExtractTextPlugin` hasn't stable release for Webpack 2, that is why you need to specify the latest version of the v2 branch while installation:
 
  ```bash
-npm install extract-text-webpack-plugin@2.0.0-beta.5
+npm install extract-text-webpack-plugin@2.0.0-rc.3
 ```
 
 Also in my configuration it won't to work with CSS preprocessor, the solution was to change config:
@@ -111,25 +111,24 @@ module: {
   rules: [
     {
       test: /\.(scss|sass)$/,
-      use: [
-        ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: 'style-loader'
-        }),
-        {
-          loader: 'css-loader',
-          options: {
-            sourceMap: true
+      use: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: [
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+          'postcss-loader'
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
           }
-        },
-        'postcss-loader'
-        {
-          loader: 'sass-loader',
-          options: {
-            sourceMap: true
-          }
-        }
-      ]
+        ]
+      })
     }
   ]
 },
