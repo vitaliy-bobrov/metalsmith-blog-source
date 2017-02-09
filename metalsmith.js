@@ -11,6 +11,7 @@ const $ = loadPlugins(pkg, 'devDependencies', 'metalsmith-');
 // Site Variables.
 const sitename = 'Bobrov Blog';
 const facebookAppId = 393821434298248;
+const gaId = 'UA-90372372-1';
 
 // Content variables.
 const pagesPattern = 'pages/*.md';
@@ -25,6 +26,7 @@ const runMetalsmithBuild = url => {
       sitename,
       siteurl,
       facebookAppId,
+      gaId,
       sitelogo: '/images/logo',
       siteogimg: 'images/blog-og.jpg',
       description: 'Blog about web development, but not only...',
@@ -140,7 +142,7 @@ const runMetalsmithBuild = url => {
       if (err) {
         console.error(err);
       } else {
-        console.log('Metalsmith build completed')
+        console.log('Metalsmith build completed');
       }
     });
 };
