@@ -7,7 +7,7 @@ const extlink = require('remarkable-extlink');
 const classy  = require('remarkable-classy');
 
 const $ = loadPlugins(pkg, 'devDependencies', 'metalsmith-');
-$.taxonomy = require('metalsmith-taxonomy');
+// $.taxonomy = require('metalsmith-taxonomy');
 
 // Site Variables.
 const sitename = 'Bobrov Blog';
@@ -73,7 +73,7 @@ const runMetalsmithBuild = url => {
         reverse: true
       }
     }))
-    .use($.taxonomy({
+    /*.use($.taxonomy({
       taxonomies: [
         {
           name: 'categories',
@@ -81,7 +81,7 @@ const runMetalsmithBuild = url => {
           collection: 'posts'
         }
       ]
-    }))
+    }))*/
     .use($.author({
       collection: 'posts',
       authors: {
@@ -151,14 +151,12 @@ const runMetalsmithBuild = url => {
     .use($.mapsite({
       hostname: siteurl
     }))
-    .use($.feedAtom({
+    .use($.feed({
       collection: 'posts',
-      destination: 'rss.xml',
-      metadata: {
-        title: sitename,
-        subtitle: siteDescr,
-        url: siteurl
-      }
+      postDescription: file => file.description,
+      site_url: siteurl,
+      title: sitename,
+      description: siteDescr
     }))
     .build(function(err) {
       if (err) {
