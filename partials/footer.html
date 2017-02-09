@@ -4,34 +4,47 @@
       <use xlink:href="#expand-less"></use>
     </svg>
   </a>
+
   <section class="mdl-mini-footer--left-section page-footer__left-section"
            itemscope
            itemtype="http://schema.org/Person">
     <link itemprop="url" href="{{ siteurl }}">
+    <a href="{{ rss }}"
+       type="application/rss+xml"
+       class="mdl-mini-footer--social-btn"
+       title="Subscribe to RSS">
+      <svg class="mdl-mini-footer--social-btn__icon">
+        <use xlink:href="#rss"></use>
+      </svg>
+    </a>
+
     <a href="{{ authors.me.twitter }}"
        target="_blank"
        rel="nofollow noreferrer noopener"
        class="mdl-mini-footer--social-btn"
        title="Twitter"
        itemprop="sameAs">
-        <svg class="mdl-mini-footer--social-btn__icon">
-          <use xlink:href="#twitter"></use>
-        </svg>
-       </a>
+      <svg class="mdl-mini-footer--social-btn__icon">
+        <use xlink:href="#twitter"></use>
+      </svg>
+    </a>
+
     <a href="{{ authors.me.github }}"
        target="_blank"
        rel="nofollow noreferrer noopener"
        class="mdl-mini-footer--social-btn"
        title="GitHub"
        itemprop="sameAs">
-        <svg class="mdl-mini-footer--social-btn__icon">
-          <use xlink:href="#github"></use>
-        </svg>
-       </a>
+      <svg class="mdl-mini-footer--social-btn__icon">
+        <use xlink:href="#github"></use>
+      </svg>
+      </a>
   </section>
+
   <section class="mdl-copyright">
-    <p>&copy; 2017 Bobrov Blog</p>
+    <p>&copy; 2017 {{ sitename }}</p>
   </section>
+
   <section class="mdl-mini-footer--right-section page-footer__right-section">
     <p>Generated with <a href="{{ generatorurl }}" target="_blank" rel="nofollow noreferrer noopener">{{ generatorname }}</a></p>
   </section>

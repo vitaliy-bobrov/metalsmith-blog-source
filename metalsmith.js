@@ -10,6 +10,7 @@ const $ = loadPlugins(pkg, 'devDependencies', 'metalsmith-');
 
 // Site Variables.
 const sitename = 'Bobrov Blog';
+const siteDescr = 'Blog about web development, but not only...';
 const facebookAppId = 393821434298248;
 const gaId = 'UA-90372372-1';
 
@@ -25,11 +26,12 @@ const runMetalsmithBuild = url => {
       locale: 'en',
       sitename,
       siteurl,
+      rss: `${siteurl}rss.xml`,
       facebookAppId,
       gaId,
       sitelogo: '/images/logo',
       siteogimg: 'images/blog-og.jpg',
-      description: 'Blog about web development, but not only...',
+      description: siteDescr,
       themeColor: '#00bcd4',
       generatorname: 'Metalsmith',
       generatorurl: 'http://metalsmith.io/'
@@ -137,6 +139,15 @@ const runMetalsmithBuild = url => {
     }))
     .use($.mapsite({
       hostname: siteurl
+    }))
+    .use($.feedAtom({
+      collection: 'posts',
+      destination: 'rss.xml',
+      metadata: {
+        title: sitename,
+        subtitle: siteDescr,
+        url: siteurl
+      }
     }))
     .build(function(err) {
       if (err) {
