@@ -11,9 +11,10 @@ const autoprefixer     = require('autoprefixer');
 const mqpacker         = require('css-mqpacker');
 const mqkeyframes      = require('postcss-mq-keyframes');
 const exec             = require('child_process').exec;
-const ngrok            = require('ngrok');
+// const ngrok            = require('ngrok');
 const request          = require('request');
 const url              = require('url');
+const swPrecache       = require('sw-precache');
 const pkg              = require('./package.json');
 
 const $ = gulpLoadPlugins();
@@ -217,7 +218,7 @@ gulp.task('tunel:stop', () => {
   process.kill(0);
 });
 
-gulp.task('html:prod', () => gulp.src('build/**/*.html')
+gulp.task('html', () => gulp.src('build/**/*.html')
   .pipe($.htmlmin({
     collapseBooleanAttributes: true,
     collapseWhitespace: true,
@@ -226,7 +227,7 @@ gulp.task('html:prod', () => gulp.src('build/**/*.html')
   }))
   .pipe(gulp.dest('build')));
 
-gulp.task('deploy', ['html:prod', 'styles'], () => {
+gulp.task('deploy', ['html', 'styles'], () => {
   let date = new Date();
   let formattedDate = date.toUTCString();
 
@@ -259,11 +260,45 @@ gulp.task('tunel', ['assets'], cb => runSequence(
   )
 );
 
+gulp.task('copy-sw-scripts', () => gulp
+    .src([
+      'node_modules/sw-toolbox/sw-toolbox.js',
+      'js/sw/runtime-caching.js'
+    ])
+    .pipe(gulp.dest('build/js/sw')));
+
+gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
+  const rootDir = 'build';
+  const filepath = path.join(rootDir, 'service-worker.js');
+
+  return swPrecache.write(filepath, {
+    // Used to avoid cache conflicts when serving on localhost.
+    cacheId: pkg.name,
+    // sw-toolbox.js needs to be listed first. It sets up methods used in runtime-caching.js.
+    importScripts: [
+      'js/sw/sw-toolbox.js',
+      'js/sw/runtime-caching.js'
+    ],
+    staticFileGlobs: [
+      // Add/remove glob patterns to match your directory setup.
+      `${rootDir}/images/**/*`,
+      `${rootDir}/js/**/*.js`,
+      `${rootDir}/css/**/*.css`,
+      `${rootDir}/**/*.{html,json}`
+    ],
+    // Translates a static file path to the relative URL that it's served from.
+    // This is '/' rather than path.sep because the paths returned from
+    // glob always use '/'.
+    stripPrefix: rootDir + '/'
+  });
+});
+
 // Build production files, the default task
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
     ['metalsmith', 'lint', 'scripts', 'images', 'service-files'],
+    'generate-service-worker',
     cb
   )
 );

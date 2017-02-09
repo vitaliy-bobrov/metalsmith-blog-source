@@ -1,4 +1,6 @@
 (document => {
+  'use strict';
+
   let timeoutId;
 
   const mdlCahngeIcon = () => {
