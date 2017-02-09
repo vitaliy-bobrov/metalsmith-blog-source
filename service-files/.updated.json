@@ -1,56 +1,50 @@
 {
-    ".DS_Store": {
-        "filename": ".DS_Store",
-        "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2017-02-08T22:59:47.716Z",
-        "updated": "2017-02-08T22:59:47.716Z"
-    },
     "index.md": {
         "filename": "index.md",
         "hash": "d41d8cd98f00b204e9800998ecf8427e",
-        "created": "2017-02-08T22:59:47.716Z",
-        "updated": "2017-02-08T22:59:47.716Z"
+        "created": "2017-02-09T12:44:01.408Z",
+        "updated": "2017-02-09T12:44:01.408Z"
     },
-    "blog/adding-comments-to-metalsmith.md": {
-        "filename": "blog/adding-comments-to-metalsmith.md",
-        "hash": "739d3f704b21a26094151e08e4dfd715",
+    "pages\\about.md": {
+        "filename": "pages\\about.md",
+        "hash": "a9cbfb98b6f1c3b9ab0c8b838f67f80d",
+        "created": "2017-02-09T12:44:01.408Z",
+        "updated": "2017-02-09T12:44:01.408Z"
+    },
+    "blog\\adding-comments-to-metalsmith.md": {
+        "filename": "blog\\adding-comments-to-metalsmith.md",
+        "hash": "4a67bfbd13472e9d32885993e43e5df1",
         "created": "2017-01-30T00:00:00.000Z",
         "updated": "2017-01-30T00:00:00.000Z"
     },
-    "blog/five-reasons-choose-metalsmith.md": {
-        "filename": "blog/five-reasons-choose-metalsmith.md",
-        "hash": "38c0c0207a7623d90389fb20f8c916ae",
+    "blog\\five-reasons-choose-metalsmith.md": {
+        "filename": "blog\\five-reasons-choose-metalsmith.md",
+        "hash": "20829e97900e13a06816787cbd050ea3",
         "created": "2017-01-15T00:00:00.000Z",
         "updated": "2017-01-19T00:00:00.000Z"
     },
-    "blog/hello-world.md": {
-        "filename": "blog/hello-world.md",
-        "hash": "96cbdca881a1f341f5439f1a39d7b6ee",
+    "blog\\please-no-more-jquery.md": {
+        "filename": "blog\\please-no-more-jquery.md",
+        "hash": "98f59f19340dd3d0a8d558f552d3e49f",
+        "created": "2017-02-09T12:44:01.408Z",
+        "updated": "2017-02-09T12:44:01.408Z"
+    },
+    "blog\\hello-world.md": {
+        "filename": "blog\\hello-world.md",
+        "hash": "2c1406066b7aa9fd66ec36b243c719bf",
         "created": "2016-12-26T00:00:00.000Z",
         "updated": "2017-01-14T00:00:00.000Z"
     },
-    "blog/please-no-more-jquery.md": {
-        "filename": "blog/please-no-more-jquery.md",
-        "hash": "3600ccb846b95ef0473975eeb9569bdd",
-        "created": "2017-02-08T22:59:47.716Z",
-        "updated": "2017-02-08T22:59:47.716Z"
-    },
-    "blog/tasks-from-interviews-yandex.md": {
-        "filename": "blog/tasks-from-interviews-yandex.md",
-        "hash": "839b64fc7d48128f1f1919b095793592",
+    "blog\\tasks-from-interviews-yandex.md": {
+        "filename": "blog\\tasks-from-interviews-yandex.md",
+        "hash": "c66d27a1700e542002feddfb0350c908",
         "created": "2016-12-27T00:00:00.000Z",
         "updated": "2017-01-15T00:00:00.000Z"
     },
-    "blog/webpack-2-migration-tips.md": {
-        "filename": "blog/webpack-2-migration-tips.md",
-        "hash": "f85ff283340c4edd14899f49f39fb354",
+    "blog\\webpack-2-migration-tips.md": {
+        "filename": "blog\\webpack-2-migration-tips.md",
+        "hash": "5d211cc63ecb195fd06c88dd10366a7e",
         "created": "2017-01-19T00:00:00.000Z",
-        "updated": "2017-01-23T00:00:00.000Z"
-    },
-    "pages/about.md": {
-        "filename": "pages/about.md",
-        "hash": "83c94d59ca5627910c3c15d195ab56ec",
-        "created": "2017-02-08T22:59:47.716Z",
-        "updated": "2017-02-08T22:59:47.716Z"
+        "updated": "2017-02-09T00:00:00.000Z"
     }
 }

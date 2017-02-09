@@ -7,6 +7,7 @@ const extlink = require('remarkable-extlink');
 const classy  = require('remarkable-classy');
 
 const $ = loadPlugins(pkg, 'devDependencies', 'metalsmith-');
+$.taxonomy = require('metalsmith-taxonomy');
 
 // Site Variables.
 const sitename = 'Bobrov Blog';
@@ -17,6 +18,8 @@ const gaId = 'UA-90372372-1';
 // Content variables.
 const pagesPattern = 'pages/*.md';
 const postsPattern = 'blog/**/*.md';
+const postsSortBy = 'created';
+const postsPerPage = 8;
 
 const runMetalsmithBuild = url => {
   const siteurl = url || 'https://vitaliy-bobrov.github.io/';
@@ -66,9 +69,18 @@ const runMetalsmithBuild = url => {
       },
       posts: {
         pattern: postsPattern,
-        sortBy: 'created',
+        sortBy: postsSortBy,
         reverse: true
       }
+    }))
+    .use($.taxonomy({
+      taxonomies: [
+        {
+          name: 'categories',
+          path: 'categories/:name/index.html',
+          collection: 'posts'
+        }
+      ]
     }))
     .use($.author({
       collection: 'posts',
@@ -86,12 +98,11 @@ const runMetalsmithBuild = url => {
     }))
     .use($.pagination({
       'collections.posts': {
-        perPage: 8,
+        perPage: postsPerPage,
         layout: 'blog.html',
         first: 'index.html',
         noPageOne: true,
         path: 'blog/page/:num/index.html',
-        pageMetadata: {}
       }
     }))
     .use($.markdownRemarkable({
