@@ -12,23 +12,22 @@
   const shareHanler = event => {
     event.preventDefault();
 
+    const target = event.target.parentNode;
     const data = {
-      title: event.target.dataset.shareTitle,
-      text: event.target.dataset.shareText,
-      url: event.target.dataset.shareUrl
+      title: target.dataset.shareTitle,
+      text: target.dataset.shareText,
+      url: target.dataset.shareUrl
     };
 
     nativeShare(data);
   };
 
-  if (navigator.share !== undefined) {
-    Array.prototype.forEach.call(buttons, btn => {
+  Array.prototype.forEach.call(buttons, btn => {
+    if (navigator.share !== undefined) {
       btn.addEventListener('click', shareHanler, false);
-    });
-  } else {
-    Array.prototype.forEach.call(buttons, btn => {
+    } else {
       let menu = btn.parentNode.querySelector('.js-share-menu');
       menu.setAttribute('for', btn.id);
-    });
-  }
+    }
+  });
 })(document, navigator);

@@ -1,4 +1,5 @@
 const url = require('url');
+const escape = require('escape-html');
 
 const postCell = (index, length) => {
   let desktop;
@@ -76,8 +77,8 @@ const postShare = (title, description, siteurl, path, id = 0) => {
               class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect post-share__button js-share-btn"
               title="Share this post"
               aria-label="Share this post"
-              data-share-title="${title}"
-              data-share-text="${description}"
+              data-share-title="${escape(title)}"
+              data-share-text="${escape(description)}"
               data-share-url="${link}">
         <svg class="mdl-svg post-share__icon">
           <use xlink:href="#share"></use>

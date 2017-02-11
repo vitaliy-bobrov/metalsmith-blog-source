@@ -2,32 +2,26 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2017-02-11T10:56:57.819Z",
-        "updated": "2017-02-11T10:56:57.819Z"
+        "created": "2017-02-11T11:10:23.017Z",
+        "updated": "2017-02-11T11:10:23.017Z"
     },
     "index.md": {
         "filename": "index.md",
         "hash": "d41d8cd98f00b204e9800998ecf8427e",
-        "created": "2017-02-11T10:56:57.819Z",
-        "updated": "2017-02-11T10:56:57.819Z"
-    },
-    "pages/about.md": {
-        "filename": "pages/about.md",
-        "hash": "83c94d59ca5627910c3c15d195ab56ec",
-        "created": "2017-02-11T10:56:57.819Z",
-        "updated": "2017-02-11T10:56:57.819Z"
-    },
-    "blog/five-reasons-choose-metalsmith.md": {
-        "filename": "blog/five-reasons-choose-metalsmith.md",
-        "hash": "38c0c0207a7623d90389fb20f8c916ae",
-        "created": "2017-01-15T00:00:00.000Z",
-        "updated": "2017-01-19T00:00:00.000Z"
+        "created": "2017-02-11T11:10:23.017Z",
+        "updated": "2017-02-11T11:10:23.017Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
         "hash": "739d3f704b21a26094151e08e4dfd715",
         "created": "2017-01-30T00:00:00.000Z",
         "updated": "2017-01-30T00:00:00.000Z"
+    },
+    "blog/five-reasons-choose-metalsmith.md": {
+        "filename": "blog/five-reasons-choose-metalsmith.md",
+        "hash": "38c0c0207a7623d90389fb20f8c916ae",
+        "created": "2017-01-15T00:00:00.000Z",
+        "updated": "2017-01-19T00:00:00.000Z"
     },
     "blog/hello-world.md": {
         "filename": "blog/hello-world.md",
@@ -46,5 +40,11 @@
         "hash": "ccc2c777b481b6e01795b5afe8e23c41",
         "created": "2017-01-19T00:00:00.000Z",
         "updated": "2017-02-09T00:00:00.000Z"
+    },
+    "pages/about.md": {
+        "filename": "pages/about.md",
+        "hash": "83c94d59ca5627910c3c15d195ab56ec",
+        "created": "2017-02-11T11:10:23.017Z",
+        "updated": "2017-02-11T11:10:23.017Z"
     }
 }
