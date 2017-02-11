@@ -67,20 +67,23 @@ const postIllustration = (tumb, alt) => `
       <img src="${tumb}.jpg" alt="${alt}" class="safe-picture__img">
     </picture>`;
 
-const postShare = (siteurl, path, id = 0) => {
+const postShare = (title, description, siteurl, path, id = 0) => {
   let link = url.resolve(siteurl, path);
 
   return `
     <div class="mdl-card__menu post-share">
       <button id="share-menu-${id}"
-              class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect post-share__button"
-              title="Share this post">
+              class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect post-share__button js-share-btn"
+              title="Share this post"
+              aria-label="Share this post"
+              data-share-title="${title}"
+              data-share-text="${description}"
+              data-share-url="${link}">
         <svg class="mdl-svg post-share__icon">
           <use xlink:href="#share"></use>
         </svg>
       </button>
-      <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect share-menu"
-          for="share-menu-${id}">
+      <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect share-menu js-share-menu">
         <li class="mdl-menu__item share-menu__item">
           <a href="//twitter.com/home?status=${link}" class="share-menu__link" target="_blank" rel="nofollow">
             <svg class="share-menu__icon">

@@ -140,13 +140,13 @@ gulp.task('styles', () => {
 // Concatenate and minify JavaScript.
 gulp.task('scripts', () =>
     gulp.src([
-      'js/*.js',
       'node_modules/material-design-lite/src/mdlComponentHandler.js',
       'node_modules/material-design-lite/src/button/button.js',
       'node_modules/material-design-lite/src/icon-toggle/icon-toggle.js',
       'node_modules/material-design-lite/src/menu/menu.js',
       'node_modules/material-design-lite/src/layout/layout.js',
-      'node_modules/material-design-lite/src/ripple/ripple.js'
+      'node_modules/material-design-lite/src/ripple/ripple.js',
+      'js/*.js'
     ])
       .pipe($.plumber({
         errorHandler: onError
@@ -281,7 +281,7 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
     ],
     staticFileGlobs: [
       // Add/remove glob patterns to match your directory setup.
-      `${rootDir}/images/**/*`,
+      `${rootDir}/images/**/!(*-og.jpg)`,
       `${rootDir}/js/**/*.js`,
       `${rootDir}/css/**/*.css`,
       `${rootDir}/**/*.{html,json}`
