@@ -2,14 +2,14 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2017-02-11T11:41:47.287Z",
-        "updated": "2017-02-11T11:41:47.287Z"
+        "created": "2017-02-12T14:24:40.216Z",
+        "updated": "2017-02-12T14:24:40.216Z"
     },
     "index.md": {
         "filename": "index.md",
         "hash": "d41d8cd98f00b204e9800998ecf8427e",
-        "created": "2017-02-11T11:41:47.287Z",
-        "updated": "2017-02-11T11:41:47.287Z"
+        "created": "2017-02-12T14:24:40.216Z",
+        "updated": "2017-02-12T14:24:40.216Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
@@ -29,6 +29,12 @@
         "created": "2016-12-26T00:00:00.000Z",
         "updated": "2017-01-14T00:00:00.000Z"
     },
+    "blog/please-no-more-jquery.md": {
+        "filename": "blog/please-no-more-jquery.md",
+        "hash": "5dd7af8762e9bcaf8b3103f3b2e66e7d",
+        "created": "2017-02-12T14:24:40.216Z",
+        "updated": "2017-02-12T14:24:40.216Z"
+    },
     "blog/tasks-from-interviews-yandex.md": {
         "filename": "blog/tasks-from-interviews-yandex.md",
         "hash": "839b64fc7d48128f1f1919b095793592",
@@ -44,7 +50,7 @@
     "pages/about.md": {
         "filename": "pages/about.md",
         "hash": "83c94d59ca5627910c3c15d195ab56ec",
-        "created": "2017-02-11T11:41:47.287Z",
-        "updated": "2017-02-11T11:41:47.287Z"
+        "created": "2017-02-12T14:24:40.216Z",
+        "updated": "2017-02-12T14:24:40.216Z"
     }
 }
