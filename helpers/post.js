@@ -1,6 +1,10 @@
 const url = require('url');
 const escape = require('escape-html');
 
+const absoluteUrl = (siteurl, path) => `${url.resolve(siteurl, path)}/`;
+
+const ampUrl = (siteurl, path) => `${url.resolve(siteurl, path)}/amp/`;
+
 const postCell = (index, length) => {
   let desktop;
   let tablet;

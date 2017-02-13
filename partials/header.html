@@ -1,13 +1,8 @@
 <header class="mdl-layout__header" role="banner">
-  <div class="mdl-layout__header-row"
-       itemscope
-       itemtype="http://schema.org/Organization">
+  <div class="mdl-layout__header-row">
     <!-- Title -->
     <span class="mdl-layout-title">
-      <a class="site-link"
-         href="/"
-         itemprop="url"
-         itemprop="name">{{ sitename }}</a>
+      <a class="site-link" href="/">{{ sitename }}</a>
     </span>
 
     <div class="mdl-layout-spacer">
@@ -39,8 +34,9 @@
 
       {{#each collections.pages as |page|}}
         <a class="mdl-navigation__link {{ activeLink ../path page.path }}"
-           href="/{{ page.path }}/"
-           {{{ currentLink ../path page.path }}}>{{ page.title }}</a>
+           href="/{{ page.path }}/">
+           {{{ currentLink ../path page.path }}}>{{ page.title }}
+        </a>
       {{/each}}
     </nav>
   </div>
