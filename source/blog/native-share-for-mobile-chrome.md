@@ -42,7 +42,6 @@ And the last stage -- we need to add JavaScript code to call share in browser th
 
 ### Share function
 This function will get object with 3 possible properties needed for sharing: title, text, url. Note that one -- text or url must be passed to `navigator.share` method, as well as both of them. All properties must be a strings. Share returns `Promise` and you could handle succes and error results with `then` and/or `catch` methods. Succes calback can be used to notify and thank user for sharing, sending data to analytics and so on. Error callback can be used to log error or like I did -- notify user about failed sharing and ask to try again.![Ask user to retry share after error](/images/posts/native-share-for-mobile-chrome/img/retry.jpg)
-{post-img}
 
 ```js
 const nativeShare = data => navigator.share(data)
@@ -104,3 +103,7 @@ If share feature available in users browser we prevent standard behaviour, gathe
 ```js
 
 ```
+
+By taping on share button user gets native share widget.![Native share in Chrome for Android](/images/posts/native-share-for-mobile-chrome/img/share-native.jpg)
+
+If Web Share not supported -- custom share menu will be shown.![Share custom menu](/images/posts/native-share-for-mobile-chrome/img/share-menu.jpg)
