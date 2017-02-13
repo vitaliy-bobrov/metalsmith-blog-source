@@ -2,14 +2,20 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2017-02-13T20:23:24.541Z",
-        "updated": "2017-02-13T20:23:24.541Z"
+        "created": "2017-02-13T20:39:07.500Z",
+        "updated": "2017-02-13T20:39:07.500Z"
     },
     "index.md": {
         "filename": "index.md",
         "hash": "d41d8cd98f00b204e9800998ecf8427e",
-        "created": "2017-02-13T20:23:24.541Z",
-        "updated": "2017-02-13T20:23:24.541Z"
+        "created": "2017-02-13T20:39:07.500Z",
+        "updated": "2017-02-13T20:39:07.500Z"
+    },
+    "pages/about.md": {
+        "filename": "pages/about.md",
+        "hash": "83c94d59ca5627910c3c15d195ab56ec",
+        "created": "2017-02-13T20:39:07.500Z",
+        "updated": "2017-02-13T20:39:07.500Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
@@ -32,8 +38,8 @@
     "blog/native-share-for-mobile-chrome.md": {
         "filename": "blog/native-share-for-mobile-chrome.md",
         "hash": "45d4cfd5a3ba9421f9ca237e48c083fe",
-        "created": "2017-02-13T20:23:24.541Z",
-        "updated": "2017-02-13T20:23:24.541Z"
+        "created": "2017-02-13T20:39:07.500Z",
+        "updated": "2017-02-13T20:39:07.500Z"
     },
     "blog/please-no-more-jquery.md": {
         "filename": "blog/please-no-more-jquery.md",
@@ -41,22 +47,16 @@
         "created": "2017-02-12T00:00:00.000Z",
         "updated": "2017-02-12T00:00:00.000Z"
     },
-    "blog/webpack-2-migration-tips.md": {
-        "filename": "blog/webpack-2-migration-tips.md",
-        "hash": "ccc2c777b481b6e01795b5afe8e23c41",
-        "created": "2017-02-09T00:00:00.000Z",
-        "updated": "2017-02-09T00:00:00.000Z"
-    },
     "blog/tasks-from-interviews-yandex.md": {
         "filename": "blog/tasks-from-interviews-yandex.md",
         "hash": "839b64fc7d48128f1f1919b095793592",
         "created": "2017-01-15T00:00:00.000Z",
         "updated": "2017-01-15T00:00:00.000Z"
     },
-    "pages/about.md": {
-        "filename": "pages/about.md",
-        "hash": "83c94d59ca5627910c3c15d195ab56ec",
-        "created": "2017-02-13T20:23:24.541Z",
-        "updated": "2017-02-13T20:23:24.541Z"
+    "blog/webpack-2-migration-tips.md": {
+        "filename": "blog/webpack-2-migration-tips.md",
+        "hash": "ccc2c777b481b6e01795b5afe8e23c41",
+        "created": "2017-02-09T00:00:00.000Z",
+        "updated": "2017-02-09T00:00:00.000Z"
     }
 }

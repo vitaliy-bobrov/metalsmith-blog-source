@@ -1,4 +1,4 @@
-(window => {
+((window, document) => {
   'use strict';
 
   if ('serviceWorker' in navigator &&
@@ -13,14 +13,19 @@
           // i.e. whether there's an existing service worker.
           if (navigator.serviceWorker.controller) {
             const installingWorker = registration.installing;
+            const notification = document.querySelector('.mdl-js-snackbar');
+            const data = {
+              message: 'New content is available',
+              actionHandler: () => window.location.reload(),
+              actionText: 'Refresh',
+              timeout: 10000
+            };
 
             installingWorker.onstatechange = function() {
               switch (installingWorker.state) {
                 case 'installed':
-        // At this point, the old content will have been purged and the
-        // fresh content will have been added to the cache.
-        // It's the perfect time to display a "New content is
-        // available; please refresh." message in the page's interface.
+                  notification.MaterialSnackbar.showSnackbar(data);
+
                   break;
 
                 case 'redundant':
@@ -37,4 +42,4 @@
         console.error('Error during service worker registration:', e);
       });
   }
-})(window);
+})(window, document);

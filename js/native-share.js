@@ -2,11 +2,29 @@
   'use strict';
 
   let buttons = document.querySelectorAll('.js-share-btn');
+  const notification = document.querySelector('.mdl-js-snackbar');
+  let config;
 
   const nativeShare = data => {
     navigator.share(data)
-      .then(() => {})
-      .catch(error => console.error('Error sharing:', error));
+      .then(() => {
+        config = {
+          message: 'Thank you for sharing this post!',
+          timeout: 5000
+        };
+        notification.MaterialSnackbar.showSnackbar(config);
+      })
+      .catch(() => {
+        config = {
+          message: 'Sharing failed!',
+          actionHandler: () => {
+            nativeShare(data);
+          },
+          actionText: 'Retry',
+          timeout: 5000
+        };
+        notification.MaterialSnackbar.showSnackbar(config);
+      });
   };
 
   const shareHanler = event => {
