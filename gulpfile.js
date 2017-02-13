@@ -53,6 +53,7 @@ gulp.task('lint', () => gulp.src([
 
 gulp.task('webp', () => gulp.src([
     'images/**/*.{jpg,jpeg,png,gif}',
+    '!./images/posts/**/img/*.jpg',
     '!images/icons/**.*',
     '!images/**/*-og.jpg'
   ])

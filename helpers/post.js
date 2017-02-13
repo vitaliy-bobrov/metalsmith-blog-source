@@ -110,6 +110,8 @@ const postShare = (title, description, siteurl, path, id = 0) => {
 };
 
 module.exports = {
+  absoluteUrl,
+  ampUrl,
   postCell,
   postIllustration,
   postShare

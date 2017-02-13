@@ -34,7 +34,7 @@
 
       {{#each collections.pages as |page|}}
         <a class="mdl-navigation__link {{ activeLink ../path page.path }}"
-           href="/{{ page.path }}/">
+           href="/{{ page.path }}/"
            {{{ currentLink ../path page.path }}}>{{ page.title }}
         </a>
       {{/each}}
@@ -44,10 +44,14 @@
 <div class="mdl-layout__drawer">
   <span class="mdl-layout-title">{{ sitename }}</span>
   <nav class="mdl-navigation">
-    <a class="mdl-navigation__link" href="/">Blog</a>
+    <a class="mdl-navigation__link"
+       href="/"
+       {{{ currentLink ../path page.path }}}>Blog</a>
 
     {{#each collections.pages as |page|}}
-      <a class="mdl-navigation__link" href="/{{ page.path }}/">{{ page.title }}</a>
+      <a class="mdl-navigation__link"
+         href="/{{ page.path }}/"
+         {{{ currentLink ../path page.path }}}>{{ page.title }}</a>
     {{/each}}
   </nav>
 </div>

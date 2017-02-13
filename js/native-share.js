@@ -23,7 +23,7 @@
   };
 
   Array.prototype.forEach.call(buttons, btn => {
-    if (navigator.share !== undefined) {
+    if (navigator.share) {
       btn.addEventListener('click', shareHanler, false);
     } else {
       let menu = btn.parentNode.querySelector('.js-share-menu');
