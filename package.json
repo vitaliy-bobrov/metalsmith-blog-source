@@ -76,6 +76,7 @@
     "remarkable-classy": "0.0.1",
     "remarkable-extlink": "^1.0.0",
     "run-sequence": "^1.2.2",
+    "sw-offline-google-analytics": "0.0.8",
     "sw-precache": "^4.3.0",
     "sw-toolbox": "^3.4.0"
   },

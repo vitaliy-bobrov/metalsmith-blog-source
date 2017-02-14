@@ -264,7 +264,8 @@ gulp.task('tunel', ['assets'], cb => runSequence(
 gulp.task('copy-sw-scripts', () => gulp
     .src([
       'node_modules/sw-toolbox/sw-toolbox.js',
-      'js/sw/runtime-caching.js'
+      'node_modules/offline-google-analytics/build/offline-google-analytics-import.js',
+      'js/sw/*.js'
     ])
     .pipe(gulp.dest('build/js/sw')));
 
@@ -278,6 +279,8 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
     // sw-toolbox.js needs to be listed first. It sets up methods used in runtime-caching.js.
     importScripts: [
       'js/sw/sw-toolbox.js',
+      'js/sw/offline-google-analytics-import.js',
+      'js/sw/offline-analytics.js',
       'js/sw/runtime-caching.js'
     ],
     staticFileGlobs: [

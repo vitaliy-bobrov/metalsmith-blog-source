@@ -1,12 +1,13 @@
-((window, document) => {
+((window, document, ga) => {
   'use strict';
 
   if ('serviceWorker' in navigator &&
       window.location.protocol === 'https:') {
     navigator.serviceWorker.register('service-worker.js')
-      .then(function(registration) {
+      .then(registration => {
+        ga('send', 'event', 'Service Worker', 'install');
         // updatefound is fired if service-worker.js changes.
-        registration.onupdatefound = function() {
+        registration.onupdatefound = () => {
           // updatefound is also fired the very first time the SW is installed,
           // and there's no need to prompt for a reload at that point.
           // So check here to see if the page is already controlled,
@@ -21,7 +22,7 @@
               timeout: 10000
             };
 
-            installingWorker.onstatechange = function() {
+            installingWorker.onstatechange = () => {
               switch (installingWorker.state) {
                 case 'installed':
                   notification.MaterialSnackbar.showSnackbar(data);
@@ -38,8 +39,8 @@
             };
           }
         };
-      }).catch(function(e) {
+      }).catch(e => {
         console.error('Error during service worker registration:', e);
       });
   }
-})(window, document);
+})(window, document, ga);

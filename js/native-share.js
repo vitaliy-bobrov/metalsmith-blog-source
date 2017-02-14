@@ -1,8 +1,9 @@
-((document, navigator) => {
+((document, navigator, ga) => {
   'use strict';
 
-  let buttons = document.querySelectorAll('.js-share-btn');
+  const buttons = document.querySelectorAll('.js-share-btn');
   const notification = document.querySelector('.mdl-js-snackbar');
+  const SHARE_CATEGORY = 'Share';
   let config;
 
   const nativeShare = data => {
@@ -13,6 +14,7 @@
           timeout: 5000
         };
         notification.MaterialSnackbar.showSnackbar(config);
+        ga('send', 'event', SHARE_CATEGORY, 'click', 'Native Share');
       })
       .catch(() => {
         config = {
@@ -48,4 +50,4 @@
       menu.setAttribute('for', btn.id);
     }
   });
-})(document, navigator);
+})(document, navigator, ga);

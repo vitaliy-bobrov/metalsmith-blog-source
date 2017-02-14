@@ -1,4 +1,4 @@
-(document => {
+((document, ga) => {
   'use strict';
 
   /**
@@ -22,10 +22,11 @@
   const addWebPClass = support => {
     if (support) {
       document.body.classList.add('webp');
+      ga('send', 'event', 'Page', 'load', 'WebP Support');
     }
   };
 
   document.addEventListener('DOMContentLoaded',
     testWepP(addWebPClass),
     false);
-})(document);
+})(document, ga);
