@@ -81,7 +81,7 @@
   },
   "dependencies": {
     "material-design-lite": "^1.3.0",
-    "mdl-ext": "^0.15.2"
+    "mdl-ext": "^0.17.0"
   },
   "eslintConfig": {
     "parserOptions": {
