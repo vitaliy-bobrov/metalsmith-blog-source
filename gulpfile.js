@@ -127,7 +127,7 @@ gulp.task('styles', () => {
         /^\.js-.*/,
         /.*-js-.*/,
         /^.*is-.*/,
-        /^.*mdl-(layout|menu|button|button--fab|mdl-snackbar|ripple).*/,
+        /^.*mdl-(layout|menu|button|button--fab|snackbar|ripple).*/,
         /^.*\.webp.*/,
         '.drawer-icon'
       ]
@@ -147,6 +147,7 @@ gulp.task('scripts', () =>
       'node_modules/material-design-lite/src/menu/menu.js',
       'node_modules/material-design-lite/src/layout/layout.js',
       'node_modules/material-design-lite/src/ripple/ripple.js',
+      'node_modules/material-design-lite/src/snackbar/snackbar.js',
       'js/*.js'
     ])
       .pipe($.plumber({
@@ -267,6 +268,7 @@ gulp.task('copy-sw-scripts', () => gulp
       'node_modules/offline-google-analytics/build/offline-google-analytics-import.js',
       'js/sw/*.js'
     ])
+    .pipe($.uglify())
     .pipe(gulp.dest('build/js/sw')));
 
 gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
