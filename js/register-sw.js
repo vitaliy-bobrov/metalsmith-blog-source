@@ -1,9 +1,9 @@
-((window, document, ga) => {
+((window, document) => {
   'use strict';
 
   if ('serviceWorker' in navigator &&
       window.location.protocol === 'https:') {
-    navigator.serviceWorker.register('service-worker.js')
+    navigator.serviceWorker.register('/service-worker.js', {scope: '/'})
       .then(registration => {
         ga('send', 'event', 'Service Worker', 'install');
         // updatefound is fired if service-worker.js changes.
@@ -25,6 +25,7 @@
             installingWorker.onstatechange = () => {
               switch (installingWorker.state) {
                 case 'installed':
+                  ga('send', 'event', 'Service Worker', 'update');
                   notification.MaterialSnackbar.showSnackbar(data);
 
                   break;
@@ -43,4 +44,4 @@
         console.error('Error during service worker registration:', e);
       });
   }
-})(window, document, ga);
+})(window, document);

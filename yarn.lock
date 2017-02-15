@@ -4405,9 +4405,9 @@ metalsmith-register-helpers@^0.2.0:
   dependencies:
     extend "^2.0.0"
 
-metalsmith-twitter-card@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/metalsmith-twitter-card/-/metalsmith-twitter-card-1.0.2.tgz#4522140b368f8d0655a0e6d052cb138e9e97cb79"
+metalsmith-twitter-card@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/metalsmith-twitter-card/-/metalsmith-twitter-card-1.0.3.tgz#c8a2e89b3cb20b5bcb1a8ba38c520569744cfcd2"
   dependencies:
     cheerio "^0.22.0"
     escape-html "^1.0.3"
