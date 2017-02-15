@@ -276,9 +276,7 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
   const filepath = path.join(rootDir, 'service-worker.js');
 
   return swPrecache.write(filepath, {
-    // Used to avoid cache conflicts when serving on localhost.
     cacheId: pkg.name,
-    // sw-toolbox.js needs to be listed first. It sets up methods used in runtime-caching.js.
     importScripts: [
       'js/sw/sw-toolbox.js',
       'js/sw/offline-google-analytics-import.js',
@@ -286,15 +284,39 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
       'js/sw/runtime-caching.js'
     ],
     staticFileGlobs: [
-      // Add/remove glob patterns to match your directory setup.
-      `${rootDir}/images/**/!(*-og.jpg)`,
+      `${rootDir}/images/icons/`,
+      `${rootDir}/images/authors/`,
+      `${rootDir}/images/!(*-og.jpg)`,
       `${rootDir}/js/**/*.js`,
       `${rootDir}/css/**/*.css`,
-      `${rootDir}/**/*.{html,json}`
+      `${rootDir}/*.{html,json}`,
+      `${rootDir}/about/*.html`
     ],
-    // Translates a static file path to the relative URL that it's served from.
-    // This is '/' rather than path.sep because the paths returned from
-    // glob always use '/'.
+    dynamicUrlToDependencies: {
+      '/': ['index.html']
+    },
+    runtimeCaching: [
+      {
+        urlPattern: /.*\.(png|jpg|gif|webp|svg)/i,
+        handler: 'fastest',
+        options: {
+          cache: {
+            maxEntries: 200,
+            name: 'data-images-cache'
+          }
+        }
+      },
+      {
+        urlPattern: /\/blog\/.*/,
+        handler: 'fastest',
+        options: {
+          cache: {
+            maxEntries: 100,
+            name: 'data-posts-cache'
+          }
+        }
+      }
+    ],
     stripPrefix: rootDir + '/'
   });
 });
