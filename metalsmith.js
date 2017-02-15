@@ -146,6 +146,7 @@ const runMetalsmithBuild = url => {
       site: '@bobrov1989',
       title: 'title',
       description: 'description',
+      image: 'ogimage',
       'image:alt': 'title'
     }))
     .use($.mapsite({
