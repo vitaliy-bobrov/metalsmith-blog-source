@@ -11,4 +11,8 @@
     color: $mdlext-dark-text-color-primary;
     text-decoration: none;
   }
+
+  .mdl-snackbar__action {
+    color: $mdlext-dark-color-accent;
+  }
 }

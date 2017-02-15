@@ -1,7 +1,9 @@
 .post {
   &__title {
+    width: 100%;
     margin: 0;
     position: relative;
+    text-align: center;
     z-index: $post-title;
     @include typo-display-1;
 
