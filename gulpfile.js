@@ -25,6 +25,12 @@ const onError = function(error) {
   this.emit('end');
 };
 
+const UGLIFY_CONFIG = {
+  output: {
+    comments: false
+  }
+};
+
 const LOCAL_PORT = 3000;
 const PROD_URL = 'https://vitaliy-bobrov.github.io/';
 const SITEMAP_URL = url.resolve(PROD_URL, 'sitemap.xml');
@@ -38,7 +44,10 @@ gulp.task('metalsmith', ['svg'], callback => exec(`node ./metalsmith.js --url=${
     callback(err);
   }));
 
-gulp.task('service-files', () => gulp.src(['service-files/**/*', '!service-files/.updated.json'])
+gulp.task('service-files', () => gulp.src([
+  'service-files/**/*',
+  '!service-files/.updated.json'
+])
   .pipe(gulp.dest('build')));
 
 // Lint JavaScript
@@ -157,7 +166,7 @@ gulp.task('scripts', () =>
       .pipe($.babel())
       .pipe($.sourcemaps.write())
       .pipe($.concat('main.min.js'))
-      .pipe($.uglify())
+      .pipe($.uglify(UGLIFY_CONFIG))
       .pipe($.size({title: 'scripts'}))
       .pipe($.sourcemaps.write('.'))
       .pipe(gulp.dest('build/js')));
@@ -229,7 +238,7 @@ gulp.task('html', () => gulp.src('build/**/*.html')
   }))
   .pipe(gulp.dest('build')));
 
-gulp.task('deploy', ['html', 'styles'], () => {
+gulp.task('deploy', ['html', 'styles', 'minify-sw'], () => {
   let date = new Date();
   let formattedDate = date.toUTCString();
 
@@ -262,13 +271,14 @@ gulp.task('tunel', ['assets'], cb => runSequence(
   )
 );
 
-gulp.task('copy-sw-scripts', () => gulp
-    .src([
-      'node_modules/sw-toolbox/sw-toolbox.js',
-      'node_modules/offline-google-analytics/build/offline-google-analytics-import.js',
-      'js/sw/*.js'
-    ])
-    .pipe($.uglify())
+gulp.task('copy-sw-scripts', () => gulp.src([
+    'node_modules/sw-toolbox/sw-toolbox.js',
+    'node_modules/sw-offline-google-analytics/build/offline-google-analytics-import.min.js',
+    'js/sw/*.js'
+  ])
+    .pipe($.plumber({
+      errorHandler: onError
+    }))
     .pipe(gulp.dest('build/js/sw')));
 
 gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
@@ -279,7 +289,7 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
     cacheId: pkg.name,
     importScripts: [
       'js/sw/sw-toolbox.js',
-      'js/sw/offline-google-analytics-import.js',
+      'js/sw/offline-google-analytics-import.min.js',
       'js/sw/offline-analytics.js',
       'js/sw/runtime-caching.js'
     ],
@@ -292,9 +302,6 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
       `${rootDir}/*.{html,json}`,
       `${rootDir}/about/*.html`
     ],
-    dynamicUrlToDependencies: {
-      '/': ['index.html']
-    },
     runtimeCaching: [
       {
         urlPattern: /.*\.(png|jpg|gif|webp|svg)/i,
@@ -319,6 +326,12 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
     ],
     stripPrefix: rootDir + '/'
   });
+});
+
+gulp.task('minify-sw', () => {
+  gulp.src('build/service-worker.js')
+    .pipe($.uglify(UGLIFY_CONFIG))
+    .pipe(gulp.dest('build'));
 });
 
 // Build production files, the default task
