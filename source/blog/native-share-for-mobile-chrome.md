@@ -3,6 +3,7 @@ title: Native Share for Mobile Chrome
 description: Improve you users experience with native share widget on Android devices.
 ogimage: images/posts/native-share-for-mobile-chrome/native-share-for-mobile-chrome-og.jpg
 tumb: /images/posts/native-share-for-mobile-chrome/native-share-for-mobile-chrome
+created: 2017-02-15
 categories:
 - Guides
 ---

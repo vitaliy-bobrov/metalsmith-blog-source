@@ -2,14 +2,20 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2017-02-13T21:14:28.272Z",
-        "updated": "2017-02-13T21:14:28.272Z"
+        "created": "2017-02-15T21:09:46.898Z",
+        "updated": "2017-02-15T21:09:46.898Z"
     },
     "index.md": {
         "filename": "index.md",
         "hash": "d41d8cd98f00b204e9800998ecf8427e",
-        "created": "2017-02-13T21:14:28.272Z",
-        "updated": "2017-02-13T21:14:28.272Z"
+        "created": "2017-02-15T21:09:46.898Z",
+        "updated": "2017-02-15T21:09:46.898Z"
+    },
+    "pages/about.md": {
+        "filename": "pages/about.md",
+        "hash": "83c94d59ca5627910c3c15d195ab56ec",
+        "created": "2017-02-15T21:09:46.898Z",
+        "updated": "2017-02-15T21:09:46.898Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
@@ -31,9 +37,9 @@
     },
     "blog/native-share-for-mobile-chrome.md": {
         "filename": "blog/native-share-for-mobile-chrome.md",
-        "hash": "7bbff40648be5237d16e36d00b556e70",
-        "created": "2017-02-13T21:14:28.272Z",
-        "updated": "2017-02-13T21:14:28.272Z"
+        "hash": "48134a328d2e38a41bed314f99921b98",
+        "created": "2017-02-15T00:00:00.000Z",
+        "updated": "2017-02-15T00:00:00.000Z"
     },
     "blog/please-no-more-jquery.md": {
         "filename": "blog/please-no-more-jquery.md",
@@ -52,11 +58,5 @@
         "hash": "ccc2c777b481b6e01795b5afe8e23c41",
         "created": "2017-02-09T00:00:00.000Z",
         "updated": "2017-02-09T00:00:00.000Z"
-    },
-    "pages/about.md": {
-        "filename": "pages/about.md",
-        "hash": "83c94d59ca5627910c3c15d195ab56ec",
-        "created": "2017-02-13T21:14:28.272Z",
-        "updated": "2017-02-13T21:14:28.272Z"
     }
 }
