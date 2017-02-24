@@ -2,26 +2,26 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2017-02-15T21:24:36.053Z",
-        "updated": "2017-02-15T21:24:36.053Z"
+        "created": "2017-02-16T06:05:23.873Z",
+        "updated": "2017-02-16T06:05:23.873Z"
     },
     "index.md": {
         "filename": "index.md",
         "hash": "d41d8cd98f00b204e9800998ecf8427e",
-        "created": "2017-02-15T21:24:36.053Z",
-        "updated": "2017-02-15T21:24:36.053Z"
-    },
-    "blog/five-reasons-choose-metalsmith.md": {
-        "filename": "blog/five-reasons-choose-metalsmith.md",
-        "hash": "38c0c0207a7623d90389fb20f8c916ae",
-        "created": "2017-01-19T00:00:00.000Z",
-        "updated": "2017-01-19T00:00:00.000Z"
+        "created": "2017-02-16T06:05:23.873Z",
+        "updated": "2017-02-16T06:05:23.873Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
         "hash": "739d3f704b21a26094151e08e4dfd715",
         "created": "2017-01-30T00:00:00.000Z",
         "updated": "2017-01-30T00:00:00.000Z"
+    },
+    "blog/five-reasons-choose-metalsmith.md": {
+        "filename": "blog/five-reasons-choose-metalsmith.md",
+        "hash": "38c0c0207a7623d90389fb20f8c916ae",
+        "created": "2017-01-19T00:00:00.000Z",
+        "updated": "2017-01-19T00:00:00.000Z"
     },
     "blog/hello-world.md": {
         "filename": "blog/hello-world.md",
@@ -31,7 +31,7 @@
     },
     "blog/native-share-for-mobile-chrome.md": {
         "filename": "blog/native-share-for-mobile-chrome.md",
-        "hash": "48134a328d2e38a41bed314f99921b98",
+        "hash": "ef8d9822fc5c14a717ca1f21f98bf3cd",
         "created": "2017-02-15T00:00:00.000Z",
         "updated": "2017-02-15T00:00:00.000Z"
     },
@@ -56,7 +56,7 @@
     "pages/about.md": {
         "filename": "pages/about.md",
         "hash": "83c94d59ca5627910c3c15d195ab56ec",
-        "created": "2017-02-15T21:24:36.053Z",
-        "updated": "2017-02-15T21:24:36.053Z"
+        "created": "2017-02-16T06:05:23.873Z",
+        "updated": "2017-02-16T06:05:23.873Z"
     }
 }

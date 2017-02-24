@@ -7,7 +7,6 @@ const extlink = require('remarkable-extlink');
 const classy  = require('remarkable-classy');
 
 const $ = loadPlugins(pkg, 'devDependencies', 'metalsmith-');
-// $.taxonomy = require('metalsmith-taxonomy');
 
 // Site Variables.
 const sitename = 'Bobrov Blog';
@@ -73,15 +72,6 @@ const runMetalsmithBuild = url => {
         reverse: true
       }
     }))
-    /*.use($.taxonomy({
-      taxonomies: [
-        {
-          name: 'categories',
-          path: 'categories/:name/index.html',
-          collection: 'posts'
-        }
-      ]
-    }))*/
     .use($.author({
       collection: 'posts',
       authors: {
