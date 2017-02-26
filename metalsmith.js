@@ -1,5 +1,4 @@
 const Metalsmith = require('metalsmith');
-const argv = require('minimist')(process.argv.slice(2));
 const pkg = require('./package.json');
 const loadPlugins = require('./load-plugins');
 
