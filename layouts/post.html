@@ -4,15 +4,8 @@
     <title>{{ title }} | {{ sitename }}</title>
     {{> metatags }}
 
-    <!-- <link rel="amphtml" href="{{ ampUrl siteurl path }}"> -->
-
-    {{> manifest }}
-
     {{> og-post-props }}
     {{> og-image-props }}
-
-    <!-- Styles -->
-    {{> css }}
   </head>
   <body class="mdlext-dark-color-theme">
     {{> sprite }}
@@ -59,10 +52,10 @@
 
                 <div class="post-info__side">
                   <div class="post-info__categories">
-                    {{#each this.categories as |category|}}
-                      <span class="mdl-chip post-info__category">
-                          <span class="mdl-chip__text">{{ category }}</span>
-                      </span>
+                    {{#each categories as |category|}}
+                      <a href="/category/{{ category.slug }}" class="mdl-chip post-info__category">
+                          <span class="mdl-chip__text">{{ category.name }}</span>
+                      </a>
                     {{/each}}
                   </div>
                 </div>

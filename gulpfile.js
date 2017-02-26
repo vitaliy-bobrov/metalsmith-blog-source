@@ -11,7 +11,6 @@ const autoprefixer     = require('autoprefixer');
 const mqpacker         = require('css-mqpacker');
 const mqkeyframes      = require('postcss-mq-keyframes');
 const exec             = require('child_process').exec;
-const ngrok            = require('ngrok');
 const request          = require('request');
 const url              = require('url');
 const swPrecache       = require('sw-precache');
@@ -35,9 +34,7 @@ const LOCAL_PORT = 3000;
 const PROD_URL = 'https://vitaliy-bobrov.github.io/';
 const SITEMAP_URL = url.resolve(PROD_URL, 'sitemap.xml');
 
-let tunnelUrl = PROD_URL;
-
-gulp.task('metalsmith', ['svg'], callback => exec(`node ./metalsmith.js --url=${tunnelUrl}`,
+gulp.task('metalsmith', ['svg'], callback => exec(`node ./metalsmith.js --url=${PROD_URL}`,
   (err, stdout, stderr) => {
     console.log(stdout);
     console.log(stderr);
@@ -72,10 +69,6 @@ gulp.task('webp', () => gulp.src([
 
 // Optimize images
 gulp.task('images', ['webp'], () => gulp.src('./images/**/*.{jpg,jpeg,png,gif,webp}')
-    .pipe($.imagemin({
-      progressive: true,
-      interlaced: true
-    }))
     .pipe(gulp.dest('build/images'))
     .pipe($.size({title: 'images'}))
 );
@@ -197,36 +190,6 @@ gulp.task('serve:dev', () => {
   gulp.watch(['scss/**/*.scss'], ['styles', reload]);
   gulp.watch(['js/**/*.js'], ['lint', 'scripts', reload]);
   gulp.watch(['images/**/*'], reload);
-});
-
-gulp.task('serve:tunel', () => {
-  browserSync({
-    notify: false,
-    open: false,
-    logPrefix: 'MetalSync',
-    scrollElementMapping: ['main', '.mdl-layout'],
-    server: ['build'],
-    port: LOCAL_PORT
-  });
-});
-
-const ngrokOptions = {
-  addr: LOCAL_PORT,
-  region: 'eu'
-};
-
-gulp.task('tunel:start', cb => {
-  ngrok.connect(ngrokOptions, (err, url) => {
-    tunnelUrl = url;
-
-    console.log('ngrok tunnel: %s', url);
-    cb(err);
-  });
-});
-
-gulp.task('tunel:stop', () => {
-  ngrok.disconnect();
-  process.kill(0);
 });
 
 gulp.task('html', () => gulp.src('build/**/*.html')

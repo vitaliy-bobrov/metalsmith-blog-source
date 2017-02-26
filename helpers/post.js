@@ -90,7 +90,7 @@ const postShare = (title, description, siteurl, path, id = 0) => {
       </button>
       <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect share-menu js-share-menu">
         <li class="mdl-menu__item share-menu__item">
-          <a href="//twitter.com/home?status=${link}" class="share-menu__link" target="_blank" rel="nofollow">
+          <a href="//twitter.com/home?status=${link}" class="share-menu__link" target="_blank" rel="nofollow noreferrer noopener">
             <svg class="share-menu__icon">
               <use xlink:href="#twitter"></use>
             </svg>
@@ -98,7 +98,7 @@ const postShare = (title, description, siteurl, path, id = 0) => {
           </a>
         </li>
         <li class="mdl-menu__item share-menu__item">
-          <a href="//www.facebook.com/sharer.php?u=${link}" class="share-menu__link" target="_blank" rel="nofollow">
+          <a href="//www.facebook.com/sharer.php?u=${link}" class="share-menu__link" target="_blank" rel="nofollow noreferrer noopener">
             <svg class="share-menu__icon">
               <use xlink:href="#facebook"></use>
             </svg>

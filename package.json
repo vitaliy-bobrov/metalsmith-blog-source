@@ -8,8 +8,7 @@
     "start": "gulp && gulp serve:dev",
     "build": "gulp",
     "deploy": "NODE_ENV=production gulp deploy",
-    "sitemap": "gulp seo",
-    "tunel": "gulp tunel"
+    "sitemap": "gulp seo"
   },
   "repository": {
     "type": "git",
@@ -37,7 +36,6 @@
     "gulp-gh-pages": "^0.5.4",
     "gulp-htmlmin": "^3.0.0",
     "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.1.1",
     "gulp-load-plugins": "^1.4.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.2.0",
@@ -57,6 +55,7 @@
     "metalsmith-collections": "^0.9.0",
     "metalsmith-debug": "^1.1.0",
     "metalsmith-default-values": "^1.0.1",
+    "metalsmith-discover-partials": "^0.1.0",
     "metalsmith-disqus": "^1.2.2",
     "metalsmith-drafts": "0.0.1",
     "metalsmith-excerpts": "^1.1.0",
@@ -67,10 +66,10 @@
     "metalsmith-pagination": "^1.4.0",
     "metalsmith-permalinks": "^0.5.0",
     "metalsmith-register-helpers": "^0.2.0",
+    "metalsmith-tags": "^2.0.0",
     "metalsmith-twitter-card": "^1.0.3",
     "metalsmith-updated": "^0.1.4",
     "minimist": "^1.2.0",
-    "ngrok": "^2.2.5",
     "postcss-assets": "^4.1.0",
     "postcss-mq-keyframes": "^0.3.0",
     "remarkable-classy": "0.0.1",

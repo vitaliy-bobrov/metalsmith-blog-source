@@ -5,8 +5,8 @@ ogimage: images/posts/five-reasons-choose-metalsmith/five-reasons-choose-metalsm
 tumb: /images/posts/five-reasons-choose-metalsmith/five-reasons-choose-metalsmith
 created: 2017-01-19
 categories:
-- Metalsmith
 - Blog
+- Metalsmith
 ---
 Few times I started to develop my personal blog locally, but only this implementation came to production. Previously I tried few CMS variants, other static site generators, but stop my decision on Metalsmith. I'll tell my story and try to argue why you might use Metalsmith for your next project.
 

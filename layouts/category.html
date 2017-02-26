@@ -4,13 +4,8 @@
     <title>{{ sitename }}</title>
     {{> metatags }}
 
-    {{> manifest }}
-
     {{> og-blog-props }}
     {{> og-image-props }}
-
-    <!-- Styles -->
-    {{> css }}
   </head>
   <body class="mdlext-dark-color-theme">
     {{> sprite }}
@@ -48,17 +43,11 @@
                     <div class="post-info__author">
                       {{ post.author.name }}
                     </div>
-                    {{#if post.modified}}
-                      <time date-time="{{ moment post.updated format='YYYY-MM-DDThh:mm:ssZ' }}"
-                            class="post-info__date">
-                        {{ moment post.updated format='D MMMM YYYY' }}
-                      </time>
-                    {{else}}
-                      <time date-time="{{ moment post.created format='YYYY-MM-DDThh:mm:ssZ' }}"
-                            class="post-info__date">
-                        {{ moment post.created format='D MMMM YYYY' }}
-                      </time>
-                    {{/if}}
+
+                    <time date-time="{{ moment post.created format='YYYY-MM-DDThh:mm:ssZ' }}"
+                          class="post-info__date">
+                      {{ moment post.created format='D MMMM YYYY' }}
+                    </time>
                   </div>
                 </div>
 
@@ -74,9 +63,9 @@
 
                   <div class="post-info__categories">
                     {{#each post.categories as |category|}}
-                      <span class="mdl-chip post-info__category">
-                          <span class="mdl-chip__text">{{ category }}</span>
-                      </span>
+                      <a href="/category/{{ category.slug }}" class="mdl-chip post-info__category">
+                          <span class="mdl-chip__text">{{ category.name }}</span>
+                      </a>
                     {{/each}}
                   </div>
                 </div>
@@ -92,18 +81,20 @@
                 </a>
               </section>
 
-              {{{ postShare ../siteurl post.path @index }}}
+              {{{ postShare post.title post.description ../siteurl post.path @index }}}
             </article>
           {{/each}}
         </section>
       </main>
+      <!-- Snackbar -->
+      {{> notification }}
 
       <!-- Footer -->
       {{> footer }}
     </div>
 
     <!-- Scripts -->
-    {{> js }}
     {{> ga }}
+    {{> js }}
   </body>
 </html>

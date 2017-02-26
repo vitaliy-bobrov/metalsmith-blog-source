@@ -65,6 +65,14 @@
   }
 
   &__category {
+    background-color: $mdlext-dark-color-primary;
+    user-select: none;
+
+    &:hover,
+    &:focus {
+      background-color: $mdl-selection;
+    }
+
     &:not(:last-of-type) {
       margin-right: 8px;
     }

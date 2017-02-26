@@ -5,6 +5,7 @@ ogimage: images/posts/webpack-2-migration-tips/webpack-2-migration-tips-og.jpg
 tumb: /images/posts/webpack-2-migration-tips/webpack-2-migration-tips
 created: 2017-02-09
 categories:
+- Guides
 - Tools
 ---
 Webpack 2 has been just released, it brings a lot of improvement and cool features, as well as breaking changes in configuration. Not all issues are easy to find by googling, to solve it fast. That is why I want to share tips that might help you to update you Webpack configuration and don't broke your bundle.
