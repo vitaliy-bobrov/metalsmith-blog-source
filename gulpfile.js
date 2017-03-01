@@ -247,6 +247,8 @@ gulp.task('copy-sw-scripts', () => gulp.src([
 gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
   const rootDir = 'build';
   const filepath = path.join(rootDir, 'service-worker.js');
+  const ONE_YEAR_IN_SEC = 31557600;
+  const ONE_WEEK_IN_SEC = 604800;
 
   return swPrecache.write(filepath, {
     cacheId: pkg.name,
@@ -262,27 +264,51 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
       `${rootDir}/images/!(*-og.jpg)`,
       `${rootDir}/js/**/*.js`,
       `${rootDir}/css/**/*.css`,
-      `${rootDir}/*.{html,json}`,
+      `${rootDir}/*.{json,ico}`,
       `${rootDir}/about/*.html`
     ],
     runtimeCaching: [
       {
         urlPattern: /.*\.(png|jpg|gif|webp|svg)/i,
-        handler: 'fastest',
+        handler: 'cacheFirst',
         options: {
           cache: {
-            maxEntries: 200,
-            name: 'data-images-cache'
+            name: 'images-cache',
+            maxEntries: 100,
+            maxAgeSeconds: ONE_YEAR_IN_SEC
           }
         }
       },
       {
-        urlPattern: /\/blog\/.*/,
-        handler: 'fastest',
+        urlPattern: /\/blog\/.*\.html/,
+        handler: 'networkFirst',
         options: {
           cache: {
-            maxEntries: 100,
-            name: 'data-posts-cache'
+            name: 'posts-cache',
+            maxEntries: 24,
+            maxAgeSeconds: ONE_YEAR_IN_SEC
+          }
+        }
+      },
+      {
+        urlPattern: /\/.*\.html/,
+        handler: 'networkFirst',
+        options: {
+          cache: {
+            name: 'blog-list-cache',
+            maxEntries: 24,
+            maxAgeSeconds:  ONE_WEEK_IN_SEC
+          }
+        }
+      },
+      {
+        urlPattern: /\/(category|page)\/.*\.htmll/,
+        handler: 'networkFirst',
+        options: {
+          cache: {
+            name: 'category-cache',
+            maxEntries: 72,
+            maxAgeSeconds:  ONE_WEEK_IN_SEC
           }
         }
       }

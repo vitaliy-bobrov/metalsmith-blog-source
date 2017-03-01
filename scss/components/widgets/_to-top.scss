@@ -1,11 +1,46 @@
 .to-top {
   position: absolute;
-  top: -20px;
+  top: -48px;
   right: 16px;
-  z-index: 1;
+  z-index: $under-content;
+  transition: z-index 0s linear;
+  will-change: transform;
+
+  @media screen and (min-width: 768px) {
+    top: -20px;
+  }
+
+  &_visible {
+    z-index: $above-content;
+    animation: showTop .8s;
+  }
 
   &__icon {
     margin: 8px;
     color: $mdlext-dark-text-color-primary;
+  }
+}
+
+@keyframes showTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px) scale(1);
+  }
+
+  40% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  60% {
+    transform: translateY(0) scale(1.2);
+  }
+
+  80% {
+    transform: translateY(0) scale(.8);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
   }
 }
