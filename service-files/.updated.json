@@ -2,14 +2,14 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2017-02-26T14:17:39.931Z",
-        "updated": "2017-02-26T14:17:39.931Z"
+        "created": "2017-03-01T20:10:37.328Z",
+        "updated": "2017-03-01T20:10:37.328Z"
     },
     "index.md": {
         "filename": "index.md",
         "hash": "d41d8cd98f00b204e9800998ecf8427e",
-        "created": "2017-02-26T14:17:39.931Z",
-        "updated": "2017-02-26T14:17:39.931Z"
+        "created": "2017-03-01T20:10:37.328Z",
+        "updated": "2017-03-01T20:10:37.328Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
@@ -28,6 +28,12 @@
         "hash": "96cbdca881a1f341f5439f1a39d7b6ee",
         "created": "2016-12-26T00:00:00.000Z",
         "updated": "2016-12-26T00:00:00.000Z"
+    },
+    "blog/introduction-to-functional-js.md": {
+        "filename": "blog/introduction-to-functional-js.md",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e",
+        "created": "2017-03-01T00:00:00.000Z",
+        "updated": "2017-03-01T00:00:00.000Z"
     },
     "blog/native-share-for-mobile-chrome.md": {
         "filename": "blog/native-share-for-mobile-chrome.md",
@@ -56,7 +62,7 @@
     "pages/about.md": {
         "filename": "pages/about.md",
         "hash": "83c94d59ca5627910c3c15d195ab56ec",
-        "created": "2017-02-26T14:17:39.931Z",
-        "updated": "2017-02-26T14:17:39.931Z"
+        "created": "2017-03-01T20:10:37.328Z",
+        "updated": "2017-03-01T20:10:37.328Z"
     }
 }
