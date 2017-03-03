@@ -2,20 +2,14 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2017-03-01T20:52:56.196Z",
-        "updated": "2017-03-01T20:52:56.196Z"
+        "created": "2017-03-01T22:53:20.987Z",
+        "updated": "2017-03-01T22:53:20.987Z"
     },
     "index.md": {
         "filename": "index.md",
         "hash": "d41d8cd98f00b204e9800998ecf8427e",
-        "created": "2017-03-01T20:52:56.196Z",
-        "updated": "2017-03-01T20:52:56.196Z"
-    },
-    "pages/about.md": {
-        "filename": "pages/about.md",
-        "hash": "83c94d59ca5627910c3c15d195ab56ec",
-        "created": "2017-03-01T20:52:56.196Z",
-        "updated": "2017-03-01T20:52:56.196Z"
+        "created": "2017-03-01T22:53:20.987Z",
+        "updated": "2017-03-01T22:53:20.987Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
@@ -32,12 +26,12 @@
     "blog/hello-world.md": {
         "filename": "blog/hello-world.md",
         "hash": "96cbdca881a1f341f5439f1a39d7b6ee",
-        "created": "2016-12-26T00:00:00.000Z",
-        "updated": "2016-12-26T00:00:00.000Z"
+        "created": "2017-01-14T00:00:00.000Z",
+        "updated": "2017-01-14T00:00:00.000Z"
     },
     "blog/introduction-to-functional-js.md": {
         "filename": "blog/introduction-to-functional-js.md",
-        "hash": "8943a6b2508453038a729681aa2be04b",
+        "hash": "c6b0e38f193ed1e3b6a060e5dc90d697",
         "created": "2017-03-01T00:00:00.000Z",
         "updated": "2017-03-01T00:00:00.000Z"
     },
@@ -64,5 +58,11 @@
         "hash": "ccc2c777b481b6e01795b5afe8e23c41",
         "created": "2017-02-09T00:00:00.000Z",
         "updated": "2017-02-09T00:00:00.000Z"
+    },
+    "pages/about.md": {
+        "filename": "pages/about.md",
+        "hash": "83c94d59ca5627910c3c15d195ab56ec",
+        "created": "2017-03-01T22:53:20.987Z",
+        "updated": "2017-03-01T22:53:20.987Z"
     }
 }
