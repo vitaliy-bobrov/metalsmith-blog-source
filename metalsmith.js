@@ -106,7 +106,15 @@ Metalsmith(__dirname)
   )
   .use($.codeHighlight({
     tabReplace: '  ',
-    languages: ['js', 'html', 'css', 'bash', 'json', 'yaml']
+    languages: [
+      'js',
+      'ts',
+      'html',
+      'css',
+      'bash',
+      'json',
+      'yaml'
+    ]
   }))
   .use($.permalinks({
     relative: false,
