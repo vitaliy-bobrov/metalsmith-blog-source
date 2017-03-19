@@ -131,6 +131,7 @@ gulp.task('styles', () => {
         /^.*is-.*/,
         /^.*mdl-(layout|menu|button|button--fab|snackbar|ripple).*/,
         /^.*\.webp.*/,
+        /^\.to-top.*/,
         '.drawer-icon'
       ]
     })))
