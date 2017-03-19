@@ -4,6 +4,7 @@ const loadPlugins = require('./load-plugins');
 
 const extlink = require('remarkable-extlink');
 const classy = require('remarkable-classy');
+const emoji = require('remarkable-emoji');
 
 const $ = loadPlugins(pkg, 'devDependencies', 'metalsmith-');
 
@@ -99,6 +100,7 @@ Metalsmith(__dirname)
   .use($.markdownRemarkable({
     typographer: true
   })
+    .use(emoji)
     .use(classy)
     .use(extlink, {
       host: siteurl

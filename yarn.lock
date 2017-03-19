@@ -5441,6 +5441,10 @@ remarkable-classy@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/remarkable-classy/-/remarkable-classy-0.0.1.tgz#b8f7ec700dafc51c8c1359b7e614eac86b812103"
 
+remarkable-emoji@0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/remarkable-emoji/-/remarkable-emoji-0.1.3.tgz#38c7dba14f725dbd2672686805ae7abb04432eb3"
+
 remarkable-extlink@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/remarkable-extlink/-/remarkable-extlink-1.0.1.tgz#aa5b99453e8dfa859d735af34a23a79e5bb2a150"
