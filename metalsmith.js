@@ -100,11 +100,11 @@ Metalsmith(__dirname)
   .use($.markdownRemarkable({
     typographer: true
   })
-    .use(emoji)
     .use(classy)
     .use(extlink, {
       host: siteurl
     })
+    .use(emoji)
   )
   .use($.codeHighlight({
     tabReplace: '  ',

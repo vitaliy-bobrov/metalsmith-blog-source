@@ -1,9 +1,9 @@
 ---
 title: Adding Comments to Metalsmith
-description: Metalsmith is a static site generator, that means that developer won't to implement commenting functionality from scratch.
-created: 2017-01-30
+description: Metalsmith is a static site generator, so developer won't to implement commenting functionality from scratch.
 ogimage: images/posts/adding-comments-to-metalsmith/add-comments-to-metalsmith-project-og.jpg
 tumb: /images/posts/adding-comments-to-metalsmith/add-comments-to-metalsmith-project
+created: 2017-01-30
 categories:
 - Guides
 - Metalsmith
@@ -97,10 +97,8 @@ Metalsmith(__dirname)
 There are 2 widgets possible to use from Disqus -- the commenting widget and comments counter. To use comments widgets just add `comments: true` to content front matter data:
 
 ```yaml
----
 title: Hello World
 comments: true
----
 ```
 
 But wouldn't be enought, you need to add HTML container for Disqus comments inside your page template with id `disqus_thread`, if you're using handlebars as templateengine it may look like this:
@@ -115,10 +113,8 @@ But wouldn't be enought, you need to add HTML container for Disqus comments insi
 The same manipulations needed for comments count widget, just enable `comments-counter: true` in metadata and add a container to insert text with an amount of comments. The difference is that for the container you should use class name `disqus-comment-count` (configured by default) or specify any CSS class with `counterSelector` option. In addition, you need to render property to that is used as `identifier` in your settings (`title` by default) inside `data-disqus-key` attribute. This data-attribute in necessary to insert correct counter to proper content:
 
 ```yaml
----
 title: My page
 comments-counter: true
----
 ```
 
 ```html
