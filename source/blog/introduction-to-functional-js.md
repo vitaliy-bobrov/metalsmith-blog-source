@@ -172,7 +172,7 @@ if (b === 1) {
   } else {
     a = 2;
   }
-} esle {
+} else {
   a = 3;
 }
 ```
@@ -212,7 +212,7 @@ DON'T: Use loops for simple data modification.
 ```js
 const arr = [1, 2, 3];
 
-for(let i = 0; i < arr.length; i++) {
+for (let i = 0; i < arr.length; i++) {
   arr[i] = arr[i] * 2;
 }
 ```
