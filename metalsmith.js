@@ -95,6 +95,15 @@ Metalsmith(__dirname)
       first: 'index.html',
       noPageOne: true,
       path: 'blog/page/:num/index.html',
+      pageMetadata: {
+        title: sitename,
+        description: siteDescr,
+        'comments-counter': true,
+        'disqus-prefetch-widget': true,
+        changefreq: 'always',
+        priority: 1.0,
+        twitter: true
+      }
     }
   }))
   .use($.markdownRemarkable({
