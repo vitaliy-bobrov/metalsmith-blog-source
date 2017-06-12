@@ -1,0 +1,27 @@
+<nav class="pagination mdl-grid">
+  {{#if pagination.previous}}
+    <a class="pagination__link pagination__link_prev"
+       href="/{{ pagination.previous.path }}"
+       title="Go to page {{ pagination.index }}">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon pagination__btn">
+        <svg class="mdl-svg pagination__icon">
+          <use xlink:href="#arrow-back"></use>
+        </svg>
+      </button>
+      Page {{ pagination.index }}
+    </a>
+  {{/if}}
+
+  {{#if pagination.next}}
+    <a class="pagination__link pagination__link_next"
+       href="/{{ pagination.next.path }}"
+       title="View more posts">
+      More
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon pagination__btn">
+        <svg class="mdl-svg pagination__icon">
+          <use xlink:href="#arrow-forward"></use>
+        </svg>
+      </button>
+    </a>
+  {{/if}}
+</nav>
