@@ -5,6 +5,7 @@ ogimage: images/posts/introduction-to-functional-js/introduction-to-functional-j
 tumb: /images/posts/introduction-to-functional-js/introduction-to-functional-js
 created: 2017-03-19
 categories:
+- JavaScript
 - Functional Programming
 ---
 Functional programming -- this words you might read a lot of times during last year, especially in JavaScript context. Today I'll try to demystify its basic principles for newbies in easiest and beginner-friendly manner.
