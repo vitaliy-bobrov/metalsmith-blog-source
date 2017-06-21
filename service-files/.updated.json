@@ -2,8 +2,8 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2017-06-21T21:26:10.633Z",
-        "updated": "2017-06-21T21:26:10.633Z"
+        "created": "2017-06-21T21:26:45.374Z",
+        "updated": "2017-06-21T21:26:45.374Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
@@ -62,7 +62,7 @@
     "pages/about.md": {
         "filename": "pages/about.md",
         "hash": "60b2a5e4d501ade597b1477da79ab9fe",
-        "created": "2017-06-21T21:26:10.633Z",
-        "updated": "2017-06-21T21:26:10.633Z"
+        "created": "2017-06-21T21:26:45.374Z",
+        "updated": "2017-06-21T21:26:45.374Z"
     }
 }
