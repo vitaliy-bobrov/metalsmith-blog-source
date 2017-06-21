@@ -23,6 +23,7 @@ button {
 
 a {
   text-decoration: none;
+  text-decoration-skip: ink;
 
   &:hover,
   &:focus {
