@@ -265,7 +265,6 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
       `${rootDir}/images/!(*-og.jpg)`,
       `${rootDir}/js/**/*.js`,
       `${rootDir}/css/**/*.css`,
-      `${rootDir}/*.{json,ico}`,
       `${rootDir}/about/*.html`
     ],
     runtimeCaching: [
