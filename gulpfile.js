@@ -237,7 +237,7 @@ gulp.task('tunel', ['assets'], cb => runSequence(
 
 gulp.task('copy-sw-scripts', () => gulp.src([
     'node_modules/sw-toolbox/sw-toolbox.js',
-    'node_modules/sw-offline-google-analytics/build/offline-google-analytics-import.min.js',
+    'node_modules/sw-offline-google-analytics/build/importScripts/sw-offline-google-analytics.prod.v0.0.25.js',
     'js/sw/*.js'
   ])
     .pipe($.plumber({
@@ -255,7 +255,7 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
     cacheId: pkg.name,
     importScripts: [
       'js/sw/sw-toolbox.js',
-      'js/sw/offline-google-analytics-import.min.js',
+      'js/sw/sw-offline-google-analytics.prod.v0.0.25.js',
       'js/sw/offline-analytics.js',
       'js/sw/runtime-caching.js'
     ],
