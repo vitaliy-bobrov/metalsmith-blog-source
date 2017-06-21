@@ -21,7 +21,6 @@
 
   &__date {
     display: block;
-    color: $mdlext-dark-text-color-secondary;
   }
 
   &__data {
@@ -38,7 +37,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    @media screen and (min-width: 380px) {
+    @media screen and (min-width: 460px) {
       width: auto;
       padding-top: 0;
       flex-direction: column;

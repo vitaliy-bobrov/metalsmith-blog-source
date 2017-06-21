@@ -11,7 +11,7 @@
     if (button !== null) {
       button.innerHTML = `<svg class="mdl-svg drawer-icon">
           <use xlink:href="#menu"></use>
-        </svg>`;
+        </svg>Menu`;
     } else {
       timeoutId = setTimeout(mdlCahngeIcon, 100);
     }
