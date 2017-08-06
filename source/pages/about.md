@@ -12,32 +12,36 @@ I’m Vitaliy, a 27-year-old front-end engineer from Mykolaiv, Ukraine. But curr
 ### My talks on community events:
 - [Kyiv DrupalCamp 2015](http://camp15.drupal.ua/) -- 5-6 September 2015, Kyiv, Ukraine
 
-  Topic: **Building Hybrid Apps with Drupal and Ionic**
+  Topic: **"Building Hybrid Apps with Drupal and Ionic"**
 
   [Slides](https://docs.google.com/presentation/d/193IXo4MN1qNJ9DixMxmNmZjuW0FyFi-BEck0hB0xlBk/edit?usp=sharing)
 
 - [Lviv Euro DrupalCamp 2015](http://lviv2015.drupal.ua/) -- 17-18 October 2015, Lviv, Ukraine
 
-  Topic: **Web Components, Polymer and Drupal**
+  Topic: **"Web Components, Polymer and Drupal"**
 
   [Slides](https://docs.google.com/presentation/d/1pyzEy60eYgdmtaX7JlEPFHHcsF2IwYyE6pZT05qbDfE/edit?usp=sharing)
 
 - [Experts Fridays](http://expertfridays.com/) -- 29 April 2016, Odessa, Ukraine
 
-  Topic: **Mobile development with JavaScript**
+  Topic: **"Mobile development with JavaScript"**
 
   [Slides](https://docs.google.com/presentation/d/1NQkPvKJn_aVm3QH5X6AGUZpBua25fBlYbPXm2Mhau8o/edit?usp=sharing)
 
 - [WebCamp: Front-End](http://webcamp.in.ua/2016/) -- 29 July 2016, Odessa, Ukraine
 
-  Topic: **Mobile development with JavaScript**
+  Topic: **"Mobile development with JavaScript"**
 
-  [Slides](https://docs.google.com/presentation/d/15_dfnWqU-bpWUVb0ISP_CDg0fgdQWrDjnVsd5jfiGdA/edit?usp=sharing) [Video](https://youtu.be/6AKG7goUqDQ)
+  [Slides](https://docs.google.com/presentation/d/15_dfnWqU-bpWUVb0ISP_CDg0fgdQWrDjnVsd5jfiGdA/edit?usp=sharing) | [Video](https://youtu.be/6AKG7goUqDQ)
 
 ### Upcomming talks
-- [FrontEnd Con 2017](http://frontend-con.io/) 22 September 2017, Warsaw, Poland
+- [GDG DevFest Poland](https://devfest.pl/) 7 September 2017, Rzeszów, Poland
 
-  Topic: **Keep calm and use Angular CLI**
+  Topic: **"Cooking NgRx the Right Way"**
+
+- [FrontEnd Con](http://frontend-con.io/) 23 September 2017, Warsaw, Poland
+
+  Topic: **"Keep calm and use Angular CLI"**
 
 ## Contact
 
