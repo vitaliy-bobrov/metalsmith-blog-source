@@ -1,7 +1,5 @@
 # Supported platforms
-ie >= 11
-ff >= 50
 chrome >= 58
-safari >= 8
-ios >= 8
-android >= 4.4
+firefox >= 55
+safari >= 10
+ios >= 10

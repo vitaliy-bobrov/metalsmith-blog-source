@@ -160,7 +160,7 @@ gulp.task('scripts', () =>
       .pipe($.babel())
       .pipe($.sourcemaps.write())
       .pipe($.concat('main.min.js'))
-      .pipe($.uglify(UGLIFY_CONFIG))
+      .pipe($.babelMinify())
       .pipe($.size({title: 'scripts'}))
       .pipe($.sourcemaps.write('.'))
       .pipe(gulp.dest('build/js')));
@@ -243,6 +243,7 @@ gulp.task('copy-sw-scripts', () => gulp.src([
     .pipe($.plumber({
       errorHandler: onError
     }))
+    .pipe($.babelMinify())
     .pipe(gulp.dest('build/js/sw')));
 
 gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
@@ -319,7 +320,7 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
 
 gulp.task('minify-sw', () => {
   gulp.src('build/service-worker.js')
-    .pipe($.uglify(UGLIFY_CONFIG))
+    .pipe($.babelMinify())
     .pipe(gulp.dest('build'));
 });
 
