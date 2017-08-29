@@ -35,13 +35,13 @@ I’m Vitaliy, a 27-year-old front-end engineer from Mykolaiv, Ukraine. But curr
   [Slides](https://docs.google.com/presentation/d/15_dfnWqU-bpWUVb0ISP_CDg0fgdQWrDjnVsd5jfiGdA/edit?usp=sharing) | [Video](https://youtu.be/6AKG7goUqDQ)
 
 ### Upcomming talks
-- [GDG DevFest Poland](https://devfest.pl/) 7 September 2017, Rzeszów, Poland
-
-  Topic: **"Cooking NgRx the Right Way"**
-
-- [FrontEnd Con](http://frontend-con.io/) 23 September 2017, Warsaw, Poland
+- [FrontEnd Con](http://frontend-con.io/) -- 23 September 2017, Warsaw, Poland
 
   Topic: **"Keep calm and use Angular CLI"**
+
+- [GDG DevFest Poland](https://devfest.pl/) -- 9 December 2017, Warsaw, Poland
+
+  Topic: **"Cooking NgRx the Right Way"**
 
 ## Contact
 

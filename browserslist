@@ -1,5 +1,5 @@
 # Supported platforms
-chrome >= 58
+chrome >= 60
 firefox >= 55
 safari >= 10
 ios >= 10
