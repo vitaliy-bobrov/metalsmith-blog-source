@@ -8,7 +8,7 @@
     "start": "gulp && gulp serve:dev",
     "build": "gulp",
     "deploy": "NODE_ENV=production gulp deploy",
-    "sitemap": "gulp seo"
+    "seo": "gulp seo"
   },
   "repository": {
     "type": "git",
