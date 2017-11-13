@@ -42,9 +42,9 @@ gulp.task('metalsmith', ['svg'], callback => exec(`node ./metalsmith.js --url=${
   }));
 
 gulp.task('service-files', () => gulp.src([
-  'service-files/**/*',
-  '!service-files/.updated.json'
-])
+    'service-files/**/*',
+    '!service-files/.updated.json'
+  ])
   .pipe(gulp.dest('build')));
 
 // Lint JavaScript
@@ -52,9 +52,9 @@ gulp.task('lint', () => gulp.src([
     'js/**/*.js',
     '!node_modules/**'
   ])
-    .pipe($.eslint())
-    .pipe($.eslint.format())
-    .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
+  .pipe($.eslint())
+  .pipe($.eslint.format())
+  .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
 );
 
 gulp.task('webp', () => gulp.src([
@@ -69,8 +69,8 @@ gulp.task('webp', () => gulp.src([
 
 // Optimize images
 gulp.task('images', ['webp'], () => gulp.src('./images/**/*.{jpg,jpeg,png,gif,webp}')
-    .pipe(gulp.dest('build/images'))
-    .pipe($.size({title: 'images'}))
+  .pipe(gulp.dest('build/images'))
+  .pipe($.size({title: 'images'}))
 );
 
 gulp.task('svg', () => gulp.src('images/svg/*.svg')
@@ -153,17 +153,17 @@ gulp.task('scripts', () =>
       'node_modules/material-design-lite/src/snackbar/snackbar.js',
       'js/*.js'
     ])
-      .pipe($.plumber({
-        errorHandler: onError
-      }))
-      .pipe($.sourcemaps.init())
-      .pipe($.babel())
-      .pipe($.sourcemaps.write())
-      .pipe($.concat('main.min.js'))
-      .pipe($.babelMinify())
-      .pipe($.size({title: 'scripts'}))
-      .pipe($.sourcemaps.write('.'))
-      .pipe(gulp.dest('build/js')));
+    .pipe($.plumber({
+      errorHandler: onError
+    }))
+    .pipe($.sourcemaps.init())
+    .pipe($.babel())
+    .pipe($.sourcemaps.write())
+    .pipe($.concat('main.min.js'))
+    .pipe($.babelMinify())
+    .pipe($.size({title: 'scripts'}))
+    .pipe($.sourcemaps.write('.'))
+    .pipe(gulp.dest('build/js')));
 
 // Clean output directory
 gulp.task('clean', () => del([
@@ -240,11 +240,11 @@ gulp.task('copy-sw-scripts', () => gulp.src([
     'node_modules/sw-offline-google-analytics/build/importScripts/sw-offline-google-analytics.prod.v0.0.25.js',
     'js/sw/*.js'
   ])
-    .pipe($.plumber({
-      errorHandler: onError
-    }))
-    .pipe($.babelMinify())
-    .pipe(gulp.dest('build/js/sw')));
+  .pipe($.plumber({
+    errorHandler: onError
+  }))
+  .pipe($.babelMinify())
+  .pipe(gulp.dest('build/js/sw')));
 
 gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
   const rootDir = 'build';
