@@ -2,14 +2,8 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2017-10-27T20:40:41.506Z",
-        "updated": "2017-10-27T20:40:41.506Z"
-    },
-    "pages/about.md": {
-        "filename": "pages/about.md",
-        "hash": "a6ef0c9260f8b204a7056af2c47c24ee",
-        "created": "2017-10-27T20:40:41.506Z",
-        "updated": "2017-10-27T20:40:41.506Z"
+        "created": "2017-11-13T18:46:32.831Z",
+        "updated": "2017-11-13T18:46:32.831Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
@@ -70,5 +64,17 @@
         "hash": "ccc2c777b481b6e01795b5afe8e23c41",
         "created": "2017-02-09T00:00:00.000Z",
         "updated": "2017-02-09T00:00:00.000Z"
+    },
+    "pages/about.md": {
+        "filename": "pages/about.md",
+        "hash": "d8c9ca0d8e8fbd54f741b3b9b2824dd3",
+        "created": "2017-11-13T18:46:32.831Z",
+        "updated": "2017-11-13T18:46:32.831Z"
+    },
+    "pages/speaker.md": {
+        "filename": "pages/speaker.md",
+        "hash": "c3b7840c27fc29068c549b11d741b6b5",
+        "created": "2017-11-13T18:46:32.831Z",
+        "updated": "2017-11-13T18:46:32.831Z"
     }
 }
