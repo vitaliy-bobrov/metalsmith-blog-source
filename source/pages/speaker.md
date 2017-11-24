@@ -8,9 +8,9 @@ twitter: true
 ---
 ## Upcomming talks:
 
-- [GDG DevFest Poland](https://devfest.pl/) -- 9 December 2017, Warsaw, Poland
+- [Code Europe](https://www.codeeurope.pl) -- 13 December 2017, Wrpclaw, Poland
 
-  Topic: **"Cooking NgRx the Right Way"**
+  Topic: **"Stencil: a New Hope of Web Components"**
 
 ## Past talks:
 - [meet.js Wrocław](https://www.meetup.com/meet-js-wroclaw/events/238619875/) -- 30 November 2017, Wroclaw, Poland
