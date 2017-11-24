@@ -8,7 +8,7 @@ twitter: true
 ---
 ## Upcomming talks:
 
-- [Code Europe](https://www.codeeurope.pl) -- 13 December 2017, Wrpclaw, Poland
+- [Code Europe](https://www.codeeurope.pl) -- 13 December 2017, Wroclaw, Poland
 
   Topic: **"Stencil: a New Hope of Web Components"**
 
