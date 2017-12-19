@@ -8,16 +8,22 @@ twitter: true
 ---
 ## Upcomming talks:
 
+- [ngVikings](https://www.codeeurope.pl) -- 2 March 2018, Helsinki, Finland
+
+  Topic: **"Designing Components API"**
+
+## Past talks:
 - [Code Europe](https://www.codeeurope.pl) -- 13 December 2017, Wroclaw, Poland
 
   Topic: **"Stencil: a New Hope of Web Components"**
 
-## Past talks:
+  [Slides](https://speakerdeck.com/bobrov1989/stencil-a-new-hope-of-web-components)
+
 - [meet.js Wrocław](https://www.meetup.com/meet-js-wroclaw/events/238619875/) -- 30 November 2017, Wroclaw, Poland
 
   Topic: **"Fancy Web Components with Stencil"**
 
-  [Slides](https://docs.google.com/presentation/d/1ZcvWzSF3GVrrWPz0vji6NaMaEFmZN6zdyles_z_gVAo/edit?usp=sharing)
+  [Slides](https://speakerdeck.com/bobrov1989/fancy-web-components-with-stencil)
 
 - [FrontEnd Con](http://frontend-con.io/) -- 22 September 2017, Warsaw, Poland
 
