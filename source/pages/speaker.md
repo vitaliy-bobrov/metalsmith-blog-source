@@ -8,7 +8,7 @@ twitter: true
 ---
 ## Upcomming talks:
 
-- [ngVikings](https://www.codeeurope.pl) -- 2 March 2018, Helsinki, Finland
+- [ngVikings](https://ngvikings.org/) -- 2 March 2018, Helsinki, Finland
 
   Topic: **"Designing Components API"**
 

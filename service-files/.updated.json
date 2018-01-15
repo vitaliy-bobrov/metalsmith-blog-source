@@ -2,8 +2,20 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2018-01-15T21:55:27.042Z",
-        "updated": "2018-01-15T21:55:27.042Z"
+        "created": "2018-01-15T22:32:55.285Z",
+        "updated": "2018-01-15T22:32:55.285Z"
+    },
+    "pages/about.md": {
+        "filename": "pages/about.md",
+        "hash": "7227f681530679927db96304199484a1",
+        "created": "2018-01-15T22:32:55.285Z",
+        "updated": "2018-01-15T22:32:55.285Z"
+    },
+    "pages/speaker.md": {
+        "filename": "pages/speaker.md",
+        "hash": "f63e1066cba3c5eb322575efe8f8b738",
+        "created": "2018-01-15T22:32:55.285Z",
+        "updated": "2018-01-15T22:32:55.285Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
@@ -55,7 +67,7 @@
     },
     "blog/stencil-in-action-tabs.md": {
         "filename": "blog/stencil-in-action-tabs.md",
-        "hash": "c5ef3fa97c612c77a82ec9f979a1c50d",
+        "hash": "13155869a9d80ca718e75fd6a3deb542",
         "created": "2018-01-15T00:00:00.000Z",
         "updated": "2018-01-15T00:00:00.000Z"
     },
@@ -70,17 +82,5 @@
         "hash": "ccc2c777b481b6e01795b5afe8e23c41",
         "created": "2017-02-09T00:00:00.000Z",
         "updated": "2017-02-09T00:00:00.000Z"
-    },
-    "pages/about.md": {
-        "filename": "pages/about.md",
-        "hash": "7227f681530679927db96304199484a1",
-        "created": "2018-01-15T21:55:27.042Z",
-        "updated": "2018-01-15T21:55:27.042Z"
-    },
-    "pages/speaker.md": {
-        "filename": "pages/speaker.md",
-        "hash": "2a05d813ab35d0eeb8bf433512aa21a1",
-        "created": "2018-01-15T21:55:27.042Z",
-        "updated": "2018-01-15T21:55:27.042Z"
     }
 }
