@@ -5,16 +5,14 @@ const camelCaseEscape = (slug, delimiter, escape) =>  slug.replace(escape, '')
   .reduce((name, item, index) => index ? name + capitalize(item) : name + item, '');
 
 const loadPlugins = (package, level, prefix) => {
-  let plugins = {};
-
-  Object.keys(package[level])
-    .forEach(dep => {
+  return Object.keys(package[level])
+    .reduce((plugins, dep) => {
       if (dep.indexOf(prefix) === 0) {
         plugins[camelCaseEscape(dep, '-', prefix)] = require(dep);
       }
-    });
 
-  return plugins;
+      return plugins;
+    }, {});
 };
 
 module.exports = loadPlugins;
