@@ -12,6 +12,18 @@ twitter: true
 
   Topic: **"Designing Components API"**
 
+- [KrakowJS](http://conf.krakowjs.pl/) -- 9 March 2018, Kraków, Poland
+
+  Topic: **"Make Web Brighter with CSS Paint API"**
+
+- [Angular Dragons](https://www.meetup.com/Angular-Dragons/) -- 13 March 2018, Kraków, Poland
+
+  Topic: **"NgRx Schematics"**
+
+- [ng-conf](https://www.ng-conf.org) -- 19 April 2018, Salt Lake City, UT
+
+  Topic: **"NgRx Schematics"**
+
 ## Past talks:
 - [Code Europe](https://www.codeeurope.pl) -- 13 December 2017, Wroclaw, Poland
 

@@ -4,6 +4,7 @@ description: Try Stencil by practical implementation of such commonly used compo
 ogimage: images/posts/stencil-in-action-tabs/stencil-in-action-tabs-og.jpg
 tumb: /images/posts/stencil-in-action-tabs/stencil-in-action-tabs
 created: 2018-01-15
+draft: true
 categories:
 - Stencil
 - Web Components
