@@ -9,15 +9,15 @@ categories:
 - JavaScript
 - Functional Programming
 ---
-Knowledge of JavaScript `Array` methods is really important. It allows writing code in functional style. As not all of those methods are immutable developers should know when to handle or avoid data mutations. Another important feature of array methods is context handling as it could dramatically simplify your code.
+Knowledge of JavaScript `Array` methods is fundamental. It allows writing code in functional style. As not all of those methods are immutable developers should know when to handle or avoid data mutations. Another essential feature of array methods is context handling as it could dramatically simplify your code.
 
-In this article, I want to show you some examples that are close to real use-cases rather than theory. If you need documentation you can get it on [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
+In this article, I want to show you some examples that are close to real use-cases rather than theory. If you need documentation, you can get it on [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 
 ## Immutable methods
 JavaScript provides a bunch of immutable methods for arrays manipulations. What does it mean? These methods not mutate data and always return a new modified array.
 
 ### Map
-The method is used to map array dataset, make some modifications on each array element. In difference to `forEach` method, it always returns a new array instead modifying existing. For example, you have a list of blog posts and you want to get a list of posts ids to get comments for each of them:
+The method is used to map array dataset, make some modifications on each array element. Indifference to `forEach` method, it always returns a new array instead modifying existing. For example, you have a list of blog posts, and you want to get a list of posts id's to get comments for each of them:
 
 ```js
 const posts = [
@@ -64,10 +64,10 @@ const postsWithComments = posts.map(post => {
   return post;
 });
 ```
-You might figure out that we used another method to find the comment by post id -- `filter`. Let take a look on this method.
+You might figure out that we used another method to find the comment by post id -- `filter`. Let take a look at this method.
 
 ### Filter
-Filter method is very useful when we need to make the partial copy of data that is aligned to some rule. In the previous example we get comments that have `post` property equals post `id`. As you may know, methods could be *chained*, for example, you need to get ids of posts that are related to "JavaScript" category:
+Filter method is advantageous when we need to make the partial copy of data that is aligned to some rule. In the previous example, we get comments that have `post` property equals post `id`. As you may know, methods could be *chained*, for example, you need to get ids of posts that are related to "JavaScript" category:
 
 ```js
 const posts [
@@ -148,7 +148,7 @@ const list2 = [6, 5, 4];
 const union = [...list1, ...list2]; // [1, 2, 3, 6, 5, 4]
 ```
 
-The good news that spread operator works with new JavaScript types as well, for example with `Set`
+The good news that spread operator works with new JavaScript types as well, for example with `Set`:
 
 ```js
 const setOfIds = new Set([45, 32, 11]);
@@ -162,7 +162,7 @@ const allIds = [...setOfIds, ...listOfIds];
 ```
 
 ### Reduce
-`reduce` one of the most powerful methods of the array. It is commonly used in functional style JavaScript. You could aggregate data using this method or transparently transform `Array` to another type. Reduce could be used to replace other methods as well, for example, `filter` implementation with `reduce`:
+`reduce` one of the most powerful methods of the array. Developers are using it in functional style JavaScript. You could aggregate data using this method or transparently transform `Array` to another type. Reduce could be used to replace other methods as well, for example, `filter` implementation with `reduce`:
 
 ```js
 const numbers = [1, 2, 3, 4];
@@ -204,7 +204,7 @@ In this example, we transformed `Array` into statistics `Object` with reducing h
 There is `reduceRight` method in the specification, the only difference that it starts iterate from the end of an array instead start in `reduce`.
 
 ### Every & Some
-`every` and `some` methods could be implemented with `reduce` as well because they transform `Array` into `boolean`. Every check if all items align with provided condition. Some instead return `true` if any of items follow condition. As the example imagine that you need to check all items have a `children` property:
+`every` and `some` methods could be implemented with `reduce` as well because they transform `Array` into `boolean`. Every check if all items align with a provided condition. Some instead return `true` if any of items follow condition. As the example imagine that you need to check all items have a `children` property:
 
 ```js
 const normalizedTree = [
@@ -276,7 +276,7 @@ sorted.sort();
 console.log(sorted); // [1, 2, 3];
 ```
 
-Here we made sorted copy of the initial array. To sort the array we used `sort` method, we can pass callback inside it to compare non-primitive items. This callback should return number: negative if the first element less than previous, zero if they are equal or positive if first value bigger than second. Here is the simple example to sort the list of objects by date:
+Here we made the sorted copy of the initial array. To sort the array we used `sort` method, we can pass callback inside it to compare non-primitive items. This callback should return number: negative if the first element less than previous, zero if they are equal or positive if first value bigger than second. Here is the simple example to sort the list of objects by date:
 
 ```js
 const sortByDate = (a, b) => {
@@ -319,9 +319,9 @@ const otherBoxList = [...box]; // [1, 2]
 ```
 
 ## Context handling
-Some of the array methods, like `map`, has the ability to pass context as the last argument. In some cases, it is really helpful, but nobody knows/remember about such possibility and start to use `bind` / `call` / `apply` to change execution context.
+Some of the array methods, like `map`, can pass context as the last argument. In some cases, it is beneficial, but nobody knows/remember about such possibility and start to use `bind` / `call` / `apply` to change execution context.
 
-Let us imagine you have some service to fetch data from REST API, and after response, you need to map all received data, using the same class method and/or properties:
+Let us imagine you have some service to fetch data from REST API, and after the response, you need to map all received data, using the same class method and properties:
 
 ```js
 class PostsService {
@@ -347,7 +347,7 @@ class PostsService {
 }
 ```
 
-So you can see that we are injecting some date parsing function into our service. Then we use it to parse date on each received post. As `postsMapper` used `PostsService` method inside it need to have the same context. Instead, bind context in the constructor we simply pass `this` as the last argument. Here is the full list of `Array` methods that have possibility to pass context as the last argument:
+So you can see that we are injecting some date parsing function into our service. Then we use it to parse date on each received post. As `postsMapper` used `PostsService` method inside it needs to have the same context. Instead, bind context in the constructor we simply pass `this` as the last argument. Here is the full list of `Array` methods that can pass context as the last argument:
 
 - every
 - filter
@@ -358,4 +358,4 @@ So you can see that we are injecting some date parsing function into our service
 - some
 
 ## Epilog
-This is all that I've wanted to tell about most useful array methods, hope some of the examples will find their place in your projects and will improve your JavaScript skills 😎.
+That is all that I've wanted to tell about most useful array methods, hope some of the examples will find their place in your projects and will improve your JavaScript skills 😎.
