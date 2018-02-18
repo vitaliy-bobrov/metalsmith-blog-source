@@ -8,6 +8,7 @@ categories:
 - Guides
 - Metalsmith
 ---
+
 Comments are the vital part of communication with the audience. It fits for a lot type of websites starting from blogs finishing with e-commerce. Metalsmith is a static site generator, that means (in most cases) that developer doesn't want to have a database and other back-end infrastructure to implement commenting functionality. But it not says that you can't add it.
 
 Some services provide commenting widgets as a service in web. The most widely-used and famous of them -- [Disqus](https://disqus.com/). With it, you will not care about a lot of complicated things related to comments. So what they offer to you:

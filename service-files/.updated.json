@@ -2,79 +2,79 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2018-02-03T18:43:00.858Z",
-        "updated": "2018-02-03T18:43:00.858Z"
+        "created": "2018-02-18T21:33:43.702Z",
+        "updated": "2018-02-18T21:33:43.702Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
-        "hash": "10b7ec33601a481a4de8e1d09ffa1a5e",
+        "hash": "f7e6b84265b7859c8abfffc24452edcd",
         "created": "2017-01-30T00:00:00.000Z",
         "updated": "2017-01-30T00:00:00.000Z"
     },
     "blog/deep-dive-into-array-methods.md": {
         "filename": "blog/deep-dive-into-array-methods.md",
-        "hash": "0b771a4393367332a647e0c4fc986fc1",
+        "hash": "79b943b1a0e20fdfe85570ac466e53ec",
         "created": "2017-06-21T00:00:00.000Z",
         "updated": "2017-06-21T00:00:00.000Z"
     },
     "blog/five-reasons-choose-metalsmith.md": {
         "filename": "blog/five-reasons-choose-metalsmith.md",
-        "hash": "38c0c0207a7623d90389fb20f8c916ae",
+        "hash": "1fd6618ddcbdb3cfe257b566c92c7409",
         "created": "2017-01-19T00:00:00.000Z",
         "updated": "2017-01-19T00:00:00.000Z"
     },
     "blog/hello-world.md": {
         "filename": "blog/hello-world.md",
-        "hash": "96cbdca881a1f341f5439f1a39d7b6ee",
+        "hash": "66a281ae0c020b0cf6a2551522381470",
         "created": "2017-01-14T00:00:00.000Z",
         "updated": "2017-01-14T00:00:00.000Z"
     },
     "blog/how-to-start-contribute-to-open-source.md": {
         "filename": "blog/how-to-start-contribute-to-open-source.md",
-        "hash": "74e897d1cbdf5c61cc5e6ca6ca34119d",
+        "hash": "20ebe383a7b3880fdfc2981b66a73ca7",
         "created": "2017-08-24T00:00:00.000Z",
         "updated": "2017-08-24T00:00:00.000Z"
     },
     "blog/introduction-to-functional-js.md": {
         "filename": "blog/introduction-to-functional-js.md",
-        "hash": "7dedc493fa5f460bc72a1326fc091e68",
+        "hash": "b0b8eb6a06d50b65878deb1f4152735b",
         "created": "2017-03-19T00:00:00.000Z",
         "updated": "2017-03-19T00:00:00.000Z"
     },
     "blog/native-share-for-mobile-chrome.md": {
         "filename": "blog/native-share-for-mobile-chrome.md",
-        "hash": "ef8d9822fc5c14a717ca1f21f98bf3cd",
+        "hash": "0b5a4b4ed0a5a0903a2144aae9a111e5",
         "created": "2017-02-15T00:00:00.000Z",
         "updated": "2017-02-15T00:00:00.000Z"
     },
     "blog/please-no-more-jquery.md": {
         "filename": "blog/please-no-more-jquery.md",
-        "hash": "5dd7af8762e9bcaf8b3103f3b2e66e7d",
+        "hash": "6e1a29806d78dae0e89f55ff0f77655a",
         "created": "2017-02-12T00:00:00.000Z",
         "updated": "2017-02-12T00:00:00.000Z"
     },
     "blog/tasks-from-interviews-yandex.md": {
         "filename": "blog/tasks-from-interviews-yandex.md",
-        "hash": "839b64fc7d48128f1f1919b095793592",
+        "hash": "2b30d7f91ee2f65a6efb2603e4bbf804",
         "created": "2017-01-15T00:00:00.000Z",
         "updated": "2017-01-15T00:00:00.000Z"
     },
     "blog/webpack-2-migration-tips.md": {
         "filename": "blog/webpack-2-migration-tips.md",
-        "hash": "ccc2c777b481b6e01795b5afe8e23c41",
+        "hash": "10c0084fcdc6c2831d43dcf489b2d199",
         "created": "2017-02-09T00:00:00.000Z",
         "updated": "2017-02-09T00:00:00.000Z"
     },
     "pages/about.md": {
         "filename": "pages/about.md",
         "hash": "7227f681530679927db96304199484a1",
-        "created": "2018-02-03T18:43:00.858Z",
-        "updated": "2018-02-03T18:43:00.858Z"
+        "created": "2018-02-18T21:33:43.702Z",
+        "updated": "2018-02-18T21:33:43.702Z"
     },
     "pages/speaker.md": {
         "filename": "pages/speaker.md",
         "hash": "5178eeb601bc08ad39973f0bfd0fd86c",
-        "created": "2018-02-03T18:43:00.858Z",
-        "updated": "2018-02-03T18:43:00.858Z"
+        "created": "2018-02-18T21:33:43.702Z",
+        "updated": "2018-02-18T21:33:43.702Z"
     }
 }
