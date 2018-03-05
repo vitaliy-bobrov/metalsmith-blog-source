@@ -24,7 +24,7 @@ twitter: true
 
 ### 2018
 
-- [ngVikings](https://ngvikings.org/) -- 2 March 2018, Helsinki, Finland
+- [ngVikings](https://ngvikings.org/) -- 1 March 2018, Helsinki, Finland
 
   Topic: **"Designing Components API"**
 
