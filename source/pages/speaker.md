@@ -28,6 +28,8 @@ twitter: true
 
   Topic: **"Designing Components API"**
 
+  [Slides](https://speakerdeck.com/bobrov1989/designing-component-api)
+
 ### 2017
 
 - [Code Europe](https://www.codeeurope.pl) -- 13 December 2017, Wroclaw, Poland
