@@ -8,10 +8,6 @@ twitter: true
 ---
 ## Upcomming talks:
 
-- [ngVikings](https://ngvikings.org/) -- 2 March 2018, Helsinki, Finland
-
-  Topic: **"Designing Components API"**
-
 - [KrakowJS](http://conf.krakowjs.pl/) -- 9 March 2018, Kraków, Poland
 
   Topic: **"Make Web Brighter with CSS Paint API"**
@@ -25,6 +21,17 @@ twitter: true
   Topic: **"NgRx Schematics"**
 
 ## Past talks:
+
+### 2018
+
+- [ngVikings](https://ngvikings.org/) -- 1 March 2018, Helsinki, Finland
+
+  Topic: **"Designing Components API"**
+
+  [Slides](https://speakerdeck.com/bobrov1989/designing-component-api)
+
+### 2017
+
 - [Code Europe](https://www.codeeurope.pl) -- 13 December 2017, Wroclaw, Poland
 
   Topic: **"Stencil: a New Hope of Web Components"**
@@ -43,6 +50,8 @@ twitter: true
 
   [Slides](https://docs.google.com/presentation/d/163227i-G20qaMdr1e74dzOqLv0jQU40nAzUWyLCK6AU/edit?usp=sharing)
 
+### 2016
+
 - [WebCamp: Front-End](http://webcamp.in.ua/2016/) -- 29 July 2016, Odessa, Ukraine
 
   Topic: **"Mobile development with JavaScript"**
@@ -54,6 +63,8 @@ twitter: true
   Topic: **"Mobile development with JavaScript"**
 
   [Slides](https://docs.google.com/presentation/d/1NQkPvKJn_aVm3QH5X6AGUZpBua25fBlYbPXm2Mhau8o/edit?usp=sharing)
+
+### 2015
 
 - [Lviv Euro DrupalCamp 2015](http://lviv2015.drupal.ua/) -- 17-18 October 2015, Lviv, Ukraine
 
