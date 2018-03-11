@@ -14,7 +14,7 @@ A lot of companies provide interviewers with some programming tasks to solve bef
 
 I want to share some tasks that I've received before Skype interview in a big company called Yandex on the position of the JavaScript developer. Of course, my solution may not be that best one, if you have any concerns about it feel free to add yours in the comments to this post.
 
-##Task 1
+## Task 1
 Display to browser developer console the phrase: "I can count: 1, 2, 3" without using digits and property length in your code. Few solution variants will be a plus.
 
 So as we are limited to this rules, first of all, I consider to create some function that takes zero and outputs needed string:
@@ -35,8 +35,11 @@ var zeroFromString = + '';
 var zeroFromUndefined = + !!undefined;
 var zeroFromNull = + null;
 var zeroFromNaN = + !!NaN;
-It is really simple, but notice that we can't use construction + undefined, because it return NaN. Next idea was to use Number constructor:
+```
 
+It is really simple, but notice that we can't use construction `+ undefined`, because it return `NaN`. Next idea was to use `Number` constructor:
+
+```js
 var zeroNumberString = Number('');
 var zeroNulmberNull = Number(null);
 ```
@@ -45,17 +48,23 @@ Another variant wasn't so trivial in my taste. I decided to use `Math` object:
 
 ```js
 var zeroFromMath = Math.floor(Math.random());
-Also as we limited only not to use length, we can use method that return numbers:
+```
 
+Also as we limited only not to use `length`, we can use method that return numbers:
+
+```js
 var zeroFromIndexOf = 'a'.indexOf('a');
+```
+
 Even there are something from ES2015 that can be used:
 
+```js
 var zeroFromMap = new Map().size;
 ```
 
 This was fun, but I think you'll never use such things in the real project. I hope 🙏.
 
-##Task 2
+## Task 2
 Provide implementation of function `getNumbers`, that will output such results after call:
 
 ```js
@@ -92,7 +101,7 @@ function getNumbers() {
 }
 ```
 
-##Task 3
+## Task 3
 Write a function that defines that the passed string is a palindrome. Example:
 
 ```js
@@ -112,7 +121,7 @@ function isPalindrome(text) {
 }
 ```
 
-##Epilog
+## Epilog
 As you can see tasks are not hard to solve, but keep in mind that you need to understand how and why your code works. Knowledge of any framework requires an understanding of JavaScript concepts in general.
 
 If you have ideas for more elegant, short, better solution, feel free to write them in comments. Good luck 🍀 on interviews!
