@@ -8,10 +8,6 @@ twitter: true
 ---
 ## Upcomming talks:
 
-- [KrakowJS](http://conf.krakowjs.pl/) -- 9 March 2018, Kraków, Poland
-
-  Topic: **"Make Web Brighter with CSS Paint API"**
-
 - [Angular Dragons](https://www.meetup.com/Angular-Dragons/) -- 13 March 2018, Kraków, Poland
 
   Topic: **"NgRx Schematics"**
@@ -24,11 +20,17 @@ twitter: true
 
 ### 2018
 
+- [KrakowJS](http://conf.krakowjs.pl/) -- 9 March 2018, Kraków, Poland
+
+  Topic: **"Make Web Brighter with CSS Paint API"**
+
+  [Slides](http://slides.com/vitaliybobrov/krakowjs-css-paint-api)
+
 - [ngVikings](https://ngvikings.org/) -- 1 March 2018, Helsinki, Finland
 
   Topic: **"Designing Components API"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/designing-component-api)
+  [Slides](https://speakerdeck.com/bobrov1989/designing-component-api) | [Video](https://youtu.be/hpDQeTIbrRE)
 
 ### 2017
 
