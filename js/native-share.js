@@ -31,11 +31,11 @@
   const shareHanler = event => {
     event.preventDefault();
 
-    const target = event.target.parentNode;
+    const dataset = event.target.parentNode.dataset;
     const data = {
-      title: target.dataset.shareTitle,
-      text: target.dataset.shareText,
-      url: target.dataset.shareUrl
+      title: dataset.shareTitle,
+      text: dataset.shareText,
+      url: dataset.shareUrl
     };
 
     nativeShare(data);
