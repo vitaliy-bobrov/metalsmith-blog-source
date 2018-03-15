@@ -8,17 +8,25 @@ twitter: true
 ---
 ## Upcomming talks:
 
-- [Angular Dragons](https://www.meetup.com/Angular-Dragons/) -- 13 March 2018, Kraków, Poland
-
-  Topic: **"NgRx Schematics"**
-
 - [ng-conf](https://www.ng-conf.org) -- 19 April 2018, Salt Lake City, UT
 
   Topic: **"NgRx Schematics"**
 
+- [Code Europe](https://www.codeeurope.pl) -- 26 April 2018, Wroclaw, Poland
+
+  Topic: **"TypeScript -- JavaScript you are going to love"**
+
+- [jsDay](https://2018.jsday.it/) -- 9 May 2018, Verona, Italy
+
+  Topic: **"PWA as a new Cyber Attack Vector"**
+
 ## Past talks:
 
 ### 2018
+
+- [Angular Dragons](https://www.meetup.com/Angular-Dragons/) -- 13 March 2018, Kraków, Poland
+
+  Topic: **"NgRx Schematics"**
 
 - [KrakowJS](http://conf.krakowjs.pl/) -- 9 March 2018, Kraków, Poland
 
@@ -68,13 +76,13 @@ twitter: true
 
 ### 2015
 
-- [Lviv Euro DrupalCamp 2015](http://lviv2015.drupal.ua/) -- 17-18 October 2015, Lviv, Ukraine
+- [Lviv Euro DrupalCamp 2015](http://lviv2015.drupal.ua/) -- 17 October 2015, Lviv, Ukraine
 
   Topic: **"Web Components, Polymer and Drupal"**
 
   [Slides](https://docs.google.com/presentation/d/1pyzEy60eYgdmtaX7JlEPFHHcsF2IwYyE6pZT05qbDfE/edit?usp=sharing)
 
-- [Kyiv DrupalCamp 2015](http://camp15.drupal.ua/) -- 5-6 September 2015, Kyiv, Ukraine
+- [Kyiv DrupalCamp 2015](http://camp15.drupal.ua/) -- 5 September 2015, Kyiv, Ukraine
 
   Topic: **"Building Hybrid Apps with Drupal and Ionic"**
 

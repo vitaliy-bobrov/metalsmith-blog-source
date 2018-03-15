@@ -2,20 +2,20 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2018-03-11T08:27:39.026Z",
-        "updated": "2018-03-11T08:27:39.026Z"
-    },
-    "blog/deep-dive-into-array-methods.md": {
-        "filename": "blog/deep-dive-into-array-methods.md",
-        "hash": "79b943b1a0e20fdfe85570ac466e53ec",
-        "created": "2017-06-21T00:00:00.000Z",
-        "updated": "2017-06-21T00:00:00.000Z"
+        "created": "2018-03-15T20:43:18.194Z",
+        "updated": "2018-03-15T20:43:18.194Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
         "hash": "f7e6b84265b7859c8abfffc24452edcd",
         "created": "2017-01-30T00:00:00.000Z",
         "updated": "2017-01-30T00:00:00.000Z"
+    },
+    "blog/deep-dive-into-array-methods.md": {
+        "filename": "blog/deep-dive-into-array-methods.md",
+        "hash": "79b943b1a0e20fdfe85570ac466e53ec",
+        "created": "2017-06-21T00:00:00.000Z",
+        "updated": "2017-06-21T00:00:00.000Z"
     },
     "blog/five-reasons-choose-metalsmith.md": {
         "filename": "blog/five-reasons-choose-metalsmith.md",
@@ -68,13 +68,13 @@
     "pages/about.md": {
         "filename": "pages/about.md",
         "hash": "7227f681530679927db96304199484a1",
-        "created": "2018-03-11T08:27:39.026Z",
-        "updated": "2018-03-11T08:27:39.026Z"
+        "created": "2018-03-15T20:43:18.194Z",
+        "updated": "2018-03-15T20:43:18.194Z"
     },
     "pages/speaker.md": {
         "filename": "pages/speaker.md",
-        "hash": "16d6f8e0eef99956f3fb8e89cba27432",
-        "created": "2018-03-11T08:27:39.026Z",
-        "updated": "2018-03-11T08:27:39.026Z"
+        "hash": "808e0e04f008b00c5ee2c31a1c362e63",
+        "created": "2018-03-15T20:43:18.194Z",
+        "updated": "2018-03-15T20:43:18.194Z"
     }
 }
