@@ -1,6 +1,7 @@
 .mdl-layout__content {
   padding: 0 0 24px;
   background-image: resolve('bg-mobile.jpg');
+  background-image: paint(material-bg);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -16,10 +17,12 @@
   @media screen and (min-width: 768px) {
     padding: 48px 0;
     background-image: resolve('bg-tablet.jpg');
+    background-image: paint(material-bg);
   }
 
   @media screen and (min-width: 1025px) {
     padding: 84px 0;
     background-image: resolve('bg-desktop.jpg');
+    background-image: paint(material-bg);
   }
 }

@@ -47,7 +47,6 @@ gulp.task('service-files', () => gulp.src([
   ])
   .pipe(gulp.dest('build')));
 
-// Lint JavaScript
 gulp.task('lint', () => gulp.src([
     'js/**/*.js',
     '!node_modules/**'
@@ -61,13 +60,13 @@ gulp.task('webp', () => gulp.src([
     'images/**/*.{jpg,jpeg,png,gif}',
     '!./images/posts/**/img/*.jpg',
     '!images/icons/**.*',
-    '!images/**/*-og.jpg'
+    '!images/**/*-og.jpg',
+    '!images/bg-*.jpg'
   ])
   .pipe($.webp())
   .pipe(gulp.dest('images'))
 );
 
-// Optimize images
 gulp.task('images', ['webp'], () => gulp.src('./images/**/*.{jpg,jpeg,png,gif,webp}')
   .pipe(gulp.dest('build/images'))
   .pipe($.size({title: 'images'}))
@@ -93,7 +92,6 @@ gulp.task('svg', () => gulp.src('images/svg/*.svg')
   .pipe(gulp.dest('partials'))
   .pipe($.size({title: 'svg'})));
 
-// Compile and automatically prefix stylesheets
 gulp.task('styles', () => {
   const processors = [
     assets({
@@ -122,7 +120,6 @@ gulp.task('styles', () => {
       precision: 10
     }).on('error', $.sass.logError))
     .pipe($.postcss(processors))
-    .pipe($.webpcss())
     .pipe($.if(prod, $.uncss({
       html: ['build/**/*.html'],
       ignore: [
@@ -141,7 +138,6 @@ gulp.task('styles', () => {
     .pipe(gulp.dest('build/css'));
 });
 
-// Concatenate and minify JavaScript.
 gulp.task('scripts', () =>
     gulp.src([
       'node_modules/material-design-lite/src/mdlComponentHandler.js',
@@ -165,14 +161,20 @@ gulp.task('scripts', () =>
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('build/js')));
 
-// Clean output directory
+gulp.task('paint', () =>
+  gulp.src(['js/paint/*.js'])
+  .pipe($.plumber({
+    errorHandler: onError
+  }))
+  .pipe($.babelMinify())
+  .pipe(gulp.dest('build/js')));
+
 gulp.task('clean', () => del([
   'build/images',
   'build/js',
   'build/css'
   ], {dot: true}));
 
-// Watch files for changes & reload
 gulp.task('serve:dev', () => {
   browserSync({
     notify: false,
@@ -189,7 +191,7 @@ gulp.task('serve:dev', () => {
       'source/**/*.md'
     ], ['metalsmith', reload]);
   gulp.watch(['scss/**/*.scss'], ['styles', reload]);
-  gulp.watch(['js/**/*.js'], ['lint', 'scripts', reload]);
+  gulp.watch(['js/**/*.js'], ['lint', 'scripts', 'paint', reload]);
   gulp.watch(['images/**/*'], reload);
 });
 
@@ -219,21 +221,6 @@ gulp.task('seo', cb => {
   request(`http://www.bing.com/webmaster/ping.aspx?siteMap=${SITEMAP_URL}`);
   cb();
 });
-
-gulp.task('assets', ['clean'], cb => runSequence(
-    'styles',
-    ['scripts', 'images', 'service-files'],
-    cb
-  )
-);
-
-gulp.task('tunel', ['assets'], cb => runSequence(
-    'serve:tunel',
-    'tunel:start',
-    'metalsmith',
-    cb
-  )
-);
 
 gulp.task('copy-sw-scripts', () => gulp.src([
     'node_modules/sw-toolbox/sw-toolbox.js',
@@ -324,11 +311,10 @@ gulp.task('minify-sw', () => {
     .pipe(gulp.dest('build'));
 });
 
-// Build production files, the default task
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    ['metalsmith', 'lint', 'scripts', 'images', 'service-files'],
+    ['metalsmith', 'lint', 'scripts', 'paint', 'images', 'service-files'],
     'generate-service-worker',
     cb
   )

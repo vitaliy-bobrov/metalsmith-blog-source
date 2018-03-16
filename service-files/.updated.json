@@ -2,14 +2,14 @@
     "pages\\about.md": {
         "filename": "pages\\about.md",
         "hash": "7227f681530679927db96304199484a1",
-        "created": "2018-03-16T13:41:06.443Z",
-        "updated": "2018-03-16T13:41:06.443Z"
+        "created": "2018-03-16T15:12:15.307Z",
+        "updated": "2018-03-16T15:12:15.307Z"
     },
     "pages\\speaker.md": {
         "filename": "pages\\speaker.md",
         "hash": "808e0e04f008b00c5ee2c31a1c362e63",
-        "created": "2018-03-16T13:41:06.443Z",
-        "updated": "2018-03-16T13:41:06.443Z"
+        "created": "2018-03-16T15:12:15.307Z",
+        "updated": "2018-03-16T15:12:15.307Z"
     },
     "blog\\adding-comments-to-metalsmith.md": {
         "filename": "blog\\adding-comments-to-metalsmith.md",
@@ -23,17 +23,17 @@
         "created": "2017-06-21T00:00:00.000Z",
         "updated": "2017-06-21T00:00:00.000Z"
     },
-    "blog\\exploring-the-css-paint-api.md": {
-        "filename": "blog\\exploring-the-css-paint-api.md",
-        "hash": "ef0e6c5da62431b4e28dabac31ff20ac",
-        "created": "2018-03-15T00:00:00.000Z",
-        "updated": "2018-03-15T00:00:00.000Z"
-    },
     "blog\\five-reasons-choose-metalsmith.md": {
         "filename": "blog\\five-reasons-choose-metalsmith.md",
         "hash": "1fd6618ddcbdb3cfe257b566c92c7409",
         "created": "2017-01-19T00:00:00.000Z",
         "updated": "2017-01-19T00:00:00.000Z"
+    },
+    "blog\\exploring-the-css-paint-api.md": {
+        "filename": "blog\\exploring-the-css-paint-api.md",
+        "hash": "f80a66dda8a9ad51fd9e3e89d192b2ab",
+        "created": "2018-03-15T00:00:00.000Z",
+        "updated": "2018-03-15T00:00:00.000Z"
     },
     "blog\\how-to-start-contribute-to-open-source.md": {
         "filename": "blog\\how-to-start-contribute-to-open-source.md",
@@ -41,17 +41,17 @@
         "created": "2017-08-24T00:00:00.000Z",
         "updated": "2017-08-24T00:00:00.000Z"
     },
-    "blog\\hello-world.md": {
-        "filename": "blog\\hello-world.md",
-        "hash": "66a281ae0c020b0cf6a2551522381470",
-        "created": "2017-01-14T00:00:00.000Z",
-        "updated": "2017-01-14T00:00:00.000Z"
-    },
     "blog\\introduction-to-functional-js.md": {
         "filename": "blog\\introduction-to-functional-js.md",
         "hash": "b0b8eb6a06d50b65878deb1f4152735b",
         "created": "2017-03-19T00:00:00.000Z",
         "updated": "2017-03-19T00:00:00.000Z"
+    },
+    "blog\\hello-world.md": {
+        "filename": "blog\\hello-world.md",
+        "hash": "66a281ae0c020b0cf6a2551522381470",
+        "created": "2017-01-14T00:00:00.000Z",
+        "updated": "2017-01-14T00:00:00.000Z"
     },
     "blog\\native-share-for-mobile-chrome.md": {
         "filename": "blog\\native-share-for-mobile-chrome.md",

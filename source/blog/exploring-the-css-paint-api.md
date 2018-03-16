@@ -65,6 +65,21 @@ As `paint` is just a value of CSS declaration it will be easy to fallback it for
   background-image: paint(my-custom-paint);
 }
 ```
+
+Or we can check browser support in CSS:
+
+```css
+.paint-with-fallback {
+  background-image: url('./my-paint-fallback.jpg');
+}
+
+@supports(background-image: paint(id)) {
+  .paint-with-fallback {
+    background-image: paint(my-custom-paint);
+  }
+}
+```
+
 In this case browsers that don't support CSS Paint API will ignore last `background-image` declaration and use some static image instead.
 
 But if we will create some wide-used painter, it will be great to automate fallback insertion, as humans could forget about it. And I have great news for you, PostCSS could do it for us with a plugin. To write such plugin, we don't need a lot of lines of code. PostCSS provide us with a bunch of handy helper tools to iterate through CSS AST (Abstract Syntax Tree) and manipulate it. Below is the example of such plugin that replaces custom paint with a static fallback value passed as a `fallbackValue` option:
