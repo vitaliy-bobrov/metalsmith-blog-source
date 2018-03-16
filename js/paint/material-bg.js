@@ -22,7 +22,12 @@ class MaterialBackgroundPaint {
     ctx.shadowBlur = 20;
     ctx.shadowOffsetY = 5;
     ctx.fillStyle = '#434343';
-    ctx.fillRect(geom.width * 0.7, geom.height * 0.6, geom.width, geom.height * 1.2);
+    ctx.fillRect(
+      geom.width * 0.7,
+      geom.height * 0.6,
+      geom.width,
+      geom.height * 1.2
+    );
 
     ctx.shadowOffsetY = 0;
     ctx.fillStyle = '#2b2b2b';
@@ -35,10 +40,20 @@ class MaterialBackgroundPaint {
     ctx.shadowBlur = 10;
     ctx.shadowOffsetX = 0;
     ctx.fillStyle = '#434343';
-    ctx.fillRect(-geom.width * 0.15, geom.height * 0.3, geom.width * 0.2, geom.height * 1.2);
+    ctx.fillRect(
+      -geom.width * 0.15,
+      geom.height * 0.3,
+      geom.width * 0.2,
+      geom.height * 1.2
+    );
 
     ctx.fillStyle = '#2f2f2f';
-    ctx.fillRect(-geom.width * 0.1, geom.height * 0.4, geom.width * 0.08, geom.height * 1.2);
+    ctx.fillRect(
+      -geom.width * 0.1,
+      geom.height * 0.4,
+      geom.width * 0.08,
+      geom.height * 1.2
+    );
   }
 }
 
