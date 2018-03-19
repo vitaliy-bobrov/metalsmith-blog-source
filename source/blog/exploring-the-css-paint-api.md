@@ -223,6 +223,7 @@ To use it we created simple `div` with class name `circles` and added next rules
 So we make it square and add black color as a fallback for old browsers. That is it! You can check [result](https://vitaliy-bobrov.github.io/css-paint-demos/hello-world/) and [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/hello-world) on GitHub. Here is gif demo:
 
 INSERT GIF
+![Native share in Chrome for Android](/images/posts/native-share-for-mobile-chrome/img/share-native.jpg)
 
 One thing I want to mention now, we haven't added any resize event listener, but browser calls `paint` method automatically on any layout changes. Current Chrome implementation uses main UI thread for paint rendering, but in the future, it will use a separate thread. You can imagine some heavy animations or backgrounds that have zero effect on the main thread. It will be enormous performance boost!
 
@@ -458,7 +459,7 @@ INSERT GIF
 Now we can use `transition` to change circles opacity smoothly. Check out [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/circles-animation-with-custom-property) and [result](https://vitaliy-bobrov.github.io/css-paint-demos/circles-animation-with-custom-property/) here.
 
 ## Conclusion
-Today to just got started with CSS Paint API exploring how to create own one, how to use input properties and arguments, CSS variables and custom properties, and how to animate it. In the next article, I'm going to implement more production ready examples using the knowledge we got with that article. Try to experiment with CSS Paint API yourself!
+Today to just got started with CSS Paint API exploring how to create own one, how to use input properties and arguments, CSS variables and custom properties, and how to animate it. In the next article, I'm going to implement more production ready examples using the knowledge we got with that article. If you are reading this article using latest Chrome you might mention that I am using custom paint to make Material Design background, you can check it [here](https://vitaliy-bobrov.github.io/css-paint-demos/md-bg/) and take a look on [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/md-bg). Try to experiment with CSS Paint API yourself!
 
 ### Resources
 
