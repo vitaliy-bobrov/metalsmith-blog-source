@@ -220,10 +220,9 @@ To use it we created simple `div` with class name `circles` and added next rules
 }
 ```
 
-So we make it square and add black color as a fallback for old browsers. That is it! You can check [result](https://vitaliy-bobrov.github.io/css-paint-demos/hello-world/) and [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/hello-world) on GitHub. Here is gif demo:
+So we make it square and add black color as a fallback for old browsers. That is it! You can check [result](https://vitaliy-bobrov.github.io/css-paint-demos/hello-world/) and [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/hello-world) on GitHub. Here is the demo:
 
-INSERT GIF
-![Native share in Chrome for Android](/images/posts/native-share-for-mobile-chrome/img/share-native.jpg)
+[](youtube:9ZVg3lrqIfg)
 
 One thing I want to mention now, we haven't added any resize event listener, but browser calls `paint` method automatically on any layout changes. Current Chrome implementation uses main UI thread for paint rendering, but in the future, it will use a separate thread. You can imagine some heavy animations or backgrounds that have zero effect on the main thread. It will be enormous performance boost!
 
@@ -292,7 +291,7 @@ We should update styles with our variables:
 
 Check [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/circles-with-params) and [result](https://vitaliy-bobrov.github.io/css-paint-demos/circles-with-params/) here.
 
-INSERT GIF
+[](youtube:4WJDY1HNdcg)
 
 For GitHub demos I added a simple script to connect CSS variables with input controls, you can find it [here](https://github.com/vitaliy-bobrov/css-paint-demos/blob/master/src/js/update-css-variable.js).
 
@@ -454,7 +453,7 @@ After that we can use our newly created custom property in the stylesheet:
 }
 ```
 
-INSERT GIF
+[](youtube:VC6XgOcTHW4)
 
 Now we can use `transition` to change circles opacity smoothly. Check out [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/circles-animation-with-custom-property) and [result](https://vitaliy-bobrov.github.io/css-paint-demos/circles-animation-with-custom-property/) here.
 
