@@ -21,7 +21,7 @@ Houdini APIs are here to work with CSS parser, CSSOM, cascade, layout, paint and
 ## CSS Paint Worklet
 CSS Paint API is the kind of worklets and how you could understand the name it works with paint rendering process. What does it do? It allows you to create custom CSS function to draw an image as background with JavaScript. And then use this function for any CSS property that expects image. For example you can use it for `background-image`, `border-image` or `list-style-image`. But more exciting that it also could be used for custom CSS property, we will come back to them later.
 
-For drawing pictures with JavaScript, you allowed using limited version of Canvas API. Why limited? For security reasons, you are not able to read pixels from an image or render text. But you can draw arcs, rectangles, paths, etc.
+For drawing pictures with JavaScript, you allowed using the limited version of Canvas API. Why limited? For security reasons, you are not able to read pixels from an image or render text. But you can draw arcs, rectangles, paths, etc.
 
 ### Why we need CSS Paint API?
 
@@ -80,7 +80,7 @@ Or we can check browser support in CSS:
 }
 ```
 
-In this case browsers that don't support CSS Paint API will ignore last `background-image` declaration and use some static image instead.
+In this case, browsers that don't support the CSS Paint API will ignore last `background-image` declaration and use some static image instead.
 
 But if we will create some wide-used painter, it will be great to automate fallback insertion, as humans could forget about it. And I have great news for you, PostCSS could do it for us with a plugin. To write such plugin, we don't need a lot of lines of code. PostCSS provide us with a bunch of handy helper tools to iterate through CSS AST (Abstract Syntax Tree) and manipulate it. Below is the example of such plugin that replaces custom paint with a static fallback value passed as a `fallbackValue` option:
 
@@ -226,6 +226,7 @@ INSERT GIF
 
 One thing I want to mention now, we haven't added any resize event listener, but browser calls `paint` method automatically on any layout changes. Current Chrome implementation uses main UI thread for paint rendering, but in the future, it will use a separate thread. You can imagine some heavy animations or backgrounds that have zero effect on the main thread. It will be enormous performance boost!
 
+Your backgrounds could be responsive, and this responsiveness depends on element size itself without any listeners on `resize` events. Until `element queries` are still proposal you can generate different picture depending on element size. Try out [this exaple](https://vitaliy-bobrov.github.io/css-paint-demos/responsive/) with [source code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/responsive). When the element changes its size, we fill our circles with another color.
 
 All this nice, but next I want to make our paint configurable. So let me introduce few CSS variables:
 
