@@ -5,6 +5,7 @@ const loadPlugins = require('./load-plugins');
 const extlink = require('remarkable-extlink');
 const classy = require('remarkable-classy');
 const emoji = require('remarkable-emoji');
+const youtube = require('remarkable-youtube');
 
 const $ = loadPlugins(pkg, 'devDependencies', 'metalsmith-');
 
@@ -113,6 +114,9 @@ Metalsmith(__dirname)
     .use(classy)
     .use(extlink, {
       host: siteurl
+    })
+    .use(youtube, {
+      className: 'post__video'
     })
     .use(emoji)
   )
