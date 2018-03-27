@@ -1,0 +1,31 @@
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://google.com/article"
+    },
+    "headline": "{{ title }}",
+    "image": [
+      "{{ siteurl }}{{ ogimage }}"
+    ],
+    "datePublished": "{{ moment created format='YYYY-MM-DDThh:mm:ssZ' }}",
+    "dateModified": "{{ moment created format='YYYY-MM-DDThh:mm:ssZ' }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ author.name }}"
+    },
+     "publisher": {
+      "@type": "Organization",
+      "name": "{{ sitename }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ absoluteUrl siteurl sitelogo }}.png",
+        "width": "96",
+        "height": "96"
+      }
+    },
+    "description": "{{ description }}"
+  }
+</script>

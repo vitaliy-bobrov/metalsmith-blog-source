@@ -4780,13 +4780,6 @@ metalsmith-excerpts@^1.1.0:
     cheerio "^0.15.0"
     debug "~0.7.4"
 
-metalsmith-feed@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/metalsmith-feed/-/metalsmith-feed-0.3.0.tgz#6fac6296ef114c4c49ed5a08b106177f3f8b49cf"
-  dependencies:
-    extend "^3.0.0"
-    rss "^1.2.2"
-
 metalsmith-layouts@^1.7.0:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/metalsmith-layouts/-/metalsmith-layouts-1.8.1.tgz#a365d39939d9146cdfe51fadee7d875573fccbdc"
@@ -4903,19 +4896,9 @@ micromatch@2.3.11, micromatch@^2.1.5, micromatch@^2.3.7, micromatch@^2.3.8:
     parse-glob "^3.0.4"
     regex-cache "^0.4.2"
 
-mime-db@~1.25.0:
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.25.0.tgz#c18dbd7c73a5dbf6f44a024dc0d165a1e7b1c392"
-
 mime-db@~1.29.0:
   version "1.29.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.29.0.tgz#48d26d235589651704ac5916ca06001914266878"
-
-mime-types@2.1.13:
-  version "2.1.13"
-  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.13.tgz#e07aaa9c6c6b9a7ca3012c69003ad25a39e92a88"
-  dependencies:
-    mime-db "~1.25.0"
 
 mime-types@^2.1.11, mime-types@^2.1.12, mime-types@~2.1.11, mime-types@~2.1.7:
   version "2.1.16"
@@ -6347,13 +6330,6 @@ rimraf@~2.2.6:
   version "2.2.8"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
 
-rss@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/rss/-/rss-1.2.2.tgz#50a1698876138133a74f9a05d2bdc8db8d27a921"
-  dependencies:
-    mime-types "2.1.13"
-    xml "1.0.1"
-
 run-async@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.3.0.tgz#0371ab4ae0bdd720d4166d7dfda64ff7a445a6c0"
@@ -7590,10 +7566,6 @@ xdg-basedir@^2.0.0:
 xml-char-classes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/xml-char-classes/-/xml-char-classes-1.0.0.tgz#64657848a20ffc5df583a42ad8a277b4512bbc4d"
-
-xml@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/xml/-/xml-1.0.1.tgz#78ba72020029c5bc87b8a81a3cfcd74b4a2fc1e5"
 
 xmldom@0.1.27:
   version "0.1.27"

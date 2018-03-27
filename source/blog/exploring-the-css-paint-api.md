@@ -4,7 +4,6 @@ description: What is CSS Paint API and how to start using it in real projects.
 ogimage: images/posts/exploring-the-css-paint-api/exploring-the-css-paint-api-og.jpg
 tumb: /images/posts/exploring-the-css-paint-api/exploring-the-css-paint-api
 created: 2018-03-19
-draft: false
 categories:
 - CSS
 - Houdini

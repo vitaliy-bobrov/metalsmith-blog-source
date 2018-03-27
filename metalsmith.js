@@ -27,15 +27,12 @@ Metalsmith(__dirname)
     locale: 'en',
     sitename,
     siteurl,
-    rss: `${siteurl}rss.xml`,
     facebookAppId,
     gaId,
     sitelogo: '/images/logo',
     siteogimg: 'images/blog-og.jpg',
     description: siteDescr,
-    themeColor: '#00bcd4',
-    generatorname: 'Metalsmith',
-    generatorurl: 'http://metalsmith.io/'
+    themeColor: '#00bcd4'
   })
   .source('./source')
   .destination('./build')
@@ -80,7 +77,7 @@ Metalsmith(__dirname)
     collection: 'posts',
     authors: {
       me: {
-        name: 'Vitaliy Bobrov',
+        name: 'Vitalii Bobrov',
         url: siteurl,
         avatar: '/images/authors/bobrov/avatar',
         github: 'https://github.com/vitaliy-bobrov',
@@ -175,13 +172,6 @@ Metalsmith(__dirname)
   }))
   .use($.mapsite({
     hostname: siteurl
-  }))
-  .use($.feed({
-    collection: 'posts',
-    postDescription: file => file.description,
-    site_url: siteurl,
-    title: sitename,
-    description: siteDescr
   }))
   .build(function (err) {
     if (err) {
