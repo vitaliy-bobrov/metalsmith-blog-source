@@ -45,6 +45,7 @@ Metalsmith(__dirname)
       pattern: pagesPattern,
       defaults: {
         layout: 'page.html',
+        priority: 0.9
       }
     },
     {
@@ -53,7 +54,8 @@ Metalsmith(__dirname)
         draft: false,
         author: 'me',
         comments: true,
-        twitter: true
+        twitter: true,
+        priority: 1.0
       }
     }
   ]))

@@ -3,7 +3,6 @@ title: About
 description: About me and contact info.
 ogimage: images/pages/about-og.jpg
 layout: page.html
-priority: 0.9
 twitter: true
 ---
 ## Bio

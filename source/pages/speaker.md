@@ -3,7 +3,6 @@ title: Speaker
 description: Information about past and upcoming talk on tech events.
 ogimage: images/pages/about-og.jpg
 layout: page.html
-priority: 0.8
 twitter: true
 ---
 ## Upcomming talks:
