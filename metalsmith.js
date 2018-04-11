@@ -173,7 +173,8 @@ Metalsmith(__dirname)
     'image:alt': 'title'
   }))
   .use($.mapsite({
-    hostname: siteurl
+    hostname: siteurl,
+    omitIndex: true
   }))
   .build(function (err) {
     if (err) {
