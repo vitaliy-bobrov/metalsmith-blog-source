@@ -4,6 +4,7 @@ description: About me and contact info.
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
+priority: 0.9
 ---
 ## Bio
 

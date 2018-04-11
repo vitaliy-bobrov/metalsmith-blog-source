@@ -4,6 +4,7 @@ description: Information about past and upcoming talk on tech events.
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
+priority: 1.0
 ---
 ## Upcomming talks:
 
@@ -18,6 +19,10 @@ twitter: true
 - [jsDay](https://2018.jsday.it/) -- 9 May 2018, Verona, Italy
 
   Topic: **"PWA as a new Cyber Attack Vector"**
+
+- [jsDay](https://2018.jsday.it/) -- 10 May 2018, Verona, Italy
+
+  Topic: **"TypeScript -- JavaScript you are going to love"**
 
 ## Past talks:
 
