@@ -3,7 +3,7 @@
 
   if ('serviceWorker' in navigator &&
       window.location.protocol === 'https:') {
-    navigator.serviceWorker.register('service-worker.js')
+    navigator.serviceWorker.register('/service-worker.js')
       .then(registration => {
         ga('send', 'event', 'Service Worker', 'install');
         // updatefound is fired if service-worker.js changes.
