@@ -280,8 +280,10 @@ class BarChartPainter {
   }
 
   paint(ctx, geom, props) {
-    const position = props.get('--bar-placement').toString().trim();
-    const gap = parseInt((props.get('--bar-gap') || 10).toString(), 10);
+    const gap = parseInt(
+      (props.get('--bar-gap') || 10).toString(),
+      10
+    );
     const padding = {
       top: props.get('padding-top').value,
       right: props.get('padding-right').value,
@@ -308,7 +310,7 @@ class BarChartPainter {
 }
 ```
 
-Now we are using padding values to calculate bar width and height. Next, I want to add the possibility to change chart orientation. I will introduce `--bar-orientation` variable with possible values: top, bottom, left and right. Here is the final code:
+Now we are using padding values to calculate bar width and height. Next, I want to add the possibility to change chart orientation. I will introduce `--bar-placement` variable with possible values: top, bottom, left and right. Here is the final code:
 
 ```js
 class BarChartPainter {
@@ -443,64 +445,13 @@ So I defined JSON array with data objects in my CSS! Such rule looks strange but
 
 ```js
 class BarChartPainter {
-  static get inputProperties() {
-    return [
-      '--bar-map',
-      '--bar-placement',
-      '--bar-gap',
-      'padding-top',
-      'padding-right',
-      'padding-bottom',
-      'padding-left'
-    ];
-  }
-
-  _getMax(dataset) {
-    return dataset.reduce((maxVal, entry) => {
-      return maxVal < entry.value ? entry.value : maxVal;
-    }, 0);
-  }
-
   paint(ctx, geom, props) {
-    const position = props.get('--bar-placement').toString().trim();
-    const gap = parseInt((props.get('--bar-gap') || 10).toString(), 10);
-    const padding = {
-      top: props.get('padding-top').value,
-      right: props.get('padding-right').value,
-      bottom: props.get('padding-bottom').value,
-      left: props.get('padding-left').value
-    };
-    const vertical = position === 'top' || position === 'bottom';
-    const width = geom.width - padding.left - padding.right;
-    const height = geom.height - padding.top - padding.bottom;
+    // ...
+
     // Much simplier data parsing!
     const data = JSON.parse(props.get('--bar-map').toString());
 
-    const max = this._getMax(data);
-
-    const domain = vertical ? height : width;
-    const baseWidth = vertical ? width : height;
-    const multiplier = domain / max;
-    const barW = (baseWidth - (gap * (data.length - 1))) / data.length;
-
-    for (let i = 0; i < data.length; i++) {
-      const x = i * (barW + gap) + padding.left;
-      const barH = data[i].value * multiplier;
-      const y = {
-        top: padding.top,
-        right: domain - barH + padding.left,
-        bottom: domain - barH + padding.top,
-        left: padding.left
-      }[position];
-
-      ctx.fillStyle = data[i].color;
-
-      if (vertical) {
-        ctx.fillRect(x, y, barW, barH);
-      } else {
-        ctx.fillRect(y, x, barH, barW);
-      }
-    }
+    // ...
   }
 }
 ```
@@ -600,68 +551,11 @@ canvas.addEventListener('mouseleave', event => {
 });
 ```
 
-So using `requestAnimationFrame` on mouse enter I animated dataset from the initial value to random data set and in opposite direction on mouse leave. Also, I've added `--bar-max` variable to set the range for the main axis from zero to this value. Here is the updated painter class:
-
-```js
-class BarChartPainter {
-  static get inputProperties() {
-    return [
-      '--bar-map',
-      '--bar-placement',
-      '--bar-gap',
-      '--bar-max',
-      'padding-top',
-      'padding-right',
-      'padding-bottom',
-      'padding-left'
-    ];
-  }
-
-  paint(ctx, geom, props) {
-    const position = props.get('--bar-placement').toString().trim();
-    const gap = parseInt((props.get('--bar-gap') || 10).toString(), 10);
-    const max = parseInt(props.get('--bar-max').toString(), 10);
-    const padding = {
-      top: props.get('padding-top').value,
-      right: props.get('padding-right').value,
-      bottom: props.get('padding-bottom').value,
-      left: props.get('padding-left').value
-    };
-    const vertical = position === 'top' || position === 'bottom';
-    const width = geom.width - padding.left - padding.right;
-    const height = geom.height - padding.top - padding.bottom;
-    const data = JSON.parse(props.get('--bar-map').toString());
-
-    const domain = vertical ? height : width;
-    const baseWidth = vertical ? width : height;
-    const multiplier = domain / max;
-    const barW = (baseWidth - (gap * (data.length - 1))) / data.length;
-
-    for (let i = 0; i < data.length; i++) {
-      const x = i * (barW + gap) + padding.left;
-      const barH = data[i].value * multiplier;
-      const y = {
-        top: padding.top,
-        right: domain - barH + padding.left,
-        bottom: domain - barH + padding.top,
-        left: padding.left
-      }[position];
-
-      ctx.fillStyle = data[i].color;
-
-      if (vertical) {
-        ctx.fillRect(x, y, barW, barH);
-      } else {
-        ctx.fillRect(y, x, barH, barW);
-      }
-    }
-  }
-}
-```
+So using `requestAnimationFrame` on mouse enter I animated dataset from the initial value to random data set and in opposite direction on mouse leave. Also, I've added `--bar-max` variable to set the range for the main axis from zero to this value.
 
 [](youtube:kUgWZsoyjqU)
 
 [Code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/bar-animate) and [demo](https://vitaliy-bobrov.github.io/css-paint-demos/bar-animate/).
 
 ## Recap
-Today we implemented basic bar chart, then extend its functionality, tried to use JavaScript in CSS and animate data with `requestAnimationFrame`. I hope this was awesome, and as I still experimenting with Houdini APIs more exciting posts will come. Let's keep in touch!
+Today we implemented basic bar chart, then extend its functionality, tried to use JavaScript in CSS and animate data with `requestAnimationFrame`. I hope this was awesome, and as I still experimenting with Houdini APIs more exciting posts will come 😎. Let's keep in touch 🤟!
