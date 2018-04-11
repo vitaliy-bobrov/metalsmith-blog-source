@@ -67,7 +67,8 @@ Metalsmith(__dirname)
   .use($.collections({
     pages: {
       pattern: pagesPattern,
-      sortBy: 'priority'
+      sortBy: 'priority',
+      reverse: true
     },
     posts: {
       pattern: postsPattern,
