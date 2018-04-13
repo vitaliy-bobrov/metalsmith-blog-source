@@ -12,7 +12,7 @@ In my [previous article](/blog/exploring-the-css-paint-api/) we discovered CSS P
 
 The most uncomplicated graph we can create is a bar chart 📊. It is the set of rectangles, possibly with a different background color, and the size of each box represents its value compared to the others. Usually, the maximum dataset value is taken as the 100% on the target axis. So in our example, we will use the range from zero to the maximum amount of the given dataset for values axis, as in 90% cases this is what we need to implement. On the secondary axis, we will linearly distribute our bars and separate them with the gap in pixels specified by the passed argument.
 
-To create custom painter we need to follow three easy steps: declare a custom paint class, register paint, and load worklet. So let's start with the painter class definition:
+To create a custom painter we need to follow three easy steps: declare a custom paint class, register paint, and load worklet. So let's start with the painter class definition:
 
 ```js
 class BarChartPainter {
@@ -29,10 +29,10 @@ class BarChartPainter {
 }
 ```
 
-So, for now, our `paint` method does nothing 🤥, the only thing we declared is the static `inputProperties` getter. This getter will return the list of CSS variable our painter relies on, that means that after each change of the value of this variables browser will call our `paint` method.
+So, for now, our `paint` method does nothing 🤥, the only thing we declared is the static `inputProperties` getter. This getter will return the list of CSS variable our painter relies on, that means that after each change of the value of these variables the browser will call our `paint` method.
 
 ## Dataset
-Our first variable stands for dataset we will use to draw the chart. My first thought was to use Custom Properties API from Houdini for them and use something like `<color-stop>` type. `<color-stop>` is the pair of percentage or length value and CSS color. Value and color are separated by spaces. The list of `<color-stop>` value used for `linear-gradient` function, to declare that we want to use a list of Typed OM values we need to add `+` at the end of type declaration -- `<color-stop>+`. Unfortunately for now `CSS.registerProperty` doesn't support lists and `<color-stop>` type.
+Our first variable stands for dataset and we will use it to draw the chart. My first thought was to use Custom Properties API from Houdini for them and use something like the `<color-stop>` type. `<color-stop>` is the pair of percentage or length value and CSS color. Value and color are separated by spaces. The list of `<color-stop>` value is used on the `linear-gradient` function, to declare that we want to use a list of Typed OM values we need to add `+` at the end of type declaration -- `<color-stop>+`. Unfortunately for now `CSS.registerProperty` doesn't support lists and `<color-stop>` type.
 
 ```js
 CSS.registerProperty({
@@ -51,7 +51,7 @@ Uncaught DOMException: Failed to execute 'registerProperty' on 'CSS':
 The syntax provided is not a valid custom property syntax.
 ```
 
-Such argument will cause `DOMException` errors. After my initial idea failed, I decided to follow with CSS variable with special syntax. CSS variables are just strings that will be interpolated in place they are used.
+Such argument will cause `DOMException` errors. After my initial idea failed, I decided to follow with a CSS variable with a special syntax. CSS variables are just strings that will be interpolated in the place that they are used.
 
 ```css
 .hello-var {
@@ -71,7 +71,7 @@ Text "hello world" will be used as the value for `after` pseudo-element `content
 }
 ```
 
-So I decided to use `number` and `color` pairs delimited by a comma. Each number will represent the value for bar and color will be used for the background. This implementation has a big issue as we can't use commas in color or value. I think it is ok for now to stay with that, as I wouldn't to complicate tutorial with `RexExp`. Here how our data set should look like:
+So I decided to use `number` and `color` pairs delimited by a comma. Each number will represent the value for bar and color will be used for the background. This implementation has a big issue as we can't use commas in color or value. I think it is ok for now to stay with that, as I wouldn't want to complicate tutorial with `RexExp`. Here how our data set should look like:
 
 ```css
 .bars {
@@ -80,7 +80,7 @@ So I decided to use `number` and `color` pairs delimited by a comma. Each number
 ```
 
 ## Data parsing
-After input format decision made we can implement helper method to parse it in our painter class:
+After the input format decision has been made we can implement a helper method to parse it in our painter class:
 
 ```js
 class BarChartPainter {
@@ -99,7 +99,7 @@ class BarChartPainter {
 }
 ```
 
-Nothing special here, we pass our CSS variable input and transform to the list of objects. Additionally, we added fallbacks for value and color. Next, we will add the helper method to get the maximum value from given dataset:
+Nothing special here, we pass our CSS variable input and transform it to the list of objects. Additionally, we added fallbacks for the value and color. Next, we will add the helper method to get the maximum value from the given dataset:
 
 ```js
 class BarChartPainter {
@@ -112,7 +112,7 @@ class BarChartPainter {
 ```
 
 ## Drawing bars
-For the beginning let's make vertical bars, other orientation support will be in our "To Do" list. We are going to implement main -- `paint` method:
+For the beginning let's make vertical bars, other orientation support will be in our "To Do" list. We are going to implement the main -- `paint` method:
 
 ```js
 class BarChartPainter {
@@ -139,7 +139,7 @@ class BarChartPainter {
 }
 ```
 
-Let's look at this method line-by-line 🧐. First of all get trying to get `--bar-gap` variable and parse it as an integer. If no gap defined `props.get('--bar-gap')` will return `null` so we were providing fallback value before calling `toString`. Then we are parsing our dataset stored in `--bar-map` variable and getting the maximum value using helpers we defined before. Then we were calculating how much height should be one value point by dividing canvas height by maximum value. After that, we were calculating the width of each bar. And finally, we are iterating our dataset and draw rectangles for each of the value.
+Let's take a look at this method line-by-line 🧐. First of all we are trying to get the `--bar-gap` variable and parse it as an integer. If there is no gap defined `props.get('--bar-gap')` will return `null` so we were providing a fallback value before calling `toString`. Then we are parsing our dataset stored in the `--bar-map` variable and getting the maximum value using helpers that we defined before. Then we are calculating how much height one value point should be by dividing the canvas height by the maximum value. After that, we are calculating the width of each bar. And finally, we are iterating our dataset and drawing rectangles for each of the values.
 
 Now we are ready to register our paint:
 
@@ -211,7 +211,7 @@ if ('paintWorklet' in CSS) {
 }
 ```
 
-I called my file as `paint.js` and the loading it using `CSS.paintWorklet.addModule` method. Not far time ago [Surma](https://twitter.com/dassurma), main Houdini project supporter, published interesting [cheat](https://twitter.com/DasSurma/status/983305990731894785) how to avoid additional HTTP request to load worklets. We can't write worklet code as inline JavaScript because it shouldn't have access to the global scope. All worklets executed in separate browser context with insufficient functionality for security reasons. Inside this context we can use only small subset of 2D canvas, few global JS functions and helpers, like `parseInt` or `Math`, but no `setInterval`, `setTimeout` or `requestAnimationFrame`. The idea behind Surma's worklet embedding method is to write code inline inside `script` tag but with different language type, to avoid its execution. Then we can convert it to `Blob` objects and create object URL from it. Here is the code example:
+I called my file `paint.js` and then loaded it using the `CSS.paintWorklet.addModule` method. Not long ago [Surma](https://twitter.com/dassurma), main Houdini project supporter, published an interesting [cheat](https://twitter.com/DasSurma/status/983305990731894785) on how to avoid additional HTTP requests to load worklets. We can't write worklet code as inline JavaScript because it shouldn't have access to the global scope. All worklets are executed in a separate browser context with insufficient functionality for security reasons. Inside this context we can use only small subset of 2D canvas, a few global JS functions and helpers, like `parseInt` or `Math`, but not `setInterval`, `setTimeout` or `requestAnimationFrame`. The idea behind Surma's worklet embedding method is to write inline code inside the `script` tag but with different a language type, to avoid its execution. Then we can convert it to `Blob` objects and create an object URL from it. Here is the code example:
 
 ```html
 <script language="javascript+paint">
@@ -238,10 +238,10 @@ I called my file as `paint.js` and the loading it using `CSS.paintWorklet.addMod
 </script>
 ```
 
-Using this trick, we avoid sending additional HTTP request to load CSS Paint worklet.
+Using this trick, we avoid sending additional HTTP requests to load CSS Paint worklet.
 
 ## Using worklet
-After our painter registered and loaded we can call it in CSS:
+After our painter is registered and loaded we can call it in the CSS:
 
 ```css
 .bars {
@@ -259,15 +259,15 @@ After our painter registered and loaded we can call it in CSS:
 }
 ```
 
-We declared `--bar-map` and `--bar-gap` variables and call custom paint using `paint(bar-chart)`. We set solid background color as well. Also, I have added feature detection with `@supports` rule. Using this if a browser hasn't support of CSS Paint API, it will show an appropriate message to the user.
+We declared `--bar-map` and `--bar-gap` variables and called the custom paint using `paint(bar-chart)`. We set a solid background color as well. Also, I have added a feature detection with `@supports` rule. Using this if a browser doesn't support the CSS Paint API will show an appropriate message to the user.
 
 ## Improvements
-We have already created bar chart MVP and now is the time to think about its improvements. Actually, there are a lot of points to improve, and I am not going to cover all of them. If you want to implement more feel free to fork my repository and do it, just don't forget to share your ideas in the comments below and social networks (in Twitter please ping [me](https://twitter.com/bobrov1989)).
+We have already created a bar chart MVP and now is the time to think about its improvements. Actually, there are a lot of points to improve, and I am not going to cover all of them. If you want to implement more feel free to fork my repository and do it, just don't forget to share your ideas in the comments below and social networks (on Twitter please ping [me](https://twitter.com/bobrov1989)).
 
 ### **Note:**
 *There is a bug related to Typed OM that used as input properties in worklet. For the demos below* `props.get('padding')` *returns* `CSSUnitValue` *object without* `unit` *and* `value` *properties. The only way is to use `toString` method on it. If you are facing any issues viewing demos, try to enbale "Experimental Web Platform features"* -- `chrome://flags/#enable-experimental-web-platform-features` *to fix it.*
 
-So the first point I want to do is to add the possibility to define offsets for our chart. And I'm going to use `padding` property for that. Here is the updated painter class:
+So the first point I want to cover is to add the possibility to define offsets for our chart. And I'm going to use the `padding` property for that. Here is the updated painter class:
 
 ```js
 class BarChartPainter {
@@ -313,7 +313,7 @@ class BarChartPainter {
 }
 ```
 
-Now we are using padding values to calculate bar width and height. Next, I want to add the possibility to change chart orientation. I will introduce `--bar-placement` variable with possible values: top, bottom, left and right. Here is the final code:
+Now we are using padding values to calculate bar width and height. Next, I want to add the possibility to change chart orientation. I will introduce the `--bar-placement` variable with possible values: top, bottom, left and right. Here is the final code:
 
 ```js
 class BarChartPainter {
@@ -390,7 +390,7 @@ class BarChartPainter {
 }
 ```
 
-And updated styles:
+And the updated styles:
 
 ```css
 .bars {
@@ -409,7 +409,7 @@ And updated styles:
 As usual you can check [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/bar) and [demo](https://vitaliy-bobrov.github.io/css-paint-demos/bar/).
 
 ## Change input format
-After thinking for some time, I decided to change dataset input using "JS in CSS". Yes, you read it correctly, I want to use JavaScript inside CSS. As I said before Our worklet code executed in secure separate context and this case is completely fine to use some JS as CSS variable value. Then I'm going to parse this value in custom painter using `JSON.parse`. Let look at stylesheet first:
+After thinking for some time, I decided to change the dataset input using "JS in CSS". Yes, you read it correctly, I want to use JavaScript inside CSS. As I said before, our worklet code is executed in a secure and separate context and in this case it is completely fine to use some JS as a CSS variable value. Then I'm going to parse this value in a custom painter using `JSON.parse`. Let's look at stylesheet first:
 
 ```css
 .bars {
@@ -444,7 +444,7 @@ After thinking for some time, I decided to change dataset input using "JS in CSS
 }
 ```
 
-So I defined JSON array with data objects in my CSS! Such rule looks strange but more verbose then special string before. So now I can remove `_parseData` method from painter class and use `JSON.parse` instead:
+So I defined a JSON array with data objects in my CSS! This rule looks strange but more verbose then the special string before. So now I can remove the `_parseData` method from the painter class and use `JSON.parse` instead:
 
 ```js
 class BarChartPainter {
@@ -492,7 +492,7 @@ How is it useful? Now we can get CSS variables in JavaScript, change the data an
 
 [Code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/bar-js-in-css) and [demo](https://vitaliy-bobrov.github.io/css-paint-demos/bar-js-in-css/).
 
-Now let's try to animate dataset in JavaScript:
+Now let's try to animate the dataset in JavaScript:
 
 ```js
 const canvas = document.querySelector('.bars');
@@ -554,13 +554,13 @@ canvas.addEventListener('mouseleave', event => {
 });
 ```
 
-So using `requestAnimationFrame` on mouse enter I animated dataset from the initial value to random data set and in opposite direction on mouse leave. Also, I've added `--bar-max` variable to set the range for the main axis from zero to this value.
+So using `requestAnimationFrame` on mouse enter I animated the dataset from the initial value to the random data set and in opposite direction on mouse leave. Also, I've added the `--bar-max` variable to set the range for the main axis from zero to this value.
 
 [](youtube:kUgWZsoyjqU)
 
 [Code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/bar-animate) and [demo](https://vitaliy-bobrov.github.io/css-paint-demos/bar-animate/).
 
-After all, I've tried to go further and fetch JSON file with the custom property of `<url>` or `<image>` type. URL type seems not to work, just got the string value from it. Such resource fetched exclusively when used as a value for properties accepting URLs. The image appears to work but doesn't parse JSON data as it has only mime types related to image formats in request headers.
+After all, I've tried to go further and fetch the JSON file with the custom property of `<url>` or `<image>` type. URL type doesn't seem to work, it just got the string value from it. Such resource fetched exclusively when used as a value for properties accepting URLs. The image appears to work but doesn't parse the JSON data as it has only mime types related to image formats in request headers.
 
 ## Recap
 Today we implemented basic bar chart, then extend its functionality, tried to use JavaScript in CSS and animate data with `requestAnimationFrame`. I hope this was awesome, and as I still experimenting with Houdini APIs more exciting posts will come 😎. Let's keep in touch 🤟!
