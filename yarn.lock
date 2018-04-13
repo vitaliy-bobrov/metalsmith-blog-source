@@ -1019,9 +1019,9 @@ babel-preset-env@^1.6.0:
     invariant "^2.2.2"
     semver "^5.3.0"
 
-babel-preset-es2015@false6.24.1:
+babel-preset-es2015@^6.24.1:
   version "6.24.1"
-  resolved "https://registry.yarnpkg.com/babel-preset-es2015/-/babel-preset-es2015-6.24.1.tgz#d44050d6bc2c9feea702aaf38d727a0210538939"
+  resolved "http://npm.epm-tmc.projects.epam.com:82/babel-preset-es2015/-/babel-preset-es2015-6.24.1.tgz#d44050d6bc2c9feea702aaf38d727a0210538939"
   dependencies:
     babel-plugin-check-es2015-constants "^6.22.0"
     babel-plugin-transform-es2015-arrow-functions "^6.22.0"
@@ -1616,16 +1616,7 @@ charenc@~0.0.1:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
 
-cheerio@^0.15.0:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-0.15.0.tgz#8775ec3ab16f4c66195b9cc6797e0c82b51e6b34"
-  dependencies:
-    CSSselect "~0.4.0"
-    entities "~1.0.0"
-    htmlparser2 "~3.7.0"
-    lodash "~2.4.1"
-
-cheerio@^0.22.0:
+cheerio@0.22.0, cheerio@^0.22.0:
   version "0.22.0"
   resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-0.22.0.tgz#a9baa860a3f9b595a6b81b1a86873121ed3a269e"
   dependencies:
@@ -1645,6 +1636,15 @@ cheerio@^0.22.0:
     lodash.reduce "^4.4.0"
     lodash.reject "^4.4.0"
     lodash.some "^4.4.0"
+
+cheerio@^0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-0.15.0.tgz#8775ec3ab16f4c66195b9cc6797e0c82b51e6b34"
+  dependencies:
+    CSSselect "~0.4.0"
+    entities "~1.0.0"
+    htmlparser2 "~3.7.0"
+    lodash "~2.4.1"
 
 chokidar@1.7.0:
   version "1.7.0"
@@ -1694,6 +1694,14 @@ cli-cursor@^2.1.0:
 cli-width@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-2.1.0.tgz#b234ca209b29ef66fc518d9b98d5847b00edf00a"
+
+clipboard@^2.0.0:
+  version "2.0.0"
+  resolved "http://npm.epm-tmc.projects.epam.com:82/clipboard/-/clipboard-2.0.0.tgz#4661dc972fb72a4c4770b8db78aa9b1caef52b50"
+  dependencies:
+    good-listener "^1.2.2"
+    select "^1.1.2"
+    tiny-emitter "^2.0.0"
 
 cliui@^2.1.0:
   version "2.1.0"
@@ -2344,6 +2352,10 @@ delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
 
+delegate@^3.1.2:
+  version "3.2.0"
+  resolved "http://npm.epm-tmc.projects.epam.com:82/delegate/-/delegate-3.2.0.tgz#b66b71c3158522e8ab5744f720d8ca0c2af59166"
+
 delegates@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
@@ -2419,10 +2431,6 @@ domhandler@^2.3.0:
   resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-2.4.1.tgz#892e47000a99be55bbf3774ffea0561d8879c259"
   dependencies:
     domelementtype "1"
-
-domino@^1.0.18:
-  version "1.0.29"
-  resolved "https://registry.yarnpkg.com/domino/-/domino-1.0.29.tgz#de8aa1f6f98e3c5538feb7a61fa69c1eabbace06"
 
 domutils@1.4:
   version "1.4.3"
@@ -3460,6 +3468,12 @@ glogg@^1.0.0:
   dependencies:
     sparkles "^1.0.0"
 
+good-listener@^1.2.2:
+  version "1.2.2"
+  resolved "http://npm.epm-tmc.projects.epam.com:82/good-listener/-/good-listener-1.2.2.tgz#d53b30cdf9313dffb7dc9a0d477096aa6d145c50"
+  dependencies:
+    delegate "^3.1.2"
+
 got@^5.0.0:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/got/-/got-5.7.1.tgz#5f81635a61e4a6589f180569ea4e381680a51f35"
@@ -3888,7 +3902,7 @@ hawk@~6.0.2:
     hoek "4.x.x"
     sntp "2.x.x"
 
-he@1.1.x:
+he@1.1.x, he@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
@@ -3899,10 +3913,6 @@ helper-moment@0.1.0:
     extend-shallow "^0.2.0"
     kind-of "^0.1.2"
     moment "^2.8.4"
-
-highlight.js@^8.9.1:
-  version "8.9.1"
-  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-8.9.1.tgz#b8a9c5493212a9392f0222b649c9611497ebfb88"
 
 hoek@2.x.x:
   version "2.16.3"
@@ -5173,13 +5183,6 @@ metalsmith-author@^1.1.0:
   dependencies:
     lodash "^4.11.2"
 
-metalsmith-code-highlight@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/metalsmith-code-highlight/-/metalsmith-code-highlight-0.0.4.tgz#6cb0e4fd639aad6eeb04d47d429a3e728523b5b2"
-  dependencies:
-    domino "^1.0.18"
-    highlight.js "^8.9.1"
-
 metalsmith-collections@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/metalsmith-collections/-/metalsmith-collections-0.9.0.tgz#a0d19347a51d5fbd026899dfc1f4d68af50e0e17"
@@ -5280,6 +5283,17 @@ metalsmith-permalinks@^0.5.0:
     moment "^2.5.1"
     slug-component "~1.1.0"
     substitute "https://github.com/segmentio/substitute/archive/0.0.1.tar.gz"
+
+metalsmith-prism@^3.1.1:
+  version "3.1.1"
+  resolved "http://npm.epm-tmc.projects.epam.com:82/metalsmith-prism/-/metalsmith-prism-3.1.1.tgz#49c011735ab033e8f98cbc208295c9b0328b5b9e"
+  dependencies:
+    cheerio "0.22.0"
+    debug "^3.1.0"
+    he "^1.1.1"
+    lodash "^4.17.4"
+    metalsmith "^2.3.0"
+    prismjs "^1.6.0"
 
 metalsmith-register-helpers@^0.3.0:
   version "0.3.0"
@@ -6395,6 +6409,12 @@ prettysize@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/prettysize/-/prettysize-1.1.0.tgz#c6c52f87161ff172ea435f375f99831dd9a97bb0"
 
+prismjs@^1.6.0:
+  version "1.14.0"
+  resolved "http://npm.epm-tmc.projects.epam.com:82/prismjs/-/prismjs-1.14.0.tgz#bbccfdb8be5d850d26453933cb50122ca0362ae0"
+  optionalDependencies:
+    clipboard "^2.0.0"
+
 private@^0.1.6:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.7.tgz#68ce5e8a1ef0a23bb570cc28537b5332aba63ef1"
@@ -7000,6 +7020,10 @@ seek-bzip@^1.0.3:
   resolved "https://registry.yarnpkg.com/seek-bzip/-/seek-bzip-1.0.5.tgz#cfe917cb3d274bcffac792758af53173eb1fabdc"
   dependencies:
     commander "~2.8.1"
+
+select@^1.1.2:
+  version "1.1.2"
+  resolved "http://npm.epm-tmc.projects.epam.com:82/select/-/select-1.1.2.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"
 
 semver-diff@^2.0.0:
   version "2.1.0"
@@ -7722,6 +7746,10 @@ timers-ext@^0.1.2:
   dependencies:
     es5-ext "~0.10.14"
     next-tick "1"
+
+tiny-emitter@^2.0.0:
+  version "2.0.2"
+  resolved "http://npm.epm-tmc.projects.epam.com:82/tiny-emitter/-/tiny-emitter-2.0.2.tgz#82d27468aca5ade8e5fd1e6d22b57dd43ebdfb7c"
 
 tmp@^0.0.31:
   version "0.0.31"

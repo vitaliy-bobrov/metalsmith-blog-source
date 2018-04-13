@@ -15,8 +15,8 @@ Web Share API is an experimental feature available in Chrome for Android from 20
 Like many other modern features like Service Worker, Web Share requires the secure connection (HTTPS) to your resource. Another requirement is to fill [form](https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform?entry.1999497328=Web+Share+(Experimenting+until+April+2017)) to get Origin Trial token. After filling it, you'll receive a token that could be used only for domain and sub-domain you write (as well as `localhost` for local testing). This token is needed only until April 2017. Then you must add the meta tag with a token to the page's head section:
 
 ```html
-    <!-- Origin Trials -->
-    <meta http-equiv="origin-trial" data-feature="Web Share" data-expires="DATE" content="YOUR_TOKEN">
+<!-- Origin Trials -->
+<meta http-equiv="origin-trial" data-feature="Web Share" data-expires="DATE" content="YOUR_TOKEN">
 ```
 
 `data-expires` attribute is not required to be present on that tag, but you should renew token if it expires.
@@ -49,10 +49,10 @@ Error callback can be used to log error or as I did -- notify a user about faile
 
 ```js
 const nativeShare = data => navigator.share(data)
-      .then(() => {
-        // Here might be code to thank and notify a user.
-      })
-      .catch(error => console.error('Error sharing:', error));
+  .then(() => {
+    // Here might be code to thank and notify a user.
+  })
+  .catch(error => console.error('Error sharing:', error));
 ```
 ### Share data function
 We need some function to prepare object with sharing data. This data could be gathered from any part of your source and depend on current context. For example in share action will share current page you could use `document.title`, current or canonical url, page description, also if you have [OpenGraph](http://ogp.me/) meta tags or [JSON-LD](http://json-ld.org/) data on your page its content can be used. In my situation, I wanted to add share widget to each item in posts list on blog pages, so I stored needed data in `data-attributes`.

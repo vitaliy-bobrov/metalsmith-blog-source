@@ -120,17 +120,8 @@ Metalsmith(__dirname)
     })
     .use(emoji)
   )
-  .use($.codeHighlight({
-    tabReplace: '  ',
-    languages: [
-      'js',
-      'ts',
-      'html',
-      'css',
-      'bash',
-      'json',
-      'yaml'
-    ]
+  .use($.prism({
+    preLoad: ['bash', 'css-extras', 'json', 'python', 'scss', 'typescript']
   }))
   .use($.permalinks({
     relative: false,

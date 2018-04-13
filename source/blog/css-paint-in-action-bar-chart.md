@@ -86,15 +86,15 @@ After input format decision made we can implement helper method to parse it in o
 class BarChartPainter {
   _parseData(input) {
     return input.toString()
-    .split(',')
-    .map(entry => {
-      const [value, color] = entry.trim().split(' ');
+      .split(',')
+      .map(entry => {
+        const [value, color] = entry.trim().split(' ');
 
-      return {
-        value: parseFloat(value, 10) || 0,
-        color: color || 'black'
-      };
-    });
+        return {
+          value: parseFloat(value, 10) || 0,
+          color: color || 'black'
+        };
+      });
   }
 }
 ```
