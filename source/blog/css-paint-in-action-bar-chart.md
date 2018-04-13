@@ -264,6 +264,9 @@ We declared `--bar-map` and `--bar-gap` variables and call custom paint using `p
 ## Improvements
 We have already created bar chart MVP and now is the time to think about its improvements. Actually, there are a lot of points to improve, and I am not going to cover all of them. If you want to implement more feel free to fork my repository and do it, just don't forget to share your ideas in the comments below and social networks (in Twitter please ping [me](https://twitter.com/bobrov1989)).
 
+### **Note:**
+*There is a bug related to Typed OM used as input properties in worklet. For the domes below* `props.get('padding')` *returns* `CSSUnitValue` *object without* `unit` *and* `value` *properties. The only way is to use `toString` method on it. If you are facing any issues viewing demos, try to enbale "Experimental Web Platform features"* -- `chrome://flags/#enable-experimental-web-platform-features` *to fix it.*
+
 So the first point I want to do is to add the possibility to define offsets for our chart. And I'm going to use `padding` property for that. Here is the updated painter class:
 
 ```js

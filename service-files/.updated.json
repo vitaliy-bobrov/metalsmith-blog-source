@@ -2,8 +2,20 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2018-04-13T17:25:16.226Z",
-        "updated": "2018-04-13T17:25:16.226Z"
+        "created": "2018-04-13T17:51:19.931Z",
+        "updated": "2018-04-13T17:51:19.931Z"
+    },
+    "pages/about.md": {
+        "filename": "pages/about.md",
+        "hash": "7227f681530679927db96304199484a1",
+        "created": "2018-04-13T17:51:19.931Z",
+        "updated": "2018-04-13T17:51:19.931Z"
+    },
+    "pages/speaker.md": {
+        "filename": "pages/speaker.md",
+        "hash": "ed4882e8adc32f234e0063d97d0157b8",
+        "created": "2018-04-13T17:51:19.931Z",
+        "updated": "2018-04-13T17:51:19.931Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
@@ -13,7 +25,7 @@
     },
     "blog/css-paint-in-action-bar-chart.md": {
         "filename": "blog/css-paint-in-action-bar-chart.md",
-        "hash": "3ddd9f43cf9039a08ec5dd7f5cf23304",
+        "hash": "0c6cd2ae2b2b09fce36576b74f9a4657",
         "created": "2018-04-13T00:00:00.000Z",
         "updated": "2018-04-13T00:00:00.000Z"
     },
@@ -76,17 +88,5 @@
         "hash": "10c0084fcdc6c2831d43dcf489b2d199",
         "created": "2017-02-09T00:00:00.000Z",
         "updated": "2017-02-09T00:00:00.000Z"
-    },
-    "pages/about.md": {
-        "filename": "pages/about.md",
-        "hash": "7227f681530679927db96304199484a1",
-        "created": "2018-04-13T17:25:16.226Z",
-        "updated": "2018-04-13T17:25:16.226Z"
-    },
-    "pages/speaker.md": {
-        "filename": "pages/speaker.md",
-        "hash": "ed4882e8adc32f234e0063d97d0157b8",
-        "created": "2018-04-13T17:25:16.226Z",
-        "updated": "2018-04-13T17:25:16.226Z"
     }
 }
