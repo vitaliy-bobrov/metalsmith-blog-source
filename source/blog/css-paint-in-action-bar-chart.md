@@ -557,5 +557,7 @@ So using `requestAnimationFrame` on mouse enter I animated dataset from the init
 
 [Code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/bar-animate) and [demo](https://vitaliy-bobrov.github.io/css-paint-demos/bar-animate/).
 
+After all, I've tried to go further and fetch JSON file with the custom property of `<url>` or `<image>` type. URL type seems not to work, just got the string value from it. Such resource fetched exclusively when used as a value for properties accepting URLs. The image appears to work but doesn't parse JSON data as it has only mime types related to image formats in request headers.
+
 ## Recap
 Today we implemented basic bar chart, then extend its functionality, tried to use JavaScript in CSS and animate data with `requestAnimationFrame`. I hope this was awesome, and as I still experimenting with Houdini APIs more exciting posts will come 😎. Let's keep in touch 🤟!

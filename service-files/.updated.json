@@ -2,8 +2,8 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2018-04-11T22:29:13.925Z",
-        "updated": "2018-04-11T22:29:13.925Z"
+        "created": "2018-04-13T17:25:16.226Z",
+        "updated": "2018-04-13T17:25:16.226Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
@@ -13,7 +13,7 @@
     },
     "blog/css-paint-in-action-bar-chart.md": {
         "filename": "blog/css-paint-in-action-bar-chart.md",
-        "hash": "f05c7130952764d6d3371fd0bd02dab0",
+        "hash": "3ddd9f43cf9039a08ec5dd7f5cf23304",
         "created": "2018-04-13T00:00:00.000Z",
         "updated": "2018-04-13T00:00:00.000Z"
     },
@@ -55,7 +55,7 @@
     },
     "blog/native-share-for-mobile-chrome.md": {
         "filename": "blog/native-share-for-mobile-chrome.md",
-        "hash": "0b5a4b4ed0a5a0903a2144aae9a111e5",
+        "hash": "c446e6891faa2667432093a16b8fff73",
         "created": "2017-02-15T00:00:00.000Z",
         "updated": "2017-02-15T00:00:00.000Z"
     },
@@ -80,13 +80,13 @@
     "pages/about.md": {
         "filename": "pages/about.md",
         "hash": "7227f681530679927db96304199484a1",
-        "created": "2018-04-11T22:29:13.925Z",
-        "updated": "2018-04-11T22:29:13.925Z"
+        "created": "2018-04-13T17:25:16.226Z",
+        "updated": "2018-04-13T17:25:16.226Z"
     },
     "pages/speaker.md": {
         "filename": "pages/speaker.md",
         "hash": "ed4882e8adc32f234e0063d97d0157b8",
-        "created": "2018-04-11T22:29:13.925Z",
-        "updated": "2018-04-11T22:29:13.925Z"
+        "created": "2018-04-13T17:25:16.226Z",
+        "updated": "2018-04-13T17:25:16.226Z"
     }
 }
