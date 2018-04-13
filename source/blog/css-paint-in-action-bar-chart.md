@@ -508,27 +508,25 @@ function rand(max, min) {
 function animate(values, time) {
   const start = performance.now();
   const style = getComputedStyle(canvas);
-  const init = JSON.parse(style.getPropertyValue('--bar-map'));
-  const from = init.map(v => v.value);
-  const increments = from.map((v, i) => {
+  const data = JSON.parse(style.getPropertyValue('--bar-map'));
+  const fromData = data.map(v => v.value);
+  const increments = fromData.map((v, i) => {
     return -(v - values[i]) / time;
   });
 
   return function raf(now) {
     const count = Math.floor(now - start);
-    const style = getComputedStyle(canvas);
-    const dataset = JSON.parse(style.getPropertyValue('--bar-map'));
-    const value = dataset.map((s, i) => {
+    const value = data.map((s, i) => {
       return {
         ...s,
-        value: from[i] + (increments[i] * count)
+        value: fromData[i] + (increments[i] * count)
       };
     });
 
     canvas.style.setProperty('--bar-map', JSON.stringify(value));
 
     if(count > time) {
-      const final = dataset.map((s, i) => {
+      const final = data.map((s, i) => {
         return {
           ...s,
           value: values[i]
