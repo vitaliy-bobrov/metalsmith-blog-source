@@ -129,7 +129,7 @@ class BarChartPainter {
     for (let i = 0; i < data.length; i++) {
       const x = i * (barW + gap);
       const barHeight = data[i].value * multiplier;
-      const y = domain - barHeight;
+      const y = height - barHeight;
 
       ctx.fillStyle = data[i].color;
 
@@ -190,7 +190,7 @@ class BarChartPainter {
     for (let i = 0; i < data.length; i++) {
       const x = i * (barW + gap);
       const barHeight = data[i].value * multiplier;
-      const y = domain - barHeight;
+      const y = height - barHeight;
 
       ctx.fillStyle = data[i].color;
 
@@ -300,7 +300,7 @@ class BarChartPainter {
     for (let i = 0; i < data.length; i++) {
       const x = i * (barW + gap) + padding.left;
       const barHeight = data[i].value * multiplier;
-      const y = domain - barHeight + padding.top;
+      const y = height - barHeight + padding.top;
 
       ctx.fillStyle = data[i].color;
 
