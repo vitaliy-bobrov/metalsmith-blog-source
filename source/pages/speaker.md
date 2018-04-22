@@ -8,10 +8,6 @@ priority: 1.0
 ---
 ## Upcomming talks:
 
-- [ng-conf](https://www.ng-conf.org) -- 19 April 2018, Salt Lake City, UT
-
-  Topic: **"NgRx Schematics"**
-
 - [Code Europe](https://www.codeeurope.pl) -- 26 April 2018, Wroclaw, Poland
 
   Topic: **"TypeScript -- JavaScript you are going to love"**
@@ -27,6 +23,12 @@ priority: 1.0
 ## Past talks:
 
 ### 2018
+
+- [ng-conf](https://www.ng-conf.org) -- 19 April 2018, Salt Lake City, UT
+
+  Topic: **"NgRx Schematics"**
+
+  [Slides](https://speakerdeck.com/bobrov1989/ngrx-schematics) | [Video](https://youtu.be/q3UcqG72Zl4)
 
 - [Angular Dragons](https://www.meetup.com/Angular-Dragons/) -- 13 March 2018, Kraków, Poland
 
