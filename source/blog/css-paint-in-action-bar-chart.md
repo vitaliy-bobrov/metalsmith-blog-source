@@ -1,6 +1,6 @@
 ---
 title: "CSS Paint in Action: Bar Chart"
-description: Want to know how to create bar chart with CSS Paint API?.
+description: Want to know how to create bar chart with CSS Paint API?
 ogimage: images/posts/css-paint-in-action-bar-chart/css-paint-in-action-bar-chart-og.jpg
 tumb: /images/posts/css-paint-in-action-bar-chart/css-paint-in-action-bar-chart
 created: 2018-04-13
