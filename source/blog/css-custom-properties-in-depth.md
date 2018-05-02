@@ -90,6 +90,27 @@ CSS custom properties also use cascade, that means we can override them by incre
 }
 ```
 
+Or use them in media queries and other CSS blocks:
+
+```css
+.element {
+  --theme-color: white;
+  background: var(--theme-color);
+}
+
+.element:hover {
+  /* background: red */
+  --theme-color: red;
+}
+
+@media all and (min-width: 1024px) {
+  .element {
+    /* background: black */
+    --theme-color: black;
+  }
+}
+```
+
 ## What is the difference between CSS variable and custom property?
 
 ## How to register custom property?

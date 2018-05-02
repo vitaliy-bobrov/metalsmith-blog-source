@@ -1,8 +1,7 @@
 ((window, document) => {
   'use strict';
 
-  if ('serviceWorker' in navigator &&
-      window.location.protocol === 'https:') {
+  function register() {
     navigator.serviceWorker.register('/service-worker.js')
       .then(registration => {
         ga('send', 'event', 'Service Worker', 'install');
@@ -43,5 +42,10 @@
       }).catch(e => {
         console.error('Error during service worker registration:', e);
       });
+  }
+
+  if ('serviceWorker' in navigator &&
+      window.location.protocol === 'https:') {
+    window.addEventListener('load', register);
   }
 })(window, document);
