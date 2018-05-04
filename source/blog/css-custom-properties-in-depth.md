@@ -112,12 +112,282 @@ Or use them in media queries and other CSS blocks:
 ```
 
 ## What is the difference between CSS variable and custom property?
+Actually there is no difference between CSS variable and CSS custom property, correctly to call both as custom properties. The only thing is that when use declare custom property with `CSS.registerProperty` you will get more control over it. Under more control I mean that you will be able to assign CSS type, set initial value and inheritance.
 
 ## How to register custom property?
+To register custom property you need to use `CSS.registerProperty` static method and pass configuration object. The code might look like this:
 
-By default custom propeties don't inherit value according to DOM, like it is possible for some CSS built-ins. We can change that with custom configuration in JS.
+```js
+if ('registerProperty' in CSS) {
+  CSS.registerProperty({
+    name: '--my-custom-prop',
+    syntax: '<color>',
+    inherits: true,
+    initialValue: 'black'
+  });
+}
+```
+
+So first of all we are detecting feature support in our browser, as a part of progressive enchanment. If `registerProperty` not supported in the browser, we still able to use CSS variables in styles. Let's have a closer look on each configuration parameter. The configuration object is required, if we will try to call method without it we will get JS exception.
+
+### `name`
+This is the only required parameter, if we will try to register property without `name` provided we will get exception -- "Uncaught TypeError: Failed to execute 'registerProperty' on 'CSS': required member name is undefined.".
+
+The other thing regarding property name, that you must follow naming rule -- name should start with `--` symbols. The reason for that is to have ability to use CSS custom properties with CSS pre/post-processors and separate them from built-in CSS properties. If you try to give name in incorrect format you will see error -- "DOMException: Failed to execute 'registerProperty' on 'CSS': Custom property names must start with '--'.".
+
+If property with that name has been already registered, browser will throw next error -- "Failed to execute 'registerProperty' on 'CSS': The name provided has already been registered.".
+
+### `syntax`
+Syntax stands for our property type definition. Its default value is `*` that is similar to TypeScript `any` type. This means that you can assign any value to your property. The type definition syntax is straight forward -- "<TYPE_NAME>", where `TYPE_NAME` should be replaced with actual CSS type you want to assign. In our example we used `color` type, that gives ability to assign any CSS color value, for example: `rebeccapurple`, `rgba(0, 0, 0, .5)`, `#ff00ff`, `hls(240, 10%, 50%)`. We will look what types are available later in this article.
+
+Similary to TypeScript, it is possible to define union of types and list of arguments. To declare union we should separate types with `|` as delimiter:
+
+```js
+CSS.registerProperty({
+  name: '--my-size',
+  syntax: '<length> | <percentage>',
+  initialValue: '100%'
+});
+```
+
+In this example we declare that `--my-size` property accepts length OR percentage types, like `10px`, `3em`, `10vw`, `10%`. If provided value will not match to those types, proprty will use fallback or initial value instead.
+
+To specify list of values as a type you should add `+` sign at the end of type definition, example:
+
+```js
+CSS.registerProperty({
+  name: '--my-colors',
+  syntax: '<color>+',
+  initialValue: 'black'
+});
+```
+
+In this example we want our property to have one or more colors delimited with comma. If syntax is invalid browser will throw an error -- "Failed to execute 'registerProperty' on 'CSS': The syntax provided is not a valid custom property syntax.".
+
+There are much more possibilities to describe types, thet unfortunately not supported by the current CSS Custom Properties and Values specification.
+
+### `initialValue`
+You might notice that I have used `initialValue` parameter in the previous section examples. Initial value is required if `syntax` was specified as any value different from `*`. If you trying to register property with some type without providing `initialValue`, you'll face such error -- "DOMException: Failed to execute 'registerProperty' on 'CSS': An initial value must be provided if the syntax is not '*'". Also initial value should match the type specified as syntax, in other case you will see an error -- "DOMException: Failed to execute 'registerProperty' on 'CSS': The initial value provided does not parse for the given syntax.". For `*` syntax type `initialValue` is optional and could has any value:
+
+```js
+CSS.registerProperty({
+  name: '--my-any-prop',
+  syntax: '*',
+  initialValue: '10px'
+});
+```
+
+CSS variables created without `registerProperty` have `initialValue` as well, it is empty by default. That means that if property wasn't initialised, fallback value will be used.
+
+```css
+.element {
+  background: var(--theme-color, red);
+}
+```
+
+The value of `background` will be red, as `--theme-color` wasn't initialized and initial value is empty. But if we will register our property:
+
+```js
+CSS.registerProperty({
+  name: '--theme-color',
+  syntax: '<color>',
+  initialValue: 'blue'
+});
+```
+
+```css
+.element {
+  background: var(--theme-color, red);
+}
+```
+
+The value of `background` will be blue, as it specified as intial value for `--theme-color` in property configuration.
+
+Important thing here is that we can reset custom property using `initial` keyword. Let me show the code:
+
+```js
+CSS.registerProperty({
+  name: '--theme-color',
+  syntax: '<color>',
+  initialValue: 'blue',
+  inherits: true
+});
+```
+
+```html
+<section class="red-theme">
+  <article class="default-theme"></article>
+</section>
+```
+
+```css
+.red-theme {
+  --theme-color: red;
+  background: var(--theme-color);
+}
+
+.default-theme {
+  --theme-color: initial;
+  background: var(--theme-color);
+}
+```
+
+In this example element with class name `default-theme` will inherit `--theme-color` property and then resets it to the initial value. So its background color will be blue.
+
+### `inherits`
+Inherits is boolean parameter, that obliviously stands for custom property inheritance from DOM tree. It is `false` by default. You need to set it to `true` if you want property to be inherited:
+
+```js
+CSS.registerProperty({
+  name: '--my-col',
+  syntax: '<color>',
+  initialValue: 'red',
+  inherits: true
+});
+```
+
+```html
+<ul>
+  <li>item 1</li>
+  <li>item 2</li>
+  <li>item 3</li>
+</ul>
+```
+
+```css
+ul {
+  --my-col: #ff00ff;
+}
+
+li {
+  color: var(--my-col, blue);
+}
+```
+
+In this example we have simple unordered list in HTML. Then we assign the value to `--my-col` property that accepts CSS colors. Next we are using this property for list item text color value with fallback specified as well. Each of items will have `#ff00ff` text color, because property was inherited from `ul` element in the DOM tree.
+
+Actually CSS variable created in stylesheet only equals to the next registered custom property:
+
+```js
+CSS.registerProperty({
+  name: '--my-var',
+  syntax: '*',
+  inherits: true
+});
+```
+
+## Why we might need type for custom properties?
+There are few cases when we want our custom properties to be strictly typed: value validation, and animations.
+
+### CSS value validation
+This is the straight forward use case, as if we expect CSS property to have only valid type. If type not match value assigment for the property will be ignored and inherited/initial/fallback value will be used. Also types could be used in JavaScript, in the main context or in some worklet, like CSS Paint.
+
+```js
+CSS.registerProperty({
+  name: '--theme-color',
+  syntax: '<color>',
+  initialValue: 'blue'
+});
+```
+
+```css
+.dark-theme-section {
+  --theme-color: 1;
+}
+```
+
+We declared `--theme-color` property that accepts only CSS color as a value. Then in our stylesheet we assigned `1` as the value for that property. As `1` is not valid color value, the property will use initial value. Let's we try to get the value in JavaScript:
+
+```js
+const section = document.querySelector('.dark-theme-section');
+const styles = getComputedStyle(section);
+const themeColor = styles.getPropertyValue('--theme-color');
+const styleMap = section.computedStyleMap();
+const typedValue = styleMap.get('--theme-color');
+
+console.log(themeColor); // "blue"
+console.log(typedValue); // CSSKeywordValue {value: "blue"}
+```
+
+We can access our property value in JS and the only valid one will be used.
+
+### Animations
+If we try to animate CSS variables in styles with `transition` or `animation` it won't work, the value will be changed at 50% timeframe point without any smooth interpolation.
+
+```css
+.no-smoosh {
+  --bg-color: red;
+  background: var(--bg-color);
+  transition: --bg-color .3s linear;
+}
+
+.no-smoosh:hover {
+  --bg-color: blue;
+}
+```
+
+This happens because for browsers custom property without the type is just string and it has no idea how to interpolate one string into another. But browser already has internal functionality to interpolate built-in CSS value of different types, like lenght, percentage, color, etc. So to make custom property soothly animatable we need to tell the browser what type to expect for particular custom property:
+
+```js
+CSS.registerProperty({
+  name: '--bg-color',
+  syntax: '<color>',
+  initialValue: 'red'
+});
+```
+
+```css
+.smoosh {
+  background: var(--bg-color);
+  transition: --bg-color .3s linear;
+}
+
+.smoosh:hover {
+  --bg-color: blue;
+}
+```
+
+In this case `background` will be smoothly changed from red to blue.
 
 ## What types are available?
+Unfortunately, not all CSS types available for custom property syntax in the current spec version. For now it is limited to the next list:
+
+- `length`
+- `number`
+- `percentage`
+- `length-percentage`
+- `color`
+- `image`
+- `url`
+- `integer`
+- `angle`
+- `time`
+- `resolution`
+- `transform-list`
+- `custom-ident`
+
+Let me describe each of the type with examples.
+
+### `length`
+### `number`
+### `percentage`
+### `length-percentage`
+### `color`
+### `image`
+### `url`
+### `integer`
+### `angle`
+### `time`
+### `resolution`
+### `transform-list`
+### `custom-ident`
+
+## Use cases
+
+### Computations with `calc`
+
+### Partial application
 
 ## What types could be used as CSS Paint API `inputArguments`?
 
+## How to polyfill custom properties?
