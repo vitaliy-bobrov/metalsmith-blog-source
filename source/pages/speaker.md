@@ -52,7 +52,7 @@ priority: 1.0
 
   Topic: **"Stencil: a New Hope of Web Components"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/stencil-a-new-hope-of-web-components)
+  [Slides](https://speakerdeck.com/bobrov1989/stencil-a-new-hope-of-web-components) | [Video](https://youtu.be/XJ_DPukLJRI)
 
 - [meet.js Wrocław](https://www.meetup.com/meet-js-wroclaw/events/238619875/) -- 30 November 2017, Wroclaw, Poland
 
