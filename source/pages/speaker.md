@@ -8,21 +8,29 @@ priority: 1.0
 ---
 ## Upcomming talks:
 
-- [Code Europe](https://www.codeeurope.pl) -- 26 April 2018, Wroclaw, Poland
-
-  Topic: **"TypeScript -- JavaScript you are going to love"**
-
-- [jsDay](https://2018.jsday.it/) -- 9 May 2018, Verona, Italy
-
-  Topic: **"PWA as a new Cyber Attack Vector"**
-
-- [jsDay](https://2018.jsday.it/) -- 10 May 2018, Verona, Italy
-
-  Topic: **"TypeScript -- JavaScript you are going to love"**
+Comming soon...
 
 ## Past talks:
 
 ### 2018
+
+- [jsDay](https://2018.jsday.it/) -- 10 May 2018, Verona, Italy
+
+  Topic: **"PWA as a new Cyber Attack Vector"**
+
+  [Slides](https://speakerdeck.com/bobrov1989/pwa-as-a-new-cyber-attack-vector)
+
+- [jsDay](https://2018.jsday.it/) -- 9 May 2018, Verona, Italy
+
+  Topic: **"TypeScript -- JavaScript you are going to love"**
+
+  [Slides](https://speakerdeck.com/bobrov1989/typescript-javascript-you-are-gonna-to-love-1)
+
+- [Code Europe](https://www.codeeurope.pl) -- 26 April 2018, Wroclaw, Poland
+
+  Topic: **"TypeScript -- JavaScript you are going to love"**
+
+  [Slides](https://speakerdeck.com/bobrov1989/typescript-javascript-you-are-gonna-to-love)
 
 - [ng-conf](https://www.ng-conf.org) -- 19 April 2018, Salt Lake City, UT
 
