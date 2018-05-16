@@ -24,11 +24,7 @@ const onError = function(error) {
   this.emit('end');
 };
 
-const UGLIFY_CONFIG = {
-  output: {
-    comments: false
-  }
-};
+const prod = process.env.NODE_ENV === 'production';
 const LOCAL_PORT = 3000;
 const PROD_URL = 'https://vitaliy-bobrov.github.io/';
 const SITEMAP_URL = url.resolve(PROD_URL, 'sitemap.xml');
@@ -106,8 +102,6 @@ gulp.task('styles', () => {
     mqkeyframes
   ];
 
-  const prod = process.env.NODE_ENV === 'production';
-
   return gulp.src('scss/**/*.scss')
     .pipe($.plumber({
       errorHandler: onError
@@ -154,13 +148,13 @@ gulp.task('scripts', () =>
     .pipe($.plumber({
       errorHandler: onError
     }))
-    .pipe($.sourcemaps.init())
+    .pipe($.if(!prod, $.sourcemaps.init()))
     .pipe($.babel())
-    .pipe($.sourcemaps.write())
     .pipe($.concat('main.min.js'))
     .pipe($.babelMinify())
+    .pipe($.if(!prod, $.sourcemaps.write()))
     .pipe($.size({title: 'scripts'}))
-    .pipe($.sourcemaps.write('.'))
+    .pipe($.if(!prod, $.sourcemaps.write('.')))
     .pipe(gulp.dest('build/js')));
 
 gulp.task('paint', () =>
