@@ -63,7 +63,10 @@ gulp.task('webp', () => gulp.src([
     '!images/**/*-og.jpg',
     '!images/bg-*.jpg'
   ])
-  .pipe($.webp())
+  .pipe($.webp({
+    quality: 100,
+    method: 6
+  }))
   .pipe(gulp.dest('images'))
 );
 
@@ -104,7 +107,7 @@ gulp.task('styles', () => {
     mqkeyframes
   ];
 
-  const prod = process.env.NODE_ENV === 'production';
+  const prod = true;
 
   return gulp.src('scss/**/*.scss')
     .pipe($.plumber({
@@ -290,7 +293,7 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
         }
       },
       {
-        urlPattern: /\/(category|page)\/.*\.htmll/,
+        urlPattern: /\/(category|page)\/.*\.html/,
         handler: 'networkFirst',
         options: {
           cache: {
