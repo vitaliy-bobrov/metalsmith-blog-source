@@ -8,7 +8,11 @@ priority: 0.9
 ---
 ## Bio
 
-Vitalii is a Front-end engineer from Ukraine with more than 5 years of experience in web development. He started his career with PHP & Drupal CMF and later realized that JavaScript and front-end are the exiting most things technologies. Currently, Vitalii lives in Poland, in the old nice city called Wroclaw. In delays of work at office and open source projects maintenance, he loves to spend time with his significant other and little child, play different musical instruments and driving.
+Vitalii is the JavaScript Engineer with rich Angular and NgRx experience in enterprise projects. For the last couple of years, he lives in Poland, but Ukraine will live in his heart forever. He is co-organizer of Angular Wroclaw meetup. This guy is not just nerd, but tech speaker, ngGirls mentor, and the father of the excellent little girl.
+
+## Interviews
+
+[](youtube:sM3wR9g1jbM)
 
 ## Contact
 
