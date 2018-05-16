@@ -1,6 +1,9 @@
 ((window, document) => {
   'use strict';
 
+  /**
+   * Registers SW.
+   */
   function register() {
     navigator.serviceWorker.register('/service-worker.js')
       .then(registration => {
