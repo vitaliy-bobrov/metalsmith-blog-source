@@ -63,7 +63,10 @@ gulp.task('webp', () => gulp.src([
     '!images/**/*-og.jpg',
     '!images/bg-*.jpg'
   ])
-  .pipe($.webp())
+  .pipe($.webp({
+    quality: 100,
+    method: 6
+  }))
   .pipe(gulp.dest('images'))
 );
 
