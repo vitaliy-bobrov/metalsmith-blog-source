@@ -16,8 +16,8 @@
       {{> header }}
 
       <!-- Content -->
-      <main class="mdl-layout__content js-to-top-container">
-        <section class="mdl-grid posts-grid">
+      <div class="mdl-layout__content js-to-top-container">
+        <main class="mdl-grid posts-grid">
           {{#each pagination.files as |post|}}
             <article class="mdl-card mdl-shadow--3dp mdl-cell post-teaser {{ postCell @index ../pagination.files.length }}">
               <header class="mdl-card__media post-teaser__media">
@@ -86,20 +86,21 @@
               {{{ postShare post.title post.description ../siteurl post.path @index }}}
             </article>
           {{/each}}
-        </section>
+        </main>
 
         <!-- Pagination -->
         {{> pagination }}
-      </main>
-      <!-- Snackbar -->
-      {{> notification }}
 
-      <!-- Footer -->
-      {{> footer }}
+        <!-- Snackbar -->
+        {{> notification }}
+
+        <!-- Footer -->
+        {{> footer }}
+      </div>
     </div>
 
     <!-- Scripts -->
-    {{> ga }}
     {{> js }}
+    {{> ga }}
   </body>
 </html>

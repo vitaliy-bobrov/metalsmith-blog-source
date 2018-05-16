@@ -2,6 +2,8 @@
 <html lang="{{ locale }}">
   <head>
     <title>{{ title }} | {{ sitename }}</title>
+    <link rel="alternate" href="{{ siteurl }}{{ path }}" hreflang="en" />
+
     {{> metatags }}
 
     {{> og-page-props }}
@@ -14,8 +16,8 @@
       {{> header }}
 
       <!-- Content -->
-      <main class="mdl-layout__content js-to-top-container">
-        <section class="mdl-grid posts-grid">
+      <div class="mdl-layout__content js-to-top-container">
+        <main class="mdl-grid posts-grid">
           <article class="mdl-card mdl-shadow--3dp mdl-cell page mdl-cell--12-col">
             <h1 class="page__title">
               {{ title }}
@@ -26,18 +28,18 @@
             </section>
           </article>
 
-        </section>
-      </main>
+        </main>
 
-      <!-- Snackbar -->
-      {{> notification }}
+        <!-- Snackbar -->
+        {{> notification }}
 
-      <!-- Footer -->
-      {{> footer }}
+        <!-- Footer -->
+        {{> footer }}
+      </div>
     </div>
 
     <!-- Scripts -->
-    {{> ga }}
     {{> js }}
+    {{> ga }}
   </body>
 </html>

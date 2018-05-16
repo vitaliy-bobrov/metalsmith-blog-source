@@ -15,13 +15,13 @@
   }
 
   @media screen and (min-width: 768px) {
-    padding: 36px 0;
+    padding-top: 36px;
     background-image: resolve('bg-tablet.jpg');
     background-image: paint(material-bg);
   }
 
   @media screen and (min-width: 1025px) {
-    padding: 72px 0 54px;
+    padding-top: 72px;
     background-image: resolve('bg-desktop.jpg');
     background-image: paint(material-bg);
   }

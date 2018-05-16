@@ -2,6 +2,8 @@
 <html lang="{{ locale }}">
   <head>
     <title>{{ sitename }}</title>
+    <link rel="alternate" href="{{ siteurl }}{{ path }}" hreflang="en" />
+
     {{> metatags }}
 
     {{> og-blog-props }}
@@ -14,8 +16,8 @@
       {{> header }}
 
       <!-- Content -->
-      <main class="mdl-layout__content js-to-top-container">
-        <section class="mdl-grid posts-grid">
+      <div class="mdl-layout__content js-to-top-container">
+        <main class="mdl-grid posts-grid">
           {{#each pagination.files as |post|}}
             <article class="mdl-card mdl-shadow--3dp mdl-cell post-teaser {{ postCell @index ../collections.posts.length }}">
               <header class="mdl-card__media post-teaser__media">
@@ -84,17 +86,21 @@
               {{{ postShare post.title post.description ../siteurl post.path @index }}}
             </article>
           {{/each}}
-        </section>
-      </main>
-      <!-- Snackbar -->
-      {{> notification }}
+        </main>
 
-      <!-- Footer -->
-      {{> footer }}
+        <!-- Pagination -->
+        {{> pagination }}
+
+        <!-- Snackbar -->
+        {{> notification }}
+
+        <!-- Footer -->
+        {{> footer }}
+      </div>
     </div>
 
     <!-- Scripts -->
-    {{> ga }}
     {{> js }}
+    {{> ga }}
   </body>
 </html>

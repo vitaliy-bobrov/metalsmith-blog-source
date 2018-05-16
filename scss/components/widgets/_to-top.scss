@@ -1,18 +1,20 @@
 .to-top {
-  position: absolute;
-  top: -48px;
+  position: fixed;
+  bottom: 4px;
   right: 16px;
+  opacity: 0;
   z-index: $under-content;
   transition: z-index 0s linear;
-  will-change: transform;
 
   @media screen and (min-width: 768px) {
-    top: -20px;
+    bottom: 16px;
   }
 
   &_visible {
     z-index: $above-content;
-    animation: showTop .8s;
+    animation-name: showTop;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
   }
 
   &__icon {
@@ -41,6 +43,7 @@
   }
 
   100% {
+    opacity: 1;
     transform: translateY(0) scale(1);
   }
 }

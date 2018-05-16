@@ -7,6 +7,19 @@
     }
   }
 
+  .mdl-layout__drawer {
+    background-color: $mdl-dark-card;
+    border-right-color: $mdl-dark-header;
+
+    .mdl-layout-title {
+      color: $mdlext-dark-text-color-primary;
+    }
+
+    .mdl-navigation .mdl-navigation__link {
+      color: $mdlext-dark-text-color-secondary;
+    }
+  }
+
   .post-teaser__title-link {
     color: $mdlext-dark-text-color-primary;
     text-decoration: none;
