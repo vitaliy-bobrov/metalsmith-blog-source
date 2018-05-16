@@ -1,20 +1,20 @@
 'use strict';
 
-const path             = require('path');
-const gulp             = require('gulp');
-const del              = require('del');
-const runSequence      = require('run-sequence');
-const browserSync      = require('browser-sync');
-const gulpLoadPlugins  = require('gulp-load-plugins');
-const assets           = require('postcss-assets');
-const autoprefixer     = require('autoprefixer');
-const mqpacker         = require('css-mqpacker');
-const mqkeyframes      = require('postcss-mq-keyframes');
-const exec             = require('child_process').exec;
-const request          = require('request');
-const url              = require('url');
-const swPrecache       = require('sw-precache');
-const pkg              = require('./package.json');
+const path = require('path');
+const gulp = require('gulp');
+const del = require('del');
+const runSequence = require('run-sequence');
+const browserSync = require('browser-sync');
+const gulpLoadPlugins = require('gulp-load-plugins');
+const assets = require('postcss-assets');
+const autoprefixer = require('autoprefixer');
+const mqpacker = require('css-mqpacker');
+const mqkeyframes = require('postcss-mq-keyframes');
+const exec = require('child_process').exec;
+const request = require('request');
+const url = require('url');
+const swPrecache = require('sw-precache');
+const pkg = require('./package.json');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -29,7 +29,6 @@ const UGLIFY_CONFIG = {
     comments: false
   }
 };
-
 const LOCAL_PORT = 3000;
 const PROD_URL = 'https://vitaliy-bobrov.github.io/';
 const SITEMAP_URL = url.resolve(PROD_URL, 'sitemap.xml');
@@ -107,7 +106,7 @@ gulp.task('styles', () => {
     mqkeyframes
   ];
 
-  const prod = true;
+  const prod = process.env.NODE_ENV === 'production';
 
   return gulp.src('scss/**/*.scss')
     .pipe($.plumber({
