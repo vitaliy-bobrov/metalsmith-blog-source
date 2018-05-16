@@ -3,28 +3,25 @@
 
   const buttons = document.querySelectorAll('.js-share-btn');
   const notification = document.querySelector('.mdl-js-snackbar');
-  let config;
 
   const nativeShare = data => {
     navigator.share(data)
       .then(() => {
-        config = {
+        notification.MaterialSnackbar.showSnackbar({
           message: 'Thank you for sharing this post!',
           timeout: 5000
-        };
-        notification.MaterialSnackbar.showSnackbar(config);
+        });
         ga('send', 'event', 'Share', 'click', 'Native Share');
       })
-      .catch(() => {
-        config = {
+      .catch(err => {
+        notification.MaterialSnackbar.showSnackbar({
           message: 'Sharing failed!',
           actionHandler: () => {
             nativeShare(data);
           },
           actionText: 'Retry',
           timeout: 5000
-        };
-        notification.MaterialSnackbar.showSnackbar(config);
+        });
       });
   };
 
@@ -42,7 +39,11 @@
   };
 
   Array.prototype.forEach.call(buttons, btn => {
-    if (navigator.share) {
+    if (
+      'share' in navigator &&
+      matchMedia &&
+      matchMedia('all and (max-width: 768px)').matches
+    ) {
       btn.addEventListener('click', shareHanler, false);
     } else {
       let menu = btn.parentNode.querySelector('.js-share-menu');

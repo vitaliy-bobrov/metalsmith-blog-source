@@ -73,7 +73,7 @@ const postIllustration = (tumb, alt) => `
     </picture>`;
 
 const postShare = (title, description, siteurl, path, id = 0) => {
-  let link = url.resolve(siteurl, path);
+  let link = url.resolve(siteurl, `${path}/`);
 
   return `
     <div class="mdl-card__menu post-share">

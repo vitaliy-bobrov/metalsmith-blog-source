@@ -48,7 +48,7 @@
     background-color: rgba($white, .2);
 
     .mdl-mini-footer--social-btn__icon {
-      fill: $mdlext-dark-color-primary;
+      color: $mdlext-dark-color-primary;
     }
   }
 
@@ -56,6 +56,6 @@
     width: 20px;
     height: 20px;
     margin: 2px;
-    fill: rgba($black, .54);
+    color: rgba($black, .54);
   }
 }
