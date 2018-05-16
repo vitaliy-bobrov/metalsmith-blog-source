@@ -293,7 +293,7 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
         }
       },
       {
-        urlPattern: /\/(category|page)\/.*\.htmll/,
+        urlPattern: /\/(category|page)\/.*\.html/,
         handler: 'networkFirst',
         options: {
           cache: {
