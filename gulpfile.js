@@ -107,7 +107,7 @@ gulp.task('styles', () => {
     mqkeyframes
   ];
 
-  const prod = process.env.NODE_ENV === 'production';
+  const prod = true;
 
   return gulp.src('scss/**/*.scss')
     .pipe($.plumber({

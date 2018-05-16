@@ -24,21 +24,6 @@
     position: relative;
   }
 
-  .remarkable-youtube-wrapper {
-    height: 0;
-    overflow: hidden;
-    padding-bottom: 75%;
-    position: relative;
-  }
-
-  &__video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
   &__info {
     border-bottom: 1px solid $mdlext-dark-divider-color;
   }
