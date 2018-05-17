@@ -1,4 +1,16 @@
 {
+    "pages\\about.md": {
+        "filename": "pages\\about.md",
+        "hash": "7def121e42b26c0944ce69df233610dd",
+        "created": "2018-05-17T10:39:23.803Z",
+        "updated": "2018-05-17T10:39:23.803Z"
+    },
+    "pages\\speaker.md": {
+        "filename": "pages\\speaker.md",
+        "hash": "15e9f54c58151330fb26e550c0320c0f",
+        "created": "2018-05-17T10:39:23.803Z",
+        "updated": "2018-05-17T10:39:23.803Z"
+    },
     "blog\\adding-comments-to-metalsmith.md": {
         "filename": "blog\\adding-comments-to-metalsmith.md",
         "hash": "f7e6b84265b7859c8abfffc24452edcd",
@@ -41,12 +53,6 @@
         "created": "2017-08-24T00:00:00.000Z",
         "updated": "2017-08-24T00:00:00.000Z"
     },
-    "blog\\introduction-to-functional-js.md": {
-        "filename": "blog\\introduction-to-functional-js.md",
-        "hash": "b0b8eb6a06d50b65878deb1f4152735b",
-        "created": "2017-03-19T00:00:00.000Z",
-        "updated": "2017-03-19T00:00:00.000Z"
-    },
     "blog\\native-share-for-mobile-chrome.md": {
         "filename": "blog\\native-share-for-mobile-chrome.md",
         "hash": "c446e6891faa2667432093a16b8fff73",
@@ -59,11 +65,11 @@
         "created": "2017-02-12T00:00:00.000Z",
         "updated": "2017-02-12T00:00:00.000Z"
     },
-    "blog\\tasks-from-interviews-yandex.md": {
-        "filename": "blog\\tasks-from-interviews-yandex.md",
-        "hash": "687e78f1349ffe7a723a9ec4bba7bfd8",
-        "created": "2017-01-15T00:00:00.000Z",
-        "updated": "2017-01-15T00:00:00.000Z"
+    "blog\\introduction-to-functional-js.md": {
+        "filename": "blog\\introduction-to-functional-js.md",
+        "hash": "b0b8eb6a06d50b65878deb1f4152735b",
+        "created": "2017-03-19T00:00:00.000Z",
+        "updated": "2017-03-19T00:00:00.000Z"
     },
     "blog\\webpack-2-migration-tips.md": {
         "filename": "blog\\webpack-2-migration-tips.md",
@@ -71,16 +77,10 @@
         "created": "2017-02-09T00:00:00.000Z",
         "updated": "2017-02-09T00:00:00.000Z"
     },
-    "pages\\about.md": {
-        "filename": "pages\\about.md",
-        "hash": "7def121e42b26c0944ce69df233610dd",
-        "created": "2018-05-17T10:25:08.832Z",
-        "updated": "2018-05-17T10:25:08.832Z"
-    },
-    "pages\\speaker.md": {
-        "filename": "pages\\speaker.md",
-        "hash": "15e9f54c58151330fb26e550c0320c0f",
-        "created": "2018-05-17T10:25:08.832Z",
-        "updated": "2018-05-17T10:25:08.832Z"
+    "blog\\tasks-from-interviews-yandex.md": {
+        "filename": "blog\\tasks-from-interviews-yandex.md",
+        "hash": "687e78f1349ffe7a723a9ec4bba7bfd8",
+        "created": "2017-01-15T00:00:00.000Z",
+        "updated": "2017-01-15T00:00:00.000Z"
     }
 }

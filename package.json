@@ -8,7 +8,7 @@
     "start": "gulp && gulp serve:dev",
     "build": "gulp",
     "build:prod": "cross-env NODE_ENV=production gulp",
-    "deploy": "yarn build:prod && gulp deploy",
+    "deploy": "yarn build:prod && cross-env NODE_ENV=production gulp deploy",
     "seo": "gulp seo"
   },
   "repository": {
