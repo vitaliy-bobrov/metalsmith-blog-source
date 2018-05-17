@@ -4,6 +4,8 @@ description: Bobrov Blog's "Hello World"
 ogimage: images/posts/hello-world/hello-world-og.jpg
 tumb: /images/posts/hello-world/hello-world
 created: 2017-01-14
+updated: 2018-02-17
+lastmod: 2018-02-17
 categories:
 - Blog
 ---

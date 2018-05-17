@@ -45,6 +45,7 @@ Metalsmith(__dirname)
       pattern: pagesPattern,
       defaults: {
         layout: 'page.html',
+        changefreq: 'weekly',
         priority: 0.9
       }
     },
@@ -55,6 +56,7 @@ Metalsmith(__dirname)
         author: 'me',
         comments: true,
         twitter: true,
+        changefreq: 'monthly',
         priority: 1.0
       }
     }

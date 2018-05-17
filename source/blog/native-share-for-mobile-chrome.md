@@ -4,6 +4,8 @@ description: Improve you users experience with native share widget on Android de
 ogimage: images/posts/native-share-for-mobile-chrome/native-share-for-mobile-chrome-og.jpg
 tumb: /images/posts/native-share-for-mobile-chrome/native-share-for-mobile-chrome
 created: 2017-02-15
+updated: 2018-04-13
+lastmod: 2018-04-13
 categories:
 - Guides
 ---

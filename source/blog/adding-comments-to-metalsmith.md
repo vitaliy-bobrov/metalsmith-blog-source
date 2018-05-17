@@ -4,6 +4,8 @@ description: Metalsmith is a static site generator, so developer won't to implem
 ogimage: images/posts/adding-comments-to-metalsmith/add-comments-to-metalsmith-project-og.jpg
 tumb: /images/posts/adding-comments-to-metalsmith/add-comments-to-metalsmith-project
 created: 2017-01-30
+updated: 2018-02-18
+lastmod: 2018-02-18
 categories:
 - Guides
 - Metalsmith

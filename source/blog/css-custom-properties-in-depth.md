@@ -4,6 +4,8 @@ description: Deep dive into CSS Properties and Values API the important part of 
 ogimage: images/posts/css-custom-properties-in-depth/css-custom-properties-in-depth-og.jpg
 tumb: /images/posts/css-custom-properties-in-depth/css-custom-properties-in-depth
 created: 2018-04-24
+updated: 2018-04-24
+lastmod: 2018-04-24
 draft: true
 categories:
 - CSS

@@ -2,6 +2,8 @@
 title: Please... no more jQuery...
 description: jQuery was our buddy for a long time, but in 2017 it looks like ballast on web pages.
 created: 2017-02-12
+updated: 2018-02-17
+lastmod: 2018-02-17
 ogimage: images/posts/please-mo-more-jquery/please-mo-more-jquery-og.jpg
 tumb: /images/posts/please-mo-more-jquery/please-mo-more-jquery
 categories:

@@ -5,6 +5,8 @@ draft: false
 ogimage: images/posts/deep-dive-into-array-methods/deep-dive-into-array-methods-og.jpg
 tumb: /images/posts/deep-dive-into-array-methods/deep-dive-into-array-methods
 created: 2017-06-21
+updated: 2018-02-17
+lastmod: 2018-02-17
 categories:
 - JavaScript
 - Functional Programming
