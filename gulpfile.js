@@ -60,7 +60,7 @@ gulp.task('webp', () => gulp.src([
   ])
   .pipe($.webp({
     quality: 100,
-    method: 6
+    method: prod ? 6 : 0
   }))
   .pipe(gulp.dest('images'))
 );
@@ -106,7 +106,7 @@ gulp.task('styles', () => {
     .pipe($.plumber({
       errorHandler: onError
     }))
-    .pipe($.sourcemaps.init())
+    .pipe($.if(!prod, $.sourcemaps.init()))
     .pipe($.sass({
       includePaths: [
         'node_modules/material-design-lite/src/',
@@ -130,7 +130,7 @@ gulp.task('styles', () => {
     })))
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.size({title: 'styles'}))
-    .pipe($.sourcemaps.write('./'))
+    .pipe($.if(!prod, $.sourcemaps.write('./')))
     .pipe(gulp.dest('build/css'));
 });
 
@@ -151,10 +151,9 @@ gulp.task('scripts', () =>
     .pipe($.if(!prod, $.sourcemaps.init()))
     .pipe($.babel())
     .pipe($.concat('main.min.js'))
-    .pipe($.babelMinify())
-    .pipe($.if(!prod, $.sourcemaps.write()))
+    .pipe($.if(prod, $.babelMinify()))
     .pipe($.size({title: 'scripts'}))
-    .pipe($.if(!prod, $.sourcemaps.write('.')))
+    .pipe($.if(!prod, $.sourcemaps.write('./')))
     .pipe(gulp.dest('build/js')));
 
 gulp.task('paint', () =>
@@ -162,7 +161,7 @@ gulp.task('paint', () =>
   .pipe($.plumber({
     errorHandler: onError
   }))
-  .pipe($.babelMinify())
+  .pipe($.if(prod, $.babelMinify()))
   .pipe(gulp.dest('build/js')));
 
 gulp.task('clean', () => del([
@@ -200,7 +199,7 @@ gulp.task('html', () => gulp.src('build/**/*.html')
   }))
   .pipe(gulp.dest('build')));
 
-gulp.task('deploy', ['html', 'styles', 'minify-sw'], () => {
+gulp.task('deploy', ['html', 'minify-sw'], () => {
   let date = new Date();
   let formattedDate = date.toUTCString();
 
