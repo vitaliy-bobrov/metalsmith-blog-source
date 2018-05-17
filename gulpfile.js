@@ -28,6 +28,10 @@ const prod = process.env.NODE_ENV === 'production';
 const LOCAL_PORT = 3000;
 const PROD_URL = 'https://vitaliy-bobrov.github.io/';
 const SITEMAP_URL = url.resolve(PROD_URL, 'sitemap.xml');
+const BABELRC = {
+  presets: ['@babel/env'],
+  shouldPrintComment: () => !prod
+};
 
 gulp.task('metalsmith', ['svg'], callback => exec(`node ./metalsmith.js --url=${PROD_URL}`,
   (err, stdout, stderr) => {
@@ -149,7 +153,7 @@ gulp.task('scripts', () =>
       errorHandler: onError
     }))
     .pipe($.if(!prod, $.sourcemaps.init()))
-    .pipe($.babel())
+    .pipe($.babel(BABELRC))
     .pipe($.concat('main.min.js'))
     .pipe($.if(prod, $.babelMinify()))
     .pipe($.size({title: 'scripts'}))
@@ -302,6 +306,7 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
 
 gulp.task('minify-sw', () => {
   gulp.src('build/service-worker.js')
+    .pipe($.babel(BABELRC))
     .pipe($.babelMinify())
     .pipe(gulp.dest('build'));
 });
