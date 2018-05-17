@@ -1,92 +1,86 @@
 {
-    ".DS_Store": {
-        "filename": ".DS_Store",
-        "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2018-05-16T21:28:43.678Z",
-        "updated": "2018-05-16T21:28:43.678Z"
-    },
-    "blog/adding-comments-to-metalsmith.md": {
-        "filename": "blog/adding-comments-to-metalsmith.md",
+    "blog\\adding-comments-to-metalsmith.md": {
+        "filename": "blog\\adding-comments-to-metalsmith.md",
         "hash": "f7e6b84265b7859c8abfffc24452edcd",
         "created": "2017-01-30T00:00:00.000Z",
         "updated": "2017-01-30T00:00:00.000Z"
     },
-    "blog/css-paint-in-action-bar-chart.md": {
-        "filename": "blog/css-paint-in-action-bar-chart.md",
+    "blog\\css-paint-in-action-bar-chart.md": {
+        "filename": "blog\\css-paint-in-action-bar-chart.md",
         "hash": "d1331b60b11c1214bfc0381aefab90b3",
         "created": "2018-04-13T00:00:00.000Z",
         "updated": "2018-04-13T00:00:00.000Z"
     },
-    "blog/deep-dive-into-array-methods.md": {
-        "filename": "blog/deep-dive-into-array-methods.md",
+    "blog\\deep-dive-into-array-methods.md": {
+        "filename": "blog\\deep-dive-into-array-methods.md",
         "hash": "79b943b1a0e20fdfe85570ac466e53ec",
         "created": "2017-06-21T00:00:00.000Z",
         "updated": "2017-06-21T00:00:00.000Z"
     },
-    "blog/exploring-the-css-paint-api.md": {
-        "filename": "blog/exploring-the-css-paint-api.md",
+    "blog\\exploring-the-css-paint-api.md": {
+        "filename": "blog\\exploring-the-css-paint-api.md",
         "hash": "98e8ae2a8ad6f2b49cde29a538f9d272",
         "created": "2018-03-19T00:00:00.000Z",
         "updated": "2018-03-19T00:00:00.000Z"
     },
-    "blog/five-reasons-choose-metalsmith.md": {
-        "filename": "blog/five-reasons-choose-metalsmith.md",
+    "blog\\five-reasons-choose-metalsmith.md": {
+        "filename": "blog\\five-reasons-choose-metalsmith.md",
         "hash": "1fd6618ddcbdb3cfe257b566c92c7409",
         "created": "2017-01-19T00:00:00.000Z",
         "updated": "2017-01-19T00:00:00.000Z"
     },
-    "blog/hello-world.md": {
-        "filename": "blog/hello-world.md",
+    "blog\\hello-world.md": {
+        "filename": "blog\\hello-world.md",
         "hash": "66a281ae0c020b0cf6a2551522381470",
         "created": "2017-01-14T00:00:00.000Z",
         "updated": "2017-01-14T00:00:00.000Z"
     },
-    "blog/how-to-start-contribute-to-open-source.md": {
-        "filename": "blog/how-to-start-contribute-to-open-source.md",
+    "blog\\how-to-start-contribute-to-open-source.md": {
+        "filename": "blog\\how-to-start-contribute-to-open-source.md",
         "hash": "20ebe383a7b3880fdfc2981b66a73ca7",
         "created": "2017-08-24T00:00:00.000Z",
         "updated": "2017-08-24T00:00:00.000Z"
     },
-    "blog/introduction-to-functional-js.md": {
-        "filename": "blog/introduction-to-functional-js.md",
+    "blog\\introduction-to-functional-js.md": {
+        "filename": "blog\\introduction-to-functional-js.md",
         "hash": "b0b8eb6a06d50b65878deb1f4152735b",
         "created": "2017-03-19T00:00:00.000Z",
         "updated": "2017-03-19T00:00:00.000Z"
     },
-    "blog/native-share-for-mobile-chrome.md": {
-        "filename": "blog/native-share-for-mobile-chrome.md",
+    "blog\\native-share-for-mobile-chrome.md": {
+        "filename": "blog\\native-share-for-mobile-chrome.md",
         "hash": "c446e6891faa2667432093a16b8fff73",
         "created": "2017-02-15T00:00:00.000Z",
         "updated": "2017-02-15T00:00:00.000Z"
     },
-    "blog/please-no-more-jquery.md": {
-        "filename": "blog/please-no-more-jquery.md",
+    "blog\\please-no-more-jquery.md": {
+        "filename": "blog\\please-no-more-jquery.md",
         "hash": "6e1a29806d78dae0e89f55ff0f77655a",
         "created": "2017-02-12T00:00:00.000Z",
         "updated": "2017-02-12T00:00:00.000Z"
     },
-    "blog/tasks-from-interviews-yandex.md": {
-        "filename": "blog/tasks-from-interviews-yandex.md",
+    "blog\\tasks-from-interviews-yandex.md": {
+        "filename": "blog\\tasks-from-interviews-yandex.md",
         "hash": "687e78f1349ffe7a723a9ec4bba7bfd8",
         "created": "2017-01-15T00:00:00.000Z",
         "updated": "2017-01-15T00:00:00.000Z"
     },
-    "blog/webpack-2-migration-tips.md": {
-        "filename": "blog/webpack-2-migration-tips.md",
+    "blog\\webpack-2-migration-tips.md": {
+        "filename": "blog\\webpack-2-migration-tips.md",
         "hash": "10c0084fcdc6c2831d43dcf489b2d199",
         "created": "2017-02-09T00:00:00.000Z",
         "updated": "2017-02-09T00:00:00.000Z"
     },
-    "pages/about.md": {
-        "filename": "pages/about.md",
+    "pages\\about.md": {
+        "filename": "pages\\about.md",
         "hash": "7def121e42b26c0944ce69df233610dd",
-        "created": "2018-05-16T21:28:43.678Z",
-        "updated": "2018-05-16T21:28:43.678Z"
+        "created": "2018-05-17T10:25:08.832Z",
+        "updated": "2018-05-17T10:25:08.832Z"
     },
-    "pages/speaker.md": {
-        "filename": "pages/speaker.md",
+    "pages\\speaker.md": {
+        "filename": "pages\\speaker.md",
         "hash": "15e9f54c58151330fb26e550c0320c0f",
-        "created": "2018-05-16T21:28:43.678Z",
-        "updated": "2018-05-16T21:28:43.678Z"
+        "created": "2018-05-17T10:25:08.832Z",
+        "updated": "2018-05-17T10:25:08.832Z"
     }
 }

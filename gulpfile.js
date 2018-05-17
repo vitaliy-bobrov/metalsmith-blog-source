@@ -247,12 +247,13 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
       'js/sw/runtime-caching.js'
     ],
     staticFileGlobs: [
-      `${rootDir}/images/icons/`,
-      `${rootDir}/images/authors/`,
+      `${rootDir}/images/icons/**/*`,
+      `${rootDir}/images/authors/**/*`,
       `${rootDir}/images/!(*-og.jpg)`,
       `${rootDir}/js/**/*.js`,
       `${rootDir}/css/**/*.css`,
-      `${rootDir}/about/*.html`
+      `${rootDir}/about/*.html`,
+      `${rootDir}/speaker/*.html`
     ],
     runtimeCaching: [
       {
