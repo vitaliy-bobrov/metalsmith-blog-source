@@ -116,6 +116,11 @@ Or use them in media queries and other CSS blocks:
 ## What is the difference between CSS variable and custom property?
 Actually there is no difference between CSS variable and CSS custom property, correctly to call both as custom properties. The only thing is that when use declare custom property with `CSS.registerProperty` you will get more control over it. Under more control I mean that you will be able to assign CSS type, set initial value and inheritance.
 
+### **Note:**
+*Work with `registerProperty` requires you to enbale "Experimental Web Platform features"* -- `chrome://flags/#enable-experimental-web-platform-features` *to try it in Chrome.*
+
+INSERT IMAGE
+
 ## How to register custom property?
 To register custom property you need to use `CSS.registerProperty` static method and pass configuration object. The code might look like this:
 
@@ -368,7 +373,9 @@ Unfortunately, not all CSS types available for custom property syntax in the cur
 - `transform-list`
 - `custom-ident`
 
-Let me describe each of the type with examples.
+There are interfaces for `<url>` and `<image>` in Blink core, but they still in development. That is why it is impossible to test them now. And it seems that specification for this types usage could be slightly changed in the future.
+
+All of this types could be used as input arguments in Houdini worklets, like CSS Paint API. Let's take a look at each of the type with examples.
 
 ### `length`
 ### `number`
@@ -389,7 +396,5 @@ Let me describe each of the type with examples.
 ### Computations with `calc`
 
 ### Partial application
-
-## What types could be used as CSS Paint API `inputArguments`?
 
 ## How to polyfill custom properties?
