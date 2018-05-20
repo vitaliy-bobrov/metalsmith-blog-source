@@ -4,6 +4,8 @@ description: Webpack 2 has been just released, it brings a lot of improvement an
 ogimage: images/posts/webpack-2-migration-tips/webpack-2-migration-tips-og.jpg
 tumb: /images/posts/webpack-2-migration-tips/webpack-2-migration-tips
 created: 2017-02-09
+updated: 2018-02-17
+lastmod: 2018-02-17
 categories:
 - Guides
 - Tools

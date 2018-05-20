@@ -4,11 +4,18 @@ description: Information about past and upcoming talk on tech events.
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
+lastmod: 2018-05-18
 priority: 1.0
 ---
 ## Upcomming talks:
 
-Comming soon...
+- [ngHouston](https://www.meetup.com/ngHouston/) -- 15 June 2018, Online
+
+  Topic: **"NgRx Schematics"**
+
+- [Angular Academy Show](https://angular-academy.com/) -- 02 July 2018, Online
+
+  Topic: **"Angular Schematics"**
 
 ## Past talks:
 

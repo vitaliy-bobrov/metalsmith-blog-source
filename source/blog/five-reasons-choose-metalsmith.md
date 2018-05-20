@@ -4,6 +4,8 @@ description: Why you midht choose static site generator for your next project?
 ogimage: images/posts/five-reasons-choose-metalsmith/five-reasons-choose-metalsmith-og.jpg
 tumb: /images/posts/five-reasons-choose-metalsmith/five-reasons-choose-metalsmith
 created: 2017-01-19
+updated: 2018-02-17
+lastmod: 2018-02-17
 categories:
 - Blog
 - Metalsmith

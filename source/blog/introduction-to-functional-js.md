@@ -4,6 +4,8 @@ description: Basic functional programming principles for beginers.
 ogimage: images/posts/introduction-to-functional-js/introduction-to-functional-js-og.jpg
 tumb: /images/posts/introduction-to-functional-js/introduction-to-functional-js
 created: 2017-03-19
+updated: 2018-02-17
+lastmod: 2018-02-17
 categories:
 - JavaScript
 - Functional Programming

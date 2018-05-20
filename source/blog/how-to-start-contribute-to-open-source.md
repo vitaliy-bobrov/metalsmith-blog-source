@@ -4,6 +4,8 @@ description: To be a part of community means not only using libraries, modules, 
 ogimage: images/posts/how-to-start-contribute-to-open-source/how-to-start-contribute-to-open-source-og.jpg
 tumb: /images/posts/how-to-start-contribute-to-open-source/how-to-start-contribute-to-open-source
 created: 2017-08-24
+updated: 2018-02-17
+lastmod: 2018-02-17
 categories:
 - Guides
 - Open Source

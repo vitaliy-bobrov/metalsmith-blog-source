@@ -7,7 +7,8 @@
   "scripts": {
     "start": "gulp && gulp serve:dev",
     "build": "gulp",
-    "deploy": "NODE_ENV=production gulp deploy",
+    "build:prod": "cross-env NODE_ENV=production gulp",
+    "deploy": "yarn build:prod && cross-env NODE_ENV=production gulp deploy",
     "seo": "gulp seo"
   },
   "repository": {
@@ -21,17 +22,17 @@
   },
   "homepage": "https://github.com/vitaliy-bobrov/metalsmith-blog-source#readme",
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.47",
+    "@babel/preset-env": "^7.0.0-beta.47",
     "autoprefixer": "^8.5.0",
-    "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.18.13",
+    "cross-env": "^5.1.5",
     "css-mqpacker": "^6.0.1",
     "del": "^3.0.0",
     "escape-html": "^1.0.3",
     "eslint-config-google": "^0.9.1",
     "gulp": "^3.9.1",
-    "gulp-babel": "^7.0.0",
+    "gulp-babel": "^8.0.0-beta.2",
     "gulp-babel-minify": "^0.4.3",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
@@ -85,8 +86,18 @@
     "mdl-ext": "^0.17.0"
   },
   "browserslist": [
-    "last 2 versions",
-    "not ie <= 10"
+    "last 3 chrome versions",
+    "last 3 and_chr versions",
+    "last 3 and_ff versions",
+    "last 3 and_uc versions",
+    "android >= 6",
+    "last 3 firefox versions",
+    "last 2 samsung versions",
+    "last 3 edge versions",
+    "last 2 opera versions",
+    "safari >= 10",
+    "iOS >= 10",
+    "ie >= 11"
   ],
   "eslintConfig": {
     "parserOptions": {

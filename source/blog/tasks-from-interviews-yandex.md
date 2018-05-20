@@ -4,9 +4,9 @@ description: Resolving tasks received before Yandex interview on JavaScript deve
 ogimage: images/posts/tasks-from-interviews-yandex/tasks-from-interviews-yandex-og.jpg
 tumb: /images/posts/tasks-from-interviews-yandex/tasks-from-interviews-yandex
 created: 2017-01-15
+updated: 2018-03-11
+lastmod: 2018-03-11
 categories:
-- Tasks
-tags:
 - JavaScript
 - Interviews
 ---

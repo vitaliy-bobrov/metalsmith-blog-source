@@ -1,0 +1,42 @@
+<script type="application/ld+json">
+  {
+    "@type": "Blog",
+    "name": "{{ sitename }}",
+    "url": "{{ siteurl }}",
+    "description": "{{ description }}",
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ sitename }}"
+    },
+    "blogPosts": [
+      {{#each pagination.files as |post|}}
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": "True",
+        "headline": "{{ post.title }}",
+        "image": [
+          "{{ siteurl }}{{ post.ogimage }}"
+        ],
+        "datePublished": "{{ moment post.created format='YYYY-MM-DDThh:mm:ssZ' }}",
+        "dateModified": "{{ moment post.updated format='YYYY-MM-DDThh:mm:ssZ' }}",
+        "author": {
+          "@type": "Person",
+          "name": "{{ post.author.name }}"
+        },
+         "publisher": {
+          "@type": "Organization",
+          "name": "{{ sitename }}",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{ absoluteUrl ../siteurl ../sitelogo }}.png",
+            "width": "96",
+            "height": "96"
+          }
+        },
+        "description": "{{ post.description }}"
+      }
+      {{/each}}
+    ]
+  }
+</script>
