@@ -116,7 +116,9 @@ Metalsmith(__dirname)
       host: siteurl
     })
     .use(youtube, {
-      className: 'post__video'
+      className: 'post__video',
+      origin: siteurl,
+      related: false
     })
     .use(emoji)
   )

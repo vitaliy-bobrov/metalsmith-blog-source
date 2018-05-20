@@ -6934,8 +6934,8 @@ remarkable-extlink@^1.0.4:
     remarkable "^1.7.1"
 
 remarkable-youtube@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/remarkable-youtube/-/remarkable-youtube-1.0.2.tgz#9b513640eaf729ec9dad5bfa909e181c1d3d9a55"
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/remarkable-youtube/-/remarkable-youtube-1.1.2.tgz#6e9abaf229563e7263b98a8a574fe1afcd591fae"
   dependencies:
     remarkable "^1.7.1"
 
