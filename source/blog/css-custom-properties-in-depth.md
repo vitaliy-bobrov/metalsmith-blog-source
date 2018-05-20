@@ -390,4 +390,6 @@ Let me describe each of the type with examples.
 
 ## What types could be used as CSS Paint API `inputArguments`?
 
+## Browser support
+
 ## How to polyfill custom properties?
