@@ -116,6 +116,17 @@ Or use them in media queries and other CSS blocks:
 ## What is the difference between CSS variable and custom property?
 Actually there is no difference between CSS variable and CSS custom property, correctly to call both as custom properties. The only thing is that when use declare custom property with `CSS.registerProperty` you will get more control over it. Under more control I mean that you will be able to assign CSS type, set initial value and inheritance.
 
+## Browsers support
+If we are speaking about CSS variables, the brosers support is awesome! All "evergreen" one has full support.
+
+INSERT IMAGE
+
+Unfortunately, can't say the same about custom properties 😢. Only Chrome and Firefox started initial implementation of spec.
+
+INSERT IMAGE
+
+It will be great to be prepared before custom properties will be release in stable browser branch. You can always check the current status of every Houdini feature [here](https://ishoudinireadyyet.com/).
+
 ### **Note:**
 *Work with `registerProperty` requires you to enbale "Experimental Web Platform features"* -- `chrome://flags/#enable-experimental-web-platform-features` *to try it in Chrome.*
 
@@ -137,14 +148,14 @@ if ('registerProperty' in CSS) {
 
 So first of all we are detecting feature support in our browser, as a part of progressive enchanment. If `registerProperty` not supported in the browser, we still able to use CSS variables in styles. Let's have a closer look on each configuration parameter. The configuration object is required, if we will try to call method without it we will get JS exception.
 
-### `name`
+### name
 This is the only required parameter, if we will try to register property without `name` provided we will get exception -- "Uncaught TypeError: Failed to execute 'registerProperty' on 'CSS': required member name is undefined.".
 
 The other thing regarding property name, that you must follow naming rule -- name should start with `--` symbols. The reason for that is to have ability to use CSS custom properties with CSS pre/post-processors and separate them from built-in CSS properties. If you try to give name in incorrect format you will see error -- "DOMException: Failed to execute 'registerProperty' on 'CSS': Custom property names must start with '--'.".
 
 If property with that name has been already registered, browser will throw next error -- "Failed to execute 'registerProperty' on 'CSS': The name provided has already been registered.".
 
-### `syntax`
+### syntax
 Syntax stands for our property type definition. Its default value is `*` that is similar to TypeScript `any` type. This means that you can assign any value to your property. The type definition syntax is straight forward -- "<TYPE_NAME>", where `TYPE_NAME` should be replaced with actual CSS type you want to assign. In our example we used `color` type, that gives ability to assign any CSS color value, for example: `rebeccapurple`, `rgba(0, 0, 0, .5)`, `#ff00ff`, `hls(240, 10%, 50%)`. We will look what types are available later in this article.
 
 Similary to TypeScript, it is possible to define union of types and list of arguments. To declare union we should separate types with `|` as delimiter:
@@ -173,7 +184,7 @@ In this example we want our property to have one or more colors delimited with c
 
 There are much more possibilities to describe types, thet unfortunately not supported by the current CSS Custom Properties and Values specification.
 
-### `initialValue`
+### initialValue
 You might notice that I have used `initialValue` parameter in the previous section examples. Initial value is required if `syntax` was specified as any value different from `*`. If you trying to register property with some type without providing `initialValue`, you'll face such error -- "DOMException: Failed to execute 'registerProperty' on 'CSS': An initial value must be provided if the syntax is not '*'". Also initial value should match the type specified as syntax, in other case you will see an error -- "DOMException: Failed to execute 'registerProperty' on 'CSS': The initial value provided does not parse for the given syntax.". For `*` syntax type `initialValue` is optional and could has any value:
 
 ```js
@@ -241,8 +252,8 @@ CSS.registerProperty({
 
 In this example element with class name `default-theme` will inherit `--theme-color` property and then resets it to the initial value. So its background color will be blue.
 
-### `inherits`
-Inherits is boolean parameter, that obliviously stands for custom property inheritance from DOM tree. It is `false` by default. You need to set it to `true` if you want property to be inherited:
+### inherits
+Inherits is boolean parameter, that obliviously stands for custom property inheritance from DOM tree. It is `false` by default. The reason for such default is performance, as browser don't need to walk trouhg DOM tree to define which nodes inherits properties. You need to set inheritance to `true` if you want property to be inherited:
 
 ```js
 CSS.registerProperty({
@@ -377,24 +388,112 @@ There are interfaces for `<url>` and `<image>` in Blink core, but they still in 
 
 All of this types could be used as input arguments in Houdini worklets, like CSS Paint API. Let's take a look at each of the type with examples.
 
-### `length`
-### `number`
-### `percentage`
-### `length-percentage`
-### `color`
-### `image`
-### `url`
-### `integer`
-### `angle`
-### `time`
-### `resolution`
-### `transform-list`
-### `custom-ident`
+### length
 
-## Use cases
+```js
+CSS.registerProperty({
+  name: '--size',
+  syntax: '<length>',
+  initialValue: '0'
+});
+```
 
-### Computations with `calc`
+### percentage
 
-### Partial application
+```js
+CSS.registerProperty({
+  name: '--transparency',
+  syntax: '<percentage>',
+  initialValue: '0%'
+});
+```
 
-## How to polyfill custom properties?
+### length-percentage
+
+```js
+CSS.registerProperty({
+  name: '--relative-size',
+  syntax: '<length-percentage>',
+  initialValue: '0'
+});
+```
+
+### number
+
+```js
+CSS.registerProperty({
+  name: '--progress',
+  syntax: '<number>',
+  initialValue: '0'
+});
+```
+
+### integer
+
+```js
+CSS.registerProperty({
+  name: '--sides',
+  syntax: '<integer>',
+  initialValue: '0'
+});
+```
+
+### color
+
+```js
+CSS.registerProperty({
+  name: '--fill',
+  syntax: '<color>',
+  initialValue: 'transparent'
+});
+```
+
+### image
+
+```js
+CSS.registerProperty({
+  name: '--image',
+  syntax: '<image>',
+  initialValue: 'url()'
+});
+```
+
+### url
+
+```js
+CSS.registerProperty({
+  name: '--file',
+  syntax: '<url> | none',
+  initialValue: 'none'
+});
+```
+
+### angle
+
+```js
+CSS.registerProperty({
+  name: '--angle',
+  syntax: '<angle>',
+  initialValue: '0deg'
+});
+```
+
+### time
+
+```js
+CSS.registerProperty({
+  name: '--duration',
+  syntax: '<time>',
+  initialValue: '0s'
+});
+```
+
+### resolution
+
+### transform-list
+
+### custom-ident
+
+## How to use custom properties today?
+
+## Conclusion

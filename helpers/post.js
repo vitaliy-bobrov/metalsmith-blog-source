@@ -55,21 +55,21 @@ const postCell = (index, length) => {
 };
 
 const postIllustration = (tumb, alt) => `
-    <picture class="safe-picture">
+    <picture class="safe-picture js-lazy-load">
       <source media="(min-width: 1025px)"
-              srcset="${tumb}.webp 1x, ${tumb}@2x.webp 2x"
+              data-srcset="${tumb}.webp 1x, ${tumb}@2x.webp 2x"
               type="image/webp">
       <source media="(min-width: 1025px)"
-              srcset="${tumb}.jpg 1x, ${tumb}@2x.jpg 2x">
+              data-srcset="${tumb}.jpg 1x, ${tumb}@2x.jpg 2x">
       <source media="(min-width: 768px)"
-              srcset="${tumb}-tablet.webp 1x, ${tumb}-tablet@2x.webp 2x"
+              data-srcset="${tumb}-tablet.webp 1x, ${tumb}-tablet@2x.webp 2x"
               type="image/webp">
       <source media="(min-width: 768px)"
-              srcset="${tumb}-tablet.jpg 1x, ${tumb}-tablet@2x.jpg 2x">
-      <source srcset="${tumb}-mobile.webp 1x, ${tumb}-mobile@2x.webp 2x"
+              data-srcset="${tumb}-tablet.jpg 1x, ${tumb}-tablet@2x.jpg 2x">
+      <source data-srcset="${tumb}-mobile.webp 1x, ${tumb}-mobile@2x.webp 2x"
               type="image/webp">
-      <source srcset="${tumb}-mobile.jpg 1x, ${tumb}-mobile@2x.jpg 2x">
-      <img src="${tumb}.jpg" alt="${alt}" class="safe-picture__img">
+      <source data-srcset="${tumb}-mobile.jpg 1x, ${tumb}-mobile@2x.jpg 2x">
+      <img data-src="${tumb}.jpg" alt="${alt}" class="safe-picture__img">
     </picture>`;
 
 const postShare = (title, description, siteurl, path, id = 0) => {
