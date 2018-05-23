@@ -1,15 +1,15 @@
 {
-    "pages\\speaker.md": {
-        "filename": "pages\\speaker.md",
-        "hash": "7aa8b361897c2b8d2e5779093180e9ba",
-        "created": "2018-05-23T09:41:22.307Z",
-        "updated": "2018-05-23T09:41:22.307Z"
-    },
     "pages\\about.md": {
         "filename": "pages\\about.md",
         "hash": "7def121e42b26c0944ce69df233610dd",
-        "created": "2018-05-23T09:41:22.307Z",
-        "updated": "2018-05-23T09:41:22.307Z"
+        "created": "2018-05-23T11:30:29.503Z",
+        "updated": "2018-05-23T11:30:29.503Z"
+    },
+    "pages\\speaker.md": {
+        "filename": "pages\\speaker.md",
+        "hash": "7aa8b361897c2b8d2e5779093180e9ba",
+        "created": "2018-05-23T11:30:29.503Z",
+        "updated": "2018-05-23T11:30:29.503Z"
     },
     "blog\\adding-comments-to-metalsmith.md": {
         "filename": "blog\\adding-comments-to-metalsmith.md",
@@ -17,17 +17,17 @@
         "created": "2017-01-30T00:00:00.000Z",
         "updated": "2018-02-18T00:00:00.000Z"
     },
-    "blog\\css-paint-in-action-bar-chart.md": {
-        "filename": "blog\\css-paint-in-action-bar-chart.md",
-        "hash": "d1331b60b11c1214bfc0381aefab90b3",
-        "created": "2018-04-13T00:00:00.000Z",
-        "updated": "2018-04-24T00:00:00.000Z"
-    },
     "blog\\deep-dive-into-array-methods.md": {
         "filename": "blog\\deep-dive-into-array-methods.md",
         "hash": "79b943b1a0e20fdfe85570ac466e53ec",
         "created": "2017-06-21T00:00:00.000Z",
         "updated": "2018-02-17T00:00:00.000Z"
+    },
+    "blog\\css-paint-in-action-bar-chart.md": {
+        "filename": "blog\\css-paint-in-action-bar-chart.md",
+        "hash": "d1331b60b11c1214bfc0381aefab90b3",
+        "created": "2018-04-13T00:00:00.000Z",
+        "updated": "2018-04-24T00:00:00.000Z"
     },
     "blog\\exploring-the-css-paint-api.md": {
         "filename": "blog\\exploring-the-css-paint-api.md",
@@ -41,16 +41,16 @@
         "created": "2017-01-19T00:00:00.000Z",
         "updated": "2018-02-17T00:00:00.000Z"
     },
-    "blog\\how-to-start-contribute-to-open-source.md": {
-        "filename": "blog\\how-to-start-contribute-to-open-source.md",
-        "hash": "2f89452ada033c9d02bf8492727f6ecf",
-        "created": "2017-08-24T00:00:00.000Z",
-        "updated": "2018-02-17T00:00:00.000Z"
-    },
     "blog\\hello-world.md": {
         "filename": "blog\\hello-world.md",
         "hash": "66a281ae0c020b0cf6a2551522381470",
         "created": "2017-01-14T00:00:00.000Z",
+        "updated": "2018-02-17T00:00:00.000Z"
+    },
+    "blog\\how-to-start-contribute-to-open-source.md": {
+        "filename": "blog\\how-to-start-contribute-to-open-source.md",
+        "hash": "2f89452ada033c9d02bf8492727f6ecf",
+        "created": "2017-08-24T00:00:00.000Z",
         "updated": "2018-02-17T00:00:00.000Z"
     },
     "blog\\introduction-to-functional-js.md": {

@@ -836,7 +836,7 @@ array-find-index@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/array-find-index/-/array-find-index-1.0.2.tgz#df010aa1287e164bbda6f9723b0a96a1ec4187a1"
 
-array-slice@^0.2.2, array-slice@^0.2.3:
+array-slice@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/array-slice/-/array-slice-0.2.3.tgz#dd3cfb80ed7973a75117cdac69b0b99ec86186f5"
 
@@ -2234,6 +2234,10 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
+date-fns@^1.29.0:
+  version "1.29.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.29.0.tgz#12e609cdcb935127311d04d33334e2960a2a54e6"
+
 dateformat@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-2.2.0.tgz#4065e2013cf9fb916ddfd82efb506ad4c6769062"
@@ -2917,12 +2921,6 @@ expand-tilde@^2.0.0, expand-tilde@^2.0.2:
   resolved "https://registry.yarnpkg.com/expand-tilde/-/expand-tilde-2.0.2.tgz#97e801aa052df02454de46b02bf621642cdc8502"
   dependencies:
     homedir-polyfill "^1.0.1"
-
-extend-shallow@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/extend-shallow/-/extend-shallow-0.2.0.tgz#0c98a09f27d83cb43efafcedac8c9d149deb599c"
-  dependencies:
-    array-slice "^0.2.2"
 
 extend-shallow@^1.1.2:
   version "1.1.4"
@@ -4025,14 +4023,6 @@ he@1.1.x, he@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
-helper-moment@0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/helper-moment/-/helper-moment-0.1.0.tgz#3713971f0cb399c971a2b30dfc6f7440664429ef"
-  dependencies:
-    extend-shallow "^0.2.0"
-    kind-of "^0.1.2"
-    moment "^2.8.4"
-
 hoek@2.x.x:
   version "2.16.3"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
@@ -4758,10 +4748,6 @@ jsprim@^1.2.2:
 kew@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/kew/-/kew-0.7.0.tgz#79d93d2d33363d6fdd2970b335d9141ad591d79b"
-
-kind-of@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-0.1.2.tgz#07bd601cc9433f5d79bd5edd2031ed155f0604a4"
 
 kind-of@^1.1.0:
   version "1.1.0"
@@ -5662,7 +5648,7 @@ modify-event@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/modify-event/-/modify-event-1.0.1.tgz#ea1314e13ff6e79389f20ad74192f621de658ad6"
 
-moment@^2.5.1, moment@^2.8.4:
+moment@^2.5.1:
   version "2.22.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.0.tgz#7921ade01017dd45186e7fee5f424f0b8663a730"
 

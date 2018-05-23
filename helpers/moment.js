@@ -1,3 +1,10 @@
-const helperMoment = require('helper-moment');
+const { format, getYear } = require('date-fns');
 
-module.exports = (str, pattern) => helperMoment(str, pattern);
+const moment = (str, pattern) => format(str, pattern);
+
+const currentYear = () => getYear(new Date());
+
+module.exports = {
+  moment,
+  currentYear
+};
