@@ -24,7 +24,7 @@ I hope 🙏 every person already has the understanding why you should help open 
 Yes, contributions will make you a better professional as you could improve professional and even soft skills. It might be the ability to work the best people in our field and understanding internal principles of software. For me, it gives an excellent chance to try something that couldn't you can't use on work projects. In summary, it will increase your value in the market (to honest all we love programming, but we want to convert code into money 😎).
 
 ## What to choose?
-![Hard choice](/images/posts/how-to-start-contribute-to-open-source/img/lamps.jpg)
+![Hard choice](/images/posts/how-to-start-contribute-to-open-source/img/lamps.jpg){js-lazy-load}
 
 The first time the hardest is the choice when you have no idea how to start. My advice is to start with the project you're using for a long time every day at work, at home, for a side project. First of all, you already know the public API, best practices and code standards (I believe in 🦄). Even better if you found some defect (bug, unexpected behavior, etc.).
 
@@ -58,6 +58,6 @@ And always remember to clarify, ask, thank, developers are only humans and would
 
 After full process complete you'll get your first pull request merge. So welcome to the club, trying it once you'll never stop, open source contribution is a drug-like. I believe that you'll come back to your GitHub dealer.
 
-![Welcome to community](/images/posts/how-to-start-contribute-to-open-source/img/welcome.jpg)
+![Welcome to community](/images/posts/how-to-start-contribute-to-open-source/img/welcome.jpg){js-lazy-load}
 
 It'll be great to hear about your success or faced problems in the comments below!

@@ -45,9 +45,9 @@ And the last stage -- we need to add JavaScript code to call share in the browse
 ### Share function
 This function will get an object with three possible properties needed for sharing: title, text, url. Note that one -- text or url must be passed to `navigator.share` method, as well as both of them. All properties must be a string. Share returns `Promise` and you could handle success and error results with `then` and `catch` methods.
 
-Success callback can be used to notify and thank the user for sharing, sending data to analytics and so on.![Thank you for share message](/images/posts/native-share-for-mobile-chrome/img/thanks.jpg)
+Success callback can be used to notify and thank the user for sharing, sending data to analytics and so on.![Thank you for share message](/images/posts/native-share-for-mobile-chrome/img/thanks.jpg){js-lazy-load}
 
-Error callback can be used to log error or as I did -- notify a user about failed sharing and ask to try again.![Ask user to retry share after error](/images/posts/native-share-for-mobile-chrome/img/retry.jpg)
+Error callback can be used to log error or as I did -- notify a user about failed sharing and ask to try again.![Ask user to retry share after error](/images/posts/native-share-for-mobile-chrome/img/retry.jpg){js-lazy-load}
 
 ```js
 const nativeShare = data => navigator.share(data)
@@ -124,8 +124,8 @@ const onButtonClick = event => {
 button.addEventListener('click', onButtonClick);
 ```
 
-By taping on the share button user gets native share widget.![Native share in Chrome for Android](/images/posts/native-share-for-mobile-chrome/img/share-native.jpg)
+By taping on the share button user gets native share widget.![Native share in Chrome for Android](/images/posts/native-share-for-mobile-chrome/img/share-native.jpg){js-lazy-load}
 
-If Web Share not supported -- custom share menu will be shown.![Share custom menu](/images/posts/native-share-for-mobile-chrome/img/share-menu.jpg)
+If Web Share not supported -- custom share menu will be shown.![Share custom menu](/images/posts/native-share-for-mobile-chrome/img/share-menu.jpg){js-lazy-load}
 
 All my examples don't provide completed monolith implementation, as the developer I want to give you a choice. All this code is a guideline and final decisions up-to-you. Web Share API is simple and cost nothing to add and improve your projects UX.
