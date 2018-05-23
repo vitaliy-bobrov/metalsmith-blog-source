@@ -22,7 +22,7 @@
           {{#each pagination.files as |post|}}
             <article class="mdl-card mdl-shadow--3dp mdl-cell post-teaser {{ postCell @index ../collections.posts.length }}">
               <header class="mdl-card__media post-teaser__media">
-                {{{ postIllustration post.tumb post.title }}}
+                {{{ postIllustration post.tumb post.title @first }}}
 
                 <div class="safe-gradient"></div>
 

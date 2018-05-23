@@ -54,22 +54,22 @@ const postCell = (index, length) => {
   return `mdl-cell--${desktop}-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone`;
 };
 
-const postIllustration = (tumb, alt) => `
-    <picture class="safe-picture js-lazy-load">
+const postIllustration = (tumb, alt, nolazy = false) => `
+    <picture class="safe-picture ${nolazy ? '' : 'js-lazy-load'}">
       <source media="(min-width: 1025px)"
-              data-srcset="${tumb}.webp 1x, ${tumb}@2x.webp 2x"
+              ${nolazy ? '' : 'data-'}srcset="${tumb}.webp 1x, ${tumb}@2x.webp 2x"
               type="image/webp">
       <source media="(min-width: 1025px)"
-              data-srcset="${tumb}.jpg 1x, ${tumb}@2x.jpg 2x">
+              ${nolazy ? '' : 'data-'}srcset="${tumb}.jpg 1x, ${tumb}@2x.jpg 2x">
       <source media="(min-width: 768px)"
-              data-srcset="${tumb}-tablet.webp 1x, ${tumb}-tablet@2x.webp 2x"
+              ${nolazy ? '' : 'data-'}srcset="${tumb}-tablet.webp 1x, ${tumb}-tablet@2x.webp 2x"
               type="image/webp">
       <source media="(min-width: 768px)"
-              data-srcset="${tumb}-tablet.jpg 1x, ${tumb}-tablet@2x.jpg 2x">
-      <source data-srcset="${tumb}-mobile.webp 1x, ${tumb}-mobile@2x.webp 2x"
+              ${nolazy ? '' : 'data-'}srcset="${tumb}-tablet.jpg 1x, ${tumb}-tablet@2x.jpg 2x">
+      <source ${nolazy ? '' : 'data-'}srcset="${tumb}-mobile.webp 1x, ${tumb}-mobile@2x.webp 2x"
               type="image/webp">
-      <source data-srcset="${tumb}-mobile.jpg 1x, ${tumb}-mobile@2x.jpg 2x">
-      <img data-src="${tumb}.jpg" alt="${alt}" class="safe-picture__img">
+      <source ${nolazy ? '' : 'data-'}srcset="${tumb}-mobile.jpg 1x, ${tumb}-mobile@2x.jpg 2x">
+      <img ${nolazy ? '' : 'data-'}src="${tumb}.jpg" alt="${alt}" class="safe-picture__img">
     </picture>`;
 
 const postShare = (title, description, siteurl, path, id = 0) => {

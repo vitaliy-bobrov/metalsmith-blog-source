@@ -5,18 +5,40 @@
    * Enabbles media sources.
    * @param {HTMLElement} element
    */
-  function enableNodeSource(element) {
+  function enableMediaSource(element) {
     const sourceType = element.nodeName === 'SOURCE' ? 'srcset' : 'src';
+    const source = element.dataset[sourceType];
 
-    element.setAttribute(sourceType, element.dataset[sourceType]);
+    if (source) {
+      element.setAttribute(sourceType, element.dataset[sourceType]);
+    }
   }
 
   /**
    * Enables each media element.
    * @param {HTMLElement} element
    */
-  function enablePictureSource(element) {
-    Array.prototype.forEach.call(element.children, enableNodeSource);
+  function enableSource(element) {
+    switch (element.nodeName) {
+      case 'PICTURE':
+        Array.prototype.forEach.call(element.children, enableMediaSource);
+        break;
+
+      case 'IMAGE':
+      case 'IFRAME':
+        enableMediaSource(element);
+        break;
+
+      default: {
+        const media = element.querySelectorAll('iframe, img, source');
+
+        if (media) {
+          Array.prototype.forEach.call(media, enableMediaSource);
+        }
+
+        break;
+      }
+    }
   }
 
   /**
@@ -29,15 +51,15 @@
       if (entry.isIntersecting || entry.intersectionRatio > 0) {
         observer.unobserve(entry.target);
 
-        enablePictureSource(entry.target);
+        enableSource(entry.target);
       }
     });
   }
 
   window.addEventListener('load', () => {
-    const pictures = document.querySelectorAll('.js-lazy-load');
+    const resources = document.querySelectorAll('.js-lazy-load');
 
-    if (pictures) {
+    if (resources) {
       if (typeof IntersectionObserver !== 'undefined') {
         const options = {
           root: document.querySelector('.js-to-top-container'),
@@ -49,11 +71,11 @@
           options
         );
 
-        Array.prototype.forEach.call(pictures, picture => {
+        Array.prototype.forEach.call(resources, picture => {
           observer.observe(picture);
         });
       } else {
-        Array.prototype.forEach.call(pictures, enablePictureSource);
+        Array.prototype.forEach.call(resources, enableSource);
       }
     }
   }, false);

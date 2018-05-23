@@ -118,9 +118,10 @@ Metalsmith(__dirname)
       host: siteurl
     })
     .use(youtube, {
-      className: 'post__video',
+      className: 'js-lazy-load',
       origin: siteurl,
-      related: false
+      related: false,
+      attr: 'data-src'
     })
     .use(emoji)
   )
