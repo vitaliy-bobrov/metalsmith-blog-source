@@ -4,7 +4,7 @@ description: Information about past and upcoming talk on tech events.
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2018-05-18
+lastmod: 2018-05-25
 priority: 1.0
 ---
 ## Upcomming talks:
@@ -13,9 +13,17 @@ priority: 1.0
 
   Topic: **"NgRx Schematics"**
 
+- [Angular Wroclaw](https://www.meetup.com/AngularJS-Wrocław/) -- 28 June 2018, Wroclaw, Poland
+
+  Topic: **"Robots Don't Cry: Automation with Schematics"**
+
 - [Angular Academy Show](https://angular-academy.com/) -- 02 July 2018, Online
 
   Topic: **"Angular Schematics"**
+
+- [Ruhr JS](https://ruhrjs.de/) -- 13 October 2018, Bochum, Germany
+
+  Topic: **"Make the Web Brighter with the CSS Paint API"**
 
 ## Past talks:
 
@@ -45,17 +53,17 @@ priority: 1.0
 
   [Slides](https://speakerdeck.com/bobrov1989/ngrx-schematics) | [Video](https://youtu.be/q3UcqG72Zl4)
 
-- [Angular Dragons](https://www.meetup.com/Angular-Dragons/) -- 13 March 2018, Kraków, Poland
+- [Angular Dragons](https://www.meetup.com/Angular-Dragons/events/247151777/) -- 13 March 2018, Kraków, Poland
 
   Topic: **"NgRx Schematics"**
 
 - [KrakowJS](http://conf.krakowjs.pl/) -- 9 March 2018, Kraków, Poland
 
-  Topic: **"Make Web Brighter with CSS Paint API"**
+  Topic: **"Make the Web Brighter with the CSS Paint API"**
 
   [Slides](http://slides.com/vitaliybobrov/krakowjs-css-paint-api)
 
-- [ngVikings](https://ngvikings.org/) -- 1 March 2018, Helsinki, Finland
+- [ngVikings](https://2018.ngvikings.org/) -- 1 March 2018, Helsinki, Finland
 
   Topic: **"Designing Components API"**
 
@@ -63,7 +71,7 @@ priority: 1.0
 
 ### 2017
 
-- [Code Europe](https://www.codeeurope.pl) -- 13 December 2017, Wroclaw, Poland
+- [Code Europe](https://2017autumn.codeeurope.pl/en) -- 13 December 2017, Wroclaw, Poland
 
   Topic: **"Stencil: a New Hope of Web Components"**
 
