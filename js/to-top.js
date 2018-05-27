@@ -1,20 +1,6 @@
 ((window, document) => {
   'use strict';
 
-  let supportsPassive = false;
-
-  try {
-    let opts = Object.defineProperty({}, 'passive', {
-      get: function() {
-        supportsPassive = true;
-      }
-    });
-
-    window.addEventListener('test', null, opts);
-  } catch (err) {
-    console.error(err);
-  }
-
   const toTop = document.querySelector('.js-to-top');
   const toTopVisible = 'to-top_visible';
   const container = document.querySelector('.js-to-top-container');
@@ -32,5 +18,5 @@
     } else {
       toTop.classList.remove(toTopVisible);
     }
-  }, supportsPassive ? {passive: true} : false);
+  }, window.__supportsPassive ? {passive: true} : false);
 })(window, document);

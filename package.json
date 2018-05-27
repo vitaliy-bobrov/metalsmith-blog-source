@@ -133,7 +133,8 @@
     },
     "globals": {
       "ga": false,
-      "registerPaint": false
+      "registerPaint": false,
+      "componentHandler": false
     }
   }
 }

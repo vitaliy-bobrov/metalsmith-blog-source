@@ -144,7 +144,6 @@ gulp.task('scripts', () =>
       'node_modules/material-design-lite/src/button/button.js',
       'node_modules/material-design-lite/src/icon-toggle/icon-toggle.js',
       'node_modules/material-design-lite/src/menu/menu.js',
-      'node_modules/material-design-lite/src/layout/layout.js',
       'node_modules/material-design-lite/src/ripple/ripple.js',
       'node_modules/material-design-lite/src/snackbar/snackbar.js',
       'js/*.js'

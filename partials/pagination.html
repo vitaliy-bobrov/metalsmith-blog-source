@@ -2,7 +2,7 @@
   {{#if pagination.previous}}
     <a class="pagination__link pagination__link_prev"
        href="/{{ pagination.previous.path }}"
-       title="Go to page {{ pagination.index }}">
+       aria-label="Go to page {{ pagination.index }}">
       <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon pagination__btn">
         <svg class="mdl-svg pagination__icon">
           <use xlink:href="#arrow-back"></use>
@@ -15,7 +15,7 @@
   {{#if pagination.next}}
     <a class="pagination__link pagination__link_next"
        href="/{{ pagination.next.path }}"
-       title="View more posts">
+       aria-label="Go to the next page">
       More
       <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon pagination__btn">
         <svg class="mdl-svg pagination__icon">

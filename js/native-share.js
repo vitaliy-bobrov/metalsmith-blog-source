@@ -41,7 +41,6 @@
   Array.prototype.forEach.call(buttons, btn => {
     if (
       'share' in navigator &&
-      matchMedia &&
       matchMedia('all and (max-width: 768px)').matches
     ) {
       btn.addEventListener('click', shareHandler, false);
