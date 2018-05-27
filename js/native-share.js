@@ -25,7 +25,7 @@
       });
   };
 
-  const shareHanler = event => {
+  const shareHandler = event => {
     event.preventDefault();
 
     const dataset = event.target.parentNode.dataset;
@@ -44,7 +44,7 @@
       matchMedia &&
       matchMedia('all and (max-width: 768px)').matches
     ) {
-      btn.addEventListener('click', shareHanler, false);
+      btn.addEventListener('click', shareHandler, false);
     } else {
       let menu = btn.parentNode.querySelector('.js-share-menu');
       menu.setAttribute('for', btn.id);
