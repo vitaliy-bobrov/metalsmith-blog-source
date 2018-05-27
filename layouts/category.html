@@ -2,7 +2,7 @@
 <html lang="{{ locale }}">
   <head>
     <title>{{ sitename }}</title>
-    <link rel="alternate" href="{{ siteurl }}{{ path }}" hreflang="en" />
+    <link rel="alternate" href="{{ absoluteUrl siteurl path }}" hreflang="en" />
 
     {{> metatags }}
 
@@ -27,7 +27,7 @@
                 <div class="safe-gradient"></div>
 
                 <h2 class="post-teaser__title">
-                  <a href="/{{ post.path }}/" class="post-teaser__title-link">{{ post.title }}</a>
+                  <a href="{{ absoluteUrl ../siteurl post.path }}" class="post-teaser__title-link">{{ post.title }}</a>
                 </h2>
               </header>
 
@@ -79,7 +79,7 @@
               </section>
 
               <section class="mdl-card__actions post-teaser__actions">
-                <a href="/{{ post.path }}/" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+                <a href="{{ absoluteUrl ../siteurl post.path }}" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
                   Read more
                 </a>
               </section>
