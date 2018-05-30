@@ -4,8 +4,8 @@ description: Want to know how to create bar chart with CSS Paint API?
 ogimage: images/posts/css-paint-in-action-bar-chart/css-paint-in-action-bar-chart-og.jpg
 tumb: /images/posts/css-paint-in-action-bar-chart/css-paint-in-action-bar-chart
 created: 2018-04-13
-updated: 2018-04-24
-lastmod: 2018-04-24
+updated: 2018-04-30
+lastmod: 2018-04-30
 categories:
 - CSS
 - Houdini
@@ -267,7 +267,7 @@ We declared `--bar-map` and `--bar-gap` variables and called the custom paint us
 We have already created a bar chart MVP and now is the time to think about its improvements. Actually, there are a lot of points to improve, and I am not going to cover all of them. If you want to implement more feel free to fork my repository and do it, just don't forget to share your ideas in the comments below and social networks (on Twitter please ping [me](https://twitter.com/bobrov1989)).
 
 ### **Note:**
-*There is a bug related to Typed OM that used as input properties in worklet. For the demos below* `props.get('padding')` *returns* `CSSUnitValue` *object without* `unit` *and* `value` *properties. The only way is to use `toString` method on it. If you are facing any issues viewing demos, try to enbale "Experimental Web Platform features"* -- `chrome://flags/#enable-experimental-web-platform-features` *to fix it.*
+*There is a bug related to Typed OM that used as input properties in worklet. For the demos below* `props.get('padding')` *returns* `CSSUnitValue` *object without* `unit` *and* `value` *properties. The only way is to use `toString` method on it. If you are facing any issues viewing demos, try to enable "Experimental Web Platform features"* -- `chrome://flags/#enable-experimental-web-platform-features` *to fix it.*
 
 So the first point I want to cover is to add the possibility to define offsets for our chart. And I'm going to use the `padding` property for that. Here is the updated painter class:
 

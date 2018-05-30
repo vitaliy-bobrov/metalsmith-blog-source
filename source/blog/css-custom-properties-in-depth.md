@@ -4,13 +4,15 @@ description: CSS Properties and Values API the vital part of Houdini project. Th
 ogimage: images/posts/css-custom-properties-in-depth/css-custom-properties-in-depth-og.jpg
 tumb: /images/posts/css-custom-properties-in-depth/css-custom-properties-in-depth
 created: 2018-05-30
-updated: 2018-05-30
-lastmod: 2018-05-30
+updated: 2018-05-31
+lastmod: 2018-05-31
 categories:
 - CSS
 - Houdini
 ---
-"CSS Properties and Values API Level 1" is a brand new draft for CSS specification module. It gives developers the power to extend stylesheet dictionary. I have already mentioned custom properties in my previous articles: ["Exploring the CSS Paint API"](/blog/css-paint-in-action-bar-chart/) and ["CSS Paint in Action: Bar Chart"](/blog/css-paint-in-action-bar-chart/). But today I want to introduce them in as many details as possible. So let's start our journey into properties and values far depths ⚓!
+"CSS Properties and Values API Level 1" is a brand new draft for CSS specification module. It gives developers the power to extend stylesheet dictionary. I have already mentioned custom properties in my previous articles: ["Exploring the CSS Paint API"](https://vitaliy-bobrov.github.io/blog/css-paint-in-action-bar-chart/) and ["CSS Paint in Action: Bar Chart"](https://vitaliy-bobrov.github.io/blog/css-paint-in-action-bar-chart/). But today I want to introduce them in as many details as possible. So let's start our journey into properties and values far depths ⚓!
+
+The topic splitted into two parts. Now you are reading the first one. You can check out the second part [here](https://vitaliy-bobrov.github.io/blog/css-custom-properties-in-depth-part-2/){post-series}
 
 ## What are custom properties?
 CSS Properties and Values API is the part of Houdini project that allows **you** as developer create own variables to use later in your styles. The idea behind them is pretty similar to variables we have for many years in SASS, LESS or Stylus. The main difference between preprocessor variables and CSS properties that they are **not** static and existing at compile time only. You can change them in more specific selector block, for example on `:hover` or a `media-query` block. You could access them from JavaScript to read and modify. We will see all those features later in cases.
@@ -391,4 +393,4 @@ There are interfaces for `<url>` and `<image>` in Blink core, but they still in 
 All of this types could be used as input arguments in Houdini worklets, for example, the CSS Paint API.
 
 ## Conclusion
-Houdini "Custom Properties and Values" is the very powerful specification that opens a vast field for experiments. Working on this post, I realized that topic and amount of info and ideas I want to share is too big. That is why I decided to split it at least into two parts. In the next part of the article, I will make the in-depth overview of each available type. Hope you enjoyed our journey to the deep of the spec 😊! Read & share! See you in the future 👨‍⚕️👲🚙.
+Houdini "Custom Properties and Values" is the very powerful specification that opens a vast field for experiments. Working on this post, I realized that topic and amount of info and ideas I want to share is too big. That is why I decided to split it at least into two parts. In the next part of the article, I will make the in-depth overview of each available type. Check out the [second part](https://vitaliy-bobrov.github.io/blog/css-custom-properties-in-depth-part-2/)! Hope you enjoyed our journey to the deep of the spec 😊! Read & share! See you in the future 👨‍⚕️👲🚙.
