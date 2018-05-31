@@ -6,7 +6,6 @@ tumb: /images/posts/css-custom-properties-in-depth-2/css-custom-properties-in-de
 created: 2018-05-31
 updated: 2018-05-31
 lastmod: 2018-05-31
-draft: true
 categories:
 - CSS
 - Houdini
