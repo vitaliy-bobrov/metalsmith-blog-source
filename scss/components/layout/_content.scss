@@ -5,10 +5,6 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  -ms-interpolation-mode: nearest-neighbor;
 
   @supports (scroll-behavior: smooth) {
     scroll-behavior: smooth;
