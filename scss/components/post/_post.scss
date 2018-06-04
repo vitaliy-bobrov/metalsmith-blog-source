@@ -28,6 +28,16 @@
     border-bottom: 1px solid $mdlext-dark-divider-color;
   }
 
+  &__series {
+    padding: 8px;
+    background: rgba($black, .38);
+    border-radius: 2px;
+
+    @media screen and (min-width: 768px) {
+      padding: 16px;
+    }
+  }
+
   &__contents {
     width: 100%;
     max-width: 760px;
