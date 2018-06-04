@@ -12,7 +12,7 @@ categories:
 ---
 "CSS Properties and Values API Level 1" is a brand new draft for CSS specification module. It gives developers the power to extend stylesheet dictionary. I have already mentioned custom properties in my previous articles: ["Exploring the CSS Paint API"](https://vitaliy-bobrov.github.io/blog/css-paint-in-action-bar-chart/) and ["CSS Paint in Action: Bar Chart"](https://vitaliy-bobrov.github.io/blog/css-paint-in-action-bar-chart/). But today I want to introduce them in as many details as possible. So let's start our journey into properties and values far depths ⚓!
 
-The topic splitted into two parts. Now you are reading the first one. You can check out the second part [here](https://vitaliy-bobrov.github.io/blog/css-custom-properties-in-depth-part-2/){post-series}
+The topic splitted into two parts. Now you are reading the first one. You can check out the second part [here](https://vitaliy-bobrov.github.io/blog/css-custom-properties-in-depth-part-2/).{post__series}
 
 ## What are custom properties?
 CSS Properties and Values API is the part of Houdini project that allows **you** as developer create own variables to use later in your styles. The idea behind them is pretty similar to variables we have for many years in SASS, LESS or Stylus. The main difference between preprocessor variables and CSS properties that they are **not** static and existing at compile time only. You can change them in more specific selector block, for example on `:hover` or a `media-query` block. You could access them from JavaScript to read and modify. We will see all those features later in cases.

@@ -9,7 +9,7 @@ priority: 1.0
 ---
 ## Upcomming talks:
 
-- [ngHouston](https://www.meetup.com/ngHouston/) -- 15 June 2018, Online
+- [ngHouston](https://www.meetup.com/ngHouston/) -- 14 June 2018, Online
 
   Topic: **"NgRx Schematics"**
 

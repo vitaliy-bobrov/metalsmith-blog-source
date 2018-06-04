@@ -3,16 +3,16 @@ title: "CSS Custom Properties in Depth: Part 2"
 description: Deep dive into CSS Properties and Values API available types with real code examples.
 ogimage: images/posts/css-custom-properties-in-depth-2/css-custom-properties-in-depth-2-og.jpg
 tumb: /images/posts/css-custom-properties-in-depth-2/css-custom-properties-in-depth-2
-created: 2018-05-31
-updated: 2018-05-31
-lastmod: 2018-05-31
+created: 2018-06-01
+updated: 2018-06-01
+lastmod: 2018-06-01
 categories:
 - CSS
 - Houdini
 ---
 Houdini "Custom Properties and Values" spec gives us the strictly typed CSS variables. It has a big potential and as a new technology is pretty unknown field. Today, I'm going to have deep overview of what types available in the first version of the spec, and show the usage on real examples.
 
-The topic splitted into two parts. Now you are reading the second one. You can check out the first part [here](https://vitaliy-bobrov.github.io/blog/css-custom-properties-in-depth/){post-series}
+The topic splitted into two parts. Now you are reading the second one. You can check out the first part [here](https://vitaliy-bobrov.github.io/blog/css-custom-properties-in-depth/).{post__series}
 
 ## Available types
 As I have written in the previous part, not all of the types are available for custom properties. In the initial specification we have the only limited set of them. Let me introduce each of available types.
@@ -27,7 +27,7 @@ Length type stands for CSS sizing values, like pixel, em, rem, vw, vh, etc. We c
 CSS.registerProperty({
   name: '--size',
   syntax: '<length>',
-  initialValue: '0'
+  initialValue: 0
 });
 ```
 
@@ -146,7 +146,7 @@ One of the great examples where custom properties really shine -- the control of
 In the example above we have separate control under different HSL color components -- lightness and saturation. Let's try to access them in JavaScript:
 
 ```js
-const el = document.querySelector('.block');
+const el = document.querySelector('.link');
 const styleMap = el.computedStyleMap();
 
 console.log(styleMap.get('--lightness'));
@@ -159,13 +159,65 @@ console.log(styleMap.get('--saturation'));
 So we can get resolved property value and it returns nice object with unit property set as percent and numeric value. It is pretty cool to have such object in JS instead operating with strings. For example in animation implementation.
 
 ### length-percentage
+As you might notice from its name, `length-percentage` is a kind of type alias for CSS length and percentage values. Here is the registration example:
 
 ```js
 CSS.registerProperty({
   name: '--relative-size',
   syntax: '<length-percentage>',
-  initialValue: '0'
+  initialValue: 0
 });
+```
+
+Let's try to reproduce the same type in the different way:
+
+```js
+CSS.registerProperty({
+  name: '--relative-size',
+  syntax: '<length> | <percentage>',
+  initialValue: 0
+});
+```
+
+Both of our custom properties declarations are equvivalent. Now we could use it in styles:
+
+```css
+.zero {
+  --relative-size: 0;
+  width: var(--relative-size);
+}
+
+.percent {
+  --relative-size: 50%;
+  width: var(--relative-size);
+}
+
+.length {
+  --relative-size: 50vw;
+  width: var(--relative-size);
+}
+```
+
+Now, lets try to access the value from JavaScript:
+
+```js
+const zeroEl = document.querySelector('.zero');
+const zeroStyleMap = zeroEl.computedStyleMap();
+
+console.log(zeroStyleMap.get('--relative-size'));
+// CSSUnitValue {value: 50, unit: "percent"}
+
+const percentEl = document.querySelector('.percent');
+const percentStyleMap = percentEl.computedStyleMap();
+
+console.log(percentStyleMap.get('--relative-size'));
+// CSSUnitValue {value: 50, unit: "percent"}
+
+const lengthEl = document.querySelector('.length');
+const lengthStyleMap = lengthEl.computedStyleMap();
+
+console.log(lengthStyleMap.get('--relative-size'));
+// CSSUnitValue {value: 50, unit: "percent"}
 ```
 
 ### number
