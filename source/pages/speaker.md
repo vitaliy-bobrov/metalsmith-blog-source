@@ -4,7 +4,7 @@ description: Information about past and upcoming talk on tech events.
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2018-05-31
+lastmod: 2018-06-05
 priority: 1.0
 ---
 ## Upcomming talks:
@@ -20,6 +20,10 @@ priority: 1.0
 - [Angular Academy Show](https://angular-academy.com/) -- 02 July 2018, Online
 
   Topic: **"Angular Schematics"**
+
+- [Vinnytsia JS](http://vinnytsiajs.org/) -- 21 July 2018, Vinnytsia, Ukraine
+
+  Topic: **"Make the Web Brighter with the CSS Paint API"**
 
 - [Ruhr JS](https://ruhrjs.de/) -- 13 October 2018, Bochum, Germany
 

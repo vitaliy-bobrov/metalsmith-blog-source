@@ -3,9 +3,9 @@ title: "CSS Custom Properties in Depth: Part 2"
 description: Deep dive into CSS Properties and Values API available types with real code examples.
 ogimage: images/posts/css-custom-properties-in-depth-2/css-custom-properties-in-depth-2-og.jpg
 tumb: /images/posts/css-custom-properties-in-depth-2/css-custom-properties-in-depth-2
-created: 2018-06-01
-updated: 2018-06-01
-lastmod: 2018-06-01
+created: 2018-06-05
+updated: 2018-06-05
+lastmod: 2018-06-05
 categories:
 - CSS
 - Houdini
