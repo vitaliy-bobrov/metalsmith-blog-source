@@ -6,15 +6,11 @@
     max-width: 100%;
     height: auto;
 
-    &:not([src]) {
+    &:after {
+      content: '';
+      border: 4px solid $white;
+      background: $mdl-scroll;
       @extend %shrink-to-container;
-
-      &:after {
-        content: '';
-        border: 4px solid $white;
-        background: $mdl-scroll;
-        @extend %shrink-to-container;
-      }
     }
 
     @supports(object-fit: cover) {

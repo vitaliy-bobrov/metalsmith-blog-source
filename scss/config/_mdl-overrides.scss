@@ -17,6 +17,13 @@
 
     .mdl-navigation .mdl-navigation__link {
       color: $mdlext-dark-text-color-secondary;
+
+      &:hover,
+      &:focus,
+      &_active {
+        background-color: $mdlext-dark-content-background-color;
+        border-bottom-color: $mdlext-dark-color-primary;
+      }
     }
   }
 
