@@ -13,10 +13,6 @@ priority: 1.0
 
   Topic: **"NgRx Schematics"**
 
-- [Angular Wroclaw](https://www.meetup.com/AngularJS-Wrocław/) -- 27 June 2018, Wroclaw, Poland
-
-  Topic: **"Robots Don't Cry: Automation with Schematics"**
-
 - [Angular Academy Show](https://angular-academy.com/) -- 02 July 2018, Online
 
   Topic: **"Angular Schematics"**
@@ -24,6 +20,10 @@ priority: 1.0
 - [Vinnytsia JS](http://vinnytsiajs.org/) -- 21 July 2018, Vinnytsia, Ukraine
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
+
+- [Angular Wroclaw](https://www.meetup.com/AngularJS-Wrocław/) -- 26 July 2018, Wroclaw, Poland
+
+  Topic: **"Robots Don't Cry: Automation with Schematics"**
 
 - [Ruhr JS](https://ruhrjs.de/) -- 13 October 2018, Bochum, Germany
 
