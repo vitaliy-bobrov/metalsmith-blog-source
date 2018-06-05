@@ -48,7 +48,7 @@
    */
   function intersectionCallback(entries, observer) {
     entries.forEach(entry => {
-      if (entry.isIntersecting || entry.intersectionRatio > 0) {
+      if (entry.intersectionRatio > 0) {
         observer.unobserve(entry.target);
 
         enableSource(entry.target);
@@ -62,7 +62,7 @@
     if (resources) {
       if (typeof IntersectionObserver !== 'undefined') {
         const options = {
-          root: null,
+          root: document.querySelector('.js-to-top-container'),
           threshold: 0.25
         };
 
