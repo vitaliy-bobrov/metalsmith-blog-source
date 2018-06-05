@@ -2,8 +2,8 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "eb1b4b22fafd2416bc69a6ef9cf65b25",
-        "created": "2018-05-31T21:34:41.127Z",
-        "updated": "2018-05-31T21:34:41.127Z"
+        "created": "2018-06-05T16:36:41.868Z",
+        "updated": "2018-06-05T16:36:41.868Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
@@ -14,8 +14,8 @@
     "blog/css-custom-properties-in-depth-part-2.md": {
         "filename": "blog/css-custom-properties-in-depth-part-2.md",
         "hash": "f12c61564fea1dc9f1ee9917a75a7966",
-        "created": "2018-06-01T00:00:00.000Z",
-        "updated": "2018-06-01T00:00:00.000Z"
+        "created": "2018-06-05T00:00:00.000Z",
+        "updated": "2018-06-05T00:00:00.000Z"
     },
     "blog/css-custom-properties-in-depth.md": {
         "filename": "blog/css-custom-properties-in-depth.md",
@@ -92,13 +92,13 @@
     "pages/about.md": {
         "filename": "pages/about.md",
         "hash": "7def121e42b26c0944ce69df233610dd",
-        "created": "2018-05-31T21:34:41.127Z",
-        "updated": "2018-05-31T21:34:41.127Z"
+        "created": "2018-06-05T16:36:41.868Z",
+        "updated": "2018-06-05T16:36:41.868Z"
     },
     "pages/speaker.md": {
         "filename": "pages/speaker.md",
-        "hash": "6654ee64441b8da946a2c52c406312e9",
-        "created": "2018-05-31T21:34:41.127Z",
-        "updated": "2018-05-31T21:34:41.127Z"
+        "hash": "d74057bc17cc21c90f94394ea848745a",
+        "created": "2018-06-05T16:36:41.868Z",
+        "updated": "2018-06-05T16:36:41.868Z"
     }
 }

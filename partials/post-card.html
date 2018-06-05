@@ -1,0 +1,69 @@
+<article class="mdl-card mdl-shadow--3dp mdl-cell post-teaser {{ postCell @index amount }}">
+  <header class="mdl-card__media post-teaser__media">
+    {{{ postIllustration post.tumb post.title @first }}}
+
+    <div class="safe-gradient"></div>
+
+    <h2 class="post-teaser__title" aria-describedby="post-card-descr-{{ @index }}">
+      <a href="{{ absoluteUrl siteurl post.path }}" class="post-teaser__title-link">{{ post.title }}</a>
+    </h2>
+  </header>
+
+  <section class="post-teaser__info post-info">
+    <div class="post-info__data">
+      <picture class="post-info__avatar">
+        <source srcset="{{ post.author.avatar }}.webp 1x, {{ post.author.avatar }}@2x.webp 2x"
+                type="image/webp">
+        <source srcset="{{ post.author.avatar }}.jpg 1x, {{ post.author.avatar }}@2x.jpg 2x">
+        <img src="{{ post.author.avatar }}.jpg"
+           alt="{{ post.author.name }} Photo"
+           class="mdl-list__item-avatar">
+      </picture>
+
+      <div class="post-info__data-wrapper">
+        <div class="post-info__author">
+          {{ post.author.name }}
+        </div>
+
+        <time date-time="{{ moment post.created 'YYYY-MM-DDThh:mm:ssZ' }}"
+              class="post-info__date">
+          {{ moment post.created 'D MMMM YYYY' }}
+        </time>
+      </div>
+    </div>
+
+    <div class="post-info__side">
+      {{#if post.comments}}
+        <div class="post-info__comments">
+          <svg class="mdl-svg post-info__comments-icon">
+            <use xlink:href="#comment"></use>
+          </svg>
+          <span class="disqus-comment-count post-info__comments-counter" data-disqus-key="{{post.title}}"></span>
+        </div>
+      {{/if}}
+
+      <div class="post-info__categories">
+        {{#each post.categories as |category|}}
+          <a href="/category/{{ category.slug }}" class="mdl-chip post-info__category">
+              <span class="mdl-chip__text">{{ category.name }}</span>
+          </a>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <section class="mdl-card__supporting-text post-teaser__intro">
+    {{{ post.excerpt }}}
+  </section>
+
+  <section class="mdl-card__actions post-teaser__actions">
+    <a href="{{ absoluteUrl siteurl post.path }}"
+       class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+       id="post-card-descr-{{ @index }}"
+       aria-hidden="true">
+      Read more
+    </a>
+  </section>
+
+  {{{ postShare post.title post.description siteurl post.path @index }}}
+</article>

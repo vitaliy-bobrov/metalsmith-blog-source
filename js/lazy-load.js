@@ -62,8 +62,8 @@
     if (resources) {
       if (typeof IntersectionObserver !== 'undefined') {
         const options = {
-          root: document.querySelector('.js-to-top-container'),
-          threshold: 0.5
+          root: null,
+          threshold: 0.25
         };
 
         const observer = new IntersectionObserver(
