@@ -123,13 +123,9 @@ gulp.task('styles', () => {
     .pipe($.if(prod, $.uncss({
       html: ['build/**/*.html'],
       ignore: [
-        /^\.js-.*/,
-        /.*-js-.*/,
-        /^.*is-.*/,
-        /^.*mdl-(layout|menu|button|button--fab|snackbar|ripple).*/,
-        /^.*\.webp.*/,
-        /^\.to-top.*/,
-        '.drawer-icon'
+        /^.*is-(compact|small-screen|visible|active|animating|upgraded).*/,
+        /^.*mdl-(menu|button|button--fab|snackbar).*/,
+        /^.*ripple-ink_animate.*/
       ]
     })))
     .pipe($.if('*.css', $.cssnano()))
@@ -141,10 +137,7 @@ gulp.task('styles', () => {
 gulp.task('scripts', () =>
     gulp.src([
       'node_modules/material-design-lite/src/mdlComponentHandler.js',
-      'node_modules/material-design-lite/src/button/button.js',
-      'node_modules/material-design-lite/src/icon-toggle/icon-toggle.js',
       'node_modules/material-design-lite/src/menu/menu.js',
-      'node_modules/material-design-lite/src/ripple/ripple.js',
       'node_modules/material-design-lite/src/snackbar/snackbar.js',
       'js/*.js'
     ])

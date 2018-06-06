@@ -16,20 +16,6 @@
   window['MaterialLayout'] = MaterialLayout;
 
   /**
-   * Store constants in one place so they can be updated easily.
-   *
-   * @enum {string | number}
-   * @private
-   */
-  MaterialLayout.prototype.Constant_ = {
-    MAX_WIDTH: '(max-width: 1024px)',
-    RESIZE_TIMEOUT: 100,
-
-    CHEVRON_LEFT: 'chevron_left',
-    CHEVRON_RIGHT: 'chevron_right'
-  };
-
-  /**
    * Keycodes, for code readability.
    *
    * @enum {number}
@@ -50,30 +36,12 @@
    * @private
    */
   MaterialLayout.prototype.CssClasses_ = {
-    HEADER: 'mdl-layout__header',
-    DRAWER: 'mdl-layout__drawer',
-    CONTENT: 'mdl-layout__content',
     DRAWER_BTN: 'mdl-layout__drawer-button',
 
-    JS_RIPPLE_EFFECT: 'mdl-js-ripple-effect',
-    RIPPLE_CONTAINER: 'mdl-layout__tab-ripple-container',
-    RIPPLE: 'mdl-ripple',
-    RIPPLE_IGNORE_EVENTS: 'mdl-js-ripple-effect--ignore-events',
-
-    FIXED_HEADER: 'mdl-layout--fixed-header',
-    OBFUSCATOR: 'mdl-layout__obfuscator',
-
-    HAS_DRAWER: 'has-drawer',
-    CASTING_SHADOW: 'is-casting-shadow',
     IS_COMPACT: 'is-compact',
     IS_SMALL_SCREEN: 'is-small-screen',
     IS_DRAWER_OPEN: 'is-visible',
-    IS_ACTIVE: 'is-active',
-    IS_UPGRADED: 'is-upgraded',
-    IS_ANIMATING: 'is-animating',
-
-    ON_LARGE_SCREEN: 'mdl-layout--large-screen-only',
-    ON_SMALL_SCREEN: 'mdl-layout--small-screen-only'
+    IS_ACTIVE: 'is-active'
   };
 
   /**
@@ -130,27 +98,6 @@
   };
 
   /**
-   * Handles (un)setting the `is-animating` class
-   *
-   * @private
-   */
-  MaterialLayout.prototype.headerTransitionEndHandler_ = function() {
-    this.header_.classList.remove(this.CssClasses_.IS_ANIMATING);
-  };
-
-  /**
-   * Handles expanding the header on click
-   *
-   * @private
-   */
-  MaterialLayout.prototype.headerClickHandler_ = function() {
-    if (this.header_.classList.contains(this.CssClasses_.IS_COMPACT)) {
-      this.header_.classList.remove(this.CssClasses_.IS_COMPACT);
-      this.header_.classList.add(this.CssClasses_.IS_ANIMATING);
-    }
-  };
-
-  /**
   * Toggle drawer state
   *
   * @public
@@ -189,17 +136,17 @@
       for (let c = 0; c < numChildren; c++) {
         const child = directChildren[c];
         if (child.classList &&
-            child.classList.contains(this.CssClasses_.HEADER)) {
+            child.classList.contains('mdl-layout__header')) {
           this.header_ = child;
         }
 
         if (child.classList &&
-            child.classList.contains(this.CssClasses_.DRAWER)) {
+            child.classList.contains('mdl-layout__drawer')) {
           this.drawer_ = child;
         }
 
         if (child.classList &&
-            child.classList.contains(this.CssClasses_.CONTENT)) {
+            child.classList.contains('mdl-layout__content')) {
           this.content_ = child;
         }
       }
@@ -214,30 +161,9 @@
         }
       }.bind(this), false);
 
-      if (this.header_) {
-        this.header_.classList.add(this.CssClasses_.CASTING_SHADOW);
-      }
-
       if (this.drawer_) {
-        let drawerButton = this.element_.querySelector('.' +
-          this.CssClasses_.DRAWER_BTN);
-        if (!drawerButton) {
-          drawerButton = document.createElement('div');
-          drawerButton.setAttribute('aria-expanded', 'false');
-          drawerButton.setAttribute('role', 'button');
-          drawerButton.setAttribute('tabindex', '0');
-          drawerButton.classList.add(this.CssClasses_.DRAWER_BTN);
-          drawerButton.innerHTML = `<svg class="mdl-svg drawer-icon">
-            <use xlink:href="#menu"></use>
-          </svg>Menu`;
-        }
-
-        if (this.drawer_.classList.contains(this.CssClasses_.ON_LARGE_SCREEN)) {
-          drawerButton.classList.add(this.CssClasses_.ON_LARGE_SCREEN);
-        } else if (this.drawer_.classList
-          .contains(this.CssClasses_.ON_SMALL_SCREEN)) {
-          drawerButton.classList.add(this.CssClasses_.ON_SMALL_SCREEN);
-        }
+        let drawerButton = this.element_
+          .querySelector(`.${this.CssClasses_.DRAWER_BTN}`);
 
         drawerButton.addEventListener('click',
             this.drawerToggleHandler_.bind(this));
@@ -245,15 +171,11 @@
         drawerButton.addEventListener('keydown',
             this.drawerToggleHandler_.bind(this));
 
-        this.element_.classList.add(this.CssClasses_.HAS_DRAWER);
-        this.header_.insertBefore(drawerButton, this.header_.firstChild);
+        this.element_.classList.add('has-drawer');
 
-        const obfuscator = document.createElement('div');
-        obfuscator.classList.add(this.CssClasses_.OBFUSCATOR);
-        this.element_.appendChild(obfuscator);
-        obfuscator.addEventListener('click',
+        this.obfuscator_ = document.querySelector('.mdl-layout__obfuscator');
+        this.obfuscator_.addEventListener('click',
             this.drawerToggleHandler_.bind(this));
-        this.obfuscator_ = obfuscator;
 
         this.drawer_
           .addEventListener('keydown', this.keyboardEventHandler_.bind(this));
@@ -262,13 +184,12 @@
 
       // Keep an eye on screen size, and add/remove auxiliary class for styling
       // of small screens.
-      this.screenSizeMediaQuery_ = window.matchMedia(
-          /** @type {string} */ (this.Constant_.MAX_WIDTH));
+      this.screenSizeMediaQuery_ = window.matchMedia('(max-width: 1024px)');
       this.screenSizeMediaQuery_
         .addListener(this.screenSizeHandler_.bind(this));
       this.screenSizeHandler_();
 
-      this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
+      this.element_.classList.add('is-upgraded');
     }
   };
 

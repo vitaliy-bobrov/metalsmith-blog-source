@@ -5,6 +5,10 @@
     fill: $mdlext-dark-text-color-primary;
     @extend %absolute-center;
   }
+
+  &__button {
+    font-size: 0;
+  }
 }
 
 .share-menu {

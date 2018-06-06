@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "start": "gulp && gulp serve:dev",
+    "run:prod": "yarn build:prod && gulp serve:dev",
     "build": "gulp",
     "build:prod": "cross-env NODE_ENV=production gulp",
     "deploy": "yarn build:prod && cross-env NODE_ENV=production gulp deploy",

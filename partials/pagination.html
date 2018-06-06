@@ -3,7 +3,8 @@
     <a class="pagination__link pagination__link_prev"
        href="/{{ pagination.previous.path }}"
        aria-label="Go to page {{ pagination.index }}">
-      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon pagination__btn">
+      <button class="mdl-button ripple mdl-button--icon pagination__btn">
+        <span class="ripple-ink"></span>
         <svg class="mdl-svg pagination__icon">
           <use xlink:href="#arrow-back"></use>
         </svg>
@@ -17,7 +18,8 @@
        href="/{{ pagination.next.path }}"
        aria-label="Go to the next page">
       More
-      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon pagination__btn">
+      <button class="mdl-button ripple mdl-button--icon pagination__btn">
+        <span class="ripple-ink"></span>
         <svg class="mdl-svg pagination__icon">
           <use xlink:href="#arrow-forward"></use>
         </svg>

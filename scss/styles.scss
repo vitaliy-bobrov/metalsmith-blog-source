@@ -9,21 +9,11 @@
 @import 'config/mdl';
 
 // MDL.
-@import '../node_modules/material-design-lite/src/material-design-lite';
-
-// MDL-Ext dark theme.
-@import '../node_modules/mdl-ext/src/variables';
-@import '../node_modules/mdl-ext/src/mixins';
-@import '../node_modules/mdl-ext/src/color-themes/dark-color-theme';
-
-// MDL Overrides.
-@import 'config/mdl-overrides';
+@import 'mdl';
 
 // Base.
 @import 'base';
 @import 'config/placeholders';
-
-// MDL overrides.
 
 // Components.
 @import 'components/logos/site';

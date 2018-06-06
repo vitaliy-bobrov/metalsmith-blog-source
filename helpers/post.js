@@ -78,17 +78,19 @@ const postShare = (title, description, siteurl, path, id = 0) => {
   return `
     <div class="mdl-card__menu post-share">
       <button id="share-menu-${id}"
-              class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect post-share__button js-share-btn"
+              class="mdl-button mdl-button--icon ripple post-share__button js-share-btn"
               title="Share this post"
               aria-label="Share this post"
               data-share-title="${escape(title)}"
               data-share-text="${escape(description)}"
               data-share-url="${link}">
+        <span class="ripple-ink"></span>
         <svg class="mdl-svg post-share__icon">
           <use xlink:href="#share"></use>
         </svg>
+        Share post
       </button>
-      <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect share-menu js-share-menu">
+      <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu share-menu js-share-menu">
         <li class="mdl-menu__item share-menu__item">
           <a href="//www.facebook.com/sharer.php?u=${link}"
              class="share-menu__link"
