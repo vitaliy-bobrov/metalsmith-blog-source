@@ -1,0 +1,346 @@
+.mdlext-dark-color-theme {
+  background-color: $mdlext-dark-content-background-color;
+  color: $mdlext-dark-text-color-primary;
+
+  .mdl-card {
+    background-color: $mdl-dark-card;
+
+    &__media {
+      background-color: $mdl-dark-header;
+    }
+  }
+
+  .mdl-layout__drawer {
+    background-color: $mdl-dark-card;
+    border-right-color: $mdl-dark-header;
+
+    .mdl-layout-title {
+      color: $mdlext-dark-text-color-primary;
+    }
+
+    .mdl-navigation .mdl-navigation__link {
+      color: $mdlext-dark-text-color-secondary;
+
+      &:hover,
+      &:focus,
+      &_active {
+        background-color: $mdlext-dark-content-background-color;
+        border-bottom-color: $mdlext-dark-color-primary;
+      }
+    }
+  }
+
+  .post-teaser__title-link {
+    color: $mdlext-dark-text-color-primary;
+    text-decoration: none;
+  }
+
+  .post-info__category {
+    color: $mdlext-dark-color-primary-contrast;
+  }
+
+  .mdl-snackbar__action {
+    color: $mdlext-dark-color-accent;
+  }
+}
+
+// mdl/src/palette/_palette.scss
+.mdl-color--primary {
+  background-color: $mdlext-dark-color-primary !important;
+}
+
+.mdl-color--primary-contrast {
+  background-color: $mdlext-dark-color-primary-contrast !important;
+}
+
+.mdl-color--primary-dark {
+  background-color: $mdlext-dark-color-primary-dark !important;
+}
+
+.mdl-color--accent {
+  background-color: $mdlext-dark-color-accent !important;
+}
+
+.mdl-color--accent-contrast {
+  background-color: $mdlext-dark-color-accent-contrast !important;
+}
+
+.mdl-color-text--primary {
+  color: $mdlext-dark-color-primary !important;
+}
+
+.mdl-color-text--primary-contrast {
+  color: $mdlext-dark-color-primary-contrast !important;
+}
+
+.mdl-color-text--primary-dark {
+  color: $mdlext-dark-color-primary-dark !important;
+}
+
+.mdl-color-text--accent {
+  color: $mdlext-dark-color-accent !important;
+}
+
+.mdl-color-text--accent-contrast {
+  color: $mdlext-dark-color-accent-contrast !important;
+}
+
+// mdl/src/typography/_typography.scss
+.mdlext-dark-color-theme {
+  a {
+    outline-color: inherit;
+    color: $mdlext-dark-text-link-color;
+  }
+}
+
+
+// mdl/src/button/_button.scss
+// ---------------------------
+.mdlext-dark-color-theme {
+
+  .mdl-button {
+    background: transparent;
+    color: $mdlext-dark-button-secondary-color;
+
+    &:hover {
+      background-color: $mdlext-dark-button-hover-color;
+    }
+
+    &:focus:not(:active) {
+      background-color: $mdlext-dark-button-focus-color;
+    }
+
+    &:active {
+      background-color: $mdlext-dark-button-active-color;
+    }
+
+    &.mdl-button--colored {
+      color: $mdlext-dark-button-primary-color-alt;
+
+      &:focus:not(:active) {
+        background-color: $mdlext-dark-button-focus-color-alt;
+      }
+    }
+  }
+
+  // Raised buttons
+  .mdl-button--raised {
+    background: $mdlext-dark-button-primary-color;
+
+    &:active {
+      background-color: $mdlext-dark-button-active-color;
+    }
+
+    &:focus:not(:active) {
+      background-color: $mdlext-dark-button-active-color;
+    }
+
+    &.mdl-button--colored {
+      background: $mdlext-dark-button-primary-color-alt;
+      color: $mdlext-dark-button-secondary-color-alt;
+
+      &:hover {
+        background-color: $mdlext-dark-button-hover-color-alt;
+      }
+
+      &:active {
+        background-color: $mdlext-dark-button-active-color-alt;
+      }
+
+      &:focus:not(:active) {
+        background-color: $mdlext-dark-button-active-color-alt;
+      }
+
+      & .mdl-ripple {
+        background: $mdlext-dark-button-ripple-color-alt;
+      }
+    }
+  }
+
+
+  // FABs
+  .mdl-button--fab {
+    background: $mdlext-dark-button-primary-color;
+
+    &:active {
+      background-color: $mdlext-dark-button-active-color;
+    }
+
+    &:focus:not(:active) {
+      background-color: $mdlext-dark-button-active-color;
+    }
+
+    &.mdl-button--colored {
+      background: $mdlext-dark-button-fab-color-alt;
+      color: $mdlext-dark-button-fab-text-color-alt;
+
+      &:hover {
+        background-color: $mdlext-dark-button-fab-hover-color-alt;
+      }
+
+      &:focus:not(:active) {
+        background-color: $mdlext-dark-button-fab-active-color-alt;
+      }
+
+      &:active {
+        background-color: $mdlext-dark-button-fab-active-color-alt;
+      }
+
+      & .mdl-ripple {
+        background: $mdlext-dark-button-fab-ripple-color-alt;
+      }
+    }
+  }
+
+
+  // Icon buttons
+  .mdl-button--icon {
+    color: inherit;
+  }
+
+  // Colorized buttons
+
+  .mdl-button--primary.mdl-button--primary {
+    color: $mdlext-dark-button-primary-color-alt;
+
+    & .mdl-ripple {
+      background: $mdlext-dark-button-secondary-color-alt;
+    }
+    &.mdl-button--raised,
+    &.mdl-button--fab {
+      color: $mdlext-dark-button-secondary-color-alt;
+      background-color: $mdlext-dark-button-primary-color-alt;
+    }
+  }
+
+  .mdl-button--accent.mdl-button--accent {
+    color: $mdlext-dark-button-fab-color-alt;
+
+    & .mdl-ripple {
+      background: $mdlext-dark-button-fab-text-color-alt;
+    }
+    &.mdl-button--raised,
+    &.mdl-button--fab {
+      color: $mdlext-dark-button-fab-text-color-alt;
+      background-color: $mdlext-dark-button-fab-color-alt;
+    }
+  }
+
+  // Disabled buttons
+
+  .mdl-button {
+    // Bump up specificity by using [disabled] twice.
+    &[disabled][disabled],
+    &.mdl-button--disabled.mdl-button--disabled {
+      color: $mdlext-dark-button-secondary-color-disabled;
+      background-color: transparent;
+    }
+
+    &--fab {
+      // Bump up specificity by using [disabled] twice.
+      &[disabled][disabled],
+      &.mdl-button--disabled.mdl-button--disabled {
+        background-color: $mdlext-dark-button-primary-color-disabled;
+        color: $mdlext-dark-button-secondary-color-disabled;
+      }
+    }
+
+    &--raised {
+      // Bump up specificity by using [disabled] twice.
+      &[disabled][disabled],
+      &.mdl-button--disabled.mdl-button--disabled {
+        background-color: $mdlext-dark-button-primary-color-disabled;
+        color: $mdlext-dark-button-secondary-color-disabled;
+      }
+    }
+    &--colored {
+      // Bump up specificity by using [disabled] twice.
+      &[disabled][disabled],
+      &.mdl-button--disabled.mdl-button--disabled {
+        color: $mdlext-dark-button-secondary-color-disabled;
+      }
+    }
+  }
+}
+
+// mdl/src/menu/_menu.scss
+// -----------------------------------
+.mdlext-dark-color-theme {
+
+  .mdl-menu__outline {
+    background: $mdlext-dark-default-dropdown-bg-color;
+  }
+
+  .mdl-menu__item {
+    color: $mdlext-dark-default-item-text-color;
+    background-color: transparent;
+    outline-color: $mdlext-dark-default-item-outline-color;
+
+    &--full-bleed-divider {
+      border-bottom-color: $mdlext-dark-default-item-divider-color;
+    }
+
+    &[disabled],
+    &[data-mdl-disabled] {
+      color: $mdlext-dark-disabled-item-text-color;
+      background-color: transparent;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      &:focus {
+        background-color: transparent;
+      }
+
+      & .mdl-ripple {
+        background: transparent;
+      }
+    }
+
+    &:hover {
+      background-color: $mdlext-dark-default-item-hover-bg-color;
+    }
+
+    &:focus {
+      background-color: $mdlext-dark-default-item-focus-bg-color;
+    }
+
+    &:active {
+      background-color: $mdlext-dark-default-item-active-bg-color;
+    }
+  }
+}
+
+// mdl/src/card/_card.scss
+// ----------------------------------------
+.mdlext-dark-color-theme {
+
+  .mdl-card__title {
+    color: $mdlext-dark-card-text-color;
+
+    &.mdl-card--border {
+      border-bottom-color: $mdlext-dark-card-border-color;
+    }
+  }
+
+  .mdl-card__title-text {
+    color: inherit;
+  }
+
+  .mdl-card__subtitle-text {
+    color: $mdlext-dark-card-subtitle-color;
+  }
+
+  .mdl-card__supporting-text {
+    color: $mdlext-dark-card-supporting-text-text-color;
+  }
+
+  .mdl-card__actions {
+    background-color: rgba(255, 255, 255, 0);
+
+    &.mdl-card--border {
+      border-top-color: $mdlext-dark-card-border-color;
+    }
+  }
+}

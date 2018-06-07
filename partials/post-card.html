@@ -38,7 +38,7 @@
           <svg class="mdl-svg post-info__comments-icon">
             <use xlink:href="#comment"></use>
           </svg>
-          <span class="disqus-comment-count post-info__comments-counter" data-disqus-key="{{post.title}}"></span>
+          <span class="disqus-comment-count post-info__comments-counter" data-disqus-key="{{ post.title }}"></span>
         </div>
       {{/if}}
 
@@ -58,9 +58,10 @@
 
   <section class="mdl-card__actions post-teaser__actions">
     <a href="{{ absoluteUrl siteurl post.path }}"
-       class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+       class="mdl-button mdl-button--raised ripple mdl-button--colored"
        id="post-card-descr-{{ @index }}"
        aria-hidden="true">
+      <span class="ripple-ink"></span>
       Read more
     </a>
   </section>

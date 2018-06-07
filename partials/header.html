@@ -1,4 +1,10 @@
-<header class="mdl-layout__header" role="banner">
+<header class="mdl-layout__header is-casting-shadow" role="banner">
+  <div class="mdl-layout__drawer-button" role="button" tabindex="0" aria-expanded="false">
+    <svg class="mdl-svg drawer-icon">
+      <use xlink:href="#menu"></use>
+    </svg>
+    Menu
+  </div>
   <div class="mdl-layout__header-row">
     <!-- Title -->
     <span class="mdl-layout-title">
@@ -55,7 +61,7 @@
       </a>
     {{/each}}
 
-    <button class="mdl-button mdl-js-button mdl-button--raised js-add-to-home" disabled>
+    <button class="mdl-button mdl-button--raised js-add-to-home" disabled>
       Add to home screen
     </button>
   </nav>

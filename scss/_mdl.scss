@@ -1,0 +1,24 @@
+/* Material Design Lite */
+
+// Variables and mixins
+@import "../node_modules/material-design-lite/src/variables";
+@import '../node_modules/mdl-ext/src/variables';
+@import "../node_modules/material-design-lite/src/mixins";
+
+// Resets and dependencies
+@import "../node_modules/material-design-lite/src/resets/resets";
+@import "../node_modules/material-design-lite/src/typography/typography";
+
+// Components
+@import "../node_modules/material-design-lite/src/button/button";
+@import "../node_modules/material-design-lite/src/card/card";
+@import "../node_modules/material-design-lite/src/chip/chip";
+@import "../node_modules/material-design-lite/src/footer/mini_footer";
+@import "../node_modules/material-design-lite/src/list/list";
+@import "../node_modules/material-design-lite/src/menu/menu";
+@import "../node_modules/material-design-lite/src/layout/layout";
+@import "../node_modules/material-design-lite/src/snackbar/snackbar";
+@import "../node_modules/material-design-lite/src/shadow/shadow";
+@import "mdl/ripple";
+@import "mdl/grid";
+@import 'mdl/dark-theme';
