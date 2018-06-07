@@ -3,7 +3,7 @@
 const path = require('path');
 const gulp = require('gulp');
 const del = require('del');
-const runSequence = require('run-sequence');
+const once = require('async-once');
 const browserSync = require('browser-sync');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const assets = require('postcss-assets');
@@ -33,48 +33,7 @@ const BABELRC = {
   shouldPrintComment: () => !prod
 };
 
-gulp.task('metalsmith', ['svg'], callback => exec(`node ./metalsmith.js --url=${PROD_URL}`,
-  (err, stdout, stderr) => {
-    console.log(stdout);
-    console.log(stderr);
-    callback(err);
-  }));
-
-gulp.task('service-files', () => gulp.src([
-    'service-files/**/*',
-    '!service-files/.updated.json'
-  ])
-  .pipe(gulp.dest('build')));
-
-gulp.task('lint', () => gulp.src([
-    'js/**/*.js',
-    '!node_modules/**'
-  ])
-  .pipe($.eslint())
-  .pipe($.eslint.format())
-  .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
-);
-
-gulp.task('webp', () => gulp.src([
-    'images/**/*.{jpg,jpeg,png,gif}',
-    '!./images/posts/**/img/*.jpg',
-    '!images/icons/**.*',
-    '!images/**/*-og.jpg',
-    '!images/bg-*.jpg'
-  ])
-  .pipe($.webp({
-    quality: 100,
-    method: prod ? 6 : 0
-  }))
-  .pipe(gulp.dest('images'))
-);
-
-gulp.task('images', ['webp'], () => gulp.src('./images/**/*.{jpg,jpeg,png,gif,webp}')
-  .pipe(gulp.dest('build/images'))
-  .pipe($.size({title: 'images'}))
-);
-
-gulp.task('svg', () => gulp.src('images/svg/*.svg')
+const svg = () => gulp.src('images/svg/*.svg')
   .pipe($.plumber({
     errorHandler: onError
   }))
@@ -92,9 +51,67 @@ gulp.task('svg', () => gulp.src('images/svg/*.svg')
     }
   }))
   .pipe(gulp.dest('partials'))
-  .pipe($.size({title: 'svg'})));
+  .pipe($.size({title: 'svg'}));
 
-gulp.task('styles', () => {
+gulp.task('svg', svg);
+
+const metalsmith = gulp.series(
+  'svg',
+  done => exec(
+    `node ./metalsmith.js --url=${PROD_URL}`,
+    (err, stdout, stderr) => {
+      console.log(stdout);
+      console.log(stderr);
+      done(err);
+    }
+  )
+);
+
+gulp.task('metalsmith', metalsmith);
+
+const serviceFiles = () => gulp.src([
+    'service-files/**/*',
+    '!service-files/.updated.json'
+  ])
+  .pipe(gulp.dest('build'));
+
+gulp.task('service-files', serviceFiles);
+
+const lint = () => gulp.src([
+    'js/**/*.js',
+    '!node_modules/**'
+  ])
+  .pipe($.eslint())
+  .pipe($.eslint.format())
+  .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
+
+gulp.task('lint', lint);
+
+const webp = () => gulp.src([
+    'images/**/*.{jpg,jpeg,png,gif}',
+    '!./images/posts/**/img/*.jpg',
+    '!images/icons/**.*',
+    '!images/**/*-og.jpg',
+    '!images/bg-*.jpg'
+  ])
+  .pipe($.webp({
+    quality: 100,
+    method: prod ? 6 : 0
+  }))
+  .pipe(gulp.dest('images'));
+
+gulp.task('webp', webp);
+
+const images = gulp.series(
+  'webp',
+  () => gulp.src('./images/**/*.{jpg,jpeg,png,gif,webp}')
+    .pipe(gulp.dest('build/images'))
+    .pipe($.size({title: 'images'}))
+);
+
+gulp.task('images', images);
+
+const styles = () => {
   const processors = [
     assets({
       basePath: './',
@@ -132,41 +149,49 @@ gulp.task('styles', () => {
     .pipe($.size({title: 'styles'}))
     .pipe($.if(!prod, $.sourcemaps.write('./')))
     .pipe(gulp.dest('build/css'));
-});
+};
 
-gulp.task('scripts', () =>
-    gulp.src([
-      'node_modules/material-design-lite/src/mdlComponentHandler.js',
-      'node_modules/material-design-lite/src/menu/menu.js',
-      'node_modules/material-design-lite/src/snackbar/snackbar.js',
-      'js/*.js'
-    ])
-    .pipe($.plumber({
-      errorHandler: onError
-    }))
-    .pipe($.if(!prod, $.sourcemaps.init()))
-    .pipe($.babel(BABELRC))
-    .pipe($.concat('main.min.js'))
-    .pipe($.if(prod, $.babelMinify()))
-    .pipe($.size({title: 'scripts'}))
-    .pipe($.if(!prod, $.sourcemaps.write('./')))
-    .pipe(gulp.dest('build/js')));
+gulp.task('styles', styles);
 
-gulp.task('paint', () =>
-  gulp.src(['js/paint/*.js'])
+const scripts = () => gulp.src([
+    'node_modules/material-design-lite/src/mdlComponentHandler.js',
+    'node_modules/material-design-lite/src/menu/menu.js',
+    'node_modules/material-design-lite/src/snackbar/snackbar.js',
+    'js/*.js'
+  ])
+  .pipe($.plumber({
+    errorHandler: onError
+  }))
+  .pipe($.if(!prod, $.sourcemaps.init()))
+  .pipe($.babel(BABELRC))
+  .pipe($.concat('main.min.js'))
+  .pipe($.if(prod, $.babelMinify()))
+  .pipe($.size({title: 'scripts'}))
+  .pipe($.if(!prod, $.sourcemaps.write('./')))
+  .pipe(gulp.dest('build/js'));
+
+gulp.task('scripts', scripts);
+
+const paint = () => gulp.src(['js/paint/*.js'])
   .pipe($.plumber({
     errorHandler: onError
   }))
   .pipe($.if(prod, $.babelMinify()))
-  .pipe(gulp.dest('build/js')));
+  .pipe(gulp.dest('build/js'));
 
-gulp.task('clean', () => del([
-  'build/images',
-  'build/js',
-  'build/css'
-  ], {dot: true}));
+gulp.task('paint', paint);
 
-gulp.task('serve:dev', () => {
+const clean = once((done) => {
+  del([
+    'build/images',
+    'build/js',
+    'build/css'
+  ], {dot: true}).then(() => done());
+});
+
+gulp.task('clean', clean);
+
+const serve = () => {
   browserSync({
     notify: false,
     logPrefix: 'MetalSync',
@@ -180,40 +205,58 @@ gulp.task('serve:dev', () => {
       'partials/**/*.html',
       'images/**/*.svg',
       'source/**/*.md'
-    ], ['metalsmith', reload]);
-  gulp.watch(['scss/**/*.scss'], ['styles', reload]);
-  gulp.watch(['js/**/*.js'], ['lint', 'scripts', 'paint', reload]);
+    ], gulp.series('metalsmith', reload));
+  gulp.watch(['scss/**/*.scss'], gulp.series('styles', reload));
+  gulp.watch(['js/**/*.js'], gulp.series('lint', 'scripts', 'paint', reload));
   gulp.watch(['images/**/*'], reload);
-});
+};
 
-gulp.task('html', () => gulp.src('build/**/*.html')
+gulp.task('serve', serve);
+
+const minifySW = () => gulp.src('build/service-worker.js')
+  .pipe($.babel(BABELRC))
+  .pipe($.babelMinify())
+  .pipe(gulp.dest('build'));
+
+gulp.task('minify-sw', minifySW);
+
+const html = () => gulp.src('build/**/*.html')
   .pipe($.htmlmin({
     collapseBooleanAttributes: true,
     collapseWhitespace: true,
     quoteCharacter: '"',
     removeComments: true
   }))
-  .pipe(gulp.dest('build')));
+  .pipe(gulp.dest('build'));
 
-gulp.task('deploy', ['html', 'minify-sw'], () => {
-  let date = new Date();
-  let formattedDate = date.toUTCString();
+gulp.task('html', html);
 
-  return gulp.src('build/**/*')
-    .pipe($.ghPages({
-      remoteUrl: 'git@github.com:vitaliy-bobrov/vitaliy-bobrov.github.io.git',
-      branch: 'master',
-      message: `Updates blog content ${formattedDate}`
-    }));
-});
+const deploy = gulp.series(
+  gulp.parallel('html', 'minify-sw'),
+  () => {
+    const date = new Date();
+    const formattedDate = date.toUTCString();
 
-gulp.task('seo', cb => {
+    return gulp.src('build/**/*')
+      .pipe($.ghPages({
+        remoteUrl: 'git@github.com:vitaliy-bobrov/vitaliy-bobrov.github.io.git',
+        branch: 'master',
+        message: `Updates blog content ${formattedDate}`
+      }));
+  }
+);
+
+gulp.task('deploy', deploy);
+
+const seo = done => {
   request(`http://www.google.com/webmasters/tools/ping?sitemap=${SITEMAP_URL}`);
   request(`http://www.bing.com/webmaster/ping.aspx?siteMap=${SITEMAP_URL}`);
-  cb();
-});
+  done();
+};
 
-gulp.task('copy-sw-scripts', () => gulp.src([
+gulp.task('seo', seo);
+
+const copySWScripts = () => gulp.src([
     'node_modules/sw-toolbox/sw-toolbox.js',
     'node_modules/sw-offline-google-analytics/build/importScripts/sw-offline-google-analytics.prod.v0.0.25.js',
     'js/sw/*.js'
@@ -222,9 +265,11 @@ gulp.task('copy-sw-scripts', () => gulp.src([
     errorHandler: onError
   }))
   .pipe($.babelMinify())
-  .pipe(gulp.dest('build/js/sw')));
+  .pipe(gulp.dest('build/js/sw'));
 
-gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
+gulp.task('copy-sw-scripts', copySWScripts);
+
+const generateSW = gulp.series('copy-sw-scripts', () => {
   const rootDir = 'build';
   const filepath = path.join(rootDir, 'service-worker.js');
   const ONE_YEAR_IN_SEC = 31557600;
@@ -297,18 +342,18 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
   });
 });
 
-gulp.task('minify-sw', () => {
-  gulp.src('build/service-worker.js')
-    .pipe($.babel(BABELRC))
-    .pipe($.babelMinify())
-    .pipe(gulp.dest('build'));
-});
+gulp.task('generate-service-worker', generateSW);
 
-gulp.task('default', ['clean'], cb =>
-  runSequence(
+const defaultTask = gulp.series(
+  'clean',
+  gulp.parallel(
     'styles',
-    ['metalsmith', 'lint', 'scripts', 'paint', 'images', 'service-files'],
-    'generate-service-worker',
-    cb
+    'images',
+    gulp.series('lint', gulp.parallel('scripts', 'paint')),
+    'service-files',
+    'metalsmith',
+    'generate-service-worker'
   )
 );
+
+gulp.task('default', defaultTask);
