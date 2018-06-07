@@ -205,7 +205,7 @@ const zeroEl = document.querySelector('.zero');
 const zeroStyleMap = zeroEl.computedStyleMap();
 
 console.log(zeroStyleMap.get('--relative-size'));
-// CSSUnitValue {value: 50, unit: "percent"}
+// CSSUnitValue {value: 0, unit: "px"}
 
 const percentEl = document.querySelector('.percent');
 const percentStyleMap = percentEl.computedStyleMap();
@@ -217,26 +217,64 @@ const lengthEl = document.querySelector('.length');
 const lengthStyleMap = lengthEl.computedStyleMap();
 
 console.log(lengthStyleMap.get('--relative-size'));
-// CSSUnitValue {value: 50, unit: "percent"}
+// CSSUnitValue {value: 672, unit: "px"}
 ```
 
-### number
+As you can see, we got all non-percent values in pixels. More interesting thing with length-percentage syntax is that it accepts expressions as a value:
 
-```js
-CSS.registerProperty({
-  name: '--progress',
-  syntax: '<number>',
-  initialValue: 0
-});
+```css
+.calculated {
+  --relative-size: calc(100vw - 20px);
+  width: var(--relative-size);
+}
 ```
+
+Such expressions resolved differently according to the context they used in. In particular example above `calc` each operand will be converted to pixels and than evaluated. This happend cause we used our property as the value for `width`. But if will use it as a value for `hsl` saturation component which accepts only percentage we can use only percentages inside `calc` expression.
 
 ### integer
+Integer type is represents numeric values without a fractional component. Let's declare property using tht type:
 
 ```js
 CSS.registerProperty({
   name: '--sides',
   syntax: '<integer>',
   initialValue: 0
+});
+```
+
+If we will try to assign float as an initial value, registration will fail with error:
+
+```js
+CSS.registerProperty({
+  name: '--sides',
+  syntax: '<integer>',
+  initialValue: 0.1
+});
+
+// Uncaught DOMException: Failed to execute 'registerProperty' on 'CSS':
+// The initial value provided does not parse for the given syntax.
+```
+
+There is no way to set that range of possible values for interger property for now, but hopefully it will come in the next specification versions. Here is how we can access value in JS:
+
+```js
+const el = document.querySelector('.zero');
+const styleMap = zeroEl.computedStyleMap();
+
+console.log(styleMap.get('--sides'));
+// CSSUnitValue {value: 0, unit: "number"}
+```
+
+As you can see even when we give property type of integer, Typed OM returns us type number.
+
+### number
+As you can guess number type is similar to interger one, but allows to set float values as well:
+
+```js
+CSS.registerProperty({
+  name: '--progress',
+  syntax: '<number>',
+  initialValue: 0.5
 });
 ```
 
@@ -304,6 +342,20 @@ CSS.registerProperty({
 
 ### custom-ident
 
+```js
+CSS.registerProperty({
+  name: '--keyword',
+  syntax: '<custom-ident>',
+  initialValue: 'left-side | right-side'
+});
+```
+
 ## How to use custom properties today?
 
 ## Conclusion
+
+### Resources
+
+- [CSS Values and Units Module Level 4](https://drafts.csswg.org/css-values-4/)
+- [CSS Properties and Values API Level 1](https://drafts.css-houdini.org/css-properties-values-api/​)
+

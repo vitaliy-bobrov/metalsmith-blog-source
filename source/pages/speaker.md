@@ -4,7 +4,7 @@ description: Information about past and upcoming talk on tech events.
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2018-06-05
+lastmod: 2018-06-07
 priority: 1.0
 ---
 ## Upcomming talks:
@@ -22,6 +22,10 @@ priority: 1.0
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
 - [Angular Wroclaw](https://www.meetup.com/AngularJS-Wrocław/) -- 26 July 2018, Wroclaw, Poland
+
+  Topic: **"Robots Don't Cry: Automation with Schematics"**
+
+- [NG Talks](https://ngtalks.io/) -- 09 August 2018, Kharkiv, Ukraine
 
   Topic: **"Robots Don't Cry: Automation with Schematics"**
 
