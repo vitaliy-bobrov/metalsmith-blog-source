@@ -29,6 +29,10 @@ priority: 1.0
 
   Topic: **"Robots Don't Cry: Automation with Schematics"**
 
+- [GrillJS](http://grilljs.com/) -- 18 August 2018, Wroclaw, Poland
+
+  Topic: **""**
+
 - [Ruhr JS](https://ruhrjs.de/) -- 13 October 2018, Bochum, Germany
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**

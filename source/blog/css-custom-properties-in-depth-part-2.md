@@ -278,7 +278,10 @@ CSS.registerProperty({
 });
 ```
 
+Nothing really special here, it works the same way as interger type.
+
 ### color
+Color -- most used type in CSS, it makes the Web brighter.
 
 ```js
 CSS.registerProperty({
@@ -330,6 +333,14 @@ CSS.registerProperty({
 
 ### resolution
 
+```js
+CSS.registerProperty({
+  name: '--resolution',
+  syntax: '<resolution>',
+  initialValue: ''
+});
+```
+
 ### transform-list
 
 ```js
@@ -341,18 +352,102 @@ CSS.registerProperty({
 ```
 
 ### custom-ident
+Custom indent is a special type that gives us ability to use own keywords as a value of a custom property. This custom value will be validated by CSS engine for us. Here is the registration example:
 
 ```js
 CSS.registerProperty({
   name: '--keyword',
-  syntax: '<custom-ident>',
-  initialValue: 'left-side | right-side'
+  syntax: 'left-side | right-side',
+  initialValue: 'left-side'
 });
 ```
 
+You should remember that `custom-indent` is case sensitive. That means that `left-side` value is not equal to `LEFT-SIDE` value, and will be invalidated.
+
+```js
+CSS.registerProperty({
+  name: '--keyword',
+  syntax: 'left-side | right-side',
+  initialValue: 'LEFT-SIDE'
+});
+```
+
+CSS allows us to use property values in any lettercase we want. It is a good practive to write styles in lowercase, but browser won't judge you if you will decide to used uppercase one.
+
 ## How to use custom properties today?
+First of all, we should remember that CSS ignores declarations that it can't parse. In addition to that it uses "last win" approach -- latest declaration overrides previous one. So we can simply put CSS rule with fallback value before `var()` function usage:
+
+```css
+.fallback {
+  background-color: #fff;
+  background-color: var(--bg-color, #fff);
+}
+```
+
+Old browsers that has no implementation for custom properties will ignore second `background-color` rule and will use first one.
+
+We can do fallback more explicitly, using supports at-rule:
+
+```css
+.variable-bg {
+  background-color: #fff;
+}
+
+@supports(--foo: bar) {
+  .variable-bg {
+    background-color: var(--bg-color, #fff);
+  }
+}
+```
+
+But you should remember that not all browsers know about `@supports`. More sad thing, that we are just checking for simple CSS variables, there is no guarantee that browser will understood typed properties. To address our check to custom properties we need to use JS, at least for now. For example, we can add some class name to the root element:
+
+```js
+if (!('registerProperty' in CSS)) {
+  document.documentElement.classList.add('no-custom-props');
+}
+```
+
+So we can use this class name to target our fallback:
+
+```css
+.no-custom-props .variable-bg {
+  background-color: #fff;
+}
+
+.variable-bg {
+  background-color: var(--bg-color, #fff);
+}
+```
+
+## Future
+There is a [great proposal](https://github.com/w3c/css-houdini-drafts/issues/137) to "CSS Properties and Values API Level 2" specification that allows to register custom properties inside stylesheets. It is logical to declare custom property in the same place where it should be used. The other good reason to do it in CSS -- not revalidate variables again after registration of the property used. The proposed syntax looks like this:
+
+```css
+@property --highlight-color {
+  syntax: '<color>';
+  initial-value: red;
+  inherits: true;
+}
+```
+
+Note that it is not part of the spec yet. Even more it is just discussion of posibility to include something sinilar in the next specification level. The syntax could be completely different in the future and it is not implemented in any browser.
+
+In the current draft it looks pretty straight-forward. We need to use property at-rule, followed by property name. Then inside `@property` block we use the same options: `syntax`, `inherits` and `initial-value` (in CSS-like notation). This should be equal to:
+
+```js
+CSS.registerProperty({
+  name: '--highlight-color',
+  syntax: '<color>',
+  initialValue: 'red',
+  inherits: true
+});
+```
+
+I love the idea and decided to create PostCSS plugin that will use custom property declarations in CSS to generate JavaScript fallback, that registers all of them using `CSS.registerProperty`.
 
 ## Conclusion
+Custom properties and value is so powerfull and a big game-changer in CSS. I can't even imagine all possible use-cases for them. It is an ocean of posibilities. For example you can use them to implement [lazy-loaded styles](https://jakearchibald.com/2016/css-loading-with-custom-props/)! Or implement customazible wb-site theme. Share your ideas in Twitter and over comments here.
 
 ### Resources
 

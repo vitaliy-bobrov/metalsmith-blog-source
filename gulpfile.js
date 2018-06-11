@@ -351,9 +351,9 @@ const defaultTask = gulp.series(
     'images',
     gulp.series('lint', gulp.parallel('scripts', 'paint')),
     'service-files',
-    'metalsmith',
-    'generate-service-worker'
-  )
+    'metalsmith'
+  ),
+  'generate-service-worker'
 );
 
 gulp.task('default', defaultTask);
