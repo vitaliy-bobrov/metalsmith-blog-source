@@ -292,6 +292,7 @@ CSS.registerProperty({
 ```
 
 ### image
+Image syntax is the most intriguing one, as it opens the door to do crazy stuff with images. The canvas implementation for CSS Paint API doesn't support methods to read pixes from the element for security reasons. I don't think anybody want his sensitive data could be readed by 3rd party stylesheet. So the only way to draw images inside custom paint is to use image passed as input property or argument. Below is the registration of the image custom property:
 
 ```js
 CSS.registerProperty({
