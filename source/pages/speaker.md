@@ -9,10 +9,6 @@ priority: 1.0
 ---
 ## Upcomming talks:
 
-- [ngHouston](https://www.meetup.com/ngHouston/) -- 14 June 2018, Online
-
-  Topic: **"NgRx Schematics"**
-
 - [Angular Academy Show](https://angular-academy.com/) -- 02 July 2018, Online
 
   Topic: **"Angular Schematics"**
@@ -37,9 +33,19 @@ priority: 1.0
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
+- [Mobile Era](http://mobileera.rocks/) -- 01 November 2018, Oslo, Norway
+
+  Topic: **"Flutter in Action: How to build cross-platform app with Dart"**
+
 ## Past talks:
 
 ### 2018
+
+- [ngHouston](https://www.meetup.com/ngHouston/) -- 14 June 2018, Online
+
+  Topic: **"NgRx Schematics"**
+
+  [Slides](https://speakerdeck.com/bobrov1989/ngrx-schematics-1) | [Video](https://youtu.be/qyymWyiZYNY)
 
 - [jsDay](https://2018.jsday.it/) -- 10 May 2018, Verona, Italy
 
