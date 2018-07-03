@@ -3,9 +3,9 @@ title: "CSS Custom Properties in Depth: Part 2"
 description: Deep dive into CSS Properties and Values API available types with real code examples.
 ogimage: images/posts/css-custom-properties-in-depth-2/css-custom-properties-in-depth-2-og.jpg
 tumb: /images/posts/css-custom-properties-in-depth-2/css-custom-properties-in-depth-2
-created: 2018-06-05
-updated: 2018-06-05
-lastmod: 2018-06-05
+created: 2018-07-03
+updated: 2018-07-03
+lastmod: 2018-07-03
 categories:
 - CSS
 - Houdini
@@ -27,6 +27,7 @@ Length type stands for CSS sizing values, like pixel, em, rem, vw, vh, etc. We c
 CSS.registerProperty({
   name: '--size',
   syntax: '<length>',
+  inherits: false,
   initialValue: 0
 });
 ```
@@ -122,6 +123,7 @@ Usully working with responsive web design (RWD) we trying to avoid pixel depende
 CSS.registerProperty({
   name: '--lightness',
   syntax: '<percentage>',
+  inherits: false,
   initialValue: '0%'
 });
 ```
@@ -165,6 +167,7 @@ As you might notice from its name, `length-percentage` is a kind of type alias f
 CSS.registerProperty({
   name: '--relative-size',
   syntax: '<length-percentage>',
+  inherits: false,
   initialValue: 0
 });
 ```
@@ -175,6 +178,7 @@ Let's try to reproduce the same type in the different way:
 CSS.registerProperty({
   name: '--relative-size',
   syntax: '<length> | <percentage>',
+  inherits: false,
   initialValue: 0
 });
 ```
@@ -238,6 +242,7 @@ Integer type is represents numeric values without a fractional component. Let's 
 CSS.registerProperty({
   name: '--sides',
   syntax: '<integer>',
+  inherits: false,
   initialValue: 0
 });
 ```
@@ -248,6 +253,7 @@ If we will try to assign float as an initial value, registration will fail with 
 CSS.registerProperty({
   name: '--sides',
   syntax: '<integer>',
+  inherits: false,
   initialValue: 0.1
 });
 
@@ -274,6 +280,7 @@ As you can guess number type is similar to interger one, but allows to set float
 CSS.registerProperty({
   name: '--progress',
   syntax: '<number>',
+  inherits: false,
   initialValue: 0.5
 });
 ```
@@ -287,6 +294,7 @@ Color -- most used type in CSS, it makes the Web brighter.
 CSS.registerProperty({
   name: '--fill',
   syntax: '<color>',
+  inherits: false,
   initialValue: 'transparent'
 });
 ```
@@ -298,6 +306,7 @@ Image syntax is the most intriguing one, as it opens the door to do crazy stuff 
 CSS.registerProperty({
   name: '--image',
   syntax: '<image>',
+  inherits: false,
   initialValue: 'url()'
 });
 ```
@@ -308,6 +317,7 @@ CSS.registerProperty({
 CSS.registerProperty({
   name: '--file',
   syntax: '<url> | none',
+  inherits: false,
   initialValue: 'none'
 });
 ```
@@ -318,6 +328,7 @@ CSS.registerProperty({
 CSS.registerProperty({
   name: '--angle',
   syntax: '<angle>',
+  inherits: false,
   initialValue: '0deg'
 });
 ```
@@ -328,6 +339,7 @@ CSS.registerProperty({
 CSS.registerProperty({
   name: '--duration',
   syntax: '<time>',
+  inherits: false,
   initialValue: '0s'
 });
 ```
@@ -338,6 +350,7 @@ CSS.registerProperty({
 CSS.registerProperty({
   name: '--resolution',
   syntax: '<resolution>',
+  inherits: false,
   initialValue: ''
 });
 ```
@@ -348,6 +361,7 @@ CSS.registerProperty({
 CSS.registerProperty({
   name: '--transform-state',
   syntax: '<transform-list>',
+  inherits: false,
   initialValue: ''
 });
 ```
@@ -359,6 +373,7 @@ Custom indent is a special type that gives us ability to use own keywords as a v
 CSS.registerProperty({
   name: '--keyword',
   syntax: 'left-side | right-side',
+  inherits: false,
   initialValue: 'left-side'
 });
 ```
@@ -369,6 +384,7 @@ You should remember that `custom-indent` is case sensitive. That means that `lef
 CSS.registerProperty({
   name: '--keyword',
   syntax: 'left-side | right-side',
+  inherits: false,
   initialValue: 'LEFT-SIDE'
 });
 ```

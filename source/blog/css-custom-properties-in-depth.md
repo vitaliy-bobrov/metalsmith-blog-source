@@ -4,8 +4,8 @@ description: CSS Properties and Values API the vital part of Houdini project. Th
 ogimage: images/posts/css-custom-properties-in-depth/css-custom-properties-in-depth-og.jpg
 tumb: /images/posts/css-custom-properties-in-depth/css-custom-properties-in-depth
 created: 2018-05-30
-updated: 2018-05-31
-lastmod: 2018-05-31
+updated: 2018-07-03
+lastmod: 2018-07-03
 categories:
 - CSS
 - Houdini
@@ -165,6 +165,7 @@ Similarly to TypeScript, it is possible to define the union of types and list of
 CSS.registerProperty({
   name: '--my-size',
   syntax: '<length> | <percentage>',
+  inherits: false,
   initialValue: '100%'
 });
 ```
@@ -177,6 +178,7 @@ To specify a list of values as a type, you should add `+` sign at the end of the
 CSS.registerProperty({
   name: '--my-colors',
   syntax: '<color>+',
+  inherits: false,
   initialValue: 'black'
 });
 ```
@@ -192,6 +194,7 @@ You might notice that I have used the `initialValue` parameter in the previous s
 CSS.registerProperty({
   name: '--my-any-prop',
   syntax: '*',
+  inherits: false,
   initialValue: '10px'
 });
 ```
@@ -210,6 +213,7 @@ The value of `background` will be red, as `--theme-color` wasn't initialized and
 CSS.registerProperty({
   name: '--theme-color',
   syntax: '<color>',
+  inherits: false,
   initialValue: 'blue'
 });
 ```
@@ -254,7 +258,7 @@ CSS.registerProperty({
 In this example element with class name, `default-theme` will inherit `--theme-color` property and then resets it to the initial value. So its background color will be blue.
 
 ### inherits
-Inherits is a boolean parameter, that obliviously stands for custom property inheritance from DOM tree. It is `false` by default. The reason for such default is performance, as browser don't need to walk through DOM tree to define which nodes inherit properties. You need to set inheritance to `true` if you want the property to be inherited:
+Inherits is a boolean parameter, that obliviously stands for custom property inheritance from DOM tree. It is `false` by default and after the latest spec update is required. The reason for such default is performance, as browser don't need to walk through DOM tree to define which nodes inherit properties. You need to set inheritance to `true` if you want the property to be inherited:
 
 ```js
 CSS.registerProperty({
@@ -305,6 +309,7 @@ This is the straightforward use case as if we expect CSS property to have an onl
 CSS.registerProperty({
   name: '--theme-color',
   syntax: '<color>',
+  inherits: false,
   initialValue: 'blue'
 });
 ```
@@ -354,6 +359,7 @@ This happens because for browsers custom property without the type is just strin
 CSS.registerProperty({
   name: '--bg-color',
   syntax: '<color>',
+  inherits: false,
   initialValue: 'red'
 });
 ```
