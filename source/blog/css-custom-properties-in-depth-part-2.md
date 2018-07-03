@@ -311,7 +311,78 @@ CSS.registerProperty({
 });
 ```
 
+Let's try to set and use our `--image` property with CSS Paint API:
+
+```css
+.placeholder {
+  --image: url('/some/image/url.png');
+  background-image: paint(image-placeholder);
+}
+```
+
+```js
+CSS.paintWorklet.addModule('image-placeholder.js');
+```
+
+Now I'm going to implement `image-placeholder` painter:
+
+```js
+// image-placeholder.js
+
+class ImagePlaceholder {
+  static get inputProperties() {
+    return ['--image'];
+  }
+
+   paint(ctx, {width, height}, props) {
+    const img = props.get('--image');
+    const radius = Math.min(width, height) / 2;
+
+    switch (img.state) {
+      case 'ready':
+        // The image is loaded! Draw the image.
+        ctx.drawImage(img, 0, 0, geom.width, geom.height);
+        break;
+
+      case 'pending':
+        // The image is loading, draw placeholder.
+        ctx.lineWidth = 4;
+        ctx.strokeRect(0, 0, width, height);
+
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(width, height);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(width, 0);
+        ctx.lineTo(0, height);
+        ctx.stroke();
+        break;
+
+      case 'invalid':
+      default:
+        // The image is invalid (e.g. it didn’t load), draw circle.
+        ctx.fillStyle = 'red';
+        ctx.beginPath();
+        ctx.arc(radius, radius, radius, 0, 2 * Math.PI);
+        ctx.fill();
+        break;
+    }
+  }
+}
+
+registerPaint('image-placeholder', ImagePlaceholder);
+```
+
+The image property syntax still not implemented, but according to the spec we `paint` will be called on image loading stages. And we will have access to the `state` of an image. State could have few values: ready, pending and invalid. The names of states are speaking itself.
+
+In our example, we relying on an image state. If image still loading (its state pending) we draw placeholder. If it is ready we draw image. And red circle on errors -- invalid state.
+
+Hopefuly implementation will come to the browsers this year. Image custom properties will open huge horizonts.
+
 ### url
+URL type is similar to the image, with one difference it is not restricted to media MIME types. This type still in development as well, below is an example registration:
 
 ```js
 CSS.registerProperty({
@@ -322,7 +393,10 @@ CSS.registerProperty({
 });
 ```
 
+Theoretically it will alow to request any files to use in other Houdini APIs. My first thought was to use it for JSON files fetching. Imagine we have bar chart custom painter and we can request dataset in JSON format for it. Sounds awesome? Can't wait for the working implementation.
+
 ### angle
+Angles are rarely used in CSS, usually in special properties, like transforms. But in combination with CSS Paint API it gives strictly typed andge values to use with 2D canvas context. In CSS we have few valid angle units: degrees, radians, gradians and turns (`deg`, `rad`, `grad`, `turn`). All of them could be used as a value for angle syntax. Below is the example:
 
 ```js
 CSS.registerProperty({
@@ -334,6 +408,7 @@ CSS.registerProperty({
 ```
 
 ### time
+Time usually used with transitions and animations. It accepts seconds and milliseconds (`s` and `ms` respectively). Use case: we can use time custom property for animation duration control. Here is the example how to register property:
 
 ```js
 CSS.registerProperty({
@@ -345,24 +420,48 @@ CSS.registerProperty({
 ```
 
 ### resolution
+CSS resolution has few possible unit values: dots per inch, dots per centimeter and dots per pixel unit. In CSS they look like: `dpi`, `dpcm` and `dppx` respectively. Possible use case is adjacting canvas resolution to an user device screen. You can register such property this way:
 
 ```js
 CSS.registerProperty({
   name: '--resolution',
   syntax: '<resolution>',
   inherits: false,
-  initialValue: ''
+  initialValue: '1dppx'
 });
 ```
 
-### transform-list
+### transform-function
 
 ```js
 CSS.registerProperty({
   name: '--transform-state',
+  syntax: '<transform-function>',
+  inherits: false,
+  initialValue: 'rotate(0deg)'
+});
+```
+
+### transform-list
+Transform list is just stands for the list of `transform-function`s separated by space. Below the example:
+
+```js
+CSS.registerProperty({
+  name: '--transformations',
   syntax: '<transform-list>',
   inherits: false,
-  initialValue: ''
+  initialValue: 'rotate(90deg) translateX(5rem)'
+});
+```
+
+We can achieve same resulting property registration using another syntax:
+
+```js
+CSS.registerProperty({
+  name: '--transformations',
+  syntax: '<transform-function>+',
+  inherits: false,
+  initialValue: 'rotate(90deg) translateX(5rem)'
 });
 ```
 

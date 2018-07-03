@@ -179,11 +179,22 @@ CSS.registerProperty({
   name: '--my-colors',
   syntax: '<color>+',
   inherits: false,
-  initialValue: 'black'
+  initialValue: 'black white'
 });
 ```
 
-In this example we want our property to have one or more colors delimited with a comma. If the syntax is invalid browser will throw an error -- "*Failed to execute 'registerProperty' on 'CSS': The syntax provided is not a valid custom property syntax.*".
+In this example we want our property to have one or more colors delimited with a space. If the syntax is invalid browser will throw an error -- "*Failed to execute 'registerProperty' on 'CSS': The syntax provided is not a valid custom property syntax.*".
+
+If you want values list to be separated with commas you should use `#` at the syntax type end:
+
+```js
+CSS.registerProperty({
+  name: '--my-colors',
+  syntax: '<color>#',
+  inherits: false,
+  initialValue: 'black, white'
+});
+```
 
 There are much more possibilities to describe types that unfortunately not supported by the current CSS Custom Properties and Values specification. Hope to see them all in the next specification release 🙏.
 
@@ -392,6 +403,7 @@ Unfortunately, not all CSS types available for custom property syntax in the cur
 - `time`
 - `resolution`
 - `transform-list`
+- `transform-function`
 - `custom-ident`
 
 There are interfaces for `<url>` and `<image>` in Blink core, but they still in development. That is why it is impossible to test them now. And it seems that specification for this types usage could be slightly changed in the future.
