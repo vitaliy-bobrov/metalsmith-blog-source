@@ -9,10 +9,6 @@ priority: 1.0
 ---
 ## Upcomming talks:
 
-- [Angular Academy Show](https://angular-academy.com/) -- 02 July 2018, Online
-
-  Topic: **"Angular Schematics"**
-
 - [Vinnytsia JS](http://vinnytsiajs.org/) -- 21 July 2018, Vinnytsia, Ukraine
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
@@ -27,7 +23,7 @@ priority: 1.0
 
 - [GrillJS](http://grilljs.com/) -- 18 August 2018, Wroclaw, Poland
 
-  Topic: **""**
+  Topic: **"Make the Web Brighter with the CSS Paint API"**
 
 - [Ruhr JS](https://ruhrjs.de/) -- 13 October 2018, Bochum, Germany
 
@@ -105,7 +101,8 @@ priority: 1.0
 
   Topic: **"Keep calm and use Angular CLI"**
 
-  [Slides](https://docs.google.com/presentation/d/163227i-G20qaMdr1e74dzOqLv0jQU40nAzUWyLCK6AU/edit?usp=sharing)
+  [Slides](https://docs.google.com/presentation/d/163227i-G20qaMdr1e74dzOqLv0jQU40nAzUWyLCK6AU/edit?usp=sharing) | [Video](https://youtu.be/iUFaduAeplU)
+
 
 ### 2016
 
