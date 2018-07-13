@@ -3,25 +3,25 @@ title: "CSS Custom Properties in Depth: Part 2"
 description: Deep dive into CSS Properties and Values API available types with real code examples.
 ogimage: images/posts/css-custom-properties-in-depth-2/css-custom-properties-in-depth-2-og.jpg
 tumb: /images/posts/css-custom-properties-in-depth-2/css-custom-properties-in-depth-2
-created: 2018-07-03
-updated: 2018-07-03
-lastmod: 2018-07-03
+created: 2018-07-16
+updated: 2018-07-16
+lastmod: 2018-07-16
 categories:
 - CSS
 - Houdini
 ---
-Houdini "Custom Properties and Values" spec gives us the strictly typed CSS variables. It has a big potential and as a new technology is pretty unknown field. Today, I'm going to have deep overview of what types available in the first version of the spec, and show the usage on real examples.
+Houdini "Custom Properties and Values" spec gives us the strictly typed CSS variables. It has a significant potential and as new technology is a pretty unknown field. Today, I'm going to have the in-depth overview of what types available in the first version of the spec, and show the usage on real examples.
 
-The topic splitted into two parts. Now you are reading the second one. You can check out the first part [here](https://vitaliy-bobrov.github.io/blog/css-custom-properties-in-depth/).{post__series}
+The topic split into two parts. Now you are reading the second one. You can check out the first part [here](https://vitaliy-bobrov.github.io/blog/css-custom-properties-in-depth/).{post__series}
 
 ## Available types
-As I have written in the previous part, not all of the types are available for custom properties. In the initial specification we have the only limited set of them. Let me introduce each of available types.
+As I have written in the previous part, not all of the types are available for custom properties. In the initial specification, we have the only limited set of them. Let me introduce each of the possible types.
 
 ### **Note:**
 *Work with `registerProperty` requires you to enable "Experimental Web Platform features"* -- `chrome://flags/#enable-experimental-web-platform-features` *to try it in Chrome.*
 
 ### length
-Length type stands for CSS sizing values, like pixel, em, rem, vw, vh, etc. We can declare custom property that expects that type with JavaScript:
+Length type stands for CSS sizing values, like pixel, em, rem, vw, vh, etc. We can declare a custom property that expects that type with JavaScript:
 
 ```js
 CSS.registerProperty({
@@ -32,7 +32,7 @@ CSS.registerProperty({
 });
 ```
 
-If assigned property value will be invalid, initial one will be used.
+If the assigned property value is invalid, the initial one is used.
 
 ```css
 .block {
@@ -52,7 +52,7 @@ To make value valid we need to add units:
 }
 ```
 
-Unfortunately, we can't use CSS variables in functions like `calc` as is. They works as just strings, example below won't work as expected:
+Unfortunately, we can't use CSS variables in functions like `calc` as is. They work as just strings, and example below won't work as expected:
 
 ```css
 .block {
@@ -62,7 +62,7 @@ Unfortunately, we can't use CSS variables in functions like `calc` as is. They w
 }
 ```
 
-But with custom property it works like a charm:
+However, with the custom property it works like a charm:
 
 ```css
 .block {
@@ -72,7 +72,7 @@ But with custom property it works like a charm:
 }
 ```
 
-Examples above look pretty similar to the variables usage in SASS. But you should remember that in SASS variables are static and replaced on compile time.
+Examples above look pretty similar to the usage of the variables in SASS. However, you should remember that in SASS variables are static and replaced at compile time.
 
 ```scss
 .block {
@@ -112,12 +112,12 @@ console.log(el.computedStyleMap().get('--size'));
 // CSSUnitValue {value: 288, unit: "px"}
 ```
 
-What is going on? We are using `computedStyleMap` method on DOM node to get resolved custom property. To assign new value we use `style.setProperty`, that creates property declaration inline. Then we use `style.getPropertyValue` that returns the string representation. As now we have property declared in style attribute we can use `attributeStyleMap` that returns unparsed value. Both `computedStyleMap` and `attributeStyleMap` are properties sets, but `computedStyleMap` is readonly. Resolved length property always return pixels value.
+What is going on? We are using `computedStyleMap` method on DOM node to get resolved custom property. To assign new value we use `style.setProperty`, that creates property declaration inline. Then we use `style.getPropertyValue` that returns the string representation. As now we have the property declared in style attribute we can use `attributeStyleMap` that returns unparsed value. Both `computedStyleMap` and `attributeStyleMap` are properties sets, but `computedStyleMap` is read-only. Resolved length property always return the pixels value.
 
-Manipulations with CSS units, like parsing, converting or creating values are part of CSS Typed OM specification. It is separate huge topic to sepak about. You can get overview from [this article](https://developers.google.com/web/updates/2018/03/cssom).
+Manipulations with CSS units, like parsing, converting or creating values are part of CSS Typed OM specification. It is a separate colossal topic to speak about. You can get an overview from [this article](https://developers.google.com/web/updates/2018/03/cssom).
 
 ### percentage
-Usully working with responsive web design (RWD) we trying to avoid pixel dependent units. Instead them we prefer relative ones, like percentages. Luckily we have ability to declare percentage syntax for custom properties.
+Usually working with responsive web design (RWD) we are trying to avoid pixel dependent units. Instead of them, we prefer relative ones, like percentages. Luckily we can declare percentage syntax for custom properties.
 
 ```js
 CSS.registerProperty({
@@ -128,9 +128,9 @@ CSS.registerProperty({
 });
 ```
 
-Please note that for unit values, like length or percentace you are not allowed to use zero value without units. It might be confusing, because CSS allowes you to do so. Even more it is kind of a good practice to use zero without units, because `0px === 0em === 0%`. That is why in the `--lightness` property definition the initial value specified as `0%` not just `0`.
+Please note that for unit values, like length or percentage you are not allowed to use zero value without units. It might be confusing because CSS allows you to do so. Even more it is kind of a good practice to use zero without units, because `0px === 0em === 0%`. That is why in the `--lightness` property defines the initial value specified as `0%` not just `0`.
 
-One of the great examples where custom properties really shine -- the control of the part of a CSS declaration. Let me show it:
+One of the great examples where custom properties shine -- the control of the part of a CSS declaration. Let me show it:
 
 ```css
 .link {
@@ -158,7 +158,7 @@ console.log(styleMap.get('--saturation'));
 // CSSUnitValue {value: 50, unit: "percent"}
 ```
 
-So we can get resolved property value and it returns nice object with unit property set as percent and numeric value. It is pretty cool to have such object in JS instead operating with strings. For example in animation implementation.
+So we can get resolved property value, and it returns a beautiful object with the unit property set as a percent and numeric value. It is pretty cool to have such an object in JS instead operating with strings. For example in animation implementation.
 
 ### length-percentage
 As you might notice from its name, `length-percentage` is a kind of type alias for CSS length and percentage values. Here is the registration example:
@@ -172,7 +172,7 @@ CSS.registerProperty({
 });
 ```
 
-Let's try to reproduce the same type in the different way:
+Let's try to reproduce the same type differently:
 
 ```js
 CSS.registerProperty({
@@ -183,7 +183,7 @@ CSS.registerProperty({
 });
 ```
 
-Both of our custom properties declarations are equvivalent. Now we could use it in styles:
+Both of our custom properties declarations are equivalent. Now we could use it in styles:
 
 ```css
 .zero {
@@ -224,7 +224,7 @@ console.log(lengthStyleMap.get('--relative-size'));
 // CSSUnitValue {value: 672, unit: "px"}
 ```
 
-As you can see, we got all non-percent values in pixels. More interesting thing with length-percentage syntax is that it accepts expressions as a value:
+As you can see, we got all non-percent values in pixels. The more interesting thing with length-percentage syntax is that it accepts expressions as a value:
 
 ```css
 .calculated {
@@ -233,7 +233,7 @@ As you can see, we got all non-percent values in pixels. More interesting thing 
 }
 ```
 
-Such expressions resolved differently according to the context they used in. In particular example above `calc` each operand will be converted to pixels and than evaluated. This happend cause we used our property as the value for `width`. But if will use it as a value for `hsl` saturation component which accepts only percentage we can use only percentages inside `calc` expression.
+Such expressions resolved differently according to the context they used it. In particular example above `calc`, each operand will be converted to pixels and then evaluated. Such convert happened cause we used our property as the value for `width`. But it will use it as a value for `hsl` saturation component which accepts the only percentage we can use only percentages inside `calc` expression.
 
 ### integer
 Integer type is represents numeric values without a fractional component. Let's declare property using tht type:
@@ -247,7 +247,7 @@ CSS.registerProperty({
 });
 ```
 
-If we will try to assign float as an initial value, registration will fail with error:
+If we try to assign float as an initial value, registration will fail with the error:
 
 ```js
 CSS.registerProperty({
@@ -274,7 +274,7 @@ console.log(styleMap.get('--sides'));
 As you can see even when we give property type of integer, Typed OM returns us type number.
 
 ### number
-As you can guess number type is similar to interger one, but allows to set float values as well:
+As you can guess number type is similar to integer one but allows to set float values as well:
 
 ```js
 CSS.registerProperty({
@@ -285,7 +285,7 @@ CSS.registerProperty({
 });
 ```
 
-Nothing really special here, it works the same way as interger type.
+Nothing extraordinary here, it works the same way as integer type.
 
 ### color
 Color -- most used type in CSS, it makes the Web brighter.
@@ -300,7 +300,7 @@ CSS.registerProperty({
 ```
 
 ### image
-Image syntax is the most intriguing one, as it opens the door to do crazy stuff with images. The canvas implementation for CSS Paint API doesn't support methods to read pixes from the element for security reasons. I don't think anybody want his sensitive data could be readed by 3rd party stylesheet. So the only way to draw images inside custom paint is to use image passed as input property or argument. Below is the registration of the image custom property:
+Image syntax is the most intriguing one, as it opens the door to do crazy stuff with images. The canvas implementation for CSS Paint API doesn't support methods to read pixels from the element for security reasons. I don't think anybody wants 3rd party stylesheet could read his sensitive data. So the only way to draw images inside custom paint is to use image passed as input property or argument. Below is the registration of the image custom property:
 
 ```js
 CSS.registerProperty({
@@ -375,11 +375,11 @@ class ImagePlaceholder {
 registerPaint('image-placeholder', ImagePlaceholder);
 ```
 
-The image property syntax still not implemented, but according to the spec we `paint` will be called on image loading stages. And we will have access to the `state` of an image. State could have few values: ready, pending and invalid. The names of states are speaking itself.
+The image property syntax still not implemented, but according to the spec we `paint` is called on image loading stages. So we have access to the `state` of an image. The state could have few values: ready, pending and invalid. The names of states are speaking itself.
 
-In our example, we relying on an image state. If image still loading (its state pending) we draw placeholder. If it is ready we draw image. And red circle on errors -- invalid state.
+In our example, we are relying on an image state. If the image still loading (its state pending), we draw placeholder. If it is ready, we draw the image. Moreover, red circle on errors -- invalid state.
 
-Hopefuly implementation will come to the browsers this year. Image custom properties will open huge horizonts.
+Hopefully, implementation will arrive in the browsers this year. Image custom properties will open immense horizons.
 
 ### url
 URL type is similar to the image, with one difference it is not restricted to media MIME types. This type still in development as well, below is an example registration:
@@ -393,10 +393,10 @@ CSS.registerProperty({
 });
 ```
 
-Theoretically it will alow to request any files to use in other Houdini APIs. My first thought was to use it for JSON files fetching. Imagine we have bar chart custom painter and we can request dataset in JSON format for it. Sounds awesome? Can't wait for the working implementation.
+Theoretically, it will allow requesting any files to use in other Houdini APIs. My first thought was to use it for JSON files fetching. Imagine we have bar chart custom painter and we can request dataset in JSON format for it. Sounds awesome? Can't wait for the working implementation.
 
 ### angle
-Angles are rarely used in CSS, usually in special properties, like transforms. But in combination with CSS Paint API it gives strictly typed andge values to use with 2D canvas context. In CSS we have few valid angle units: degrees, radians, gradians and turns (`deg`, `rad`, `grad`, `turn`). All of them could be used as a value for angle syntax. Below is the example:
+Angles are rarely used in CSS, usually in special properties, like transforms. However, in combination with CSS Paint API, it gives strictly typed and values to use with 2D canvas context. In CSS we have few valid angle units: degrees, radians, gradians and turns (`deg`, `rad`, `grad`, `turn`). All of them could use as a value for angle syntax. Below is the example:
 
 ```js
 CSS.registerProperty({
@@ -420,7 +420,7 @@ CSS.registerProperty({
 ```
 
 ### resolution
-CSS resolution has few possible unit values: dots per inch, dots per centimeter and dots per pixel unit. In CSS they look like: `dpi`, `dpcm` and `dppx` respectively. Possible use case is adjacting canvas resolution to an user device screen. You can register such property this way:
+CSS resolution has few possible unit values: dots per inch, dots per centimeter and dots per pixel unit. In CSS they look like: `dpi`, `dpcm` and `dppx` respectively. The possible use case is adjusting canvas resolution to a user device screen. You can register such property this way:
 
 ```js
 CSS.registerProperty({
@@ -454,7 +454,7 @@ CSS.registerProperty({
 });
 ```
 
-We can achieve same resulting property registration using another syntax:
+We can achieve the same resulting property registration using another syntax:
 
 ```js
 CSS.registerProperty({
@@ -466,7 +466,7 @@ CSS.registerProperty({
 ```
 
 ### custom-ident
-Custom indent is a special type that gives us ability to use own keywords as a value of a custom property. This custom value will be validated by CSS engine for us. Here is the registration example:
+Custom indent is a special type that gives us the ability to use own keywords as a value of a custom property. This custom value will be validated by the CSS engine for us. Here is the registration example:
 
 ```js
 CSS.registerProperty({
@@ -488,10 +488,10 @@ CSS.registerProperty({
 });
 ```
 
-CSS allows us to use property values in any lettercase we want. It is a good practive to write styles in lowercase, but browser won't judge you if you will decide to used uppercase one.
+CSS allows us to use property values in any case we want. It is a good practice to write styles in lowercase, but browser won't judge you if you decide to used uppercase one.
 
 ## How to use custom properties today?
-First of all, we should remember that CSS ignores declarations that it can't parse. In addition to that it uses "last win" approach -- latest declaration overrides previous one. So we can simply put CSS rule with fallback value before `var()` function usage:
+First of all, we should remember that CSS ignores declarations that it can't parse. In addition to that, it uses "last win" approach -- latest declaration overrides previous one. So we can simply put CSS rule with a fallback value before `var()` function usage:
 
 ```css
 .fallback {
@@ -500,7 +500,7 @@ First of all, we should remember that CSS ignores declarations that it can't par
 }
 ```
 
-Old browsers that has no implementation for custom properties will ignore second `background-color` rule and will use first one.
+Old browsers that have no implementation for custom properties ignore second `background-color` rule and use the first one.
 
 We can do fallback more explicitly, using supports at-rule:
 
@@ -516,7 +516,7 @@ We can do fallback more explicitly, using supports at-rule:
 }
 ```
 
-But you should remember that not all browsers know about `@supports`. More sad thing, that we are just checking for simple CSS variables, there is no guarantee that browser will understood typed properties. To address our check to custom properties we need to use JS, at least for now. For example, we can add some class name to the root element:
+But you should remember that not all browsers know about `@supports`. The more sad thing that we are just checking for simple CSS variables, there is no guarantee that the browser will understand typed properties. To address our check to custom properties, we need to use JS, at least for now. For example, we can add some class name to the root element:
 
 ```js
 if (!('registerProperty' in CSS)) {
@@ -537,7 +537,7 @@ So we can use this class name to target our fallback:
 ```
 
 ## Future
-There is a [great proposal](https://github.com/w3c/css-houdini-drafts/issues/137) to "CSS Properties and Values API Level 2" specification that allows to register custom properties inside stylesheets. It is logical to declare custom property in the same place where it should be used. The other good reason to do it in CSS -- not revalidate variables again after registration of the property used. The proposed syntax looks like this:
+There is a [great proposal](https://github.com/w3c/css-houdini-drafts/issues/137) to "CSS Properties and Values API Level 2" specification that allows registering custom properties inside stylesheets. It is logical to declare a custom property in the same place where it should be used. The other good reason to do it in CSS -- not revalidate variables again after registration of the property used. The proposed syntax looks like this:
 
 ```css
 @property --highlight-color {
@@ -547,9 +547,9 @@ There is a [great proposal](https://github.com/w3c/css-houdini-drafts/issues/137
 }
 ```
 
-Note that it is not part of the spec yet. Even more it is just discussion of posibility to include something sinilar in the next specification level. The syntax could be completely different in the future and it is not implemented in any browser.
+Note that it is not part of the spec yet. Even more, it is just discussion of possibility to include something similar in the next specification level. The syntax could be completely different in the future, and it is not implemented in any browser.
 
-In the current draft it looks pretty straight-forward. We need to use property at-rule, followed by property name. Then inside `@property` block we use the same options: `syntax`, `inherits` and `initial-value` (in CSS-like notation). This should be equal to:
+In the current draft, it looks pretty straight-forward. We need to use property at-rule, followed by property name. Then inside `@property` block we use the same options: `syntax`, `inherits` and `initial-value` (in CSS-like notation). This should be equal to:
 
 ```js
 CSS.registerProperty({
@@ -560,13 +560,13 @@ CSS.registerProperty({
 });
 ```
 
-I love the idea and decided to create PostCSS plugin that will use custom property declarations in CSS to generate JavaScript fallback, that registers all of them using `CSS.registerProperty`.
+I loved the idea and decided to create a PostCSS plugin that will use custom property declarations in CSS to generate JavaScript fallback, that registers all of them using `CSS.registerProperty`.
 
 [Star on GitHub](https://github.com/vitaliy-bobrov/postcss-register-custom-props)
 {star-me}
 
 ## Conclusion
-Custom properties and value is so powerfull and a big game-changer in CSS. I can't even imagine all possible use-cases for them. It is an ocean of posibilities. For example you can use them to implement [lazy-loaded styles](https://jakearchibald.com/2016/css-loading-with-custom-props/)! Or implement customazible wb-site theme. Share your ideas in Twitter and over comments here.
+Custom properties and value are powerful and a big game-changer in CSS. I can't even imagine all the possible use-cases for them. It is an ocean of possibilities. For example, you can use them to implement [lazy-loaded styles](https://jakearchibald.com/2016/css-loading-with-custom-props/)! Alternatively, implement a customizable website theme. Share your ideas on Twitter and over comments here.
 
 ### Resources
 
