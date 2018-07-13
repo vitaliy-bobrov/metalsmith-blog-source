@@ -562,6 +562,9 @@ CSS.registerProperty({
 
 I love the idea and decided to create PostCSS plugin that will use custom property declarations in CSS to generate JavaScript fallback, that registers all of them using `CSS.registerProperty`.
 
+[Star on GitHub](https://github.com/vitaliy-bobrov/postcss-register-custom-props)
+{star-me}
+
 ## Conclusion
 Custom properties and value is so powerfull and a big game-changer in CSS. I can't even imagine all possible use-cases for them. It is an ocean of posibilities. For example you can use them to implement [lazy-loaded styles](https://jakearchibald.com/2016/css-loading-with-custom-props/)! Or implement customazible wb-site theme. Share your ideas in Twitter and over comments here.
 

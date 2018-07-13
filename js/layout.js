@@ -117,8 +117,6 @@
       drawerButton.setAttribute('aria-expanded', 'false');
     }
   };
-  MaterialLayout.prototype['toggleDrawer'] =
-      MaterialLayout.prototype.toggleDrawer;
 
   /**
    * Initialize element.
