@@ -4,7 +4,7 @@ description: Information about past and upcoming talk on tech events.
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2018-06-07
+lastmod: 2018-07-03
 priority: 1.0
 ---
 ## Upcomming talks:
