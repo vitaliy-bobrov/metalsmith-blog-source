@@ -236,7 +236,7 @@ As you can see, we got all non-percent values in pixels. The more interesting th
 Such expressions resolved differently according to the context they used it. In particular example above `calc`, each operand will be converted to pixels and then evaluated. Such convert happened cause we used our property as the value for `width`. But it will use it as a value for `hsl` saturation component which accepts the only percentage we can use only percentages inside `calc` expression.
 
 ### integer
-Integer type is represents numeric values without a fractional component. Let's declare property using tht type:
+Integer type is represents numeric values without a fractional component. Let's declare property using that type:
 
 ```js
 CSS.registerProperty({
@@ -261,7 +261,7 @@ CSS.registerProperty({
 // The initial value provided does not parse for the given syntax.
 ```
 
-There is no way to set that range of possible values for interger property for now, but hopefully it will come in the next specification versions. Here is how we can access value in JS:
+There is no way to set the range of possible values for interger property for now, but hopefully it will come in the next specification versions. Here is how we can access value in JS:
 
 ```js
 const el = document.querySelector('.zero');
@@ -298,6 +298,8 @@ CSS.registerProperty({
   initialValue: 'transparent'
 });
 ```
+
+You can use any color values that available in CSS: HEX, RGBA, RGBA, HSL, etc. With typed custom property the browser will recognise that variable is not just a string but color value. So it will know how to interpolate value for transitions and animations.
 
 ### image
 Image syntax is the most intriguing one, as it opens the door to do crazy stuff with images. The canvas implementation for CSS Paint API doesn't support methods to read pixels from the element for security reasons. I don't think anybody wants 3rd party stylesheet could read his sensitive data. So the only way to draw images inside custom paint is to use image passed as input property or argument. Below is the registration of the image custom property:
@@ -432,15 +434,59 @@ CSS.registerProperty({
 ```
 
 ### transform-function
+Transform function is a single tranformation CSS declaration like `translate`, `rotate` or `scale`. It is building block for transform declaration. We can combine few custom propertis to get resulting transform. Below is an example:
 
 ```js
 CSS.registerProperty({
-  name: '--transform-state',
+  name: '--transform-rotation',
   syntax: '<transform-function>',
   inherits: false,
   initialValue: 'rotate(0deg)'
 });
+
+CSS.registerProperty({
+  name: '--transform-scale',
+  syntax: '<transform-function>',
+  inherits: false,
+  initialValue: 'scale(1)'
+});
 ```
+
+And composition of custom properties in CSS:
+
+```css
+.transformed-element {
+  transform: var(--transform-rotation) var(--transform-scale);
+  animation: trans 1s;
+}
+
+@keyframes trans {
+  0% {
+    --transform-rotation: rotate(0deg);
+    --transform-scale: scale(1);
+  }
+
+  40% {
+    --transform-rotation: rotate(45deg);
+  }
+
+  60% {
+    --transform-scale: scale(1.2);
+  }
+
+  80% {
+    --transform-rotation: rotate(90deg);
+    --transform-scale: scale(1.5);
+  }
+
+  100% {
+    --transform-rotation: rotate(0deg);
+    --transform-scale: scale(1);
+  }
+}
+```
+
+In the example we are manipulating different transform functions separately.
 
 ### transform-list
 Transform list is just stands for the list of `transform-function`s separated by space. Below the example:
