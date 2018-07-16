@@ -29,7 +29,7 @@ priority: 1.0
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
-- [Mobile Era](http://mobileera.rocks/) -- 01 November 2018, Oslo, Norway
+- [Mobile Era](http://mobileera.rocks/) -- s1 November 2018, Oslo, Norway
 
   Topic: **"Flutter in Action: How to build cross-platform app with Dart"**
 
