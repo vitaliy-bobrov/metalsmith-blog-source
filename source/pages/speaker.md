@@ -4,7 +4,7 @@ description: Information about past and upcoming talk on tech events.
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2018-07-03
+lastmod: 2018-07-17
 priority: 1.0
 ---
 ## Upcomming talks:
@@ -47,13 +47,13 @@ priority: 1.0
 
   Topic: **"PWA as a new Cyber Attack Vector"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/pwa-as-a-new-cyber-attack-vector)
+  [Slides](https://speakerdeck.com/bobrov1989/pwa-as-a-new-cyber-attack-vector) | [Video](https://youtu.be/JGKyPVu9abo)
 
 - [jsDay](https://2018.jsday.it/) -- 9 May 2018, Verona, Italy
 
   Topic: **"TypeScript -- JavaScript you are going to love"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/typescript-javascript-you-are-gonna-to-love-1)
+  [Slides](https://speakerdeck.com/bobrov1989/typescript-javascript-you-are-gonna-to-love-1) | [Video](https://youtu.be/VGAyA8eQ3o0)
 
 - [Code Europe](https://www.codeeurope.pl) -- 26 April 2018, Wroclaw, Poland
 
