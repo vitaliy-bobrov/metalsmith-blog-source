@@ -8,11 +8,11 @@
   <div class="mdl-layout__header-row">
     <!-- Title -->
     <span class="mdl-layout-title">
-      <a class="site-link" href="{{ siteurl }}">{{ sitename }}</a>
+      <a class="site-link" href="{{ siteurl }}" rel="nofollow">{{ sitename }}</a>
     </span>
 
     <div class="mdl-layout-spacer">
-      <a href="{{ siteurl }}" class="site-logo" title="{{ sitename }}">
+      <a href="{{ siteurl }}" class="site-logo" title="{{ sitename }}" rel="nofollow">
         <picture class="site-logo__picture">
           <source media="(min-width: 1025px)"
                   srcset="{{ sitelogo }}.webp 1x, {{ sitelogo }}@2x.webp 2x"
@@ -36,6 +36,7 @@
     <nav class="mdl-navigation mdl-layout--large-screen-only">
       <a class="mdl-navigation__link {{ activeLink path '' }}"
          href="{{ siteurl }}"
+         rel="nofollow"
          {{{ currentLink path '' }}}>Blog</a>
 
       {{#each collections.pages as |page|}}
@@ -52,6 +53,7 @@
   <nav class="mdl-navigation">
     <a class="mdl-navigation__link {{ activeLink path '' }}"
        href="{{ siteurl }}"
+       rel="nofollow"
        {{{ currentLink ../path page.path }}}>Blog</a>
 
     {{#each collections.pages as |page|}}
