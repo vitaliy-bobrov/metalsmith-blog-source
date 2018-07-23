@@ -4,14 +4,10 @@ description: Information about past and upcoming talk on tech events.
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2018-07-17
+lastmod: 2018-07-23
 priority: 1.0
 ---
 ## Upcomming talks:
-
-- [Vinnytsia JS](http://vinnytsiajs.org/) -- 21 July 2018, Vinnytsia, Ukraine
-
-  Topic: **"Make the Web Brighter with the CSS Paint API"**
 
 - [Angular Wroclaw](https://www.meetup.com/AngularJS-Wrocław/) -- 26 July 2018, Wroclaw, Poland
 
@@ -36,6 +32,12 @@ priority: 1.0
 ## Past talks:
 
 ### 2018
+
+- [Vinnytsia JS](http://vinnytsiajs.org/) -- 21 July 2018, Vinnytsia, Ukraine
+
+  Topic: **"Make the Web Brighter with the CSS Paint API"**
+
+  [Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api)
 
 - [ngHouston](https://www.meetup.com/ngHouston/) -- 14 June 2018, Online
 
