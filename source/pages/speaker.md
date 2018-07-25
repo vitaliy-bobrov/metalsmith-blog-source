@@ -9,7 +9,7 @@ priority: 1.0
 ---
 ## Upcomming talks:
 
-- [Angular Wroclaw](https://www.meetup.com/AngularJS-Wrocław/) -- 26 July 2018, Wroclaw, Poland
+- [Angular Wroclaw](https://www.meetup.com/AngularJS-Wroc%C5%82aw/events/252571459/) -- 26 July 2018, Wroclaw, Poland
 
   Topic: **"Robots Don't Cry: Automation with Schematics"**
 
@@ -69,11 +69,11 @@ priority: 1.0
 
   [Slides](https://speakerdeck.com/bobrov1989/ngrx-schematics) | [Video](https://youtu.be/q3UcqG72Zl4)
 
-- [Angular Dragons](https://www.meetup.com/Angular-Dragons/events/247151777/) -- 13 March 2018, Kraków, Poland
+- [Angular Dragons](https://www.meetup.com/Angular-Dragons/events/247151777/) -- 13 March 2018, Krakow, Poland
 
   Topic: **"NgRx Schematics"**
 
-- [KrakowJS](http://conf.krakowjs.pl/) -- 9 March 2018, Kraków, Poland
+- [KrakowJS](http://conf.krakowjs.pl/) -- 9 March 2018, Krakow, Poland
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
