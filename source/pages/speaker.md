@@ -4,7 +4,7 @@ description: Information about past and upcoming talk on tech events.
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2018-07-23
+lastmod: 2018-07-25
 priority: 1.0
 ---
 ## Upcomming talks:
@@ -13,7 +13,7 @@ priority: 1.0
 
   Topic: **"Robots Don't Cry: Automation with Schematics"**
 
-- [NG Talks](https://ngtalks.io/) -- 09 August 2018, Kharkiv, Ukraine
+- [NG Talks](https://ngtalks.io/) -- 9 August 2018, Kharkiv, Ukraine
 
   Topic: **"Robots Don't Cry: Automation with Schematics"**
 
@@ -25,7 +25,7 @@ priority: 1.0
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
-- [Mobile Era](http://mobileera.rocks/) -- s1 November 2018, Oslo, Norway
+- [Mobile Era](http://mobileera.rocks/) -- 1 November 2018, Oslo, Norway
 
   Topic: **"Flutter in Action: How to build cross-platform app with Dart"**
 
