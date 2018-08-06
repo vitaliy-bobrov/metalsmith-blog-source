@@ -8,11 +8,6 @@ lastmod: 2018-07-25
 priority: 1.0
 ---
 ## Upcomming talks:
-
-- [Angular Wroclaw](https://www.meetup.com/AngularJS-Wroc%C5%82aw/events/252571459/) -- 26 July 2018, Wroclaw, Poland
-
-  Topic: **"Robots Don't Cry: Automation with Schematics"**
-
 - [NG Talks](https://ngtalks.io/) -- 9 August 2018, Kharkiv, Ukraine
 
   Topic: **"Robots Don't Cry: Automation with Schematics"**
@@ -32,6 +27,10 @@ priority: 1.0
 ## Past talks:
 
 ### 2018
+
+- [Angular Wroclaw](https://www.meetup.com/AngularJS-Wroc%C5%82aw/events/252571459/) -- 26 July 2018, Wroclaw, Poland
+
+  Topic: **"Robots Don't Cry: Automation with Schematics"**
 
 - [Vinnytsia JS](http://vinnytsiajs.org/) -- 21 July 2018, Vinnytsia, Ukraine
 
