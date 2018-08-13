@@ -1,13 +1,30 @@
 const url = require('url');
 const escape = require('escape-html');
 
-const absoluteUrl = (siteurl, path) => `${url.resolve(siteurl, path)}/`;
+const exclude = [
+  '/images/logo',
+  '/',
+  ''
+];
+
+function shouldAddSlash(path) {
+  if (exclude.includes(path)) return true;
+
+  return path.indexOf('.html') === path.length - 5;
+}
+
+const absoluteUrl = (siteurl, path) => {
+  const base = url.resolve(siteurl, path);
+  const tail = shouldAddSlash(path) ? '' : '/';
+  const result = `${base}${tail}`;
+
+  return result;
+};
 
 const ampUrl = (siteurl, path) => `${url.resolve(siteurl, path)}/amp/`;
 
 const postCell = (index, length) => {
   let desktop;
-  let tablet;
 
   switch (index) {
     case 0:

@@ -1,15 +1,9 @@
 {
-    "pages\\about.md": {
-        "filename": "pages\\about.md",
-        "hash": "7def121e42b26c0944ce69df233610dd",
-        "created": "2018-08-13T12:18:53.155Z",
-        "updated": "2018-08-13T12:18:53.155Z"
-    },
-    "pages\\speaker.md": {
-        "filename": "pages\\speaker.md",
-        "hash": "2470c61bf112d6bf8a2913772135c04f",
-        "created": "2018-08-13T12:18:53.155Z",
-        "updated": "2018-08-13T12:18:53.155Z"
+    "blog\\css-custom-properties-in-depth-part-2.md": {
+        "filename": "blog\\css-custom-properties-in-depth-part-2.md",
+        "hash": "c7716dc5b3ffc4df364136c29b2c71f6",
+        "created": "2018-07-16T00:00:00.000Z",
+        "updated": "2018-07-16T00:00:00.000Z"
     },
     "blog\\adding-comments-to-metalsmith.md": {
         "filename": "blog\\adding-comments-to-metalsmith.md",
@@ -17,23 +11,11 @@
         "created": "2017-01-30T00:00:00.000Z",
         "updated": "2018-02-18T00:00:00.000Z"
     },
-    "blog\\css-custom-properties-in-depth-part-2.md": {
-        "filename": "blog\\css-custom-properties-in-depth-part-2.md",
-        "hash": "c7716dc5b3ffc4df364136c29b2c71f6",
-        "created": "2018-07-16T00:00:00.000Z",
-        "updated": "2018-07-16T00:00:00.000Z"
-    },
     "blog\\css-custom-properties-in-depth.md": {
         "filename": "blog\\css-custom-properties-in-depth.md",
         "hash": "a33af6804b07b563576b55e133d9565b",
         "created": "2018-05-30T00:00:00.000Z",
         "updated": "2018-07-03T00:00:00.000Z"
-    },
-    "blog\\css-paint-in-action-bar-chart.md": {
-        "filename": "blog\\css-paint-in-action-bar-chart.md",
-        "hash": "2115dc2af3952b3e626c1ef178b39c4d",
-        "created": "2018-04-13T00:00:00.000Z",
-        "updated": "2018-04-30T00:00:00.000Z"
     },
     "blog\\deep-dive-into-array-methods.md": {
         "filename": "blog\\deep-dive-into-array-methods.md",
@@ -41,16 +23,28 @@
         "created": "2017-06-21T00:00:00.000Z",
         "updated": "2018-02-17T00:00:00.000Z"
     },
+    "blog\\css-paint-in-action-bar-chart.md": {
+        "filename": "blog\\css-paint-in-action-bar-chart.md",
+        "hash": "2115dc2af3952b3e626c1ef178b39c4d",
+        "created": "2018-04-13T00:00:00.000Z",
+        "updated": "2018-04-30T00:00:00.000Z"
+    },
     "blog\\exploring-the-css-paint-api.md": {
         "filename": "blog\\exploring-the-css-paint-api.md",
         "hash": "98e8ae2a8ad6f2b49cde29a538f9d272",
         "created": "2018-03-19T00:00:00.000Z",
         "updated": "2018-07-03T00:00:00.000Z"
     },
-    "blog\\how-to-start-contribute-to-open-source.md": {
-        "filename": "blog\\how-to-start-contribute-to-open-source.md",
-        "hash": "2f89452ada033c9d02bf8492727f6ecf",
-        "created": "2017-08-24T00:00:00.000Z",
+    "blog\\five-reasons-choose-metalsmith.md": {
+        "filename": "blog\\five-reasons-choose-metalsmith.md",
+        "hash": "1fd6618ddcbdb3cfe257b566c92c7409",
+        "created": "2017-01-19T00:00:00.000Z",
+        "updated": "2018-02-17T00:00:00.000Z"
+    },
+    "blog\\hello-world.md": {
+        "filename": "blog\\hello-world.md",
+        "hash": "66a281ae0c020b0cf6a2551522381470",
+        "created": "2017-01-14T00:00:00.000Z",
         "updated": "2018-02-17T00:00:00.000Z"
     },
     "blog\\introduction-to-functional-js.md": {
@@ -59,10 +53,10 @@
         "created": "2017-03-19T00:00:00.000Z",
         "updated": "2018-02-17T00:00:00.000Z"
     },
-    "blog\\hello-world.md": {
-        "filename": "blog\\hello-world.md",
-        "hash": "66a281ae0c020b0cf6a2551522381470",
-        "created": "2017-01-14T00:00:00.000Z",
+    "blog\\how-to-start-contribute-to-open-source.md": {
+        "filename": "blog\\how-to-start-contribute-to-open-source.md",
+        "hash": "2f89452ada033c9d02bf8492727f6ecf",
+        "created": "2017-08-24T00:00:00.000Z",
         "updated": "2018-02-17T00:00:00.000Z"
     },
     "blog\\native-share-for-mobile-chrome.md": {
@@ -89,10 +83,16 @@
         "created": "2017-01-15T00:00:00.000Z",
         "updated": "2018-03-11T00:00:00.000Z"
     },
-    "blog\\five-reasons-choose-metalsmith.md": {
-        "filename": "blog\\five-reasons-choose-metalsmith.md",
-        "hash": "1fd6618ddcbdb3cfe257b566c92c7409",
-        "created": "2017-01-19T00:00:00.000Z",
-        "updated": "2018-02-17T00:00:00.000Z"
+    "pages\\about.md": {
+        "filename": "pages\\about.md",
+        "hash": "7def121e42b26c0944ce69df233610dd",
+        "created": "2018-08-13T13:27:31.365Z",
+        "updated": "2018-08-13T13:27:31.365Z"
+    },
+    "pages\\speaker.md": {
+        "filename": "pages\\speaker.md",
+        "hash": "2470c61bf112d6bf8a2913772135c04f",
+        "created": "2018-08-13T13:27:31.365Z",
+        "updated": "2018-08-13T13:27:31.365Z"
     }
 }
