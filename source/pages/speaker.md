@@ -8,9 +8,6 @@ lastmod: 2018-07-25
 priority: 1.0
 ---
 ## Upcomming talks:
-- [NG Talks](https://ngtalks.io/) -- 9 August 2018, Kharkiv, Ukraine
-
-  Topic: **"Robots Don't Cry: Automation with Schematics"**
 
 - [GrillJS](http://grilljs.com/) -- 18 August 2018, Wroclaw, Poland
 
@@ -27,10 +24,17 @@ priority: 1.0
 ## Past talks:
 
 ### 2018
+- [NG Talks](https://ngtalks.io/) -- 9 August 2018, Kharkiv, Ukraine
+
+  Topic: **"Robots Don't Cry: Automation with Schematics"**
+
+  [Slides](https://speakerdeck.com/bobrov1989/robots-dont-cry-automation-with-schematics)
 
 - [Angular Wroclaw](https://www.meetup.com/AngularJS-Wroc%C5%82aw/events/252571459/) -- 26 July 2018, Wroclaw, Poland
 
   Topic: **"Robots Don't Cry: Automation with Schematics"**
+
+  [Slides](https://speakerdeck.com/bobrov1989/robots-dont-cry-automation-with-schematics)
 
 - [Vinnytsia JS](http://vinnytsiajs.org/) -- 21 July 2018, Vinnytsia, Ukraine
 
