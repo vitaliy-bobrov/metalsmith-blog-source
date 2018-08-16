@@ -21,6 +21,10 @@ priority: 1.0
 
   Topic: **"Flutter in Action: How to build cross-platform app with Dart"**
 
+- [JS Poland](http://www.js-poland.pl/) -- 16 November 2018, Warsaw, Poland
+
+  Topic: **"Make the Web Brighter with the CSS Paint API"**
+
 - [FrontEnd Con](http://frontend-con.io/) -- 4 December 2018, Warsaw, Poland
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
