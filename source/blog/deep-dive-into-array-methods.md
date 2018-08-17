@@ -1,12 +1,11 @@
 ---
 title: Deep Dive into Array Methods
-description: Deep dive into JavaScript Array methods for begginers and experts.
-draft: false
+description: "Knowledge of JavaScript Array methods is fundamental. It allows writing code in functional style. As not all of those methods are immutable developers should know when to handle or avoid data mutations. Another essential feature of array methods is context handling as it could dramatically simplify your code."
 ogimage: images/posts/deep-dive-into-array-methods/deep-dive-into-array-methods-og.jpg
 tumb: /images/posts/deep-dive-into-array-methods/deep-dive-into-array-methods
 created: 2017-06-21
 updated: 2018-02-17
-lastmod: 2018-02-17
+lastmod: 2018-08-14
 categories:
 - JavaScript
 - Functional Programming

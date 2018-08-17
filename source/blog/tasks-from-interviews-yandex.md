@@ -1,11 +1,11 @@
 ---
 title: Tasks from interviews - Yandex
-description: Resolving tasks received before Yandex interview on JavaScript developer position.
+description: A lot of companies provide interviewers with some programming tasks to solve before face-to-face or Skype interview with their employees. Sometimes they could ask you to resolve some problems during the meeting online. I think many of specialists nowadays know that and looking for such usual tasks while preparing to interview.
 ogimage: images/posts/tasks-from-interviews-yandex/tasks-from-interviews-yandex-og.jpg
 tumb: /images/posts/tasks-from-interviews-yandex/tasks-from-interviews-yandex
 created: 2017-01-15
 updated: 2018-03-11
-lastmod: 2018-03-11
+lastmod: 2018-08-14
 categories:
 - JavaScript
 - Interviews

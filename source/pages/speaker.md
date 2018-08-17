@@ -1,10 +1,10 @@
 ---
 title: Speaker
-description: Information about past and upcoming talk on tech events.
+description: Information about upcoming and past talks at tech events by Vitalii Bobrov.
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2018-08-13
+lastmod: 2018-08-14
 priority: 1.0
 ---
 ## Upcomming talks:

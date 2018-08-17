@@ -1,11 +1,11 @@
 ---
 title: Hello World
-description: Bobrov Blog's "Hello World"
+description: "\"Hello World\" - exactly with the output of these two words on screen begins learning. It may be some programming language or new JavaScript framework. This phrase means the starting point cognition of something new. The output \"Hello World\" is almost the same as the first word spoken through the mouth of a baby, \"Mom.\" For this reason, I called the first post on this blog so."
 ogimage: images/posts/hello-world/hello-world-og.jpg
 tumb: /images/posts/hello-world/hello-world
 created: 2017-01-14
 updated: 2018-02-17
-lastmod: 2018-02-17
+lastmod: 2018-08-14
 categories:
 - Blog
 ---

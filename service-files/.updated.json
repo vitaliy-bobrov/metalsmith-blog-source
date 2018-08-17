@@ -1,98 +1,110 @@
 {
-    "blog\\adding-comments-to-metalsmith.md": {
-        "filename": "blog\\adding-comments-to-metalsmith.md",
+    ".DS_Store": {
+        "filename": ".DS_Store",
+        "hash": "e468004398859ecfddd8987af79c15c2",
+        "created": "2018-08-14T18:25:43.132Z",
+        "updated": "2018-08-14T18:25:43.132Z"
+    },
+    "pages/about.md": {
+        "filename": "pages/about.md",
+        "hash": "7def121e42b26c0944ce69df233610dd",
+        "created": "2018-08-14T18:25:43.132Z",
+        "updated": "2018-08-14T18:25:43.132Z"
+    },
+    "pages/speaker.md": {
+        "filename": "pages/speaker.md",
+        "hash": "2470c61bf112d6bf8a2913772135c04f",
+        "created": "2018-08-14T18:25:43.132Z",
+        "updated": "2018-08-14T18:25:43.132Z"
+    },
+    "blog/adding-comments-to-metalsmith.md": {
+        "filename": "blog/adding-comments-to-metalsmith.md",
         "hash": "f7e6b84265b7859c8abfffc24452edcd",
         "created": "2017-01-30T00:00:00.000Z",
         "updated": "2018-02-18T00:00:00.000Z"
     },
-    "blog\\css-custom-properties-in-depth-part-2.md": {
-        "filename": "blog\\css-custom-properties-in-depth-part-2.md",
+    "blog/css-custom-properties-in-depth-part-2.md": {
+        "filename": "blog/css-custom-properties-in-depth-part-2.md",
         "hash": "c7716dc5b3ffc4df364136c29b2c71f6",
         "created": "2018-07-16T00:00:00.000Z",
         "updated": "2018-07-16T00:00:00.000Z"
     },
-    "blog\\css-custom-properties-in-depth.md": {
-        "filename": "blog\\css-custom-properties-in-depth.md",
+    "blog/css-custom-properties-in-depth.md": {
+        "filename": "blog/css-custom-properties-in-depth.md",
         "hash": "a33af6804b07b563576b55e133d9565b",
         "created": "2018-05-30T00:00:00.000Z",
         "updated": "2018-07-03T00:00:00.000Z"
     },
-    "blog\\deep-dive-into-array-methods.md": {
-        "filename": "blog\\deep-dive-into-array-methods.md",
-        "hash": "79b943b1a0e20fdfe85570ac466e53ec",
-        "created": "2017-06-21T00:00:00.000Z",
-        "updated": "2018-02-17T00:00:00.000Z"
-    },
-    "blog\\five-reasons-choose-metalsmith.md": {
-        "filename": "blog\\five-reasons-choose-metalsmith.md",
-        "hash": "1fd6618ddcbdb3cfe257b566c92c7409",
-        "created": "2017-01-19T00:00:00.000Z",
-        "updated": "2018-02-17T00:00:00.000Z"
-    },
-    "blog\\css-paint-in-action-bar-chart.md": {
-        "filename": "blog\\css-paint-in-action-bar-chart.md",
+    "blog/css-paint-in-action-bar-chart.md": {
+        "filename": "blog/css-paint-in-action-bar-chart.md",
         "hash": "2115dc2af3952b3e626c1ef178b39c4d",
         "created": "2018-04-13T00:00:00.000Z",
         "updated": "2018-04-30T00:00:00.000Z"
     },
-    "blog\\exploring-the-css-paint-api.md": {
-        "filename": "blog\\exploring-the-css-paint-api.md",
+    "blog/deep-dive-into-array-methods.md": {
+        "filename": "blog/deep-dive-into-array-methods.md",
+        "hash": "79b943b1a0e20fdfe85570ac466e53ec",
+        "created": "2017-06-21T00:00:00.000Z",
+        "updated": "2018-02-17T00:00:00.000Z"
+    },
+    "blog/exploring-the-css-paint-api.md": {
+        "filename": "blog/exploring-the-css-paint-api.md",
         "hash": "98e8ae2a8ad6f2b49cde29a538f9d272",
         "created": "2018-03-19T00:00:00.000Z",
         "updated": "2018-07-03T00:00:00.000Z"
     },
-    "blog\\hello-world.md": {
-        "filename": "blog\\hello-world.md",
+    "blog/five-reasons-choose-metalsmith.md": {
+        "filename": "blog/five-reasons-choose-metalsmith.md",
+        "hash": "1fd6618ddcbdb3cfe257b566c92c7409",
+        "created": "2017-01-19T00:00:00.000Z",
+        "updated": "2018-02-17T00:00:00.000Z"
+    },
+    "blog/hello-world.md": {
+        "filename": "blog/hello-world.md",
         "hash": "66a281ae0c020b0cf6a2551522381470",
         "created": "2017-01-14T00:00:00.000Z",
         "updated": "2018-02-17T00:00:00.000Z"
     },
-    "blog\\how-to-start-contribute-to-open-source.md": {
-        "filename": "blog\\how-to-start-contribute-to-open-source.md",
+    "blog/how-to-start-contribute-to-open-source.md": {
+        "filename": "blog/how-to-start-contribute-to-open-source.md",
         "hash": "2f89452ada033c9d02bf8492727f6ecf",
         "created": "2017-08-24T00:00:00.000Z",
         "updated": "2018-02-17T00:00:00.000Z"
     },
-    "blog\\introduction-to-functional-js.md": {
-        "filename": "blog\\introduction-to-functional-js.md",
+    "blog/introduction-to-functional-js.md": {
+        "filename": "blog/introduction-to-functional-js.md",
         "hash": "b0b8eb6a06d50b65878deb1f4152735b",
         "created": "2017-03-19T00:00:00.000Z",
         "updated": "2018-02-17T00:00:00.000Z"
     },
-    "blog\\native-share-for-mobile-chrome.md": {
-        "filename": "blog\\native-share-for-mobile-chrome.md",
+    "blog/native-share-for-mobile-chrome.md": {
+        "filename": "blog/native-share-for-mobile-chrome.md",
         "hash": "934fc13e1121f4962ff2922f7c7f09bf",
         "created": "2017-02-15T00:00:00.000Z",
         "updated": "2018-04-13T00:00:00.000Z"
     },
-    "blog\\please-no-more-jquery.md": {
-        "filename": "blog\\please-no-more-jquery.md",
+    "blog/ngrx-with-schematics.md": {
+        "filename": "blog/ngrx-with-schematics.md",
+        "hash": "2406bfed642e8da5b27f1c8badd6efcb",
+        "created": "2018-08-13T00:00:00.000Z",
+        "updated": "2018-08-13T00:00:00.000Z"
+    },
+    "blog/please-no-more-jquery.md": {
+        "filename": "blog/please-no-more-jquery.md",
         "hash": "6e1a29806d78dae0e89f55ff0f77655a",
         "created": "2017-02-12T00:00:00.000Z",
         "updated": "2018-02-17T00:00:00.000Z"
     },
-    "blog\\tasks-from-interviews-yandex.md": {
-        "filename": "blog\\tasks-from-interviews-yandex.md",
+    "blog/tasks-from-interviews-yandex.md": {
+        "filename": "blog/tasks-from-interviews-yandex.md",
         "hash": "687e78f1349ffe7a723a9ec4bba7bfd8",
         "created": "2017-01-15T00:00:00.000Z",
         "updated": "2018-03-11T00:00:00.000Z"
     },
-    "blog\\webpack-2-migration-tips.md": {
-        "filename": "blog\\webpack-2-migration-tips.md",
+    "blog/webpack-2-migration-tips.md": {
+        "filename": "blog/webpack-2-migration-tips.md",
         "hash": "10c0084fcdc6c2831d43dcf489b2d199",
         "created": "2017-02-09T00:00:00.000Z",
         "updated": "2018-02-17T00:00:00.000Z"
-    },
-    "pages\\about.md": {
-        "filename": "pages\\about.md",
-        "hash": "7def121e42b26c0944ce69df233610dd",
-        "created": "2018-08-13T13:37:19.718Z",
-        "updated": "2018-08-13T13:37:19.718Z"
-    },
-    "pages\\speaker.md": {
-        "filename": "pages\\speaker.md",
-        "hash": "2470c61bf112d6bf8a2913772135c04f",
-        "created": "2018-08-13T13:37:19.718Z",
-        "updated": "2018-08-13T13:37:19.718Z"
     }
 }

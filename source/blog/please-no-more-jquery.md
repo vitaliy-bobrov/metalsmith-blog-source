@@ -1,9 +1,9 @@
 ---
 title: Please... no more jQuery...
-description: jQuery was our buddy for a long time, but in 2017 it looks like ballast on web pages.
+description: jQuery was our buddy for a long time, and it helped developers around the world to solve browser incompatibility issues in old dark times. But everything changes and JavaScript incredibly changed compared to 2006. Browser vendors involved in specification improvements and followed it and gave devs ability to try experimental platform features. Why might you not need jQuery in 2017?
 created: 2017-02-12
 updated: 2018-02-17
-lastmod: 2018-02-17
+lastmod: 2018-08-14
 ogimage: images/posts/please-mo-more-jquery/please-mo-more-jquery-og.jpg
 tumb: /images/posts/please-mo-more-jquery/please-mo-more-jquery
 categories:

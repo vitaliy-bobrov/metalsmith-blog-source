@@ -1,11 +1,11 @@
 ---
 title: Exploring the CSS Paint API
-description: What is CSS Paint API and how to start using it in real projects.
+description: CSS Paint API is the first part of Houdini project that is available in the stable version of the browser. It Google Chrome team added it to Chrome 65 on March 6th. That is why it is an excellent time to try it out and start experimenting. I want you to get started and start own experimenting with it.
 ogimage: images/posts/exploring-the-css-paint-api/exploring-the-css-paint-api-og.jpg
 tumb: /images/posts/exploring-the-css-paint-api/exploring-the-css-paint-api
 created: 2018-03-19
 updated: 2018-07-03
-lastmod: 2018-07-03
+lastmod: 2018-08-14
 categories:
 - CSS
 - Houdini

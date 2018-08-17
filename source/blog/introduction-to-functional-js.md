@@ -1,11 +1,11 @@
 ---
 title: Introduction to Functional JavaScript
-description: Basic functional programming principles for beginers.
+description: "Functional programming - this words you might read a lot of times during last year, especially in JavaScript context. Today I'll try to demystify its fundamental principles for newbies in easiest and beginner-friendly manner."
 ogimage: images/posts/introduction-to-functional-js/introduction-to-functional-js-og.jpg
 tumb: /images/posts/introduction-to-functional-js/introduction-to-functional-js
 created: 2017-03-19
 updated: 2018-02-17
-lastmod: 2018-02-17
+lastmod: 2018-08-14
 categories:
 - JavaScript
 - Functional Programming

@@ -1,11 +1,11 @@
 ---
 title: Native Share for Mobile Chrome
-description: Improve you users experience with native share widget on Android devices.
+description: New features come to Web standards every day and their goal to improve user experience visitors of your web page. Sharing to social networks is one of the must-have features in modern web. Today I want to show how easy add native share widget for your users on Android devices with Chrome 55+.
 ogimage: images/posts/native-share-for-mobile-chrome/native-share-for-mobile-chrome-og.jpg
 tumb: /images/posts/native-share-for-mobile-chrome/native-share-for-mobile-chrome
 created: 2017-02-15
 updated: 2018-04-13
-lastmod: 2018-04-13
+lastmod: 2018-08-14
 categories:
 - Guides
 ---

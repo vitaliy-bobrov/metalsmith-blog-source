@@ -1,11 +1,11 @@
 ---
 title: "CSS Paint in Action: Bar Chart"
-description: Want to know how to create bar chart with CSS Paint API?
+description: Want to know how to create bar chart with CSS Paint API? More than 65% of the humans are visual learners. Visualization makes it easier to understand, compare, and analyze data. Using CSS Paint API, we can encapsulate all logic related to drawing charts on canvas and expose the high-level declarative interface.
 ogimage: images/posts/css-paint-in-action-bar-chart/css-paint-in-action-bar-chart-og.jpg
 tumb: /images/posts/css-paint-in-action-bar-chart/css-paint-in-action-bar-chart
 created: 2018-04-13
 updated: 2018-04-30
-lastmod: 2018-04-30
+lastmod: 2018-08-14
 categories:
 - CSS
 - Houdini

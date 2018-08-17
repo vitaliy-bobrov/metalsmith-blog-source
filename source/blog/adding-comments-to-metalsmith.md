@@ -1,11 +1,11 @@
 ---
 title: Adding Comments to Metalsmith
-description: Metalsmith is a static site generator, so developer won't to implement commenting functionality from scratch.
+description: "Comments are the vital part of communication with the audience. It fits for a lot type of websites starting from blogs finishing with e-commerce. Metalsmith is a static site generator, that means that developer doesn't want to have a database and other back-end infrastructure to implement commenting functionality."
 ogimage: images/posts/adding-comments-to-metalsmith/add-comments-to-metalsmith-project-og.jpg
 tumb: /images/posts/adding-comments-to-metalsmith/add-comments-to-metalsmith-project
 created: 2017-01-30
 updated: 2018-02-18
-lastmod: 2018-02-18
+lastmod: 2018-08-14
 categories:
 - Guides
 - Metalsmith

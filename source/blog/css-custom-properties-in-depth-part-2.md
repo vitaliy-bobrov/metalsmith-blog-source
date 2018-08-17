@@ -1,11 +1,11 @@
 ---
 title: "CSS Custom Properties in Depth: Part 2"
-description: Deep dive into CSS Properties and Values API available types with real code examples.
+description: "Houdini \"Custom Properties and Values\" spec gives us the strictly typed CSS variables. It has a significant potential and as new technology is a pretty unknown field. Today, I'm going to have the in-depth overview of what types available in the first version of the spec, and show the usage on real examples."
 ogimage: images/posts/css-custom-properties-in-depth-2/css-custom-properties-in-depth-2-og.jpg
 tumb: /images/posts/css-custom-properties-in-depth-2/css-custom-properties-in-depth-2
 created: 2018-07-16
 updated: 2018-07-16
-lastmod: 2018-07-16
+lastmod: 2018-08-14
 categories:
 - CSS
 - Houdini

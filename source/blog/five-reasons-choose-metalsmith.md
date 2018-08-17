@@ -1,11 +1,11 @@
 ---
 title: 5 Reasons to Choose Metalsmith
-description: Why you midht choose static site generator for your next project?
+description: "Few times I started to develop my blog locally, but only this implementation came into production. Previously I tried few CMS variants, other static site generators, but stop my decision on Metalsmith. I'll tell my story and try to argue why you might use Metalsmith for your next project."
 ogimage: images/posts/five-reasons-choose-metalsmith/five-reasons-choose-metalsmith-og.jpg
 tumb: /images/posts/five-reasons-choose-metalsmith/five-reasons-choose-metalsmith
 created: 2017-01-19
 updated: 2018-02-17
-lastmod: 2018-02-17
+lastmod: 2018-08-14
 categories:
 - Blog
 - Metalsmith

@@ -46,7 +46,7 @@
     "gulp-if": "^2.0.2",
     "gulp-load-plugins": "^1.4.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-postcss": "^7.0.0",
+    "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.1",
     "gulp-size": "^3.0.0",
     "gulp-sourcemaps": "^2.6.1",
