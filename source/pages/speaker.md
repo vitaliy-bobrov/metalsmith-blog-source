@@ -9,10 +9,6 @@ priority: 1.0
 ---
 ## Upcomming talks:
 
-- [GrillJS](http://grilljs.com/) -- 18 August 2018, Wroclaw, Poland
-
-  Topic: **"Make the Web Brighter with the CSS Paint API"**
-
 - [Ruhr JS](https://ruhrjs.de/) -- 13 October 2018, Bochum, Germany
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
@@ -32,6 +28,12 @@ priority: 1.0
 ## Past talks:
 
 ### 2018
+
+- [GrillJS](http://grilljs.com/) -- 18 August 2018, Wroclaw, Poland
+
+  Topic: **"Make the Web Brighter with the CSS Paint API"**
+
+  [Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api-1)
 
 - [NG Talks](https://ngtalks.io/) -- 9 August 2018, Kharkiv, Ukraine
 
