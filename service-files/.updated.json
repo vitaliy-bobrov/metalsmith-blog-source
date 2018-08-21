@@ -2,8 +2,8 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "e468004398859ecfddd8987af79c15c2",
-        "created": "2018-08-21T09:52:49.011Z",
-        "updated": "2018-08-21T09:52:49.011Z"
+        "created": "2018-08-21T20:33:19.217Z",
+        "updated": "2018-08-21T20:33:19.217Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
@@ -17,17 +17,17 @@
         "created": "2018-07-16T00:00:00.000Z",
         "updated": "2018-07-16T00:00:00.000Z"
     },
-    "blog/css-custom-properties-in-depth.md": {
-        "filename": "blog/css-custom-properties-in-depth.md",
-        "hash": "a33af6804b07b563576b55e133d9565b",
-        "created": "2018-05-30T00:00:00.000Z",
-        "updated": "2018-07-03T00:00:00.000Z"
-    },
     "blog/css-paint-in-action-bar-chart.md": {
         "filename": "blog/css-paint-in-action-bar-chart.md",
         "hash": "2115dc2af3952b3e626c1ef178b39c4d",
         "created": "2018-04-13T00:00:00.000Z",
         "updated": "2018-04-30T00:00:00.000Z"
+    },
+    "blog/css-custom-properties-in-depth.md": {
+        "filename": "blog/css-custom-properties-in-depth.md",
+        "hash": "a33af6804b07b563576b55e133d9565b",
+        "created": "2018-05-30T00:00:00.000Z",
+        "updated": "2018-07-03T00:00:00.000Z"
     },
     "blog/deep-dive-into-array-methods.md": {
         "filename": "blog/deep-dive-into-array-methods.md",
@@ -71,6 +71,12 @@
         "created": "2017-02-15T00:00:00.000Z",
         "updated": "2018-04-13T00:00:00.000Z"
     },
+    "blog/ngrx-with-schematics.md": {
+        "filename": "blog/ngrx-with-schematics.md",
+        "hash": "9d34b2aeb3fea25ef1133a0f33d69cdf",
+        "created": "2018-08-21T00:00:00.000Z",
+        "updated": "2018-08-21T00:00:00.000Z"
+    },
     "blog/please-no-more-jquery.md": {
         "filename": "blog/please-no-more-jquery.md",
         "hash": "6e1a29806d78dae0e89f55ff0f77655a",
@@ -92,13 +98,13 @@
     "pages/about.md": {
         "filename": "pages/about.md",
         "hash": "7def121e42b26c0944ce69df233610dd",
-        "created": "2018-08-21T09:52:49.011Z",
-        "updated": "2018-08-21T09:52:49.011Z"
+        "created": "2018-08-21T20:33:19.217Z",
+        "updated": "2018-08-21T20:33:19.217Z"
     },
     "pages/speaker.md": {
         "filename": "pages/speaker.md",
         "hash": "d123199e2d5651329cb8dc0be27e0eee",
-        "created": "2018-08-21T09:52:49.011Z",
-        "updated": "2018-08-21T09:52:49.011Z"
+        "created": "2018-08-21T20:33:19.217Z",
+        "updated": "2018-08-21T20:33:19.217Z"
     }
 }
