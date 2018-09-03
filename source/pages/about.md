@@ -4,7 +4,7 @@ description: "Vitalii Bobrov is the JavaScript Engineer with rich Angular and Ng
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2018-08-14
+lastmod: 2018-09-03
 priority: 0.9
 ---
 ## Bio
@@ -14,6 +14,8 @@ Vitalii is the JavaScript Engineer with rich Angular and NgRx experience in ente
 ## Interviews
 
 [](youtube:sM3wR9g1jbM)
+
+[Speakers in UA](https://speakers.in.ua/vitalii-bobrov/) (in Russian language).
 
 ## Contact
 
