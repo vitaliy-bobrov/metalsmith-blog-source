@@ -39,7 +39,7 @@ priority: 1.0
 
   Topic: **"Robots Don't Cry: Automation with Schematics"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/robots-dont-cry-automation-with-schematics)
+  [Slides](https://speakerdeck.com/bobrov1989/robots-dont-cry-automation-with-schematics) | [Video](https://youtu.be/vif2u6A7aeo)
 
 - [Angular Wroclaw](https://www.meetup.com/AngularJS-Wroc%C5%82aw/events/252571459/) -- 26 July 2018, Wroclaw, Poland
 
@@ -51,7 +51,7 @@ priority: 1.0
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api)
+  [Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api) | [Video](https://youtu.be/Gfq5Ut3r6Bw)
 
 - [ngHouston](https://www.meetup.com/ngHouston/) -- 14 June 2018, Online
 
