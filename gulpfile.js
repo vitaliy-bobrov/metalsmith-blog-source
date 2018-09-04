@@ -29,7 +29,16 @@ const LOCAL_PORT = 3000;
 const PROD_URL = 'https://vitaliy-bobrov.github.io/';
 const SITEMAP_URL = url.resolve(PROD_URL, 'sitemap.xml');
 const BABELRC = {
-  presets: ['@babel/env'],
+  presets: [
+    prod &&
+    [
+      '@babel/preset-env',
+      {
+        loose: true
+      }
+    ]
+  ]
+  .filter(Boolean),
   shouldPrintComment: () => !prod
 };
 
