@@ -2,5 +2,5 @@
 (global => {
   'use strict';
 
-    global.goog.offlineGoogleAnalytics.initialize();
+  global.goog.offlineGoogleAnalytics.initialize();
 })(self);
