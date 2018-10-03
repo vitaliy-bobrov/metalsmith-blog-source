@@ -4,7 +4,7 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2018-09-03
+lastmod: 2018-10-03
 priority: 1.0
 ---
 ## Upcomming talks:
@@ -28,6 +28,12 @@ priority: 1.0
 ## Past talks:
 
 ### 2018
+
+- [Modern Web Podcast](https://www.thisdot.co/modern-web) -- 1 October 2018, Online
+
+  Topic: **"Houdini"**
+
+  [Video](https://youtu.be/QbHJIybbPLM)
 
 - [GrillJS](http://grilljs.com/) -- 18 August 2018, Wroclaw, Poland
 

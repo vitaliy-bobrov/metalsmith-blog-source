@@ -49,9 +49,9 @@
   function intersectionCallback(entries, observer) {
     entries.forEach(entry => {
       if (entry.intersectionRatio > 0) {
-        observer.unobserve(entry.target);
-
         enableSource(entry.target);
+
+        observer.unobserve(entry.target);
       }
     });
   }
