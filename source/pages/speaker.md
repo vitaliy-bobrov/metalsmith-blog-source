@@ -4,14 +4,10 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2018-10-03
+lastmod: 2018-10-17
 priority: 1.0
 ---
 ## Upcomming talks:
-
-- [Ruhr JS](https://ruhrjs.de/) -- 13 October 2018, Bochum, Germany
-
-  Topic: **"Make the Web Brighter with the CSS Paint API"**
 
 - [Mobile Era](http://mobileera.rocks/) -- 1 November 2018, Oslo, Norway
 
@@ -28,6 +24,12 @@ priority: 1.0
 ## Past talks:
 
 ### 2018
+
+- [Ruhr JS](https://ruhrjs.de/) -- 14 October 2018, Bochum, Germany
+
+  Topic: **"Make the Web Brighter with the CSS Paint API"**
+
+  [Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api) | [Video](https://youtu.be/yPP6YCuJ29w)
 
 - [Modern Web Podcast](https://www.thisdot.co/modern-web) -- 1 October 2018, Online
 

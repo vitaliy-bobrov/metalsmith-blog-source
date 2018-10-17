@@ -2,20 +2,20 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "e468004398859ecfddd8987af79c15c2",
-        "created": "2018-10-03T19:43:47.491Z",
-        "updated": "2018-10-03T19:43:47.491Z"
+        "created": "2018-10-17T20:24:39.076Z",
+        "updated": "2018-10-17T20:24:39.076Z"
     },
     "pages/about.md": {
         "filename": "pages/about.md",
         "hash": "520a07749adbae7c928d18c9491b2ef1",
-        "created": "2018-10-03T19:43:47.491Z",
-        "updated": "2018-10-03T19:43:47.491Z"
+        "created": "2018-10-17T20:24:39.076Z",
+        "updated": "2018-10-17T20:24:39.076Z"
     },
     "pages/speaker.md": {
         "filename": "pages/speaker.md",
-        "hash": "56ddc36237520a1ad68e3a7f47625c98",
-        "created": "2018-10-03T19:43:47.491Z",
-        "updated": "2018-10-03T19:43:47.491Z"
+        "hash": "86ea3f00a818b5af1d8b6217da4e75b0",
+        "created": "2018-10-17T20:24:39.076Z",
+        "updated": "2018-10-17T20:24:39.076Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
