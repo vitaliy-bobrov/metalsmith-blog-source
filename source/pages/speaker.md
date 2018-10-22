@@ -4,20 +4,20 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2018-10-17
+lastmod: 2018-10-22
 priority: 1.0
 ---
 ## Upcomming talks:
 
-- [Mobile Era](http://mobileera.rocks/) -- 1 November 2018, Oslo, Norway
-
-  Topic: **"Flutter in Action: How to build cross-platform app with Dart"**
-
-- [JS Poland](http://www.js-poland.pl/) -- 16 November 2018, Warsaw, Poland
+- [GDG DevFest Wroclaw](https://wroclaw.devfest.pl/) -- 26 October 2018, Wroclaw, Poland
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
-- [FrontEnd Con](http://frontend-con.io/) -- 4 December 2018, Warsaw, Poland
+- [Mobile Era](https://mobileera.rocks/) -- 1 November 2018, Oslo, Norway
+
+  Topic: **"Flutter in Action: How to build cross-platform app with Dart"**
+
+- [FrontEnd Con](https://frontend-con.io/) -- 4 December 2018, Warsaw, Poland
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
