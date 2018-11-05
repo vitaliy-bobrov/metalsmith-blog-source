@@ -9,14 +9,6 @@ priority: 1.0
 ---
 ## Upcomming talks:
 
-- [GDG DevFest Wroclaw](https://wroclaw.devfest.pl/) -- 26 October 2018, Wroclaw, Poland
-
-  Topic: **"Make the Web Brighter with the CSS Paint API"**
-
-- [Mobile Era](https://mobileera.rocks/) -- 1 November 2018, Oslo, Norway
-
-  Topic: **"Flutter in Action: How to build cross-platform app with Dart"**
-
 - [FrontEnd Con](https://frontend-con.io/) -- 4 December 2018, Warsaw, Poland
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
@@ -24,6 +16,18 @@ priority: 1.0
 ## Past talks:
 
 ### 2018
+
+- [Mobile Era](https://mobileera.rocks/) -- 1 November 2018, Oslo, Norway
+
+  Topic: **"Flutter in Action: How to build cross-platform app with Dart"**
+
+  [Slides](https://speakerdeck.com/bobrov1989/flutter-in-action-how-to-build-cross-platform-app-with-dart)
+
+- [GDG DevFest Wroclaw](https://wroclaw.devfest.pl/) -- 26 October 2018, Wroclaw, Poland
+
+  Topic: **"Make the Web Brighter with the CSS Paint API"**
+
+  [Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api-1c99ed50-7d7d-43b4-bc1e-7f41684274ed)
 
 - [Ruhr JS](https://ruhrjs.de/) -- 14 October 2018, Bochum, Germany
 
