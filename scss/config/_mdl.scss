@@ -1,7 +1,12 @@
 // MDL.
-$preferred_font: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-$performance_font: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-$code-font: 'Roboto Mono', monospace;
+$preferred_font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+'Droid Sans', 'Helvetica Neue', sans-serif;
+$performance_font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+'Droid Sans', 'Helvetica Neue', sans-serif;
+$code-font: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+'Courier New', monospace;
 
 $trim-color-classes: true;
 
