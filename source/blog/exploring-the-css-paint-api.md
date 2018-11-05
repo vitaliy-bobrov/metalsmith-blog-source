@@ -4,8 +4,8 @@ description: CSS Paint API is the first part of the Houdini project that is avai
 ogimage: images/posts/exploring-the-css-paint-api/exploring-the-css-paint-api-og.jpg
 tumb: /images/posts/exploring-the-css-paint-api/exploring-the-css-paint-api
 created: 2018-03-19
-updated: 2018-07-03
-lastmod: 2018-08-14
+updated: 2018-11-05
+lastmod: 2018-11-05
 categories:
 - CSS
 - Houdini
@@ -20,16 +20,16 @@ So Houdini is the set of APIs that allows you to interact with CSS engine intern
 Houdini APIs are here to work with CSS parser, CSSOM, cascade, layout, paint, and composite rendering stages. There are two main groups of the API: CSS properties & values and worklets. And worklets cover renders states access: layout, paint, and composite.  While properties and values focused on parser extension, work with CSSOM and cascade. You can check browsers implementation status for each API [here](https://ishoudinireadyyet.com/) and more information about it [here](https://developers.google.com/web/updates/2016/05/houdini).
 
 ## CSS Paint Worklet
-CSS Paint API is the kind of worklets and how you could understand the name it works with paint rendering process. What does it do? It allows you to create custom CSS function to draw an image as background with JavaScript. And then use this function for any CSS property that expects image. For example you can use it for `background-image`, `border-image` or `list-style-image`. But more exciting that it also could be used for custom CSS property, we will come back to them later.
+CSS Paint API is the kind of worklets and how you could understand the name it works with paint rendering process. What does it do? It allows you to create custom CSS function to draw an image as background with JavaScript. And then use this function for any CSS property that expects image. For example, you can use it for `background-image`, `border-image` or `list-style-image`. But more exciting that it also could be used for custom CSS property, we will come back to them later.
 
 For drawing pictures with JavaScript, you allowed using the limited version of Canvas API. Why limited? For security reasons, you are not able to read pixels from an image or render text. But you can draw arcs, rectangles, paths, etc.
 
 ### Why we need CSS Paint API?
 
 There are a few use cases that I have in my mind for now:
-1. CSS polyfills -- of course we could write a polyfill for CSS with JavaScript, but it is not a good idea in case of usability and performance. You can read some thoughts about that [here](https://philipwalton.com/articles/the-dark-side-of-polyfilling-css/). But CSS Paint is a good candidate for that, for example, take a look on `conic-gradient` [polyfill example](https://lab.iamvdo.me/houdini/conic-gradient).
+1. CSS polyfills -- of course, we could write a polyfill for CSS with JavaScript, but it is not a good idea in case of usability and performance. You can read some thoughts about that [here](https://philipwalton.com/articles/the-dark-side-of-polyfilling-css/). But CSS Paint is a good candidate for that, for example, take a look on `conic-gradient` [polyfill example](https://lab.iamvdo.me/houdini/conic-gradient).
 
-2. Reduce DOM nodes number -- sometimes we need to add dummy DOM nodes, like `span` just for visuals. Also, some of the animations may require additional elements. Look for painter that implements Material Design "ripple" [animation](https://lab.iamvdo.me/houdini/ripple). In original Material Design library, it creates two additional `span` elements for that animation and with worklet no need to do so. Now imagine you have ten buttons with "ripple" effect on the page, and CSS paint saves you twenty DOM nodes for that.
+2. Reduce DOM nodes number -- sometimes we need to add dummy DOM nodes, like `span` just for visuals. Also, some of the animations may require additional elements. Take a look at the painter that implements Material Design "ripple" [animation](https://lab.iamvdo.me/houdini/ripple). In original Material Design library, it creates two additional `span` elements for that animation and with worklet no need to do so. Now imagine you have ten buttons with "ripple" effect on the page, and CSS paint saves you twenty DOM nodes for that.
 
 3. Fancy backgrounds -- you can create some kind of new experience for end users with unusual patterns and backgrounds. And good thing here that they will not affect performance and could be used as a part of progressive enhancement.
 
@@ -42,7 +42,7 @@ div {
 }
 ```
 
-In the example above we are using custom paint with name `my-custom-paint`, next let's imagine that it allows us to pass additional arguments inside, like color:
+In the case above we are using custom paint with name `my-custom-paint`, next let's imagine that it allows us to pass additional arguments inside, like color:
 
 ```css
 div {
@@ -115,7 +115,7 @@ So how to create custom CSS paint? It is just three steps:
 2. Register paint
 3. Load worklet
 
-So, first of all, we want to declare CSS Paint class. It should be a JavaScript class with `paint` method. We will explore this method and its arguments later, for now just look at the basic implementation:
+So, first of all, we want to declare CSS Paint class. It should be a JavaScript class with `paint` method. We will explore this method and its arguments later, for now just look at the underlying implementation:
 
 ```js
 class MyCustomPainter {
@@ -125,21 +125,13 @@ class MyCustomPainter {
 }
 ```
 
-After that we need to registed newly defined painter:
+After that we need to register the newly defined painter:
 
 ```js
 registerPaint('my-custom-paint', MyCustomPainter);
 ```
 
-We were using `registerPaint` function and pass paint name as the first argument and our class reference as the second. Here I want to notice that our paint module file with class and registration call has a separate context. That means that we can't access any function or variable available in global browser scope or even load any dependency script. The only function available there globally is `registerPaint`. If you try to import synchronously or asynchronously any script browser will block it and show you an error:
-
-```js
-// my-custom-paint.js
-
-import { lib } from './my-lib.js' // Error.
-
-import('./another-lib.js').then(); // Error.
-```
+We were using `registerPaint` function and pass paint name as the first argument and our class reference as the second. Here I want to notice that our paint module file with class and registration call has a separate context. That means that we can't access any function or variable available in global browser scope or even load any dependency script.
 
 Next, the last step is to load worklet, so after that, you will be able to use it in your stylesheets:
 
@@ -174,7 +166,7 @@ if ('paintWorklet' in CSS) {
 ```
 
 ## Practice
-After the introduction to Paint API, the best idea is to try it. Let's start with the basic example -- create painter that will draw few circles as background. To get started let's define a class for paint and register it:
+After the introduction to Paint API, the best idea is to try it. Let's start with the primary example -- create painter that will draw few circles as background. To get started let's define a class for paint and register it:
 
 ```js
 // paint.js
@@ -201,7 +193,7 @@ class CirclesPainter {
 registerPaint('circles', CirclesPainter);
 ```
 
-We created `CirclesPainter` class with the `paint` method. This method accepting two arguments: `ctx` which is our canvas context and `geom` object that consists of 2 properties. `geom` contains `width` and `height` of our canvas surface. Then using our context, we draw four circles inside loops and fill them with some shades of blue. And finally we load our worklet on the page:
+We created `CirclesPainter` class with the `paint` method. This method accepting two arguments: `ctx` which is our canvas context and `geom` object that consists of 2 properties. `geom` contains the `width` and `height` of our canvas surface. Then using our context, we draw four circles inside loops and fill them with some shades of blue. And finally we load our worklet on the page:
 
 ```js
 if ('paintWorklet' in CSS) {
@@ -227,7 +219,7 @@ So we make it square and add black color as a fallback for old browsers. That is
 
 One thing I want to mention now, we haven't added any resize event listener, but browser calls `paint` method automatically on any layout changes. Current Chrome implementation uses main UI thread for paint rendering, but in the future, it will use a separate thread. You can imagine some heavy animations or backgrounds that have zero effect on the main thread. It will be an enormous performance boost!
 
-Your backgrounds could be responsive, and this responsiveness depends on element size itself without any listeners on `resize` events. Until `element queries` are still proposal you can generate different picture depending on element size. Try out [this exaple](https://vitaliy-bobrov.github.io/css-paint-demos/responsive/) with [source code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/responsive). When the element changes its size, we fill our circles with another color.
+Your backgrounds could be responsive, and this responsiveness depends on element size itself without any listeners on `resize` events. Until `element queries` are still the proposal, you can generate different picture depending on element size. Try out [this example](https://vitaliy-bobrov.github.io/css-paint-demos/responsive/) with [source code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/responsive). When the element changes its size, we fill our circles with another color.
 
 All this nice, but next I want to make our paint configurable. So let me introduce a few CSS variables:
 
@@ -235,7 +227,7 @@ All this nice, but next I want to make our paint configurable. So let me introdu
 - `--circles-count` -- for the number of circles to render
 - `--circles-opacity` -- to change circles opacity
 
-With those variables, we can create some kind of pattern that could be changed over time. To access CSS variables in our painter class, we need to define the static property called `inputProperties`. It should be an `Array` of CSS properties and variables we want to access in `paint` method. On every property from the array change browser will call render for us without any additional line of code. Below is the updated `CirclesPainter`:
+With those variables, we can create some kind of pattern that could change over time. To access CSS variables in our painter class, we need to define the static property called `inputProperties`. It should be an `Array` of CSS properties and variables we want to access in the `paint` method. On every property from the array change browser will call render for us without any additional line of code. Below is the updated `CirclesPainter`:
 
 ```js
 class CirclesPainter {
@@ -344,9 +336,9 @@ class CirclesPainter {
 }
 ```
 
-So our `CirclesPainter` now includes `inputArguments` list that contains three parameters: `<number>`, `<number>` and `<percentage>`. You might mention syntax for CSS types -- `<type name>`. Also you can accept types union similar way as it possible in TypeScript -- `<number | percentage>`.You can find all available types in "CSS Values and Units" specification [draft](https://drafts.csswg.org/css-values-4).
+So our `CirclesPainter` now includes `inputArguments` list that contains three parameters: `<number>`, `<number>` and `<percentage>`. You might mention syntax for CSS types -- `<type name>`. Also, you can accept types union similar way as it possible in TypeScript -- `<number | percentage>`. You can find all the available types in "CSS Values and Units" specification [draft](https://drafts.csswg.org/css-values-4).
 
-Then in `paint` method we got `args` parameter that similar to JavaScript function `arguments` object, but it is just `Array` that contains `CSSUnitValue` objects. Each of unit objects consists of two properties `value` and `unit`. So in our example, we accessed all the value of each argument. And we should modify our CSS to use it:
+Then in the `paint` method, we got `args` parameter that similar to JavaScript function `arguments` object, but it is just `Array` that contains `CSSUnitValue` objects. Each of unit objects consists of two properties `value` and `unit`. So in our example, we accessed all the value of each argument. And we should modify our CSS to use it:
 
 ```css
 .circles {
@@ -415,13 +407,13 @@ canvas.addEventListener('mouseenter', event => {
     }
 
     requestAnimationFrame(raf);
-  })
-})
+  });
+});
 ```
 
 Not so good, could we do it better? Yes, with Custom Properties API. This API also under the flag in Chrome now, so don't forget to enable it. It allows us to register custom CSS property with syntax similar to variables, but this time with CSS type assigned to it. So browser will have an idea about how to animate it, and we can use CSS animations and transition for that!
 
-So to register custom property we need to call `CSS.registerProperty` and pass options object:
+So to register custom property, we need to call `CSS.registerProperty` and pass options object:
 
 ```js
 CSS.registerProperty({
@@ -432,7 +424,7 @@ CSS.registerProperty({
 });
 ```
 
-As you can see we need to give the property the name with `name` option. Then we specify its type with `syntax` property, and in addition, we say that it won't be inherited by children nodes and initial value as 100%.
+As you can see we need to give the property the name with `name` option. Then we specify its type with `syntax` property, and besides, we say that it won't be inherited by children nodes and initial value as 100%.
 
 After that we can use our newly created custom property in the stylesheet:
 
@@ -456,10 +448,10 @@ After that we can use our newly created custom property in the stylesheet:
 
 [](youtube:VC6XgOcTHW4)
 
-Now we can use `transition` to change circles opacity smoothly. Check out [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/circles-animation-with-custom-property) and [result](https://vitaliy-bobrov.github.io/css-paint-demos/circles-animation-with-custom-property/) here.
+Now we can use a `transition` to change circles opacity smoothly. Check out [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/circles-animation-with-custom-property) and [result](https://vitaliy-bobrov.github.io/css-paint-demos/circles-animation-with-custom-property/) here.
 
 ## Conclusion
-Today to just got started with CSS Paint API exploring how to create own one, how to use input properties and arguments, CSS variables and custom properties, and how to animate it. In the next article, I'm going to implement more production ready examples using the knowledge we got with that article. If you are reading this article using latest Chrome you might mention that I am using custom paint to make Material Design background, you can check it [here](https://vitaliy-bobrov.github.io/css-paint-demos/md-bg/) and take a look on [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/md-bg). Try to experiment with CSS Paint API yourself!
+Today to just got started with CSS Paint API exploring how to create own one, how to use input properties and arguments, CSS variables and custom properties, and how to animate it. In the next article, I'm going to implement more production ready examples using the knowledge we got with that article. If you are reading this article using latest Chrome you might mention that I am using custom paint to make Material Design background, you can check it [here](https://vitaliy-bobrov.github.io/css-paint-demos/md-bg/) and take a look at the [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/md-bg). Try to experiment with CSS Paint API yourself!
 
 ### Resources
 
