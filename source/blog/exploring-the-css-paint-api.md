@@ -1,6 +1,6 @@
 ---
 title: Exploring the CSS Paint API
-description: CSS Paint API is the first part of Houdini project that is available in the stable version of the browser. It Google Chrome team added it to Chrome 65 on March 6th. That is why it is an excellent time to try it out and start experimenting. I want you to get started and start own experimenting with it.
+description: CSS Paint API is the first part of the Houdini project that is available in the stable version of the browser. It Google Chrome team added it to Chrome 65 on March 6th. That is why it is an excellent time to try it out and start experimenting. I want you to get started and start own experimenting with it.
 ogimage: images/posts/exploring-the-css-paint-api/exploring-the-css-paint-api-og.jpg
 tumb: /images/posts/exploring-the-css-paint-api/exploring-the-css-paint-api
 created: 2018-03-19
@@ -10,14 +10,14 @@ categories:
 - CSS
 - Houdini
 ---
-CSS Paint API is the first part of Houdini project that is available in the stable version of the browser. It Google Chrome team added it to Chrome 65 on March 6th. That is why it is an excellent time to try it out and start experimenting. I want you to get started and start own experimenting with it.
+CSS Paint API is the first part of the Houdini project that is available in the stable version of the browser. It Google Chrome team added it to Chrome 65 on March 6th. That is why it is an excellent time to try it out and start experimenting. I want you to get started and start own experimenting with it.
 
 ## What is Houdini?
-Before we start the exploration of CSS Paint API, let me made a short intro to Houdini project. I will not get into too many details but will provide you with links to resources to learn more if you want.
+Before we start the exploration of CSS Paint API, let me made a short intro to the Houdini project. I will not get into too many details but will provide you with links to resources to learn more if you want.
 
 So Houdini is the set of APIs that allows you to interact with CSS engine internals. Unfortunately, until this time we are limited to works with some part of CSSOM (CSS Object Model) via JavaScript. So we can try polyfill CSS with JS but after browser renders stage. And after changes browser needs to perform rendering of the screen again. But with Houdini, we can extend styles in the same way we do with JS.
 
-Houdini APIs are here to work with CSS parser, CSSOM, cascade, layout, paint and composite rendering stages. There are two main groups of the API: CSS properties & values and worklets. And worklets cover renders states access: layout, paint, and composite.  While properties and values focused on parser extension, work with CSSOM and cascade. You can check browsers implementation status for each API [here](https://ishoudinireadyyet.com/) and more information about it [here](https://developers.google.com/web/updates/2016/05/houdini).
+Houdini APIs are here to work with CSS parser, CSSOM, cascade, layout, paint, and composite rendering stages. There are two main groups of the API: CSS properties & values and worklets. And worklets cover renders states access: layout, paint, and composite.  While properties and values focused on parser extension, work with CSSOM and cascade. You can check browsers implementation status for each API [here](https://ishoudinireadyyet.com/) and more information about it [here](https://developers.google.com/web/updates/2016/05/houdini).
 
 ## CSS Paint Worklet
 CSS Paint API is the kind of worklets and how you could understand the name it works with paint rendering process. What does it do? It allows you to create custom CSS function to draw an image as background with JavaScript. And then use this function for any CSS property that expects image. For example you can use it for `background-image`, `border-image` or `list-style-image`. But more exciting that it also could be used for custom CSS property, we will come back to them later.
@@ -26,7 +26,7 @@ For drawing pictures with JavaScript, you allowed using the limited version of C
 
 ### Why we need CSS Paint API?
 
-There are few use cases that I have in my mind for now:
+There are a few use cases that I have in my mind for now:
 1. CSS polyfills -- of course we could write a polyfill for CSS with JavaScript, but it is not a good idea in case of usability and performance. You can read some thoughts about that [here](https://philipwalton.com/articles/the-dark-side-of-polyfilling-css/). But CSS Paint is a good candidate for that, for example, take a look on `conic-gradient` [polyfill example](https://lab.iamvdo.me/houdini/conic-gradient).
 
 2. Reduce DOM nodes number -- sometimes we need to add dummy DOM nodes, like `span` just for visuals. Also, some of the animations may require additional elements. Look for painter that implements Material Design "ripple" [animation](https://lab.iamvdo.me/houdini/ripple). In original Material Design library, it creates two additional `span` elements for that animation and with worklet no need to do so. Now imagine you have ten buttons with "ripple" effect on the page, and CSS paint saves you twenty DOM nodes for that.
@@ -83,7 +83,7 @@ Or we can check browser support in CSS:
 
 In this case, browsers that don't support the CSS Paint API will ignore last `background-image` declaration and use some static image instead.
 
-But if we will create some wide-used painter, it will be great to automate fallback insertion, as humans could forget about it. And I have great news for you, PostCSS could do it for us with a plugin. To write such plugin, we don't need a lot of lines of code. PostCSS provide us with a bunch of handy helper tools to iterate through CSS AST (Abstract Syntax Tree) and manipulate it. Below is the example of such plugin that replaces custom paint with a static fallback value passed as a `fallbackValue` option:
+But if we will create some wide-used painter, it will be great to automate fallback insertion, as humans could forget about it. And I have great news for you, PostCSS could do it for us with a plugin. To write such a plugin, we don't need a lot of lines of code. PostCSS provide us with a bunch of handy helper tools to iterate through CSS AST (Abstract Syntax Tree) and manipulate it. Below is the example of such plugin that replaces custom paint with a static fallback value passed as a `fallbackValue` option:
 
 ```js
 const postcss = require('postcss');
@@ -115,7 +115,7 @@ So how to create custom CSS paint? It is just three steps:
 2. Register paint
 3. Load worklet
 
-So, first of all, we want to declare CSS Paint class. It should be JavaScript class with `paint` method. We will explore this method and its arguments later, for now just look on basic implementation:
+So, first of all, we want to declare CSS Paint class. It should be a JavaScript class with `paint` method. We will explore this method and its arguments later, for now just look at the basic implementation:
 
 ```js
 class MyCustomPainter {
@@ -131,7 +131,7 @@ After that we need to registed newly defined painter:
 registerPaint('my-custom-paint', MyCustomPainter);
 ```
 
-We were using `registerPaint` function and pass paint name as the first argument and our class reference as the second. Here I want to notice that our paint module file with class and registration call has separate context. That means that we can't access any function or variable available in global browser scope or even load any dependency script. The only function available there globally is `registerPaint`. If you try to import synchronously or asynchronously any script browser will block it and show you an error:
+We were using `registerPaint` function and pass paint name as the first argument and our class reference as the second. Here I want to notice that our paint module file with class and registration call has a separate context. That means that we can't access any function or variable available in global browser scope or even load any dependency script. The only function available there globally is `registerPaint`. If you try to import synchronously or asynchronously any script browser will block it and show you an error:
 
 ```js
 // my-custom-paint.js
@@ -151,7 +151,7 @@ if ('paintWorklet' in CSS) {
 
 First, we are checking if `paintWorklet` available in browser and then register our custom paint calling the only available method on `CSS.paintWorklet` called `addModule`. It accepts one parameter -- path to our worklet JavaScript file. Here you can also opt-in with JavaScript-based fallback for CSS Paint with additional `else` statement.
 
-Here how should look final result:
+Here how should look the final result:
 
 ```js
 // my-custom-paint.js
@@ -225,17 +225,17 @@ So we make it square and add black color as a fallback for old browsers. That is
 
 [](youtube:9ZVg3lrqIfg)
 
-One thing I want to mention now, we haven't added any resize event listener, but browser calls `paint` method automatically on any layout changes. Current Chrome implementation uses main UI thread for paint rendering, but in the future, it will use a separate thread. You can imagine some heavy animations or backgrounds that have zero effect on the main thread. It will be enormous performance boost!
+One thing I want to mention now, we haven't added any resize event listener, but browser calls `paint` method automatically on any layout changes. Current Chrome implementation uses main UI thread for paint rendering, but in the future, it will use a separate thread. You can imagine some heavy animations or backgrounds that have zero effect on the main thread. It will be an enormous performance boost!
 
 Your backgrounds could be responsive, and this responsiveness depends on element size itself without any listeners on `resize` events. Until `element queries` are still proposal you can generate different picture depending on element size. Try out [this exaple](https://vitaliy-bobrov.github.io/css-paint-demos/responsive/) with [source code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/responsive). When the element changes its size, we fill our circles with another color.
 
-All this nice, but next I want to make our paint configurable. So let me introduce few CSS variables:
+All this nice, but next I want to make our paint configurable. So let me introduce a few CSS variables:
 
 - `--circles-offset` -- to control the distance between circles
 - `--circles-count` -- for the number of circles to render
 - `--circles-opacity` -- to change circles opacity
 
-With those variables, we can create some kind of pattern that could be changed over the time. To access CSS variables in our painter class, we need to define the static property called `inputProperties`. It should be an `Array` of CSS properties and variables we want to access in `paint` method. On every property from the array change browser will call render for us without any additional line of code. Below is the updated `CirclesPainter`:
+With those variables, we can create some kind of pattern that could be changed over time. To access CSS variables in our painter class, we need to define the static property called `inputProperties`. It should be an `Array` of CSS properties and variables we want to access in `paint` method. On every property from the array change browser will call render for us without any additional line of code. Below is the updated `CirclesPainter`:
 
 ```js
 class CirclesPainter {
@@ -273,7 +273,7 @@ class CirclesPainter {
 registerPaint('circles', CirclesPainter);
 ```
 
-So we added the getter for `inputProperties`, and it returns the list of CSS variable we want to use. Then we get access to all properties we subscribed with `props` argument. It contains CSS map of properties with values. We call `get` method with variable name to get its value as a `string`. Also, we define some defaults to have values even if they are not specified in styles. And we used this value to make circles rendering dynamic.
+So we added the getter for `inputProperties`, and it returns the list of CSS variable we want to use. Then we get access to all properties we subscribed with `props` argument. It contains a CSS map of properties with values. We call `get` method with variable name to get its value as a `string`. Also, we define some defaults to have values even if they are not specified in styles. And we used this value to make circles rendering dynamic.
 
 We should update styles with our variables:
 
@@ -390,7 +390,7 @@ This was cool, but how we can create animations for a painter? As I told before,
 }
 ```
 
-And... this solution won't work as we expect. It just switches opacity from one to zero at 50% point. But why? And the answer is simple, all CSS variable are just strings, they are similar to variables in SASS or LESS -- variables are replaced with values with simple string interpolation. To animate some CSS property browser need to apply interpolation function, but it doesn't know how to interpolate one string to another. It has the only built-in functionality to animate colors, length, numbers, but not for strings. That is why it just switch value at 50%. In this case, we can animate variables with JavaScript using `requestAnimationFrame`. Such script could look like this:
+And... this solution won't work as we expect. It just switches opacity from one to zero at 50% point. But why? And the answer is simple, all CSS variable are just strings, they are similar to variables in SASS or LESS -- variables are replaced with values with simple string interpolation. To animate some CSS property browser need to apply interpolation function, but it doesn't know how to interpolate one string to another. It has the only built-in functionality to animate colors, length, numbers, but not for strings. That is why it just switch value at 50%. In this case, we can animate variables with JavaScript using `requestAnimationFrame`. Such a script could look like this:
 
 ```js
 const canvas = document.querySelector('.circles');
