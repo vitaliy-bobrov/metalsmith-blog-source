@@ -104,7 +104,7 @@
   */
   MaterialLayout.prototype.toggleDrawer = function() {
     const drawerButton = this.element_
-      .querySelector(`.${this.CssClasses_.DRAWER_BTN}`);
+        .querySelector(`.${this.CssClasses_.DRAWER_BTN}`);
     this.drawer_.classList.toggle(this.CssClasses_.IS_DRAWER_OPEN);
     this.obfuscator_.classList.toggle(this.CssClasses_.IS_DRAWER_OPEN);
 
@@ -160,8 +160,8 @@
       }.bind(this), false);
 
       if (this.drawer_) {
-        let drawerButton = this.element_
-          .querySelector(`.${this.CssClasses_.DRAWER_BTN}`);
+        const drawerButton = this.element_
+            .querySelector(`.${this.CssClasses_.DRAWER_BTN}`);
 
         drawerButton.addEventListener('click',
             this.drawerToggleHandler_.bind(this));
@@ -176,7 +176,7 @@
             this.drawerToggleHandler_.bind(this));
 
         this.drawer_
-          .addEventListener('keydown', this.keyboardEventHandler_.bind(this));
+            .addEventListener('keydown', this.keyboardEventHandler_.bind(this));
         this.drawer_.setAttribute('aria-hidden', 'true');
       }
 
@@ -184,7 +184,7 @@
       // of small screens.
       this.screenSizeMediaQuery_ = window.matchMedia('(max-width: 1024px)');
       this.screenSizeMediaQuery_
-        .addListener(this.screenSizeHandler_.bind(this));
+          .addListener(this.screenSizeHandler_.bind(this));
       this.screenSizeHandler_();
 
       this.element_.classList.add('is-upgraded');

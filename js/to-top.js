@@ -4,7 +4,7 @@
   let supportsPassive;
 
   try {
-    let opts = Object.defineProperty({}, 'passive', {
+    const opts = Object.defineProperty({}, 'passive', {
       get: function() {
         supportsPassive = true;
 

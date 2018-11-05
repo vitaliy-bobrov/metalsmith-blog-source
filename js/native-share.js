@@ -6,23 +6,23 @@
 
   const nativeShare = data => {
     navigator.share(data)
-      .then(() => {
-        notification.MaterialSnackbar.showSnackbar({
-          message: 'Thank you for sharing this post!',
-          timeout: 5000
+        .then(() => {
+          notification.MaterialSnackbar.showSnackbar({
+            message: 'Thank you for sharing this post!',
+            timeout: 5000
+          });
+          ga('send', 'event', 'Share', 'click', 'Native Share');
+        })
+        .catch(err => {
+          notification.MaterialSnackbar.showSnackbar({
+            message: 'Sharing failed!',
+            actionHandler: () => {
+              nativeShare(data);
+            },
+            actionText: 'Retry',
+            timeout: 5000
+          });
         });
-        ga('send', 'event', 'Share', 'click', 'Native Share');
-      })
-      .catch(err => {
-        notification.MaterialSnackbar.showSnackbar({
-          message: 'Sharing failed!',
-          actionHandler: () => {
-            nativeShare(data);
-          },
-          actionText: 'Retry',
-          timeout: 5000
-        });
-      });
   };
 
   const shareHandler = event => {
@@ -45,7 +45,7 @@
     ) {
       btn.addEventListener('click', shareHandler, false);
     } else {
-      let menu = btn.parentNode.querySelector('.js-share-menu');
+      const menu = btn.parentNode.querySelector('.js-share-menu');
       menu.setAttribute('for', btn.id);
     }
   });

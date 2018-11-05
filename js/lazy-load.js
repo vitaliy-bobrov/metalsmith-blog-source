@@ -67,8 +67,8 @@
         };
 
         const observer = new IntersectionObserver(
-          intersectionCallback,
-          options
+            intersectionCallback,
+            options
         );
 
         Array.prototype.forEach.call(resources, picture => {

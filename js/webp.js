@@ -6,7 +6,7 @@
    * @param {Function} callback - Callback function.
    */
   const testWepP = callback => {
-    let webP = new Image();
+    const webP = new Image();
 
     webP.src = 'data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAUAAEB8wA' +
     'iMwAgSSNtse/cXjxyCCmrYNWPwmHRH9jwMA';
@@ -26,6 +26,6 @@
   };
 
   document.addEventListener('DOMContentLoaded',
-    testWepP(addWebPClass),
-    false);
+      testWepP(addWebPClass),
+      false);
 })(document);
