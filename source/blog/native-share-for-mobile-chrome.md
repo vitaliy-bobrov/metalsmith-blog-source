@@ -4,26 +4,18 @@ description: New features come to Web standards every day and their goal to impr
 ogimage: images/posts/native-share-for-mobile-chrome/native-share-for-mobile-chrome-og.jpg
 tumb: /images/posts/native-share-for-mobile-chrome/native-share-for-mobile-chrome
 created: 2017-02-15
-updated: 2018-04-13
-lastmod: 2018-08-14
+updated: 2018-11-08
+lastmod: 2018-11-08
 categories:
+-
 - Guides
 ---
 New features come to Web standards every day and their goal to improve user experience visitors of your web page. Sharing to social networks is one of the must-have features in modern web. Today I want to show how easy add native share widget for your users on Android devices with Chrome 55+.
 
-Web Share API is an experimental feature available in Chrome for Android from 2016, but it came as an unflagged feature only to Chrome 55. There is only one difficulty to use that feature now -- you need to sign up form to get [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md) token because the feature is still experimental. This limitation will present till April 2017, and then it'll be possible just to use Web Share as any other browser API. Read down the fast & straightforward step-by-step guide how to add native sharing in your project.
+Web Share API is an experimental feature available in Chrome for Android from 2016, but it came as an unflagged feature to Chrome 55. Read down the fast & straightforward step-by-step guide how to add native sharing to your project.
 
 ## Step 1: Pre-requirements
-Like many other modern features like Service Worker, Web Share requires the secure connection (HTTPS) to your resource. Another requirement is to fill [form](https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform?entry.1999497328=Web+Share+(Experimenting+until+April+2017)) to get Origin Trial token. After filling it, you'll receive a token that could be used only for domain and sub-domain you write (as well as `localhost` for local testing). This token is needed only until April 2017. Then you must add the meta tag with a token to the page's head section:
-
-```html
-<!-- Origin Trials -->
-<meta http-equiv="origin-trial" data-feature="Web Share" data-expires="DATE" content="YOUR_TOKEN">
-```
-
-`data-expires` attribute is not required to be present on that tag, but you should renew token if it expires.
-
-And finally, the main restriction -- share action should be invoked with user action like click, tap, etc. It is the logical requirement to avoid speculations with Web Share API by some "marketing" trickers.
+Like many other modern features like Service Worker, Web Share requires the secure connection (HTTPS) to your resource. And finally, the main restriction -- share action should be invoked with user action like click, tap, etc. It is the logical requirement to avoid speculations with Web Share API by some "marketing" trickers.
 
 ## Step 2: Add trigger in markup
 As we need user interaction to call native share some trigger needs to be added to the page markup. It may be just a link to some share URL for users that will not have a share feature in their browser or like in my case buttons that trigger sharing menu for such users.
