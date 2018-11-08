@@ -4,7 +4,7 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2018-11-05
+lastmod: 2018-11-08
 priority: 1.0
 ---
 ## Upcomming talks:
@@ -21,7 +21,7 @@ priority: 1.0
 
   Topic: **"Flutter in Action: How to build cross-platform app with Dart"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/flutter-in-action-how-to-build-cross-platform-app-with-dart)
+  [Slides](https://speakerdeck.com/bobrov1989/flutter-in-action-how-to-build-cross-platform-app-with-dart) | [Video](https://vimeo.com/299402789)
 
 - [GDG DevFest Wroclaw](https://wroclaw.devfest.pl/) -- 26 October 2018, Wroclaw, Poland
 
