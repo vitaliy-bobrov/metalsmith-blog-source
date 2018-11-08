@@ -2,8 +2,20 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "e468004398859ecfddd8987af79c15c2",
-        "created": "2018-11-05T21:51:57.546Z",
-        "updated": "2018-11-05T21:51:57.546Z"
+        "created": "2018-11-08T21:20:36.786Z",
+        "updated": "2018-11-08T21:20:36.786Z"
+    },
+    "pages/about.md": {
+        "filename": "pages/about.md",
+        "hash": "520a07749adbae7c928d18c9491b2ef1",
+        "created": "2018-11-08T21:20:36.786Z",
+        "updated": "2018-11-08T21:20:36.786Z"
+    },
+    "pages/speaker.md": {
+        "filename": "pages/speaker.md",
+        "hash": "8c49d891624b9a61d6634abc9fe6c4c1",
+        "created": "2018-11-08T21:20:36.786Z",
+        "updated": "2018-11-08T21:20:36.786Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
@@ -11,23 +23,23 @@
         "created": "2017-01-30T00:00:00.000Z",
         "updated": "2018-02-18T00:00:00.000Z"
     },
-    "blog/css-custom-properties-in-depth-part-2.md": {
-        "filename": "blog/css-custom-properties-in-depth-part-2.md",
-        "hash": "c7716dc5b3ffc4df364136c29b2c71f6",
-        "created": "2018-07-16T00:00:00.000Z",
-        "updated": "2018-07-16T00:00:00.000Z"
-    },
     "blog/css-custom-properties-in-depth.md": {
         "filename": "blog/css-custom-properties-in-depth.md",
         "hash": "a33af6804b07b563576b55e133d9565b",
         "created": "2018-05-30T00:00:00.000Z",
         "updated": "2018-07-03T00:00:00.000Z"
     },
+    "blog/css-custom-properties-in-depth-part-2.md": {
+        "filename": "blog/css-custom-properties-in-depth-part-2.md",
+        "hash": "c7716dc5b3ffc4df364136c29b2c71f6",
+        "created": "2018-07-16T00:00:00.000Z",
+        "updated": "2018-07-16T00:00:00.000Z"
+    },
     "blog/css-paint-in-action-bar-chart.md": {
         "filename": "blog/css-paint-in-action-bar-chart.md",
-        "hash": "2115dc2af3952b3e626c1ef178b39c4d",
+        "hash": "5daccb93b61d7241a87cd6ec9d081ac8",
         "created": "2018-04-13T00:00:00.000Z",
-        "updated": "2018-04-30T00:00:00.000Z"
+        "updated": "2018-11-07T00:00:00.000Z"
     },
     "blog/deep-dive-into-array-methods.md": {
         "filename": "blog/deep-dive-into-array-methods.md",
@@ -67,9 +79,9 @@
     },
     "blog/native-share-for-mobile-chrome.md": {
         "filename": "blog/native-share-for-mobile-chrome.md",
-        "hash": "934fc13e1121f4962ff2922f7c7f09bf",
+        "hash": "fbdaacdaf2d49ccdff0882528dd10703",
         "created": "2017-02-15T00:00:00.000Z",
-        "updated": "2018-04-13T00:00:00.000Z"
+        "updated": "2018-11-08T00:00:00.000Z"
     },
     "blog/please-no-more-jquery.md": {
         "filename": "blog/please-no-more-jquery.md",
@@ -88,17 +100,5 @@
         "hash": "10c0084fcdc6c2831d43dcf489b2d199",
         "created": "2017-02-09T00:00:00.000Z",
         "updated": "2018-02-17T00:00:00.000Z"
-    },
-    "pages/about.md": {
-        "filename": "pages/about.md",
-        "hash": "520a07749adbae7c928d18c9491b2ef1",
-        "created": "2018-11-05T21:51:57.546Z",
-        "updated": "2018-11-05T21:51:57.546Z"
-    },
-    "pages/speaker.md": {
-        "filename": "pages/speaker.md",
-        "hash": "024cd86e7a884c8facf4ff155e148bef",
-        "created": "2018-11-05T21:51:57.546Z",
-        "updated": "2018-11-05T21:51:57.546Z"
     }
 }
