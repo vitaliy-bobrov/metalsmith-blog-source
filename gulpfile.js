@@ -13,7 +13,7 @@ const mqkeyframes = require('postcss-mq-keyframes');
 const exec = require('child_process').exec;
 const request = require('request');
 const url = require('url');
-const swPrecache = require('sw-precache');
+const workboxBuild = require('workbox-build');
 const pkg = require('./package.json');
 
 const $ = gulpLoadPlugins();
@@ -266,49 +266,58 @@ const seo = done => {
 
 gulp.task('seo', seo);
 
-const copySWScripts = () => gulp.src([
-    'node_modules/sw-toolbox/sw-toolbox.js',
-    'node_modules/sw-offline-google-analytics/build/importScripts/sw-offline-google-analytics.prod.v0.0.25.js',
-    'js/sw/*.js'
-  ])
-  .pipe($.plumber({
-    errorHandler: onError
-  }))
-  .pipe($.babelMinify())
-  .pipe(gulp.dest('build/js/sw'));
-
-gulp.task('copy-sw-scripts', copySWScripts);
-
-const generateSW = gulp.series('copy-sw-scripts', () => {
+const generateSW = () => {
   const rootDir = 'build';
   const filepath = path.join(rootDir, 'service-worker.js');
   const ONE_YEAR_IN_SEC = 31557600;
   const ONE_WEEK_IN_SEC = 604800;
 
-  return swPrecache.write(filepath, {
+  return workboxBuild.generateSW({
+    swDest: filepath,
+    importWorkboxFrom: 'local',
     cacheId: pkg.name,
-    importScripts: [
-      'js/sw/sw-toolbox.js',
-      'js/sw/sw-offline-google-analytics.prod.v0.0.25.js',
-      'js/sw/offline-analytics.js',
-      'js/sw/runtime-caching.js'
-    ],
-    staticFileGlobs: [
-      `${rootDir}/images/icons/**/*`,
-      `${rootDir}/images/authors/**/*`,
-      `${rootDir}/images/!(*-og.jpg)`,
-      `${rootDir}/js/**/*.js`,
-      `${rootDir}/css/**/*.css`,
-      `${rootDir}/about/*.html`,
-      `${rootDir}/speaker/*.html`
+    offlineGoogleAnalytics: true,
+    globDirectory: rootDir,
+    globPatterns: [
+      '*.html',
+      'images/icons/**/*',
+      'images/authors/**/*',
+      'images/!(*-og.jpg)',
+      'js/**/*.js',
+      'css/**/*.css',
+      'about/*.html',
+      'speaker/*.html'
     ],
     runtimeCaching: [
+      {
+        urlPattern: new RegExp('\.(?:googleapis|gstatic|google-analytics)\.com/'),
+        handler: 'staleWhileRevalidate',
+        options: {
+          cacheName: 'gapi',
+          cacheableResponse: {
+            statuses: [0, 200]
+          }
+        }
+      },
+      {
+        urlPattern: new RegExp('\.(?:bobrov-blog\.disqus|disquscdn)\.com/'),
+        handler: 'staleWhileRevalidate',
+        options: {
+          cacheName: 'disqus',
+          cacheableResponse: {
+            statuses: [0, 200]
+          },
+          matchOptions: {
+            ignoreSearch: true
+          }
+        }
+      },
       {
         urlPattern: /.*\.(png|jpg|gif|webp|svg)/i,
         handler: 'cacheFirst',
         options: {
-          cache: {
-            name: 'images-cache',
+          cacheName: 'images-cache',
+          expiration: {
             maxEntries: 100,
             maxAgeSeconds: ONE_YEAR_IN_SEC
           }
@@ -316,43 +325,37 @@ const generateSW = gulp.series('copy-sw-scripts', () => {
       },
       {
         urlPattern: /\/blog\/.*\.html/,
-        handler: 'networkFirst',
+        handler: 'cacheFirst',
         options: {
-          cache: {
-            name: 'posts-cache',
+          cacheName: 'posts-cache',
+          expiration: {
             maxEntries: 24,
-            maxAgeSeconds: ONE_YEAR_IN_SEC
-          }
-        }
-      },
-      {
-        urlPattern: /\/.*\.html/,
-        handler: 'networkFirst',
-        options: {
-          cache: {
-            name: 'blog-list-cache',
-            maxEntries: 24,
-            maxAgeSeconds:  ONE_WEEK_IN_SEC
+            maxAgeSeconds: ONE_WEEK_IN_SEC
           }
         }
       },
       {
         urlPattern: /\/(category|page)\/.*\.html/,
-        handler: 'networkFirst',
+        handler: 'cacheOnly',
         options: {
-          cache: {
-            name: 'category-cache',
+          cacheName: 'category-cache',
+          expiration: {
             maxEntries: 72,
             maxAgeSeconds:  ONE_WEEK_IN_SEC
           }
         }
       }
     ],
-    stripPrefix: rootDir + '/'
+    modifyUrlPrefix: {
+      [`/${rootDir}`]: ''
+    }
+  }).then(({count, size, warnings}) => {
+    warnings.forEach(console.warn);
+    console.log(`${count} files will be precached, totaling ${size} bytes.`);
   });
-});
+};
 
-gulp.task('generate-service-worker', generateSW);
+gulp.task('service-worker', generateSW);
 
 const defaultTask = gulp.series(
   'clean',
@@ -363,7 +366,7 @@ const defaultTask = gulp.series(
     'service-files',
     'metalsmith'
   ),
-  'generate-service-worker'
+  'service-worker'
 );
 
 gulp.task('default', defaultTask);

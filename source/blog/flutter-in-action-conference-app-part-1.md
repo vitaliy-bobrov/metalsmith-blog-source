@@ -3,6 +3,7 @@ title: "Flutter in Action: Conference App"
 description:
 ogimage: images/posts/flutter-in-action-conference-app/flutter-in-action-conference-app-og.jpg
 tumb: /images/posts/flutter-in-action-conference-app/flutter-in-action-conference-app
+draft: true
 created: 2018-11-07
 updated: 2018-11-07
 lastmod: 2018-11-07
