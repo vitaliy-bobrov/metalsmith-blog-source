@@ -5965,9 +5965,10 @@ metalsmith-markdown-remarkable@^0.1.2:
     debug "^4.1.0"
     remarkable "^1.7.1"
 
-metalsmith-pagination@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/metalsmith-pagination/-/metalsmith-pagination-1.4.0.tgz#ec440281e93171509e7bccf8e838efb824fc1ed5"
+metalsmith-pagination@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/metalsmith-pagination/-/metalsmith-pagination-1.4.1.tgz#5b83ca19ed8cb0b5b2ccd403fbcb80a4c2d4074e"
+  integrity sha512-K7VjuKzIiP9Jw+1D7q0ChbfzLtl3arMpkYaztR6mFfOIs+ujMENhivvt1Kg1PwK6WXG4RXcew+oWLjwJJ5YqGw==
   dependencies:
     to-function "^2.0.5"
     xtend "^4.0.0"
