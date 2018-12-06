@@ -4,18 +4,22 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2018-11-08
+lastmod: 2018-12-07
 priority: 1.0
 ---
 ## Upcomming talks:
+
+*The future is comming*
+
+## Past talks:
+
+### 2018
 
 - [FrontEnd Con](https://frontend-con.io/) -- 4 December 2018, Warsaw, Poland
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
-## Past talks:
-
-### 2018
+  [Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api-1c99ed50-7d7d-43b4-bc1e-7f41684274ed)
 
 - [Mobile Era](https://mobileera.rocks/) -- 1 November 2018, Oslo, Norway
 
