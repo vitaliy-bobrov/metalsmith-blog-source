@@ -14,7 +14,7 @@ Typos in the URL is a straightforward way to 404 page. But could we make user ex
 
 The example app is build using `Angular` *7.1.0* and `Angular CLI` *7.1.2*. But the code should work with any Angular version without any major problems.{post__series}
 
-## The Why
+## Why?
 What is the problem with a standard "Not found" pages? Usually, it doesn't help to find the correct address to the resource user looks for. It might contain a link to the home page or navigation list. But find content that neede at the moment might be so hard. How we can solve this problem? It will be great if we can look at the existing sitemap or routes list and find one that could be what user means.
 
 If we are speaking about modern JS frameworks and Angular in particular we already have all the links across our app as a router configuration. This solves the lookup source part.
