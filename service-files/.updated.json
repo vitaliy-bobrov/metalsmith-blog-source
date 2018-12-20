@@ -2,8 +2,20 @@
     ".DS_Store": {
         "filename": ".DS_Store",
         "hash": "e468004398859ecfddd8987af79c15c2",
-        "created": "2018-12-20T23:24:23.779Z",
-        "updated": "2018-12-20T23:24:23.779Z"
+        "created": "2018-12-20T23:29:14.577Z",
+        "updated": "2018-12-20T23:29:14.577Z"
+    },
+    "pages/speaker.md": {
+        "filename": "pages/speaker.md",
+        "hash": "d58e3d24c819745217472298c9dae194",
+        "created": "2018-12-20T23:29:14.577Z",
+        "updated": "2018-12-20T23:29:14.577Z"
+    },
+    "pages/about.md": {
+        "filename": "pages/about.md",
+        "hash": "520a07749adbae7c928d18c9491b2ef1",
+        "created": "2018-12-20T23:29:14.577Z",
+        "updated": "2018-12-20T23:29:14.577Z"
     },
     "blog/adding-comments-to-metalsmith.md": {
         "filename": "blog/adding-comments-to-metalsmith.md",
@@ -92,25 +104,13 @@
     "blog/trying-paint-wroklet-in-safari-tp.md": {
         "filename": "blog/trying-paint-wroklet-in-safari-tp.md",
         "hash": "d0d56b9971bb98da529e8a39860c561f",
-        "created": "2018-12-19T00:00:00.000Z",
-        "updated": "2018-12-20T00:00:00.000Z"
+        "created": "2018-12-21T00:00:00.000Z",
+        "updated": "2018-12-21T00:00:00.000Z"
     },
     "blog/webpack-2-migration-tips.md": {
         "filename": "blog/webpack-2-migration-tips.md",
         "hash": "10c0084fcdc6c2831d43dcf489b2d199",
         "created": "2017-02-09T00:00:00.000Z",
         "updated": "2018-02-17T00:00:00.000Z"
-    },
-    "pages/about.md": {
-        "filename": "pages/about.md",
-        "hash": "520a07749adbae7c928d18c9491b2ef1",
-        "created": "2018-12-20T23:24:23.779Z",
-        "updated": "2018-12-20T23:24:23.779Z"
-    },
-    "pages/speaker.md": {
-        "filename": "pages/speaker.md",
-        "hash": "d58e3d24c819745217472298c9dae194",
-        "created": "2018-12-20T23:24:23.779Z",
-        "updated": "2018-12-20T23:24:23.779Z"
     }
 }
