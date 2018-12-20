@@ -3,7 +3,7 @@ title: "Angular Smart 404 Page"
 description: "Typos in the URL is a straightforward way to 404 page. But could we make user experience in that situation better? For example, could we provide a user with the correct path? Today I will show how to make a prediction of the correct location on 404 page without machine learning and magic."
 ogimage: images/posts/angular-smart-404-page/angular-smart-404-page-og.jpg
 tumb: /images/posts/angular-smart-404-page/angular-smart-404-page
-created: 2018-12-09
+created: 2018-12-11
 updated: 2018-12-11
 lastmod: 2018-12-11
 categories:
