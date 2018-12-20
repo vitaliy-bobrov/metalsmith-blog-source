@@ -141,17 +141,6 @@ const postShare = (title, description, siteurl, path, id = 0) => {
             LinkedIn
           </a>
         </li>
-        <li class="mdl-menu__item share-menu__item">
-          <a href="//plus.google.com/share?url=${link}"
-             class="share-menu__link"
-             target="_blank"
-             rel="nofollow noreferrer noopener">
-            <svg class="share-menu__icon">
-              <use xlink:href="#google-plus"></use>
-            </svg>
-            Goggle+
-          </a>
-        </li>
       </ul>
     </div>`;
 };
