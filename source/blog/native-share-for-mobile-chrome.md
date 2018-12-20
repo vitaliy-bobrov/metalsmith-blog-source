@@ -7,7 +7,6 @@ created: 2017-02-15
 updated: 2018-11-08
 lastmod: 2018-11-08
 categories:
--
 - Guides
 ---
 New features come to Web standards every day and their goal to improve user experience visitors of your web page. Sharing to social networks is one of the must-have features in modern web. Today I want to show how easy add native share widget for your users on Android devices with Chrome 55+.

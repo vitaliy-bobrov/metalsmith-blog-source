@@ -457,6 +457,6 @@ Today to just got started with CSS Paint API exploring how to create own one, ho
 
 - [Developers Google](https://developers.google.com/web/updates/2018/01/paintapi)
 - [Houdini Drafts](https://drafts.css-houdini.org/css-paint-api/​)
-- [W3C CSS Paint Draft](https://www.w3.org/TR/css-paint-api-1/​)
+- [W3C CSS Paint Draft](https://www.w3.org/TR/css-paint-api-1/)
 - [Demos](https://lab.iamvdo.me/houdini/)
 - [My demos](https://vitaliy-bobrov.github.io/css-paint-demos/​)
