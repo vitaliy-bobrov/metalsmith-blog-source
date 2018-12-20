@@ -49,7 +49,6 @@
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-size": "^3.0.0",
-    "gulp-sourcemaps": "^2.6.4",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uncss": "^1.0.6",
     "gulp-webp": "^3.0.0",

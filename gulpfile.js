@@ -132,11 +132,10 @@ const styles = () => {
     mqkeyframes
   ];
 
-  return gulp.src('scss/**/*.scss')
+  return gulp.src('scss/**/*.scss', {sourcemaps: !prod})
     .pipe($.plumber({
       errorHandler: onError
     }))
-    .pipe($.if(!prod, $.sourcemaps.init()))
     .pipe($.sass({
       includePaths: [
         'node_modules/material-design-lite/src/',
@@ -157,8 +156,7 @@ const styles = () => {
     })))
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.size({title: 'styles'}))
-    .pipe($.if(!prod, $.sourcemaps.write('./')))
-    .pipe(gulp.dest('build/css'));
+    .pipe(gulp.dest('build/css', {sourcemaps: prod ? false : '.'}));
 };
 
 gulp.task('styles', styles);
@@ -168,17 +166,15 @@ const scripts = () => gulp.src([
     'node_modules/material-design-lite/src/menu/menu.js',
     'node_modules/material-design-lite/src/snackbar/snackbar.js',
     'js/*.js'
-  ])
+  ], {sourcemaps: !prod})
   .pipe($.plumber({
     errorHandler: onError
   }))
-  .pipe($.if(!prod, $.sourcemaps.init()))
   .pipe($.babel(BABELRC))
   .pipe($.concat('main.min.js'))
   .pipe($.if(prod, $.babelMinify()))
   .pipe($.size({title: 'scripts'}))
-  .pipe($.if(!prod, $.sourcemaps.write('./')))
-  .pipe(gulp.dest('build/js'));
+  .pipe(gulp.dest('build/js', {sourcemaps: prod ? false : '.'}));
 
 gulp.task('scripts', scripts);
 
