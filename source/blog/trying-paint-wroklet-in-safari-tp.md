@@ -1,5 +1,5 @@
 ---
-title: "Trying Paint Wroklet in Safari Technology Preview"
+title: "Trying Paint Worklet in Safari Technology Preview"
 description: "As a big fan of CSS Houdini, I was so happy that Safari team decided to take Paint API in development. The first implementation was shipped with Safari Technology Preview (TP) 69. But in the version 72 release the changelog I saw exciting news -- it is possible to pass <image> as an input property to the Paint Worklet. I wanted to play with it here and now. Unfortunately, it wasn't that easy."
 ogimage: images/posts/trying-paint-wroklet-in-safari-tp/trying-paint-wroklet-in-safari-tp-og.jpg
 tumb: /images/posts/trying-paint-wroklet-in-safari-tp/trying-paint-wroklet-in-safari-tp
