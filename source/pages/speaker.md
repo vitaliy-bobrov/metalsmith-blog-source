@@ -4,7 +4,7 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2018-12-07
+lastmod: 2019-01-14
 priority: 1.0
 ---
 ## Upcomming talks:
@@ -19,7 +19,7 @@ priority: 1.0
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api-1c99ed50-7d7d-43b4-bc1e-7f41684274ed)
+  [Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api-1c99ed50-7d7d-43b4-bc1e-7f41684274ed) | [Video](https://youtu.be/2bJz7c4zn9k)
 
 - [Mobile Era](https://mobileera.rocks/) -- 1 November 2018, Oslo, Norway
 

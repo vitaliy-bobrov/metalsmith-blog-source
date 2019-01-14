@@ -4,8 +4,8 @@ description: "As a big fan of CSS Houdini, I was so happy that Safari team decid
 ogimage: images/posts/trying-paint-wroklet-in-safari-tp/trying-paint-wroklet-in-safari-tp-og.jpg
 tumb: /images/posts/trying-paint-wroklet-in-safari-tp/trying-paint-wroklet-in-safari-tp
 created: 2018-12-21
-updated: 2018-12-21
-lastmod: 2018-12-21
+updated: 2018-12-22
+lastmod: 2018-12-22
 categories:
 - Tips & Tricks
 - Houdini

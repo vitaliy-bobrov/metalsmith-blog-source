@@ -4,8 +4,8 @@ description: CSS Paint API is the first part of the Houdini project that is avai
 ogimage: images/posts/exploring-the-css-paint-api/exploring-the-css-paint-api-og.jpg
 tumb: /images/posts/exploring-the-css-paint-api/exploring-the-css-paint-api
 created: 2018-03-19
-updated: 2018-11-05
-lastmod: 2018-11-05
+updated: 2018-12-21
+lastmod: 2018-12-21
 categories:
 - CSS
 - Houdini
