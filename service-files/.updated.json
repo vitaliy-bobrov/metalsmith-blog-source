@@ -2,32 +2,14 @@
   ".DS_Store": {
     "filename": ".DS_Store",
     "hash": "b0a023e07d76f04b06a60355b93fe2e3f4dc59c1",
-    "created": "2019-01-15T20:44:25.304Z",
-    "updated": "2019-01-15T20:44:25.304Z"
-  },
-  "pages/about.md": {
-    "filename": "pages/about.md",
-    "hash": "8df195aa4b2516526e4cb21e421ebc6909ffc45e",
-    "created": "2019-01-15T20:44:25.304Z",
-    "updated": "2019-01-15T20:44:25.304Z"
-  },
-  "pages/speaker.md": {
-    "filename": "pages/speaker.md",
-    "hash": "f96c7d15362cdf391c997756a3547a44c3c2f96c",
-    "created": "2019-01-15T20:44:25.304Z",
-    "updated": "2019-01-15T20:44:25.304Z"
+    "created": "2019-01-23T20:38:33.077Z",
+    "updated": "2019-01-23T20:38:33.077Z"
   },
   "blog/adding-comments-to-metalsmith.md": {
     "filename": "blog/adding-comments-to-metalsmith.md",
     "hash": "41def8f59bb38e1e8a78c474cda6d66803b5a798",
     "created": "2017-01-30T00:00:00.000Z",
     "updated": "2018-02-18T00:00:00.000Z"
-  },
-  "blog/angular-ngrx-and-easter-egg.md": {
-    "filename": "blog/angular-ngrx-and-easter-egg.md",
-    "hash": "ff46affaf69aebb2a1b3512182dc856dbe082e45",
-    "created": "2019-01-07T00:00:00.000Z",
-    "updated": "2019-01-07T00:00:00.000Z"
   },
   "blog/angular-smart-404-page.md": {
     "filename": "blog/angular-smart-404-page.md",
@@ -118,5 +100,17 @@
     "hash": "f6dc200ef7778cfff8f7452392e0b1f02e30b9b2",
     "created": "2017-02-09T00:00:00.000Z",
     "updated": "2018-02-17T00:00:00.000Z"
+  },
+  "pages/about.md": {
+    "filename": "pages/about.md",
+    "hash": "8df195aa4b2516526e4cb21e421ebc6909ffc45e",
+    "created": "2019-01-23T20:38:33.077Z",
+    "updated": "2019-01-23T20:38:33.077Z"
+  },
+  "pages/speaker.md": {
+    "filename": "pages/speaker.md",
+    "hash": "6b08b89810bfc79f42521b07e03692fd0ba3c2ac",
+    "created": "2019-01-23T20:38:33.077Z",
+    "updated": "2019-01-23T20:38:33.077Z"
   }
 }
