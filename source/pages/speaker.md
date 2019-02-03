@@ -4,12 +4,14 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2019-01-23
+lastmod: 2019-02-03
 priority: 1.0
 ---
 ## Upcomming talks:
 
-*The future is comming*
+- [Adventures in Angular](https://devchat.tv/adv-in-angular/) -- 6 February 2019, Online
+
+  Topic: **"Smart 404 pages"**
 
 ## Past talks:
 
