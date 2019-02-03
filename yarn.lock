@@ -1137,16 +1137,16 @@ autoprefixer@^6.3.1:
     postcss "^5.2.16"
     postcss-value-parser "^3.2.3"
 
-autoprefixer@^9.4.6:
-  version "9.4.6"
-  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.4.6.tgz#0ace275e33b37de16b09a5547dbfe73a98c1d446"
-  integrity sha512-Yp51mevbOEdxDUy5WjiKtpQaecqYq9OqZSL04rSoCiry7Tc5I9FEyo3bfxiTJc1DfHeKwSFCUYbBAiOQ2VGfiw==
+autoprefixer@^9.4.7:
+  version "9.4.7"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.4.7.tgz#f997994f9a810eae47b38fa6d8a119772051c4ff"
+  integrity sha512-qS5wW6aXHkm53Y4z73tFGsUhmZu4aMPV9iHXYlF0c/wxjknXNHuj/1cIQb+6YH692DbJGGWcckAXX+VxKvahMA==
   dependencies:
     browserslist "^4.4.1"
-    caniuse-lite "^1.0.30000929"
+    caniuse-lite "^1.0.30000932"
     normalize-range "^0.1.2"
     num2fraction "^1.2.2"
-    postcss "^7.0.13"
+    postcss "^7.0.14"
     postcss-value-parser "^3.3.1"
 
 aws-sign2@~0.6.0:
@@ -1874,6 +1874,11 @@ caniuse-lite@^1.0.30000929:
   version "1.0.30000930"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000930.tgz#c238bab82bedb462bcbdc61d0334932dcc084d8a"
   integrity sha512-KD+pw9DderBLB8CGqBzYyFWpnrPVOEjsjargU/CvkNyg60od3cxSPTcTeMPhxJhDbkQPWvOz5BAyBzNl/St9vg==
+
+caniuse-lite@^1.0.30000932:
+  version "1.0.30000934"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000934.tgz#4f2d749f51e9e2d4e9b182f8f121d26ec4208e8d"
+  integrity sha512-o7yfZn0R9N+mWAuksDsdLsb1gu9o//XK0QSU0zSSReKNRsXsFc/n/psxi0YSPNiqlKxImp5h4DHnAPdwYJ8nNA==
 
 caseless@~0.11.0:
   version "0.11.0"
@@ -3244,10 +3249,10 @@ eslint@^5.0.1:
     table "^4.0.3"
     text-table "^0.2.0"
 
-eslint@^5.12.1:
-  version "5.12.1"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.12.1.tgz#5ca9931fb9029d04e7be92b03ce3b58edfac7e3b"
-  integrity sha512-54NV+JkTpTu0d8+UYSA8mMKAG4XAsaOrozA9rCW7tgneg1mevcL7wIotPC+fZ0SkWwdhNqoXoxnQCTBp7UvTsg==
+eslint@^5.13.0:
+  version "5.13.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.13.0.tgz#ce71cc529c450eed9504530939aa97527861ede9"
+  integrity sha512-nqD5WQMisciZC5EHZowejLKQjWGuFS5c70fxqSKlnDME+oz9zmE8KTlX+lHSg+/5wsC/kf9Q9eMkC8qS3oM2fg==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     ajv "^6.5.3"
@@ -3278,7 +3283,6 @@ eslint@^5.12.1:
     natural-compare "^1.4.0"
     optionator "^0.8.2"
     path-is-inside "^1.0.2"
-    pluralize "^7.0.0"
     progress "^2.0.0"
     regexpp "^2.0.1"
     semver "^5.5.1"
@@ -4461,10 +4465,10 @@ gulp-util@^3.0.7, gulp-util@~3.0.6:
     through2 "^2.0.0"
     vinyl "^0.5.0"
 
-gulp-webp@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/gulp-webp/-/gulp-webp-4.0.0.tgz#5d46499706832a452190d6e70a7c3f9ea31fbfdb"
-  integrity sha512-UK45Nl+AC0KTObNEDRrQX4WwnPgJNeRFtUEdWeTEfPXyoxBp9741LHJEXtfmY6TCZGwITn3fByMUF3fJoKnpdA==
+gulp-webp@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/gulp-webp/-/gulp-webp-4.0.1.tgz#c3cf0ee8362fced253784c50bc29a44a06d98ed1"
+  integrity sha512-ChrghhDJcLDGDNPvH4LwFX2jDOOunKmshYLc4tL3BajL/aGSYXRc+sY51R/6A9veZ7Maf/pzZqzNf6zkfItARA==
   dependencies:
     imagemin-webp "^5.0.0"
     plugin-error "^1.0.1"
@@ -6192,10 +6196,10 @@ metalsmith-pagination@^1.4.1:
     to-function "^2.0.5"
     xtend "^4.0.0"
 
-metalsmith-permalinks@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/metalsmith-permalinks/-/metalsmith-permalinks-2.0.0.tgz#89d0767b52dc86593388ad5d958dfc7da9ed0898"
-  integrity sha512-Vunug89+fdMlrOO5z1WZP/Zceo/9Y3PB1tRz8w/xY2PjcqkGqYVzHF4jw9HdU2kdMlU1h6+tcJ5Tj59NfpqTgw==
+metalsmith-permalinks@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/metalsmith-permalinks/-/metalsmith-permalinks-2.1.0.tgz#07ae4af04d356259c9c1a1284537f37a7d6f4c1a"
+  integrity sha512-5VILbqJTey4vSxBTAaSqO81EcPm8wsey5kWq30p7/CQ3N15snBinaqCuRGhtbaTb87Bx/fnmJf7UdeuYhq0uoQ==
   dependencies:
     debug "^4.1.0"
     moment "^2.5.1"
@@ -7488,7 +7492,7 @@ postcss@^7.0.0:
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-postcss@^7.0.13:
+postcss@^7.0.14:
   version "7.0.14"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.14.tgz#4527ed6b1ca0d82c53ce5ec1a2041c2346bbd6e5"
   integrity sha512-NsbD6XUUMZvBxtQAJuWDJeeC4QFsmWsfozWxCJPWf3M55K9iu2iMDaKqyoOdTJ1R4usBXuxlVFAIo8rZPQD4Bg==
