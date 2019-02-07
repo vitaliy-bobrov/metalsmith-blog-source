@@ -25,85 +25,85 @@ priority: 1.0
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api-1c99ed50-7d7d-43b4-bc1e-7f41684274ed) | [Video](https://youtu.be/2bJz7c4zn9k)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api-1c99ed50-7d7d-43b4-bc1e-7f41684274ed) | 🎬[Video](https://youtu.be/2bJz7c4zn9k)
 
 - [Mobile Era](https://mobileera.rocks/) -- 1 November 2018, Oslo, Norway
 
   Topic: **"Flutter in Action: How to build cross-platform app with Dart"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/flutter-in-action-how-to-build-cross-platform-app-with-dart) | [Video](https://vimeo.com/299402789)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/flutter-in-action-how-to-build-cross-platform-app-with-dart) | 🎬[Video](https://vimeo.com/299402789)
 
 - [GDG DevFest Wroclaw](https://wroclaw.devfest.pl/) -- 26 October 2018, Wroclaw, Poland
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api-1c99ed50-7d7d-43b4-bc1e-7f41684274ed) | [Video](https://youtu.be/fHAz4unc0Mc)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api-1c99ed50-7d7d-43b4-bc1e-7f41684274ed) | 🎬[Video](https://youtu.be/fHAz4unc0Mc)
 
 - [Ruhr JS](https://ruhrjs.de/) -- 14 October 2018, Bochum, Germany
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api) | [Video](https://youtu.be/yPP6YCuJ29w)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api) |🎬 [Video](https://youtu.be/yPP6YCuJ29w)
 
 - [Modern Web Podcast](https://www.thisdot.co/modern-web) -- 1 October 2018, Online
 
   Topic: **"Houdini"**
 
-  [Video](https://youtu.be/QbHJIybbPLM)
+  🎬[Video](https://youtu.be/QbHJIybbPLM)
 
 - [GrillJS](http://grilljs.com/) -- 18 August 2018, Wroclaw, Poland
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api-1)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api-1)
 
 - [NG Talks](https://ngtalks.io/) -- 9 August 2018, Kharkiv, Ukraine
 
   Topic: **"Robots Don't Cry: Automation with Schematics"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/robots-dont-cry-automation-with-schematics) | [Video](https://youtu.be/vif2u6A7aeo)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/robots-dont-cry-automation-with-schematics) | 🎬[Video](https://youtu.be/vif2u6A7aeo)
 
 - [Angular Wroclaw](https://www.meetup.com/AngularJS-Wroc%C5%82aw/events/252571459/) -- 26 July 2018, Wroclaw, Poland
 
   Topic: **"Robots Don't Cry: Automation with Schematics"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/robots-dont-cry-automation-with-schematics)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/robots-dont-cry-automation-with-schematics)
 
 - [Vinnytsia JS](http://vinnytsiajs.org/) -- 21 July 2018, Vinnytsia, Ukraine
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api) | [Video](https://youtu.be/Gfq5Ut3r6Bw)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api) |🎬 [Video](https://youtu.be/Gfq5Ut3r6Bw)
 
 - [ngHouston](https://www.meetup.com/ngHouston/) -- 14 June 2018, Online
 
   Topic: **"NgRx Schematics"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/ngrx-schematics-1) | [Video](https://youtu.be/qyymWyiZYNY)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/ngrx-schematics-1) | 🎬[Video](https://youtu.be/qyymWyiZYNY)
 
 - [jsDay](https://2018.jsday.it/) -- 10 May 2018, Verona, Italy
 
   Topic: **"PWA as a new Cyber Attack Vector"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/pwa-as-a-new-cyber-attack-vector) | [Video](https://youtu.be/JGKyPVu9abo)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/pwa-as-a-new-cyber-attack-vector) | 🎬[Video](https://youtu.be/JGKyPVu9abo)
 
 - [jsDay](https://2018.jsday.it/) -- 9 May 2018, Verona, Italy
 
   Topic: **"TypeScript -- JavaScript you are going to love"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/typescript-javascript-you-are-gonna-to-love-1) | [Video](https://youtu.be/VGAyA8eQ3o0)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/typescript-javascript-you-are-gonna-to-love-1) |🎬 [Video](https://youtu.be/VGAyA8eQ3o0)
 
 - [Code Europe](https://www.codeeurope.pl) -- 26 April 2018, Wroclaw, Poland
 
   Topic: **"TypeScript -- JavaScript you are going to love"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/typescript-javascript-you-are-gonna-to-love)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/typescript-javascript-you-are-gonna-to-love)
 
 - [ng-conf](https://www.ng-conf.org) -- 19 April 2018, Salt Lake City, UT
 
   Topic: **"NgRx Schematics"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/ngrx-schematics) | [Video](https://youtu.be/q3UcqG72Zl4)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/ngrx-schematics) | 🎬[Video](https://youtu.be/q3UcqG72Zl4)
 
 - [Angular Dragons](https://www.meetup.com/Angular-Dragons/events/247151777/) -- 13 March 2018, Krakow, Poland
 
@@ -113,13 +113,13 @@ priority: 1.0
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
-  [Slides](http://slides.com/vitaliybobrov/krakowjs-css-paint-api)
+  🗂[Slides](http://slides.com/vitaliybobrov/krakowjs-css-paint-api)
 
 - [ngVikings](https://2018.ngvikings.org/) -- 1 March 2018, Helsinki, Finland
 
   Topic: **"Designing Components API"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/designing-component-api) | [Video](https://youtu.be/hpDQeTIbrRE)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/designing-component-api) | 🎬[Video](https://youtu.be/hpDQeTIbrRE)
 
 ### 2017
 
@@ -127,19 +127,19 @@ priority: 1.0
 
   Topic: **"Stencil: a New Hope of Web Components"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/stencil-a-new-hope-of-web-components) | [Video](https://youtu.be/XJ_DPukLJRI)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/stencil-a-new-hope-of-web-components) | 🎬[Video](https://youtu.be/XJ_DPukLJRI)
 
 - [meet.js Wrocław](https://www.meetup.com/meet-js-wroclaw/events/238619875/) -- 30 November 2017, Wroclaw, Poland
 
   Topic: **"Fancy Web Components with Stencil"**
 
-  [Slides](https://speakerdeck.com/bobrov1989/fancy-web-components-with-stencil)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/fancy-web-components-with-stencil)
 
 - [FrontEnd Con](http://frontend-con.io/) -- 22 September 2017, Warsaw, Poland
 
   Topic: **"Keep calm and use Angular CLI"**
 
-  [Slides](https://docs.google.com/presentation/d/163227i-G20qaMdr1e74dzOqLv0jQU40nAzUWyLCK6AU/edit?usp=sharing) | [Video](https://youtu.be/iUFaduAeplU)
+  🗂[Slides](https://docs.google.com/presentation/d/163227i-G20qaMdr1e74dzOqLv0jQU40nAzUWyLCK6AU/edit?usp=sharing) | 🎬[Video](https://youtu.be/iUFaduAeplU)
 
 
 ### 2016
@@ -148,13 +148,13 @@ priority: 1.0
 
   Topic: **"Mobile development with JavaScript"**
 
-  [Slides](https://docs.google.com/presentation/d/15_dfnWqU-bpWUVb0ISP_CDg0fgdQWrDjnVsd5jfiGdA/edit?usp=sharing) | [Video](https://youtu.be/6AKG7goUqDQ)
+  🗂[Slides](https://docs.google.com/presentation/d/15_dfnWqU-bpWUVb0ISP_CDg0fgdQWrDjnVsd5jfiGdA/edit?usp=sharing) | 🎬[Video](https://youtu.be/6AKG7goUqDQ)
 
 - [Experts Fridays](http://expertfridays.com/) -- 29 April 2016, Odessa, Ukraine
 
   Topic: **"Mobile development with JavaScript"**
 
-  [Slides](https://docs.google.com/presentation/d/1NQkPvKJn_aVm3QH5X6AGUZpBua25fBlYbPXm2Mhau8o/edit?usp=sharing)
+  🗂[Slides](https://docs.google.com/presentation/d/1NQkPvKJn_aVm3QH5X6AGUZpBua25fBlYbPXm2Mhau8o/edit?usp=sharing)
 
 ### 2015
 
@@ -162,10 +162,10 @@ priority: 1.0
 
   Topic: **"Web Components, Polymer and Drupal"**
 
-  [Slides](https://docs.google.com/presentation/d/1pyzEy60eYgdmtaX7JlEPFHHcsF2IwYyE6pZT05qbDfE/edit?usp=sharing)
+  🗂[Slides](https://docs.google.com/presentation/d/1pyzEy60eYgdmtaX7JlEPFHHcsF2IwYyE6pZT05qbDfE/edit?usp=sharing)
 
 - [Kyiv DrupalCamp 2015](http://camp15.drupal.ua/) -- 5 September 2015, Kyiv, Ukraine
 
   Topic: **"Building Hybrid Apps with Drupal and Ionic"**
 
-  [Slides](https://docs.google.com/presentation/d/193IXo4MN1qNJ9DixMxmNmZjuW0FyFi-BEck0hB0xlBk/edit?usp=sharing)
+  🗂[Slides](https://docs.google.com/presentation/d/193IXo4MN1qNJ9DixMxmNmZjuW0FyFi-BEck0hB0xlBk/edit?usp=sharing)

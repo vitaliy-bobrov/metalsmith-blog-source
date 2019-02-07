@@ -274,7 +274,7 @@ const generateSW = () => {
     cacheId: pkg.name,
     offlineGoogleAnalytics: true,
     globDirectory: rootDir,
-    importScripts: ['js/sw/skip-waiting.js'],
+    importScripts: ['js/skip-waiting.js'],
     globPatterns: [
       '*.html',
       'images/icons/**/*',
