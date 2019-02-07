@@ -5,50 +5,83 @@
   const addBtn = document.querySelector('.js-add-to-home');
 
   /**
+   * Shows new content snackbar.
+   * @param {Object} registration - SW registration.
+   */
+  function showRefreshUI(registration) {
+    const data = {
+      message: 'New content is available',
+      actionHandler: () => {
+        if (!registration.waiting) return;
+        registration.waiting.postMessage('skipWaiting');
+        window.location.reload();
+      },
+      actionText: 'Refresh',
+      timeout: 10000
+    };
+
+    ga('send', 'event', 'Service Worker', 'update');
+    notification.MaterialSnackbar.showSnackbar(data);
+  }
+
+  /**
+   * Handles new SW.
+   * @param {Object} registration - SW registration.
+   * @param {Function} callback - callback to execute.
+   * @return {Function}
+   */
+  function onNewServiceWorker(registration, callback) {
+    if (registration.waiting) {
+      // SW is waiting to activate. Can occur if multiple clients open and
+      // one of the clients is refreshed.
+      return callback(registration);
+    }
+
+    /**
+     * Handles state change.
+     */
+    function listenInstalledStateChange() {
+      registration.installing.addEventListener('statechange', function(event) {
+        if (event.target.state === 'installed') {
+          // A new service worker is available, inform the user
+          callback(registration);
+        }
+      });
+    }
+
+    if (registration.installing) {
+      return listenInstalledStateChange();
+    }
+
+    // We are currently controlled so a new SW may be found...
+    // Add a listener in case a new SW is found,
+    registration.addEventListener('updatefound', listenInstalledStateChange);
+  }
+
+  /**
    * Registers SW.
    */
   function register() {
     navigator.serviceWorker.register('/service-worker.js', {
       updateViaCache: 'none'
-    })
-        .then(registration => {
-        // updatefound is fired if service-worker.js changes.
-          registration.onupdatefound = () => {
-          // updatefound is also fired the very first time the SW is installed,
-          // and there's no need to prompt for a reload at that point.
-          // So check here to see if the page is already controlled,
-          // i.e. whether there's an existing service worker.
-            if (navigator.serviceWorker.controller) {
-              const installingWorker = registration.installing;
-              const data = {
-                message: 'New content is available',
-                actionHandler: () => window.location.reload(),
-                actionText: 'Refresh',
-                timeout: 10000
-              };
+    }).then(registration => {
+      if (!navigator.serviceWorker.controller) return;
 
-              installingWorker.onstatechange = () => {
-                switch (installingWorker.state) {
-                  case 'installed':
-                    ga('send', 'event', 'Service Worker', 'update');
-                    notification.MaterialSnackbar.showSnackbar(data);
+      // When the user asks to refresh the UI, we'll need to reload the window
+      let preventDevToolsReloadLoop;
+      navigator.serviceWorker.addEventListener('controllerchange', function() {
+        // Ensure refresh is only called once.
+        // This works around a bug in "force update on reload".
+        if (preventDevToolsReloadLoop) return;
+        preventDevToolsReloadLoop = true;
+        window.location.reload();
+      });
 
-                    break;
-
-                  case 'redundant':
-                    throw new Error('The installing ' +
-                    'service worker became redundant.');
-
-                  default:
-                  // Ignore
-                }
-              };
-            }
-          };
-        }).catch(e => {
-          ga('send', 'event', 'Service Worker', 'error');
-          console.error('Error during service worker registration:', e);
-        });
+      onNewServiceWorker(registration, showRefreshUI);
+    }).catch(e => {
+      ga('send', 'event', 'Service Worker', 'error');
+      console.error('Error during service worker registration:', e);
+    });
   }
 
   let installPromptEvent;

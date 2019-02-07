@@ -178,14 +178,14 @@ const scripts = () => gulp.src([
 
 gulp.task('scripts', scripts);
 
-const paint = () => gulp.src(['js/paint/*.js'])
+const separateScripts = () => gulp.src(['js/paint/*.js', 'js/sw/*.js'])
   .pipe($.plumber({
     errorHandler: onError
   }))
   .pipe($.if(prod, $.babelMinify()))
   .pipe(gulp.dest('build/js'));
 
-gulp.task('paint', paint);
+gulp.task('separateScripts', separateScripts);
 
 const clean = once((done) => {
   del([
@@ -213,7 +213,7 @@ const serve = () => {
       'source/**/*.md'
     ], gulp.series('metalsmith', reload));
   gulp.watch(['scss/**/*.scss'], gulp.series('styles', reload));
-  gulp.watch(['js/**/*.js'], gulp.series('lint', 'scripts', 'paint', reload));
+  gulp.watch(['js/**/*.js'], gulp.series('lint', 'scripts', 'separateScripts', reload));
   gulp.watch(['images/**/*'], reload);
 };
 
@@ -269,11 +269,13 @@ const generateSW = () => {
   const ONE_WEEK_IN_SEC = 604800;
 
   return workboxBuild.generateSW({
+   //debug: !prod,
     swDest: filepath,
     importWorkboxFrom: 'local',
     cacheId: pkg.name,
     offlineGoogleAnalytics: true,
     globDirectory: rootDir,
+    importScripts: ['js/sw/skip-waiting.js'],
     globPatterns: [
       '*.html',
       'images/icons/**/*',
@@ -358,7 +360,7 @@ const defaultTask = gulp.series(
   gulp.parallel(
     'styles',
     'images',
-    gulp.series('lint', gulp.parallel('scripts', 'paint')),
+    gulp.series('lint', gulp.parallel('scripts', 'separateScripts')),
     'service-files',
     'metalsmith'
   ),
