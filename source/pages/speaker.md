@@ -4,14 +4,18 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2019-02-03
+lastmod: 2019-02-07
 priority: 1.0
 ---
 ## Upcomming talks:
 
-- [Adventures in Angular](https://devchat.tv/adv-in-angular/) -- 6 February 2019, Online
+- [Adventures in Angular](https://devchat.tv/adv-in-angular/) -- 27 February 2019, Online
 
-  Topic: **"Smart 404 pages"**
+  Topic: **"Angular Smart 404 Pages"**
+
+- [JavaScript fwdays](https://fwdays.com/en/event/js-fwdays-2019) -- 16 March 2019, Kyiv, Ukraine
+
+  Topic: **"Lost in Space: Web Apps and A11Y"**
 
 ## Past talks:
 

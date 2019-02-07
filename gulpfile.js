@@ -269,7 +269,6 @@ const generateSW = () => {
   const ONE_WEEK_IN_SEC = 604800;
 
   return workboxBuild.generateSW({
-   //debug: !prod,
     swDest: filepath,
     importWorkboxFrom: 'local',
     cacheId: pkg.name,
@@ -287,16 +286,6 @@ const generateSW = () => {
       'speaker/*.html'
     ],
     runtimeCaching: [
-      {
-        urlPattern: new RegExp('\.(?:googleapis|gstatic|google-analytics)\.com/'),
-        handler: 'staleWhileRevalidate',
-        options: {
-          cacheName: 'gapi',
-          cacheableResponse: {
-            statuses: [0, 200]
-          }
-        }
-      },
       {
         urlPattern: new RegExp('\.(?:bobrov-blog\.disqus|disquscdn)\.com/'),
         handler: 'staleWhileRevalidate',
