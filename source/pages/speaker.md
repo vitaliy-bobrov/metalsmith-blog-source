@@ -4,7 +4,7 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2019-02-07
+lastmod: 2019-02-13
 priority: 1.0
 ---
 ## Upcomming talks:
@@ -16,6 +16,14 @@ priority: 1.0
 - [JavaScript fwdays](https://fwdays.com/en/event/js-fwdays-2019) -- 16 March 2019, Kyiv, Ukraine
 
   Topic: **"Lost in Space: Web Apps and A11Y"**
+
+- [4Developers](https://4developers.org.pl/) -- 8 April 2019, Warsaw, Poland
+
+  Topic: **"Algorithms and Their Habitat"**
+
+- [JSConf EU](https://2019.jsconf.eu/) -- 1 June 2019, Berlin, Germany
+
+  Topic: **"JavaScript, JavaScript…. Rocks You!"**
 
 ## Past talks:
 
