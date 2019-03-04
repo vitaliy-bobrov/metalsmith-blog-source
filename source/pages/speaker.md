@@ -9,10 +9,6 @@ priority: 1.0
 ---
 ## Upcomming talks:
 
-- [Adventures in Angular](https://devchat.tv/adv-in-angular/) -- 27 February 2019, Online
-
-  Topic: **"Angular Smart 404 Pages"**
-
 - [JavaScript fwdays](https://fwdays.com/en/event/js-fwdays-2019) -- 16 March 2019, Kyiv, Ukraine
 
   Topic: **"Lost in Space: Web Apps and A11Y"**
@@ -21,11 +17,25 @@ priority: 1.0
 
   Topic: **"Algorithms and Their Habitat"**
 
+- [NationJS](http://nationjs.com) -- 10 May 2019, Washington DC, USA
+
+  Topic: **"JavaScript, JavaScript…. Rocks You!"**
+
+- [ngVikings](https://ngvikings.org/) -- 27 May 2019, Copenhagen, Denmark
+
+  Topic: **"NgRx with WebAssembly, Web Workers and Worklets"**
+
 - [JSConf EU](https://2019.jsconf.eu/) -- 1 June 2019, Berlin, Germany
 
   Topic: **"JavaScript, JavaScript…. Rocks You!"**
 
 ## Past talks:
+
+### 2019
+
+- [Adventures in Angular](https://devchat.tv/adv-in-angular/) -- 27 February 2019, Online
+
+  Topic: **"Angular Smart 404 Pages"**
 
 ### 2018
 
@@ -107,7 +117,7 @@ priority: 1.0
 
   🗂[Slides](https://speakerdeck.com/bobrov1989/typescript-javascript-you-are-gonna-to-love)
 
-- [ng-conf](https://www.ng-conf.org) -- 19 April 2018, Salt Lake City, UT
+- [ng-conf](https://www.ng-conf.org) -- 19 April 2018, Salt Lake City, UT, USA
 
   Topic: **"NgRx Schematics"**
 
