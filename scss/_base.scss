@@ -37,7 +37,7 @@ button {
 
 a {
   text-decoration: none;
-  text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
 
   &:hover,
   &:focus {
