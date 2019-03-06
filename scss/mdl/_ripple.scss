@@ -15,6 +15,12 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .ripple-ink_animate {
+    animation: none;
+  }
+}
+
 @keyframes ripple {
   0% {
     opacity: .4;

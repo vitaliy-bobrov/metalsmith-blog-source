@@ -22,6 +22,19 @@ button {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  a,
+  button {
+    transition: none;
+
+    &:before,
+    &:after,
+    svg {
+      transition: none;
+    }
+  }
+}
+
 a {
   text-decoration: none;
   text-decoration-skip: ink;
