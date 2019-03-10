@@ -3,6 +3,7 @@ title: "Angular, NgRx and Easter Egg"
 description: ""
 ogimage: images/posts/angular-ngrx-and-easter-egg/angular-ngrx-and-easter-egg-og.jpg
 tumb: /images/posts/angular-ngrx-and-easter-egg/angular-ngrx-and-easter-egg
+draft: true
 created: 2019-01-07
 updated: 2019-01-07
 lastmod: 2019-01-07

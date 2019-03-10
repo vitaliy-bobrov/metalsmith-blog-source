@@ -44,7 +44,7 @@ Did you mean "generate"?
 ## How?
 How to use Levenshtein distance to suggest a correct value? We need the list of correct values - commands in case of CLI tool and paths in case or routing. Let call it a dictionary. We have an invalid user input. Then we need to calculate a distance between user input and each entry in our dictionary. The dictionary item with the smaller distance will be possible user wish. That means that we can sort the dictionary by the Levenshtein distance to an invalid value. And we are done.
 
-In my example, I want to pass suggested path to "Page not found" component and show a message with a correct URL. You can try working [demo](https://vitaliy-bobrov.github.io/ngx-smart-routing-demo/). Try to enter an incorrect path after the `/#/` and see the result. I've used hash location strategy only for demo purpose, as I want to handle 404 error by demo app instead of GitHub pages.
+In my example, I want to pass suggested path to "Page not found" component and show a message with a correct URL. You can try working [demo](https://bobrov.dev/ngx-smart-routing-demo/). Try to enter an incorrect path after the `/#/` and see the result. I've used hash location strategy only for demo purpose, as I want to handle 404 error by demo app instead of GitHub pages.
 
 ![Smart 404 demo with "hame" url instead "home"](/images/posts/angular-smart-404-page/img/hame-typo-url.jpg){js-lazy-load}
 

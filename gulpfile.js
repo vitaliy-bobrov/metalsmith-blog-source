@@ -26,7 +26,7 @@ const onError = function(error) {
 
 const prod = process.env.NODE_ENV === 'production';
 const LOCAL_PORT = 3000;
-const PROD_URL = 'https://vitaliy-bobrov.github.io/';
+const PROD_URL = 'https://bobrov.dev/';
 const SITEMAP_URL = url.resolve(PROD_URL, 'sitemap.xml');
 const BABELRC = {
   presets: [

@@ -1,6 +1,6 @@
 # www.robotstxt.org/
 
-Sitemap: https://vitaliy-bobrov.github.io/sitemap.xml
+Sitemap: https://bobrov.dev/sitemap.xml
 
 # Allow crawling of all content
 User-agent: *

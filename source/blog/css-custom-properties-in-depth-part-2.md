@@ -12,7 +12,7 @@ categories:
 ---
 Houdini "Custom Properties and Values" spec gives us the strictly typed CSS variables. It has a significant potential and as new technology is a pretty unknown field. Today, I'm going to have the in-depth overview of what types available in the first version of the spec, and show the usage on real examples.
 
-The topic split into two parts. Now you are reading the second one. You can check out the first part [here](https://vitaliy-bobrov.github.io/blog/css-custom-properties-in-depth/).{post__series}
+The topic split into two parts. Now you are reading the second one. You can check out the first part [here](https://bobrov.dev/blog/css-custom-properties-in-depth/).{post__series}
 
 ## Available types
 As I have written in the previous part, not all of the types are available for custom properties. In the initial specification, we have the only limited set of them. Let me introduce each of the possible types.

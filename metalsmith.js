@@ -12,7 +12,7 @@ const $ = loadPlugins(pkg, 'devDependencies', 'metalsmith-');
 const prod = process.env.NODE_ENV === 'production';
 
 // Site Variables.
-const siteurl = prod ? 'https://vitaliy-bobrov.github.io/' : 'http://localhost:3000/';
+const siteurl = prod ? 'https://bobrov.dev/' : 'http://localhost:3000/';
 const sitename = 'Bobrov Blog';
 const siteDescr = 'Blog about web development, but not only...';
 const facebookAppId = 393821434298248;

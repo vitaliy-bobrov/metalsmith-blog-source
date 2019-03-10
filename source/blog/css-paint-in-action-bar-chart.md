@@ -408,7 +408,7 @@ And the updated styles:
 
 [](youtube:dn1bwJPQY5I)
 
-As usual you can check [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/bar) and [demo](https://vitaliy-bobrov.github.io/css-paint-demos/bar/).
+As usual you can check [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/bar) and [demo](https://bobrov.dev/css-paint-demos/bar/).
 
 ## Change the input format
 After thinking for some time, I decided to change the dataset input using "JS in CSS". Yes, you read it correctly, I want to use JavaScript inside CSS. As I said before, our worklet code is executed in a secure and separate context and in this case, it is completely fine to use some JS as a CSS variable value. Then I'm going to parse this value in a custom painter using `JSON.parse`. Let's look at stylesheet first:
@@ -492,7 +492,7 @@ How is it useful? Now we can get CSS variables in JavaScript, change the data an
 
 [](youtube:toWY6fmpmQg)
 
-[Code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/bar-js-in-css) and [demo](https://vitaliy-bobrov.github.io/css-paint-demos/bar-js-in-css/).
+[Code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/bar-js-in-css) and [demo](https://bobrov.dev/css-paint-demos/bar-js-in-css/).
 
 Now let's try to animate the dataset in JavaScript:
 
@@ -558,7 +558,7 @@ So using `requestAnimationFrame` on mouse enter I animated the dataset from the 
 
 [](youtube:kUgWZsoyjqU)
 
-[Code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/bar-animate) and [demo](https://vitaliy-bobrov.github.io/css-paint-demos/bar-animate/).
+[Code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/bar-animate) and [demo](https://bobrov.dev/css-paint-demos/bar-animate/).
 
 After all, I've tried to go further and fetch the JSON file with the custom property of `<url>` or `<image>` type. URL type doesn't seem to work, it just got the string value from it. Such resource fetched exclusively when used as a value for properties accepting URLs. The image appears to work but doesn't parse the JSON data as it has only mime types related to image formats in request headers.
 

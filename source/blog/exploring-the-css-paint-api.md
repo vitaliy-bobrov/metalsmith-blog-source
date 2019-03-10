@@ -213,13 +213,13 @@ To use it we created simple `div` with class name `circles` and added next rules
 }
 ```
 
-So we make it square and add black color as a fallback for old browsers. That is it! You can check [result](https://vitaliy-bobrov.github.io/css-paint-demos/hello-world/) and [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/hello-world) on GitHub. Here is the demo:
+So we make it square and add black color as a fallback for old browsers. That is it! You can check [result](https://bobrov.dev/css-paint-demos/hello-world/) and [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/hello-world) on GitHub. Here is the demo:
 
 [](youtube:9ZVg3lrqIfg)
 
 One thing I want to mention now, we haven't added any resize event listener, but browser calls `paint` method automatically on any layout changes. Current Chrome implementation uses main UI thread for paint rendering, but in the future, it will use a separate thread. You can imagine some heavy animations or backgrounds that have zero effect on the main thread. It will be an enormous performance boost!
 
-Your backgrounds could be responsive, and this responsiveness depends on element size itself without any listeners on `resize` events. Until `element queries` are still the proposal, you can generate different picture depending on element size. Try out [this example](https://vitaliy-bobrov.github.io/css-paint-demos/responsive/) with [source code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/responsive). When the element changes its size, we fill our circles with another color.
+Your backgrounds could be responsive, and this responsiveness depends on element size itself without any listeners on `resize` events. Until `element queries` are still the proposal, you can generate different picture depending on element size. Try out [this example](https://bobrov.dev/css-paint-demos/responsive/) with [source code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/responsive). When the element changes its size, we fill our circles with another color.
 
 All this nice, but next I want to make our paint configurable. So let me introduce a few CSS variables:
 
@@ -282,7 +282,7 @@ We should update styles with our variables:
 }
 ```
 
-Check [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/circles-with-params) and [result](https://vitaliy-bobrov.github.io/css-paint-demos/circles-with-params/) here.
+Check [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/circles-with-params) and [result](https://bobrov.dev/css-paint-demos/circles-with-params/) here.
 
 [](youtube:4WJDY1HNdcg)
 
@@ -350,7 +350,7 @@ Then in the `paint` method, we got `args` parameter that similar to JavaScript f
 }
 ```
 
-Check out [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/circles-with-args) and [result](https://vitaliy-bobrov.github.io/css-paint-demos/circles-with-args/) here.
+Check out [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/circles-with-args) and [result](https://bobrov.dev/css-paint-demos/circles-with-args/) here.
 
 ## Animations
 This was cool, but how we can create animations for a painter? As I told before, our worklets execute in a separate context, and there is no `requestAnimationFrame` or even `setTimeout` functions. How to implement animations? The first solution is to use CSS variables. Let's try to animate them with CSS:
@@ -448,10 +448,10 @@ After that we can use our newly created custom property in the stylesheet:
 
 [](youtube:VC6XgOcTHW4)
 
-Now we can use a `transition` to change circles opacity smoothly. Check out [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/circles-animation-with-custom-property) and [result](https://vitaliy-bobrov.github.io/css-paint-demos/circles-animation-with-custom-property/) here.
+Now we can use a `transition` to change circles opacity smoothly. Check out [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/circles-animation-with-custom-property) and [result](https://bobrov.dev/css-paint-demos/circles-animation-with-custom-property/) here.
 
 ## Conclusion
-Today to just got started with CSS Paint API exploring how to create own one, how to use input properties and arguments, CSS variables and custom properties, and how to animate it. In the next article, I'm going to implement more production ready examples using the knowledge we got with that article. If you are reading this article using latest Chrome you might mention that I am using custom paint to make Material Design background, you can check it [here](https://vitaliy-bobrov.github.io/css-paint-demos/md-bg/) and take a look at the [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/md-bg). Try to experiment with CSS Paint API yourself!
+Today to just got started with CSS Paint API exploring how to create own one, how to use input properties and arguments, CSS variables and custom properties, and how to animate it. In the next article, I'm going to implement more production ready examples using the knowledge we got with that article. If you are reading this article using latest Chrome you might mention that I am using custom paint to make Material Design background, you can check it [here](https://bobrov.dev/css-paint-demos/md-bg/) and take a look at the [code](https://github.com/vitaliy-bobrov/css-paint-demos/tree/master/src/md-bg). Try to experiment with CSS Paint API yourself!
 
 ### Resources
 
@@ -459,4 +459,4 @@ Today to just got started with CSS Paint API exploring how to create own one, ho
 - [Houdini Drafts](https://drafts.css-houdini.org/css-paint-api/​)
 - [W3C CSS Paint Draft](https://www.w3.org/TR/css-paint-api-1/)
 - [Demos](https://lab.iamvdo.me/houdini/)
-- [My demos](https://vitaliy-bobrov.github.io/css-paint-demos/​)
+- [My demos](https://bobrov.dev/css-paint-demos/​)
