@@ -288,7 +288,7 @@ const generateSW = () => {
     runtimeCaching: [
       {
         urlPattern: new RegExp('\.(?:bobrov-blog\.disqus|disquscdn)\.com/'),
-        handler: 'staleWhileRevalidate',
+        handler: 'StaleWhileRevalidate',
         options: {
           cacheName: 'disqus',
           cacheableResponse: {
@@ -301,7 +301,7 @@ const generateSW = () => {
       },
       {
         urlPattern: /.*\.(png|jpg|gif|webp|svg)/i,
-        handler: 'cacheFirst',
+        handler: 'CacheFirst',
         options: {
           cacheName: 'images-cache',
           expiration: {
@@ -312,7 +312,7 @@ const generateSW = () => {
       },
       {
         urlPattern: /\/blog\/.*\.html/,
-        handler: 'cacheFirst',
+        handler: 'CacheFirst',
         options: {
           cacheName: 'posts-cache',
           expiration: {
@@ -323,7 +323,7 @@ const generateSW = () => {
       },
       {
         urlPattern: /\/(category|page)\/.*\.html/,
-        handler: 'cacheOnly',
+        handler: 'CacheOnly',
         options: {
           cacheName: 'category-cache',
           expiration: {
@@ -333,7 +333,7 @@ const generateSW = () => {
         }
       }
     ],
-    modifyUrlPrefix: {
+    modifyURLPrefix: {
       [`/${rootDir}`]: ''
     }
   }).then(({count, size, warnings}) => {
