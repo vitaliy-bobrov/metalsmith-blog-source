@@ -245,7 +245,7 @@ const deploy = gulp.series(
 
     return gulp.src('build/**/*')
       .pipe($.ghPages({
-        remoteUrl: 'git@github.com:vitaliy-bobrov/vitaliy-bobrov.github.io.git',
+        remoteUrl: 'git@github.com:vitaliy-bobrov/bobrov.dev.git',
         branch: 'master',
         message: `Updates blog content ${formattedDate}`
       }));
