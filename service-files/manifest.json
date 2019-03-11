@@ -45,7 +45,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/index.html?homescreen=1",
+  "start_url": "/",
   "background_color": "#424242",
   "theme_color": "#00bcd4",
   "display": "standalone"
