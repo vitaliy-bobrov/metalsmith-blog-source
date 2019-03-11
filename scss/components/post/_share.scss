@@ -20,7 +20,7 @@
 
       &:hover,
       &:focus {
-        color: $mdl-share;
+        color: $mdlext-dark-color-primary-light;
       }
     }
   }
@@ -29,6 +29,6 @@
     width: 16px;
     height: 16px;
     margin-right: 8px;
-    color: $mdl-share;
+    color: $mdlext-dark-color-primary-light;
   }
 }

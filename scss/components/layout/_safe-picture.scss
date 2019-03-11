@@ -9,7 +9,7 @@
     &:after {
       content: '';
       border: 4px solid $white;
-      background: $mdl-scroll;
+      background: $mdlext-dark-color-primary-dark;
       @extend %shrink-to-container;
     }
 
