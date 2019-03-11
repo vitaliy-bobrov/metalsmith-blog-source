@@ -62,7 +62,7 @@
     if (resources) {
       if (typeof IntersectionObserver !== 'undefined') {
         const options = {
-          root: document.querySelector('.js-to-top-container'),
+          root: document.querySelector('.js-lazy-container'),
           threshold: 0.25
         };
 

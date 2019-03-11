@@ -149,8 +149,7 @@ const styles = () => {
       html: ['build/**/*.html'],
       ignore: [
         /^.*is-(compact|small-screen|visible|active|animating|upgraded).*/,
-        /^.*to-top.*/,
-        /^.*mdl-(menu|button|button--fab|snackbar).*/,
+        /^.*mdl-(menu|button|snackbar).*/,
         /^.*ripple-ink_animate.*/
       ]
     })))
