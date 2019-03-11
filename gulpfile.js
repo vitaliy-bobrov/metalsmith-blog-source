@@ -17,11 +17,16 @@ const workboxBuild = require('workbox-build');
 const pkg = require('./package.json');
 
 const $ = gulpLoadPlugins();
-const reload = browserSync.reload;
+const server = browserSync.create();
 
 const onError = function(error) {
   console.log(error.toString());
   this.emit('end');
+};
+
+const reload = (done) => {
+  server.reload();
+  done();
 };
 
 const prod = process.env.NODE_ENV === 'production';
@@ -196,8 +201,8 @@ const clean = once((done) => {
 
 gulp.task('clean', clean);
 
-const serve = () => {
-  browserSync({
+const bs = (done) => {
+  server.init({
     notify: false,
     logPrefix: 'MetalSync',
     scrollElementMapping: ['main', '.mdl-layout'],
@@ -205,18 +210,26 @@ const serve = () => {
     port: LOCAL_PORT
   });
 
+  done();
+};
+
+gulp.task('bs', bs);
+
+const watch = () => {
   gulp.watch([
-      'layouts/**/*.html',
-      'partials/**/*.html',
-      'images/**/*.svg',
-      'source/**/*.md'
-    ], gulp.series('metalsmith', reload));
+    'layouts/**/*.html',
+    'partials/**/*.html',
+    'images/**/*.svg',
+    'source/**/*.md'
+  ], gulp.series('metalsmith', reload));
   gulp.watch(['scss/**/*.scss'], gulp.series('styles', reload));
   gulp.watch(['js/**/*.js'], gulp.series('lint', 'scripts', 'separateScripts', reload));
   gulp.watch(['images/**/*'], reload);
 };
 
-gulp.task('serve', serve);
+gulp.task('watch', watch);
+
+gulp.task('serve', gulp.series('bs', 'watch'));
 
 const minifySW = () => gulp.src('build/service-worker.js')
   .pipe($.babel(BABELRC))
