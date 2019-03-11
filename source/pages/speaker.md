@@ -7,7 +7,7 @@ twitter: true
 lastmod: 2019-02-13
 priority: 1.0
 ---
-## Upcomming talks:
+## Upcoming talks:
 
 - [JavaScript fwdays](https://fwdays.com/en/event/js-fwdays-2019) -- 16 March 2019, Kyiv, Ukraine
 
