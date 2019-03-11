@@ -34,7 +34,7 @@ Metalsmith(__dirname)
     sitelogo: '/images/logo',
     siteogimg: 'images/blog-og.jpg',
     description: siteDescr,
-    themeColor: '#00bcd4'
+    themeColor: '#008ba3'
   })
   .source('./source')
   .destination('./build')
