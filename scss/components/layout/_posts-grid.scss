@@ -5,3 +5,7 @@
     width: calc(100% - 92px);
   }
 }
+
+.mdl-card {
+  contain: layout;
+}
