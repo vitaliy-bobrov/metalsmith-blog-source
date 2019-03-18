@@ -4,14 +4,10 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2019-02-13
+lastmod: 2019-03-18
 priority: 1.0
 ---
 ## Upcoming talks:
-
-- [JavaScript fwdays](https://fwdays.com/en/event/js-fwdays-2019) -- 16 March 2019, Kyiv, Ukraine
-
-  Topic: **"Lost in Space: Web Apps and A11Y"**
 
 - [4Developers](https://4developers.org.pl/) -- 8 April 2019, Warsaw, Poland
 
@@ -33,9 +29,17 @@ priority: 1.0
 
 ### 2019
 
+- [JavaScript fwdays](https://fwdays.com/en/event/js-fwdays-2019) -- 16 March 2019, Kyiv, Ukraine
+
+  Topic: **"Lost in Space: Web Apps and A11Y"**
+
+  🗂[Slides](https://speakerdeck.com/bobrov1989/lost-in-space-web-apps-and-a11y)
+
 - [Adventures in Angular](https://devchat.tv/adv-in-angular/) -- 27 February 2019, Online
 
   Topic: **"Angular Smart 404 Pages"**
+
+  📻[Podcast](https://devchat.tv/adv-in-angular/aia-230-smart-404-pages-with-vitalii-bobrov/)
 
 ### 2018
 
