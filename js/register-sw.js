@@ -20,7 +20,7 @@
       timeout: 10000
     };
 
-    ga('send', 'event', 'Service Worker', 'update');
+    window.dataLayer.push({'event': 'sw:update'});
     notification.MaterialSnackbar.showSnackbar(data);
   }
 
@@ -79,7 +79,7 @@
 
       onNewServiceWorker(registration, showRefreshUI);
     }).catch(e => {
-      ga('send', 'event', 'Service Worker', 'error');
+      window.dataLayer.push({'event': 'sw:error'});
       console.error('Error during service worker registration:', e);
     });
   }
@@ -99,9 +99,9 @@
     // Wait for the user to respond to the prompt
     installPromptEvent.userChoice.then(choice => {
       if (choice.outcome === 'accepted') {
-        ga('send', 'event', 'Service Worker', 'prompt:accept');
+        window.dataLayer.push({'event': 'sw:prompt:accept'});
       } else {
-        ga('send', 'event', 'Service Worker', 'prompt:declined');
+        window.dataLayer.push({'event': 'sw:prompt:declined'});
       }
 
       addBtn.disabled = true;
@@ -121,7 +121,7 @@
       timeout: 10000
     };
 
-    ga('send', 'event', 'Service Worker', 'prompt');
+    window.dataLayer.push({'event': 'sw:prompt'});
     clearTimeout(tid);
     notification.MaterialSnackbar.showSnackbar(data);
   }
@@ -137,7 +137,7 @@
   });
 
   window.addEventListener('appinstalled', () => {
-    ga('send', 'event', 'Service Worker', 'install');
+    window.dataLayer.push({'event': 'sw:install'});
   });
 
   addBtn.addEventListener('click', event => {

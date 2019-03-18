@@ -11,7 +11,7 @@
             message: 'Thank you for sharing this post!',
             timeout: 5000
           });
-          ga('send', 'event', 'Share', 'click', 'Native Share');
+          window.dataLayer.push({'event': 'Native Share'});
         })
         .catch(err => {
           notification.MaterialSnackbar.showSnackbar({
