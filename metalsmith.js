@@ -65,7 +65,7 @@ Metalsmith(__dirname)
   ]))
   .use($.drafts())
   .use($.discoverPartials({
-    directory: 'partials',
+    directory: './partials',
     pattern: /\.html$/
   }))
   .use($.collections({
