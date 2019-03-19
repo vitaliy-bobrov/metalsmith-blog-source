@@ -2,20 +2,8 @@
   ".DS_Store": {
     "filename": ".DS_Store",
     "hash": "b0a023e07d76f04b06a60355b93fe2e3f4dc59c1",
-    "created": "2019-03-18T21:28:38.876Z",
-    "updated": "2019-03-18T21:28:38.876Z"
-  },
-  "pages/about.md": {
-    "filename": "pages/about.md",
-    "hash": "8df195aa4b2516526e4cb21e421ebc6909ffc45e",
-    "created": "2019-03-18T21:28:38.876Z",
-    "updated": "2019-03-18T21:28:38.876Z"
-  },
-  "pages/speaker.md": {
-    "filename": "pages/speaker.md",
-    "hash": "228183313f638e193e22dc5e298cd04d5030fb47",
-    "created": "2019-03-18T21:28:38.876Z",
-    "updated": "2019-03-18T21:28:38.876Z"
+    "created": "2019-03-19T07:15:25.873Z",
+    "updated": "2019-03-19T07:15:25.873Z"
   },
   "blog/adding-comments-to-metalsmith.md": {
     "filename": "blog/adding-comments-to-metalsmith.md",
@@ -112,5 +100,17 @@
     "hash": "f6dc200ef7778cfff8f7452392e0b1f02e30b9b2",
     "created": "2017-02-09T00:00:00.000Z",
     "updated": "2018-02-17T00:00:00.000Z"
+  },
+  "pages/about.md": {
+    "filename": "pages/about.md",
+    "hash": "8df195aa4b2516526e4cb21e421ebc6909ffc45e",
+    "created": "2019-03-19T07:15:25.873Z",
+    "updated": "2019-03-19T07:15:25.873Z"
+  },
+  "pages/speaker.md": {
+    "filename": "pages/speaker.md",
+    "hash": "228183313f638e193e22dc5e298cd04d5030fb47",
+    "created": "2019-03-19T07:15:25.873Z",
+    "updated": "2019-03-19T07:15:25.873Z"
   }
 }
