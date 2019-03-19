@@ -33,7 +33,7 @@
     </div>
 
     <!-- Navigation. We hide it in small screens. -->
-    <nav class="mdl-navigation mdl-layout--large-screen-only">
+    <nav class="mdl-navigation mdl-layout--large-screen-only" aria-label="Main navigation">
       <a class="mdl-navigation__link {{ activeLink path '' }}"
          href="{{ siteurl }}"
          rel="nofollow"
@@ -50,7 +50,7 @@
 </header>
 <div class="mdl-layout__drawer">
   <span class="mdl-layout-title">{{ sitename }}</span>
-  <nav class="mdl-navigation">
+  <nav class="mdl-navigation" aria-label="Main navigation">
     <a class="mdl-navigation__link {{ activeLink path '' }}"
        href="{{ siteurl }}"
        rel="nofollow"
