@@ -2,8 +2,8 @@
   ".DS_Store": {
     "filename": ".DS_Store",
     "hash": "b0a023e07d76f04b06a60355b93fe2e3f4dc59c1",
-    "created": "2019-03-19T07:15:25.873Z",
-    "updated": "2019-03-19T07:15:25.873Z"
+    "created": "2019-03-19T20:23:14.801Z",
+    "updated": "2019-03-19T20:23:14.801Z"
   },
   "blog/adding-comments-to-metalsmith.md": {
     "filename": "blog/adding-comments-to-metalsmith.md",
@@ -104,13 +104,13 @@
   "pages/about.md": {
     "filename": "pages/about.md",
     "hash": "8df195aa4b2516526e4cb21e421ebc6909ffc45e",
-    "created": "2019-03-19T07:15:25.873Z",
-    "updated": "2019-03-19T07:15:25.873Z"
+    "created": "2019-03-19T20:23:14.801Z",
+    "updated": "2019-03-19T20:23:14.801Z"
   },
   "pages/speaker.md": {
     "filename": "pages/speaker.md",
     "hash": "228183313f638e193e22dc5e298cd04d5030fb47",
-    "created": "2019-03-19T07:15:25.873Z",
-    "updated": "2019-03-19T07:15:25.873Z"
+    "created": "2019-03-19T20:23:14.801Z",
+    "updated": "2019-03-19T20:23:14.801Z"
   }
 }

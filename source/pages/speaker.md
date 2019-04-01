@@ -33,7 +33,7 @@ priority: 1.0
 
   Topic: **"Lost in Space: Web Apps and A11Y"**
 
-  🗂[Slides](https://speakerdeck.com/bobrov1989/lost-in-space-web-apps-and-a11y)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/lost-in-space-web-apps-and-a11y) | 🎬[Video (Russian)](https://youtu.be/b0EhpIQ9F_c)
 
 - [Adventures in Angular](https://devchat.tv/adv-in-angular/) -- 27 February 2019, Online
 
@@ -95,7 +95,7 @@ priority: 1.0
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
-  🗂[Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api) |🎬 [Video](https://youtu.be/Gfq5Ut3r6Bw)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api) |🎬 [Video (Russian)](https://youtu.be/Gfq5Ut3r6Bw)
 
 - [ngHouston](https://www.meetup.com/ngHouston/) -- 14 June 2018, Online
 
@@ -170,7 +170,7 @@ priority: 1.0
 
   Topic: **"Mobile development with JavaScript"**
 
-  🗂[Slides](https://docs.google.com/presentation/d/15_dfnWqU-bpWUVb0ISP_CDg0fgdQWrDjnVsd5jfiGdA/edit?usp=sharing) | 🎬[Video](https://youtu.be/6AKG7goUqDQ)
+  🗂[Slides](https://docs.google.com/presentation/d/15_dfnWqU-bpWUVb0ISP_CDg0fgdQWrDjnVsd5jfiGdA/edit?usp=sharing) | 🎬[Video (Russian)](https://youtu.be/6AKG7goUqDQ)
 
 - [Experts Fridays](http://expertfridays.com/) -- 29 April 2016, Odessa, Ukraine
 
