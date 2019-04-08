@@ -4,14 +4,10 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2019-03-18
+lastmod: 2019-04-01
 priority: 1.0
 ---
 ## Upcoming talks:
-
-- [4Developers](https://4developers.org.pl/) -- 8 April 2019, Warsaw, Poland
-
-  Topic: **"Algorithms and Their Habitat"**
 
 - [NationJS](http://nationjs.com) -- 10 May 2019, Washington DC, USA
 
@@ -28,6 +24,12 @@ priority: 1.0
 ## Past talks:
 
 ### 2019
+
+- [4Developers](https://4developers.org.pl/) -- 8 April 2019, Warsaw, Poland
+
+  Topic: **"Algorithms and Their Habitat"**
+
+  🗂[Slides](https://speakerdeck.com/bobrov1989/algorithms-and-their-habitat)
 
 - [JavaScript fwdays](https://fwdays.com/en/event/js-fwdays-2019) -- 16 March 2019, Kyiv, Ukraine
 
