@@ -2,7 +2,7 @@
   'use strict';
 
   /**
-   * Enabbles media sources.
+   * Enables media sources.
    * @param {HTMLElement} element
    */
   function enableMediaSource(element) {
@@ -60,7 +60,10 @@
     const resources = document.querySelectorAll('.js-lazy-load');
 
     if (resources) {
-      if (typeof IntersectionObserver !== 'undefined') {
+      if ('loading' in HTMLImageElement.prototype ||
+        typeof IntersectionObserver == 'undefined') {
+        Array.prototype.forEach.call(resources, enableSource);
+      } else {
         const options = {
           root: document.querySelector('.js-lazy-container'),
           threshold: 0.25
@@ -74,8 +77,6 @@
         Array.prototype.forEach.call(resources, picture => {
           observer.observe(picture);
         });
-      } else {
-        Array.prototype.forEach.call(resources, enableSource);
       }
     }
   }, false);

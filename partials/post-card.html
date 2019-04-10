@@ -15,9 +15,11 @@
         <source srcset="{{ post.author.avatar }}.webp 1x, {{ post.author.avatar }}@2x.webp 2x"
                 type="image/webp">
         <source srcset="{{ post.author.avatar }}.jpg 1x, {{ post.author.avatar }}@2x.jpg 2x">
-        <img src="{{ post.author.avatar }}.jpg"
-           alt="{{ post.author.name }} Photo"
-           class="mdl-list__item-avatar">
+        <img
+            src="{{ post.author.avatar }}.jpg"
+            loading="lazy"
+            alt="{{ post.author.name }} Photo"
+            class="mdl-list__item-avatar">
       </picture>
 
       <div class="post-info__data-wrapper">

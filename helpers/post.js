@@ -21,8 +21,6 @@ const absoluteUrl = (siteurl, path) => {
   return result;
 };
 
-const ampUrl = (siteurl, path) => `${url.resolve(siteurl, path)}/amp/`;
-
 const postCell = (index, length) => {
   let desktop;
 
@@ -86,7 +84,7 @@ const postIllustration = (tumb, alt, nolazy = false) => `
       <source ${nolazy ? '' : 'data-'}srcset="${tumb}-mobile.webp 1x, ${tumb}-mobile@2x.webp 2x"
               type="image/webp">
       <source ${nolazy ? '' : 'data-'}srcset="${tumb}-mobile.jpg 1x, ${tumb}-mobile@2x.jpg 2x">
-      <img ${nolazy ? '' : 'data-'}src="${tumb}.jpg" alt="${alt}" class="safe-picture__img">
+      <img ${nolazy ? '' : 'data-'}src="${tumb}.jpg" loading="${nolazy ? 'eager' : 'lazy'}" alt="${alt}" class="safe-picture__img">
     </picture>`;
 
 const postShare = (title, description, siteurl, path, id = 0) => {
@@ -147,7 +145,6 @@ const postShare = (title, description, siteurl, path, id = 0) => {
 
 module.exports = {
   absoluteUrl,
-  ampUrl,
   postCell,
   postIllustration,
   postShare
