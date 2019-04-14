@@ -4,7 +4,7 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2019-04-01
+lastmod: 2019-04-14
 priority: 1.0
 ---
 ## Upcoming talks:
@@ -20,6 +20,8 @@ priority: 1.0
 - [JSConf EU](https://2019.jsconf.eu/) -- 1 June 2019, Berlin, Germany
 
   Topic: **"JavaScript, JavaScript…. Rocks You!"**
+
+- [CSS Minsk JS](https://css-minsk-js.by/) -- 20 September 2019, Minsk, Belarus
 
 ## Past talks:
 
