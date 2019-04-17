@@ -1,0 +1,149 @@
+@charset 'UTF-8';
+
+@import 'config/colors';
+@import 'config/z-index';
+
+// MDL customization.
+@import 'config/mdl';
+
+// Variables and mixins
+@import "../node_modules/material-design-lite/src/variables";
+@import '../node_modules/mdl-ext/src/variables';
+@import "../node_modules/material-design-lite/src/mixins";
+
+.commento-root-min-height {
+  min-height: auto;
+}
+
+.commento-root {
+  * {
+    font-family: $performance_font;
+    font-size: 16px;
+    font-display: swap;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+  }
+
+  .commento-login {
+    text-align: right;
+  }
+
+  .commento-login .commento-login-text,
+  .commento-submit-button,
+  .commento-button,
+  .commento-login-box-container .commento-login-box .commento-email-container .commento-email .commento-email-button {
+    display: inline-block;
+    border: none;
+    border-radius: $button-border-radius;
+    height: $button-height;
+    margin: 0;
+    min-width: $button-min-width;
+    padding: 0 $button-padding;
+    outline: none;
+    @include typo-button();
+    will-change: box-shadow;
+    transition: box-shadow 0.2s $animation-curve-fast-out-linear-in,
+                background-color 0.2s $animation-curve-default,
+                color 0.2s $animation-curve-default;
+    text-align: center;
+    line-height: $button-height;
+    vertical-align: middle;
+  }
+
+  .commento-login-box-container .commento-login-box .commento-login-box-subtitle {
+    margin-top: 0;
+  }
+
+  .commento-login-box-container .commento-login-box .commento-login-link-container {
+    margin-bottom: 0;
+  }
+
+  .commento-login-box-container .commento-login-box .commento-oauth-buttons-container .commento-oauth-buttons .commento-github-button,
+  .commento-login-box-container .commento-login-box .commento-oauth-buttons-container .commento-oauth-buttons .commento-gitlab-button,
+  .commento-login-box-container .commento-login-box .commento-oauth-buttons-container .commento-oauth-buttons .commento-twitter-button,
+  .commento-login-box-container .commento-login-box .commento-oauth-buttons-container .commento-oauth-buttons .commento-google-button {
+    width: auto;
+    margin: 0 8px;
+  }
+
+  .commento-login .commento-login-text {
+    margin-bottom: 16px;
+    color: $mdlext-dark-text-color-secondary;
+  }
+
+  .commento-textarea-container {
+    margin-bottom: 24px;
+  }
+
+  .commento-submit-button,
+  .commento-login-box-container .commento-login-box .commento-email-container .commento-email .commento-email-button {
+    width: auto;
+    color: $mdlext-dark-color-primary-contrast;
+    background-color: $mdlext-dark-color-primary;
+    @include shadow-2dp();
+
+    &::-moz-focus-inner {
+      border: 0;
+    }
+
+    &:hover {
+      color: $mdlext-dark-color-primary-contrast;
+      background-color: $mdlext-dark-color-primary-light;
+    }
+
+    &:focus:not(:active) {
+      color: $mdlext-dark-color-primary-contrast;
+      background-color: $mdlext-dark-color-primary-light;
+      @include focus-shadow();
+    }
+
+    &:active {
+      color: $mdlext-dark-color-primary-contrast;
+      background-color: $mdlext-dark-color-primary-light;
+      @include shadow-4dp();
+    }
+  }
+
+  .commento-login-box-container .commento-login-box hr {
+    margin: 8px 0;
+  }
+
+  .commento-login-box-container .commento-login-box .commento-email-container .commento-email .commento-input {
+    width: calc(100% - 110px);
+    height: $button-height;
+  }
+
+  .commento-login-box-container .commento-login-box {
+    top: 0;
+  }
+
+  .commento-anonymous-checkbox-container {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 5px;
+    height: $button-height;
+    vertical-align: middle;
+
+    input[type=checkbox] + label {
+      color: $mdlext-dark-text-color-primary;
+      text-transform: none;
+      font-size: $input-text-font-size;
+      font-weight: 400;
+
+      &:before {
+        border-radius: $button-border-radius;
+        top: 4px;
+      }
+    }
+  }
+
+  .commento-button-margin {
+    padding-bottom: $button-height;
+  }
+
+  .commento-footer {
+    display: none;
+  }
+}
+

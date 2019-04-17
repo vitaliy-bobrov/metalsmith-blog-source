@@ -155,7 +155,8 @@ const styles = () => {
       ignore: [
         /^.*is-(compact|small-screen|visible|active|animating|upgraded).*/,
         /^.*mdl-(menu|button|snackbar).*/,
-        /^.*ripple-ink_animate.*/
+        /^.*ripple-ink_animate.*/,
+        /^.*commento-root.*/
       ]
     })))
     .pipe($.if('*.css', $.cssnano()))
@@ -219,7 +220,6 @@ const watch = () => {
   gulp.watch([
     'layouts/**/*.html',
     'partials/**/*.html',
-    'images/**/*.svg',
     'source/**/*.md'
   ], gulp.series('metalsmith', reload));
   gulp.watch(['scss/**/*.scss'], gulp.series('styles', reload));

@@ -157,7 +157,9 @@ Metalsmith(__dirname)
     engine: 'handlebars',
     default: 'post.html'
   }))
-  .use($.commento())
+  .use($.commento({
+    cssOverride: `${siteurl}css/commento.css`
+  }))
   .use($.twitterCard({
     siteurl,
     card: 'summary_large_image',
