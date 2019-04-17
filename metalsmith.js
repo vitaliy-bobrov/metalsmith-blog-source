@@ -105,7 +105,6 @@ Metalsmith(__dirname)
         title: sitename,
         description: siteDescr,
         'comments-counter': true,
-        'disqus-prefetch-widget': true,
         changefreq: 'always',
         priority: 1.0,
         twitter: true
@@ -158,10 +157,7 @@ Metalsmith(__dirname)
     engine: 'handlebars',
     default: 'post.html'
   }))
-  .use($.disqus({
-    siteurl,
-    shortname: 'bobrov-blog'
-  }))
+  .use($.commento())
   .use($.twitterCard({
     siteurl,
     card: 'summary_large_image',

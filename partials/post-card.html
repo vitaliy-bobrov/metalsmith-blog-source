@@ -40,7 +40,7 @@
           <svg class="mdl-svg post-info__comments-icon">
             <use xlink:href="#comment"></use>
           </svg>
-          <span class="disqus-comment-count post-info__comments-counter" data-disqus-key="{{ post.title }}"></span>
+          <a href="{{ absoluteUrl siteurl post.path }}" class="commento-counter post-info__comments-counter"></a>
         </div>
       {{/if}}
 
