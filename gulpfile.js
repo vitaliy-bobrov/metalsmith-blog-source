@@ -299,10 +299,10 @@ const generateSW = () => {
     ],
     runtimeCaching: [
       {
-        urlPattern: new RegExp('\.(?:bobrov-blog\.disqus|disquscdn)\.com/'),
+        urlPattern: new RegExp('\.commento\.io/'),
         handler: 'StaleWhileRevalidate',
         options: {
-          cacheName: 'disqus',
+          cacheName: 'commento',
           cacheableResponse: {
             statuses: [0, 200]
           },
