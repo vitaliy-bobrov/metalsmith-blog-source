@@ -23,6 +23,10 @@ priority: 1.0
 
 - [CSS Minsk JS](https://css-minsk-js.by/) -- 20 September 2019, Minsk, Belarus
 
+- [JSConf Budapest](https://jsconfbp.com/) -- 26 September 2019, Budapest, Hungary
+
+  Topic: **"Algorithms and Their Habitat"**
+
 ## Past talks:
 
 ### 2019
