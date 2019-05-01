@@ -21,6 +21,10 @@ priority: 1.0
 
   Topic: **"JavaScript, JavaScript…. Rocks You!"**
 
+- [NG DE](https://ng-de.org/) -- 30 August 2019, Berlin, Germany
+
+  Topic: **No Apollo-gies: Making Apps Accessible**
+
 - [CSS Minsk JS](https://css-minsk-js.by/) -- 20 September 2019, Minsk, Belarus
 
 - [JSConf Budapest](https://jsconfbp.com/) -- 26 September 2019, Budapest, Hungary
