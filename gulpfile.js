@@ -141,14 +141,14 @@ const styles = () => {
     .pipe($.plumber({
       errorHandler: onError
     }))
-    .pipe($.sass({
+    .pipe($.dartSass({
       includePaths: [
         'node_modules/material-design-lite/src/',
         'node_modules/mdl-ext/src'
       ],
       outputStyle: 'expanded',
       precision: 10
-    }).on('error', $.sass.logError))
+    }).on('error', $.dartSass.logError))
     .pipe($.postcss(processors))
     .pipe($.if(prod, $.uncss({
       html: ['build/**/*.html'],
