@@ -4,28 +4,22 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2019-04-14
+lastmod: 2019-06-05
 priority: 1.0
 ---
 ## Upcoming talks:
 
-- [NationJS](http://nationjs.com) -- 10 May 2019, Washington DC, USA
-
-  Topic: **"JavaScript, JavaScript…. Rocks You!"**
-
-- [ngVikings](https://ngvikings.org/) -- 27 May 2019, Copenhagen, Denmark
-
-  Topic: **"NgRx with WebAssembly, Web Workers and Worklets"**
-
-- [JSConf EU](https://2019.jsconf.eu/) -- 1 June 2019, Berlin, Germany
-
-  Topic: **"JavaScript, JavaScript…. Rocks You!"**
-
 - [NG DE](https://ng-de.org/) -- 30 August 2019, Berlin, Germany
 
-  Topic: **No Apollo-gies: Making Apps Accessible**
+  Topic: **No Apologies: Making Apps Accessible**
+
+- [JSConf Korea](https://2019.jsconfkorea.com/en/) - 03 September 2019, Seoul, Korea
+
+  Topic: **The Man Who Sold the Amp or How to Process Music with JS**
 
 - [CSS Minsk JS](https://css-minsk-js.by/) -- 20 September 2019, Minsk, Belarus
+
+  Topic: **"WebAssembly-driven CSS"**
 
 - [JSConf Budapest](https://jsconfbp.com/) -- 26 September 2019, Budapest, Hungary
 
@@ -34,6 +28,24 @@ priority: 1.0
 ## Past talks:
 
 ### 2019
+
+- [JSConf EU](https://2019.jsconf.eu/) -- 1 June 2019, Berlin, Germany
+
+  Topic: **"JavaScript, JavaScript…. Rocks You!"**
+
+  🗂[Slides](https://speakerdeck.com/bobrov1989/javascript-javascript-dot-dot-dot-rocks-you-251dec18-0917-4b75-be77-45e7d9e89896)
+
+- [ngVikings](https://ngvikings.org/) -- 27 May 2019, Copenhagen, Denmark
+
+  Topic: **"NgRx with WebAssembly, Web Workers and Worklets"**
+
+  🗂[Slides](https://speakerdeck.com/bobrov1989/running-in-parallel-ngrx-with-webassembly-web-workers-and-worklets) | 🎬[Video](https://youtu.be/AJsDy_45Yuc)
+
+- [NationJS](http://nationjs.com) -- 10 May 2019, Washington DC, USA
+
+  Topic: **"JavaScript, JavaScript…. Rocks You!"**
+
+  🗂[Slides](https://speakerdeck.com/bobrov1989/javascript-javascript-dot-dot-dot-rocks-you)
 
 - [4Developers](https://4developers.org.pl/) -- 8 April 2019, Warsaw, Poland
 
