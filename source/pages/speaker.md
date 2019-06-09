@@ -4,10 +4,14 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2019-06-05
+lastmod: 2019-06-09
 priority: 1.0
 ---
 ## Upcoming talks:
+
+- [.Front – first dip](https://events.epam.com/events/front-1) -- 19 June 2019, Wroclaw, Poland
+
+  Topic: **The Man Who Sold the Amp or How to Process Music with JS**
 
 - [NG DE](https://ng-de.org/) -- 30 August 2019, Berlin, Germany
 
