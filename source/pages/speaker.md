@@ -4,7 +4,7 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2019-06-09
+lastmod: 2019-06-10
 priority: 1.0
 ---
 ## Upcoming talks:
@@ -28,6 +28,10 @@ priority: 1.0
 - [JSConf Budapest](https://jsconfbp.com/) -- 26 September 2019, Budapest, Hungary
 
   Topic: **"Algorithms and Their Habitat"**
+
+- [ngSpain](https://ngspain.com/) -- 19 October 2019, Madrid, Spain
+
+  Topic: **"No Apollo-gies: Making Apps Accessible"**
 
 ## Past talks:
 
