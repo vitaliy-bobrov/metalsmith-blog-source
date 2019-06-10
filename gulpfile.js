@@ -69,17 +69,14 @@ const svg = () => gulp.src('images/svg/*.svg')
 
 gulp.task('svg', svg);
 
-const metalsmith = gulp.series(
-  'svg',
-  done => exec(
+const metalsmith = (done) => exec(
     `node ./metalsmith.js --url=${PROD_URL}`,
     (err, stdout, stderr) => {
       console.log(stdout);
       console.log(stderr);
       done(err);
     }
-  )
-);
+  );
 
 gulp.task('metalsmith', metalsmith);
 
@@ -363,7 +360,7 @@ const defaultTask = gulp.series(
     'images',
     gulp.series('lint', gulp.parallel('scripts', 'separateScripts')),
     'service-files',
-    'metalsmith'
+    gulp.series('svg', 'metalsmith')
   ),
   'service-worker'
 );
