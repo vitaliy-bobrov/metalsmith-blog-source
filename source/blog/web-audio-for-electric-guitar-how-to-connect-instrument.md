@@ -3,9 +3,9 @@ title: "Web Audio for Electric Guitar: How to Connect Instrument"
 description: Want to connect your electric guitar in a browser using Web Audio API? This short tutorial shows how to do it! You will learn how to request audio access, convert it into an audio stream and control volume.
 ogimage: images/posts/web-audio-for-electric-guitar-how-to-connect-instrument/web-audio-for-electric-guitar-how-to-connect-instrument-og.jpg
 tumb: /images/posts/web-audio-for-electric-guitar-how-to-connect-instrument/web-audio-for-electric-guitar-how-to-connect-instrument
-created: 2019-06-10
-updated: 2019-06-10
-lastmod: 2019-06-10
+created: 2019-06-11
+updated: 2019-06-11
+lastmod: 2019-06-11
 categories:
 - Guides
 - Web Audio
