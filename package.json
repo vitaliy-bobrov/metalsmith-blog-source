@@ -85,11 +85,11 @@
     "mdl-ext": "^0.17.1"
   },
   "browserslist": [
-    "last 3 chrome versions",
-    "last 3 and_chr versions",
-    "android >= 6",
-    "last 3 firefox versions",
-    "last 3 edge versions",
+    "last 2 chrome versions",
+    "last 2 and_chr versions",
+    "android >= 7",
+    "last 2 firefox versions",
+    "last 1 edge versions",
     "safari >= 11",
     "iOS >= 11"
   ],
