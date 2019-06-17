@@ -29,6 +29,14 @@
     text-align: right;
   }
 
+  .commento-markdown-button {
+    display: none;
+  }
+
+  .commento-logged-container .commento-logged-in-as .commento-name {
+    color: $mdlext-dark-text-color-primary;
+  }
+
   .commento-login .commento-login-text,
   .commento-submit-button,
   .commento-button,
