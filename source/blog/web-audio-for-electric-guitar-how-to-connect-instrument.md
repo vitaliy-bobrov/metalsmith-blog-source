@@ -12,6 +12,14 @@ categories:
 ---
 Modern Web becomes more and more powerful, especially with APIs giving developers access to hardware. One of such API -- Web Audio. It gives you a set of low-level features to generate or process music right in your browser. Today I want to show you how to connect your electric guitar 🎸 (or any other electric instrument with wire connection, ex. bass) in a browser and control its volume level.
 
+*This post is a part of "Web Audio for Electric Guitar" series, check out other posts as well!*
+
+### Web Audio for Electric Guitar:{post__series}
+
+1. How to Connect Instrument -- Current
+2. [Cabinet Emulation](https://bobrov.dev/blog/web-audio-for-electric-guitar-cabinet-emulation/)
+{post__series}
+
 I am playing a bunch of instruments, including some very unusual, like [bandura](https://en.wikipedia.org/wiki/Bandura) 🤯, but my favorite one is a guitar. At my teenage years, I've used to play at punk-rock bands 🤘 at school and university. I'm not a professional guitarist, and it is just my hobby that helps to relax and clean my mind after work. Web Audio allowed me to combine programming and music, so I've started experimenting with it. The very first task to do that was how to connect my instrument to the laptop.
 
 ![Me playing punk rock at age of 16](/images/posts/web-audio-for-electric-guitar-how-to-connect-instrument/img/punk-rock-band.jpg){js-lazy-load}
@@ -189,4 +197,4 @@ function clamp(min, max, value) {
 ```
 
 ## Recap
-If you read that post to that point, you learned how to create an audio context, request media stream from a browser, connect it to the output, and control its volume. If you are playing guitar, you can check out the ["JS Rocks"](http://js-rocks.web.app) Angular app I've built. It has a bunch of ready-to-use cabinets and effects for electric guitar created with Web Audio. Moreover, it sounds well 😎. Stay tuned in the next post I'm going to show how to emulate a real guitar cabinet. Rock it with Web Audio 🤘!
+If you read that post to that point, you learned how to create an audio context, request media stream from a browser, connect it to the output, and control its volume. If you are playing guitar, you can check out the ["JS Rocks"](http://js-rocks.web.app) Angular app I've built. It has a bunch of ready-to-use cabinets and effects for electric guitar created with Web Audio. Moreover, it sounds well 😎. Stay tuned in the [next post](https://bobrov.dev/blog/web-audio-for-electric-guitar-cabinet-emulation/) I'm going to show how to emulate a real guitar cabinet. Rock it with Web Audio 🤘!

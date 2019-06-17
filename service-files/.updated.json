@@ -2,32 +2,20 @@
   ".DS_Store": {
     "filename": ".DS_Store",
     "hash": "b0a023e07d76f04b06a60355b93fe2e3f4dc59c1",
-    "created": "2019-06-10T22:36:28.481Z",
-    "updated": "2019-06-10T22:36:28.481Z"
-  },
-  "pages/about.md": {
-    "filename": "pages/about.md",
-    "hash": "8df195aa4b2516526e4cb21e421ebc6909ffc45e",
-    "created": "2019-06-10T22:36:28.481Z",
-    "updated": "2019-06-10T22:36:28.481Z"
-  },
-  "pages/speaker.md": {
-    "filename": "pages/speaker.md",
-    "hash": "c8751358f6723208d1bb9cdadf134418595691ca",
-    "created": "2019-06-10T22:36:28.481Z",
-    "updated": "2019-06-10T22:36:28.481Z"
-  },
-  "blog/adding-comments-to-metalsmith.md": {
-    "filename": "blog/adding-comments-to-metalsmith.md",
-    "hash": "41def8f59bb38e1e8a78c474cda6d66803b5a798",
-    "created": "2017-01-30T00:00:00.000Z",
-    "updated": "2018-02-18T00:00:00.000Z"
+    "created": "2019-06-17T20:29:41.669Z",
+    "updated": "2019-06-17T20:29:41.669Z"
   },
   "blog/angular-smart-404-page.md": {
     "filename": "blog/angular-smart-404-page.md",
     "hash": "813c72eebd8944b164df1e9689a13641a00f4ef1",
     "created": "2018-12-11T00:00:00.000Z",
     "updated": "2018-12-11T00:00:00.000Z"
+  },
+  "blog/adding-comments-to-metalsmith.md": {
+    "filename": "blog/adding-comments-to-metalsmith.md",
+    "hash": "41def8f59bb38e1e8a78c474cda6d66803b5a798",
+    "created": "2017-01-30T00:00:00.000Z",
+    "updated": "2018-02-18T00:00:00.000Z"
   },
   "blog/css-custom-properties-in-depth-part-2.md": {
     "filename": "blog/css-custom-properties-in-depth-part-2.md",
@@ -107,16 +95,34 @@
     "created": "2018-12-21T00:00:00.000Z",
     "updated": "2018-12-22T00:00:00.000Z"
   },
+  "blog/web-audio-for-electric-guitar-cabinet-emulation.md": {
+    "filename": "blog/web-audio-for-electric-guitar-cabinet-emulation.md",
+    "hash": "aef9a7244252626fc7bfc0f72d1144fb98d1e698",
+    "created": "2019-06-17T00:00:00.000Z",
+    "updated": "2019-06-17T00:00:00.000Z"
+  },
   "blog/web-audio-for-electric-guitar-how-to-connect-instrument.md": {
     "filename": "blog/web-audio-for-electric-guitar-how-to-connect-instrument.md",
-    "hash": "c7fd137bef34d9ea1b66322441a50d3199cc9ba8",
-    "created": "2019-06-10T00:00:00.000Z",
-    "updated": "2019-06-10T00:00:00.000Z"
+    "hash": "12c58e5b3817e4488f4ce0b7c78d5816b0263b3f",
+    "created": "2019-06-11T00:00:00.000Z",
+    "updated": "2019-06-11T00:00:00.000Z"
   },
   "blog/webpack-2-migration-tips.md": {
     "filename": "blog/webpack-2-migration-tips.md",
     "hash": "f6dc200ef7778cfff8f7452392e0b1f02e30b9b2",
     "created": "2017-02-09T00:00:00.000Z",
     "updated": "2018-02-17T00:00:00.000Z"
+  },
+  "pages/about.md": {
+    "filename": "pages/about.md",
+    "hash": "8df195aa4b2516526e4cb21e421ebc6909ffc45e",
+    "created": "2019-06-17T20:29:41.669Z",
+    "updated": "2019-06-17T20:29:41.669Z"
+  },
+  "pages/speaker.md": {
+    "filename": "pages/speaker.md",
+    "hash": "c8751358f6723208d1bb9cdadf134418595691ca",
+    "created": "2019-06-17T20:29:41.669Z",
+    "updated": "2019-06-17T20:29:41.669Z"
   }
 }
