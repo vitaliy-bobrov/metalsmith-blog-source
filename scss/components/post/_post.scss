@@ -36,6 +36,20 @@
     @media screen and (min-width: 768px) {
       padding: 16px;
     }
+
+    & + .post__series {
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  h3.post__series {
+    margin: 0;
+  }
+
+  ol.post__series,
+  ul.post__series {
+    padding-left: 32px;
   }
 
   &__contents {
