@@ -35,7 +35,7 @@
           }
         },
         "description": "{{ post.description }}"
-      },
+      }{{#unless @last}},{{/unless}}
       {{/each}}
     ]
   }

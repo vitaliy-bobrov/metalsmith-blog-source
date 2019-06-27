@@ -2,20 +2,20 @@
   ".DS_Store": {
     "filename": ".DS_Store",
     "hash": "b0a023e07d76f04b06a60355b93fe2e3f4dc59c1",
-    "created": "2019-06-17T20:29:41.669Z",
-    "updated": "2019-06-17T20:29:41.669Z"
-  },
-  "blog/angular-smart-404-page.md": {
-    "filename": "blog/angular-smart-404-page.md",
-    "hash": "813c72eebd8944b164df1e9689a13641a00f4ef1",
-    "created": "2018-12-11T00:00:00.000Z",
-    "updated": "2018-12-11T00:00:00.000Z"
+    "created": "2019-06-20T20:11:49.124Z",
+    "updated": "2019-06-20T20:11:49.124Z"
   },
   "blog/adding-comments-to-metalsmith.md": {
     "filename": "blog/adding-comments-to-metalsmith.md",
     "hash": "41def8f59bb38e1e8a78c474cda6d66803b5a798",
     "created": "2017-01-30T00:00:00.000Z",
     "updated": "2018-02-18T00:00:00.000Z"
+  },
+  "blog/angular-smart-404-page.md": {
+    "filename": "blog/angular-smart-404-page.md",
+    "hash": "813c72eebd8944b164df1e9689a13641a00f4ef1",
+    "created": "2018-12-11T00:00:00.000Z",
+    "updated": "2018-12-11T00:00:00.000Z"
   },
   "blog/css-custom-properties-in-depth-part-2.md": {
     "filename": "blog/css-custom-properties-in-depth-part-2.md",
@@ -116,13 +116,13 @@
   "pages/about.md": {
     "filename": "pages/about.md",
     "hash": "8df195aa4b2516526e4cb21e421ebc6909ffc45e",
-    "created": "2019-06-17T20:29:41.669Z",
-    "updated": "2019-06-17T20:29:41.669Z"
+    "created": "2019-06-20T20:11:49.124Z",
+    "updated": "2019-06-20T20:11:49.124Z"
   },
   "pages/speaker.md": {
     "filename": "pages/speaker.md",
     "hash": "c8751358f6723208d1bb9cdadf134418595691ca",
-    "created": "2019-06-17T20:29:41.669Z",
-    "updated": "2019-06-17T20:29:41.669Z"
+    "created": "2019-06-20T20:11:49.124Z",
+    "updated": "2019-06-20T20:11:49.124Z"
   }
 }
