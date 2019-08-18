@@ -2,20 +2,8 @@
   ".DS_Store": {
     "filename": ".DS_Store",
     "hash": "b0a023e07d76f04b06a60355b93fe2e3f4dc59c1",
-    "created": "2019-06-27T16:50:59.425Z",
-    "updated": "2019-06-27T16:50:59.425Z"
-  },
-  "pages/about.md": {
-    "filename": "pages/about.md",
-    "hash": "8df195aa4b2516526e4cb21e421ebc6909ffc45e",
-    "created": "2019-06-27T16:50:59.425Z",
-    "updated": "2019-06-27T16:50:59.425Z"
-  },
-  "pages/speaker.md": {
-    "filename": "pages/speaker.md",
-    "hash": "c8751358f6723208d1bb9cdadf134418595691ca",
-    "created": "2019-06-27T16:50:59.425Z",
-    "updated": "2019-06-27T16:50:59.425Z"
+    "created": "2019-07-21T22:36:42.770Z",
+    "updated": "2019-07-21T22:36:42.770Z"
   },
   "blog/adding-comments-to-metalsmith.md": {
     "filename": "blog/adding-comments-to-metalsmith.md",
@@ -109,20 +97,32 @@
   },
   "blog/web-audio-for-electric-guitar-cabinet-emulation.md": {
     "filename": "blog/web-audio-for-electric-guitar-cabinet-emulation.md",
-    "hash": "aef9a7244252626fc7bfc0f72d1144fb98d1e698",
+    "hash": "f3cb1de9110272c381bcd19003723a0a26d2a867",
     "created": "2019-06-17T00:00:00.000Z",
-    "updated": "2019-06-17T00:00:00.000Z"
+    "updated": "2019-07-17T00:00:00.000Z"
   },
   "blog/web-audio-for-electric-guitar-how-to-connect-instrument.md": {
     "filename": "blog/web-audio-for-electric-guitar-how-to-connect-instrument.md",
-    "hash": "12c58e5b3817e4488f4ce0b7c78d5816b0263b3f",
+    "hash": "f7b2de09f07ad16d35d98a588ee0c523da86560d",
     "created": "2019-06-11T00:00:00.000Z",
-    "updated": "2019-06-11T00:00:00.000Z"
+    "updated": "2019-07-17T00:00:00.000Z"
   },
   "blog/webpack-2-migration-tips.md": {
     "filename": "blog/webpack-2-migration-tips.md",
     "hash": "f6dc200ef7778cfff8f7452392e0b1f02e30b9b2",
     "created": "2017-02-09T00:00:00.000Z",
     "updated": "2018-02-17T00:00:00.000Z"
+  },
+  "pages/about.md": {
+    "filename": "pages/about.md",
+    "hash": "8df195aa4b2516526e4cb21e421ebc6909ffc45e",
+    "created": "2019-07-21T22:36:42.770Z",
+    "updated": "2019-07-21T22:36:42.770Z"
+  },
+  "pages/speaker.md": {
+    "filename": "pages/speaker.md",
+    "hash": "692e9803feb10dc64773a850580230f41f381a96",
+    "created": "2019-07-21T22:36:42.770Z",
+    "updated": "2019-07-21T22:36:42.770Z"
   }
 }

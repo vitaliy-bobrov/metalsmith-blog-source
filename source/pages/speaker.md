@@ -4,14 +4,10 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2019-06-10
+lastmod: 2019-08-18
 priority: 1.0
 ---
 ## Upcoming talks:
-
-- [.Front – first dip](https://events.epam.com/events/front-1) -- 19 June 2019, Wroclaw, Poland
-
-  Topic: **The Man Who Sold the Amp or How to Process Music with JS**
 
 - [NG DE](https://ng-de.org/) -- 30 August 2019, Berlin, Germany
 
@@ -33,15 +29,29 @@ priority: 1.0
 
   Topic: **"No Apollo-gies: Making Apps Accessible"**
 
+- [ngTalks](https://ngtalks.io/) -- 07 November 2019, Kharkiv, Ukraine
+
+  Topic: **"Running in Parallel: WebAssembly, Web Workers and Worklets"**
+
+- [JS Poland](https://js-poland.pl/) - 22 November 2019, Warsaw, Poland
+
+  Topic: **"The Man Who Sold the Amp or How to Process Music with JS"**
+
 ## Past talks:
 
 ### 2019
+
+- [.Front – first dip](https://events.epam.com/events/front-1) -- 19 June 2019, Wroclaw, Poland
+
+  Topic: **The Man Who Sold the Amp or How to Process Music with JS**
+
+  🗂[Slides](https://speakerdeck.com/bobrov1989/javascript-javascript-dot-dot-dot-rocks-you-251dec18-0917-4b75-be77-45e7d9e89896)
 
 - [JSConf EU](https://2019.jsconf.eu/) -- 1 June 2019, Berlin, Germany
 
   Topic: **"JavaScript, JavaScript…. Rocks You!"**
 
-  🗂[Slides](https://speakerdeck.com/bobrov1989/javascript-javascript-dot-dot-dot-rocks-you-251dec18-0917-4b75-be77-45e7d9e89896)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/javascript-javascript-dot-dot-dot-rocks-you-251dec18-0917-4b75-be77-45e7d9e89896) | 🎬[Video](https://youtu.be/_yt89v0S1MA)
 
 - [ngVikings](https://ngvikings.org/) -- 27 May 2019, Copenhagen, Denmark
 

@@ -122,6 +122,12 @@ const images = gulp.series(
 
 gulp.task('images', images);
 
+const audio = () => gulp.src('./audio/**/*.{wav}')
+  .pipe(gulp.dest('build/audio'))
+  .pipe($.size({title: 'audio'}))
+
+gulp.task('audio', audio);
+
 const styles = () => {
   const processors = [
     assets({
@@ -192,8 +198,10 @@ gulp.task('separateScripts', separateScripts);
 const clean = once((done) => {
   del([
     'build/images',
+    'build/audio',
     'build/js',
-    'build/css'
+    'build/css',
+    'build/workbox-*'
   ], {dot: true}).then(() => done());
 });
 
@@ -289,6 +297,7 @@ const generateSW = () => {
       'images/icons/**/*',
       'images/authors/**/*',
       'images/!(*-og.jpg)',
+      // 'audio/**/*.wav',
       'js/**/*.js',
       'css/**/*.css',
       'about/*.html',
@@ -358,6 +367,7 @@ const defaultTask = gulp.series(
   gulp.parallel(
     'styles',
     'images',
+    'audio',
     gulp.series('lint', gulp.parallel('scripts', 'separateScripts')),
     'service-files',
     gulp.series('svg', 'metalsmith')

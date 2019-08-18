@@ -37,8 +37,9 @@
                             type="image/webp">
                     <source srcset="{{ author.avatar }}.jpg 1x, {{ author.avatar }}@2x.jpg 2x">
                     <img src="{{ author.avatar }}.jpg"
-                       alt="{{ author.name }} Photo"
-                       class="mdl-list__item-avatar">
+                         loading="lazy"
+                         alt="{{ author.name }} Photo"
+                         class="mdl-list__item-avatar">
                   </picture>
 
                   <div class="post-info__data-wrapper">
