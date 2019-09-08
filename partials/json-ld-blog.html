@@ -18,8 +18,8 @@
         "image": [
           "{{ siteurl }}{{ post.ogimage }}"
         ],
-        "datePublished": "{{ moment post.created 'YYYY-MM-DDThh:mm:ssZ' }}",
-        "dateModified": "{{ moment post.updated 'YYYY-MM-DDThh:mm:ssZ' }}",
+        "datePublished": "{{ moment post.created 'yyyy-MM-ddThh:mm:ssX' }}",
+        "dateModified": "{{ moment post.updated 'yyyy-MM-ddThh:mm:ssX' }}",
         "author": {
           "@type": "Person",
           "name": "{{ post.author.name }}"

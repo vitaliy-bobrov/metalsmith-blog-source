@@ -27,9 +27,9 @@
           {{ post.author.name }}
         </div>
 
-        <time date-time="{{ moment post.created 'YYYY-MM-DDThh:mm:ssZ' }}"
+        <time date-time="{{ moment post.created 'yyyy-MM-ddThh:mm:ssX' }}"
               class="post-info__date">
-          {{ moment post.created 'D MMMM YYYY' }}
+          {{ moment post.created 'd MMMM yyyy' }}
         </time>
       </div>
     </div>
