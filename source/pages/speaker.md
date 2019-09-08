@@ -9,14 +9,6 @@ priority: 1.0
 ---
 ## Upcoming talks:
 
-- [NG DE](https://ng-de.org/) -- 30 August 2019, Berlin, Germany
-
-  Topic: **No Apologies: Making Apps Accessible**
-
-- [JSConf Korea](https://2019.jsconfkorea.com/en/) - 03 September 2019, Seoul, Korea
-
-  Topic: **The Man Who Sold the Amp or How to Process Music with JS**
-
 - [CSS Minsk JS](https://css-minsk-js.by/) -- 20 September 2019, Minsk, Belarus
 
   Topic: **"WebAssembly-driven CSS"**
@@ -25,7 +17,7 @@ priority: 1.0
 
   Topic: **"Algorithms and Their Habitat"**
 
-- [ngSpain](https://ngspain.com/) -- 19 October 2019, Madrid, Spain
+- [ngSpain](https://ngspain.com/) -- 20 October 2019, Madrid, Spain
 
   Topic: **"No Apollo-gies: Making Apps Accessible"**
 
@@ -40,6 +32,18 @@ priority: 1.0
 ## Past talks:
 
 ### 2019
+
+- [JSConf Korea](https://2019.jsconfkorea.com/en/) - 03 September 2019, Seoul, Korea
+
+  Topic: **The Man Who Sold the Amp or How to Process Music with JS**
+
+  🗂[Slides](https://speakerdeck.com/bobrov1989/the-man-who-sold-the-amp-how-to-process-music-with-js)
+
+- [NG DE](https://ng-de.org/) -- 31 August 2019, Berlin, Germany
+
+  Topic: **No Apologies: Making Apps Accessible**
+
+  🗂[Slides](https://speakerdeck.com/bobrov1989/no-apollogies-making-apps-accessible)
 
 - [.Front – first dip](https://events.epam.com/events/front-1) -- 19 June 2019, Wroclaw, Poland
 
