@@ -93,7 +93,7 @@ Metalsmith(__dirname)
   }));
 ```
 
-`counterSelector` - a string that represents CSS class name selector for counter widget container. By default plugin is lookin for `.disqus-comment-count` elements in markup. Then it will add Disqus identifiers to HTML elements, so disqus widget will know what comments amount to insert inside which of them. Now only selectors starting with class name definition works.
+`counterSelector` - a string that represents CSS class name selector for counter widget container. By default plugin is looking for `.disqus-comment-count` elements in markup. Then it will add Disqus identifiers to HTML elements, so disqus widget will know what comments amount to insert inside which of them. Now only selectors starting with class name definition works.
 
 ### Widgets insertion
 
@@ -106,7 +106,7 @@ comments: true
 ---
 ```
 
-But wouldn't be enought, you need to add HTML container for Disqus comments inside your page template with id `disqus_thread`, if you're using handlebars as templateengine it may look like this:
+But wouldn't be enough, you need to add HTML container for Disqus comments inside your page template with id `disqus_thread`, if you're using handlebars as template engine it may look like this:
 
 ```html
 {{#if comments }}
