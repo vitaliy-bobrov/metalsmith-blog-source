@@ -87,8 +87,9 @@ const postIllustration = (tumb, alt, nolazy = false) => `
       <img ${nolazy ? '' : 'data-'}src="${tumb}.jpg" loading="${nolazy ? 'eager' : 'lazy'}" alt="${alt}" class="safe-picture__img">
     </picture>`;
 
-const postShare = (title, description, siteurl, path, id = 0) => {
+const postShare = (title, siteurl, path, id = 0) => {
   let link = url.resolve(siteurl, `${path}/`);
+  const headline = escape(title);
 
   return `
     <div class="mdl-card__menu post-share">
@@ -96,8 +97,8 @@ const postShare = (title, description, siteurl, path, id = 0) => {
               class="mdl-button mdl-button--icon ripple post-share__button js-share-btn"
               title="Share this post"
               aria-label="Share this post"
-              data-share-title="${escape(title)}"
-              data-share-text="${escape(description)}"
+              data-share-title="${headline}"
+              data-share-text="${headline} by @bobrov1989"
               data-share-url="${link}">
         <span class="ripple-ink"></span>
         <svg class="mdl-svg post-share__icon">
@@ -107,7 +108,7 @@ const postShare = (title, description, siteurl, path, id = 0) => {
       </button>
       <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu share-menu js-share-menu">
         <li class="mdl-menu__item share-menu__item">
-          <a href="//www.facebook.com/sharer.php?u=${link}"
+          <a href="https://www.facebook.com/sharer.php?u=${link}"
              class="share-menu__link"
              target="_blank"
              rel="nofollow noreferrer noopener">
@@ -118,7 +119,7 @@ const postShare = (title, description, siteurl, path, id = 0) => {
           </a>
         </li>
         <li class="mdl-menu__item share-menu__item">
-          <a href="//twitter.com/home?status=${link}"
+          <a href="https://twitter.com/home?status=${link}"
              class="share-menu__link"
              target="_blank"
              rel="nofollow noreferrer noopener">
@@ -129,7 +130,7 @@ const postShare = (title, description, siteurl, path, id = 0) => {
           </a>
         </li>
         <li class="mdl-menu__item share-menu__item">
-          <a href="//linkedin.com/shareArticle?url=${link}"
+          <a href="https://linkedin.com/shareArticle?url=${link}"
              class="share-menu__link"
              target="_blank"
              rel="nofollow noreferrer noopener">

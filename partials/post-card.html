@@ -27,7 +27,7 @@
           {{ post.author.name }}
         </div>
 
-        <time date-time="{{ moment post.created 'yyyy-MM-ddThh:mm:ssX' }}"
+        <time datetime="{{ moment post.created 'yyyy-MM-dd' }}"
               class="post-info__date">
           {{ moment post.created 'd MMMM yyyy' }}
         </time>
@@ -68,5 +68,5 @@
     </a>
   </section>
 
-  {{{ postShare post.title post.description siteurl post.path @index }}}
+  {{{ postShare post.title siteurl post.path @index }}}
 </article>
