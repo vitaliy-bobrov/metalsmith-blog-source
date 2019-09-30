@@ -4,34 +4,38 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2019-08-18
+lastmod: 2019-09-30
 priority: 1.0
 ---
 ## Upcoming talks:
-
-- [CSS Minsk JS](https://css-minsk-js.by/) -- 20 September 2019, Minsk, Belarus
-
-  Topic: **"WebAssembly-driven CSS"**
-
-- [JSConf Budapest](https://jsconfbp.com/) -- 26 September 2019, Budapest, Hungary
-
-  Topic: **"Algorithms and Their Habitat"**
 
 - [ngSpain](https://ngspain.com/) -- 20 October 2019, Madrid, Spain
 
   Topic: **"No Apollo-gies: Making Apps Accessible"**
 
-- [ngTalks](https://ngtalks.io/) -- 07 November 2019, Kharkiv, Ukraine
-
-  Topic: **"Running in Parallel: WebAssembly, Web Workers and Worklets"**
-
 - [JS Poland](https://js-poland.pl/) - 22 November 2019, Warsaw, Poland
 
   Topic: **"The Man Who Sold the Amp or How to Process Music with JS"**
 
+- [FrontEnd Con](https://frontend-con.io/) -- 26 November 2019, Warsaw, Poland
+
+  Topic: **"Running in Parallel: WebAssembly, Web Workers and Worklets"**
+
 ## Past talks:
 
 ### 2019
+
+- [JSConf Budapest](https://jsconfbp.com/) -- 26 September 2019, Budapest, Hungary
+
+  Topic: **"Algorithms and Their Habitat"**
+
+  🗂[Slides](https://speakerdeck.com/bobrov1989/algorithms-and-their-habitat-57986301-ba3f-405a-bce0-380980bfea7e)
+
+- [CSS Minsk JS](https://css-minsk-js.by/) -- 20 September 2019, Minsk, Belarus
+
+  Topic: **"WebAssembly-driven CSS"**
+
+  🗂[Slides](https://speakerdeck.com/bobrov1989/webassembly-driven-css-f217fbae-8272-4c00-bf4d-088a04eb4add)
 
 - [JSConf Korea](https://2019.jsconfkorea.com/en/) - 03 September 2019, Seoul, Korea
 
@@ -43,7 +47,7 @@ priority: 1.0
 
   Topic: **No Apologies: Making Apps Accessible**
 
-  🗂[Slides](https://speakerdeck.com/bobrov1989/no-apollogies-making-apps-accessible)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/no-apollogies-making-apps-accessible) | 🎬[Video](https://youtu.be/-WLAkaHIkZU)
 
 - [.Front – first dip](https://events.epam.com/events/front-1) -- 19 June 2019, Wroclaw, Poland
 
@@ -89,13 +93,13 @@ priority: 1.0
 
 ### 2018
 
-- [FrontEnd Con](https://frontend-con.io/) -- 4 December 2018, Warsaw, Poland
+- [FrontEnd Con](https://frontend-con.io/front-end-con-2018/) -- 4 December 2018, Warsaw, Poland
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
   🗂[Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api-1c99ed50-7d7d-43b4-bc1e-7f41684274ed) | 🎬[Video](https://youtu.be/2bJz7c4zn9k)
 
-- [Mobile Era](https://mobileera.rocks/) -- 1 November 2018, Oslo, Norway
+- [Mobile Era](https://2018.mobileera.rocks/) -- 1 November 2018, Oslo, Norway
 
   Topic: **"Flutter in Action: How to build cross-platform app with Dart"**
 
@@ -107,7 +111,7 @@ priority: 1.0
 
   🗂[Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api-1c99ed50-7d7d-43b4-bc1e-7f41684274ed) | 🎬[Video](https://youtu.be/fHAz4unc0Mc)
 
-- [Ruhr JS](https://ruhrjs.de/) -- 14 October 2018, Bochum, Germany
+- [Ruhr JS](https://2018.ruhrjs.de/) -- 14 October 2018, Bochum, Germany
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
@@ -119,13 +123,13 @@ priority: 1.0
 
   🎬[Video](https://youtu.be/QbHJIybbPLM)
 
-- [GrillJS](http://grilljs.com/) -- 18 August 2018, Wroclaw, Poland
+- [GrillJS](https://2018.grilljs.com/) -- 18 August 2018, Wroclaw, Poland
 
   Topic: **"Make the Web Brighter with the CSS Paint API"**
 
   🗂[Slides](https://speakerdeck.com/bobrov1989/make-the-web-brighter-with-the-css-paint-api-1)
 
-- [NG Talks](https://ngtalks.io/) -- 9 August 2018, Kharkiv, Ukraine
+- [NG Talks](https://2018.ngtalks.io) -- 9 August 2018, Kharkiv, Ukraine
 
   Topic: **"Robots Don't Cry: Automation with Schematics"**
 
@@ -167,7 +171,7 @@ priority: 1.0
 
   🗂[Slides](https://speakerdeck.com/bobrov1989/typescript-javascript-you-are-gonna-to-love)
 
-- [ng-conf](https://www.ng-conf.org) -- 19 April 2018, Salt Lake City, UT, USA
+- [ng-conf](https://2018.ng-conf.org/) -- 19 April 2018, Salt Lake City, UT, USA
 
   Topic: **"NgRx Schematics"**
 
@@ -203,7 +207,7 @@ priority: 1.0
 
   🗂[Slides](https://speakerdeck.com/bobrov1989/fancy-web-components-with-stencil)
 
-- [FrontEnd Con](http://frontend-con.io/) -- 22 September 2017, Warsaw, Poland
+- [FrontEnd Con](https://frontend-con.io/front-end-con-2017/) -- 22 September 2017, Warsaw, Poland
 
   Topic: **"Keep calm and use Angular CLI"**
 
