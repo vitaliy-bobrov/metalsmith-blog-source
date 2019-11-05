@@ -9,10 +9,6 @@ priority: 1.0
 ---
 ## Upcoming talks:
 
-- [ngSpain](https://ngspain.com/) -- 20 October 2019, Madrid, Spain
-
-  Topic: **"No Apollo-gies: Making Apps Accessible"**
-
 - [JS Poland](https://js-poland.pl/) - 22 November 2019, Warsaw, Poland
 
   Topic: **"The Man Who Sold the Amp or How to Process Music with JS"**
@@ -25,11 +21,17 @@ priority: 1.0
 
 ### 2019
 
+- [ngSpain](https://ngspain.com/) -- 20 October 2019, Madrid, Spain
+
+  Topic: **"No Apollo-gies: Making Apps Accessible"**
+
+  🗂[Slides](https://speakerdeck.com/bobrov1989/no-apollogies-making-apps-accessible)
+
 - [JSConf Budapest](https://jsconfbp.com/) -- 26 September 2019, Budapest, Hungary
 
   Topic: **"Algorithms and Their Habitat"**
 
-  🗂[Slides](https://speakerdeck.com/bobrov1989/algorithms-and-their-habitat-57986301-ba3f-405a-bce0-380980bfea7e)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/algorithms-and-their-habitat-57986301-ba3f-405a-bce0-380980bfea7e) | 🎬[Video](https://youtu.be/5JsQ7mvUeSU)
 
 - [CSS Minsk JS](https://css-minsk-js.by/) -- 20 September 2019, Minsk, Belarus
 
@@ -41,7 +43,7 @@ priority: 1.0
 
   Topic: **The Man Who Sold the Amp or How to Process Music with JS**
 
-  🗂[Slides](https://speakerdeck.com/bobrov1989/the-man-who-sold-the-amp-how-to-process-music-with-js)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/the-man-who-sold-the-amp-how-to-process-music-with-js) | 🎬[Video](https://youtu.be/kuihryJh8fU)
 
 - [NG DE](https://ng-de.org/) -- 31 August 2019, Berlin, Germany
 

@@ -13,6 +13,8 @@ Vitalii is the JavaScript Engineer with rich Angular and NgRx experience in ente
 
 ## Interviews
 
+[](youtube:va0eCh7obn4)
+
 [](youtube:sM3wR9g1jbM)
 
 [Speakers in UA](https://speakers.in.ua/vitalii-bobrov/) (in Russian language).
