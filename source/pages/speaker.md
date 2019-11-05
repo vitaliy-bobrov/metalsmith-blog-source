@@ -4,7 +4,7 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2019-09-30
+lastmod: 2019-11-05
 priority: 1.0
 ---
 ## Upcoming talks:

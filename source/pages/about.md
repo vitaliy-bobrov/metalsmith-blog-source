@@ -4,7 +4,7 @@ description: "Vitalii Bobrov is the JavaScript Engineer with rich Angular and Ng
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2018-09-03
+lastmod: 2019-11-05
 priority: 0.9
 ---
 ## Bio
