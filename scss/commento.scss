@@ -34,7 +34,8 @@
     display: none;
   }
 
-  .commento-logged-container .commento-logged-in-as .commento-name {
+  .commento-logged-container .commento-logged-in-as .commento-name,
+  .commento-card .commento-name {
     color: $mdlext-dark-text-color-primary;
   }
 
