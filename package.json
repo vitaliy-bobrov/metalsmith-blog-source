@@ -60,7 +60,7 @@
     "metalsmith-debug": "^1.2.0",
     "metalsmith-default-values": "^3.0.0",
     "metalsmith-discover-partials": "^0.1.2",
-    "metalsmith-drafts": "^0.1.0",
+    "metalsmith-drafts": "^1.0.0",
     "metalsmith-excerpts": "^1.2.0",
     "metalsmith-layouts": "^1.7.0",
     "metalsmith-mapsite": "^1.0.6",

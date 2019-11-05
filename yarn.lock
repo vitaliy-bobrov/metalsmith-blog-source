@@ -6282,9 +6282,10 @@ metalsmith-discover-partials@^0.1.2:
     fs-tools "^0.5.0"
     handlebars "*"
 
-metalsmith-drafts@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/metalsmith-drafts/-/metalsmith-drafts-0.1.0.tgz#aff2553d3987512ac57e7074196c36746b3d4c49"
+metalsmith-drafts@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/metalsmith-drafts/-/metalsmith-drafts-1.0.0.tgz#06fef230707be474793e2103412ca35c585e0c67"
+  integrity sha512-ooxvqG7bPhsxoM9WVGKjlwxQ+eUUYyQdDiDq7knu2X+Wc9qtyj5UKSpLO18c5+bewoe8dnYOyoAfktV7B58K0A==
 
 metalsmith-excerpts@^1.2.0:
   version "1.3.0"
