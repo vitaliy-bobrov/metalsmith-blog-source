@@ -46,6 +46,9 @@ const BABELRC = {
   .filter(Boolean),
   shouldPrintComment: () => !prod
 };
+const terserOptions = {
+  mangle: { toplevel: true }
+};
 
 const svg = () => gulp.src('images/svg/*.svg')
   .pipe($.plumber({
@@ -180,7 +183,7 @@ const scripts = () => gulp.src([
   }))
   .pipe($.babel(BABELRC))
   .pipe($.concat('main.min.js'))
-  .pipe($.if(prod, $.babelMinify()))
+  .pipe($.if(prod, $.terser(terserOptions)))
   .pipe($.size({title: 'scripts'}))
   .pipe(gulp.dest('build/js', {sourcemaps: prod ? false : '.'}));
 
@@ -190,7 +193,7 @@ const separateScripts = () => gulp.src(['js/paint/*.js', 'js/sw/*.js'])
   .pipe($.plumber({
     errorHandler: onError
   }))
-  .pipe($.if(prod, $.babelMinify()))
+  .pipe($.if(prod, $.terser(terserOptions)))
   .pipe(gulp.dest('build/js'));
 
 gulp.task('separateScripts', separateScripts);
@@ -238,7 +241,7 @@ gulp.task('serve', gulp.series('bs', 'watch'));
 
 const minifySW = () => gulp.src('build/service-worker.js')
   .pipe($.babel(BABELRC))
-  .pipe($.babelMinify())
+  .pipe($.terser(terserOptions))
   .pipe(gulp.dest('build'));
 
 gulp.task('minify-sw', minifySW);
