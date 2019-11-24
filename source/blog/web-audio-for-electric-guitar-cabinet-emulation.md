@@ -4,8 +4,8 @@ description: Want to know how to emulate top brand guitar amp or cabinet playing
 ogimage: images/posts/web-audio-for-electric-guitar-cabinet-emulation/web-audio-for-electric-guitar-cabinet-emulation-og.jpg
 tumb: /images/posts/web-audio-for-electric-guitar-cabinet-emulation/web-audio-for-electric-guitar-cabinet-emulation
 created: 2019-06-17
-updated: 2019-06-17
-lastmod: 2019-06-17
+updated: 2019-07-17
+lastmod: 2019-07-17
 categories:
 - Guides
 - Web Audio
@@ -19,7 +19,8 @@ In the [previous post](https://bobrov.dev/blog/web-audio-for-electric-guitar-how
 ### Web Audio for Electric Guitar Series:{post__series}
 
 1. [How to Connect Instrument](https://bobrov.dev/blog/web-audio-for-electric-guitar-how-to-connect-instrument/)
-2. Cabinet Emulation -- Current {post__series}
+2. Cabinet Emulation -- Current
+3. [Distortion](https://bobrov.dev/blog/web-audio-for-electric-guitar-distortion){post__series}
 
 While playing on electric guitar at home, it usually connected to an individual device -- amplifier or head with a cabinet. There are a lot of famous amp producers, and each of them has its own "firm" sound. However, using digital sound processing, it is possible to emulate them programmatically using a process called *convolution*. For simplicity, you can imagine convolution as a multiplication of two functions. When we are speaking about sound convolution mean the application of some sample to the live input. To simulate a guitar cabinet, we need to apply such a short sample recorded from real device to guitar sound. That samples called *impulse response* (IR).
 
@@ -156,7 +157,7 @@ I've recorded an example video showing how convolution affects the output sound.
 [](youtube:0KK6D2h7RgU)
 
 ## Recap
-If you read that post to that point, you learned how to emulate a guitar amp using convolution, and create a three-band equalizer to configure tone. If you are playing guitar, you can check out the ["JS Rocks"](http://js-rocks.web.app) Angular app I've built. It has 9‼️ of ready-to-use cabinets and  7 effects for electric guitar created with Web Audio. Moreover, it sounds well 😎. Stay tuned in the next post I'm going to make a deep dive into distortion effects. Rock it with Web Audio 🤘!
+If you read that post to that point, you learned how to emulate a guitar amp using convolution, and create a three-band equalizer to configure tone. If you are playing guitar, you can check out the ["JS Rocks"](http://js-rocks.web.app) Angular app I've built. It has 9‼️ of ready-to-use cabinets and  7 effects for electric guitar created with Web Audio. Moreover, it sounds well 😎. Stay tuned in the next post I'm going to make a deep dive into [distortion effects](https://bobrov.dev/blog/web-audio-for-electric-guitar-distortion). Rock it with Web Audio 🤘!
 
 
 

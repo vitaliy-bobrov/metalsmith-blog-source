@@ -4,14 +4,10 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2019-11-05
+lastmod: 2019-11-24
 priority: 1.0
 ---
 ## Upcoming talks:
-
-- [JS Poland](https://js-poland.pl/) - 22 November 2019, Warsaw, Poland
-
-  Topic: **"The Man Who Sold the Amp or How to Process Music with JS"**
 
 - [FrontEnd Con](https://frontend-con.io/) -- 26 November 2019, Warsaw, Poland
 
@@ -20,6 +16,12 @@ priority: 1.0
 ## Past talks:
 
 ### 2019
+
+- [JS Poland](https://js-poland.pl/) - 22 November 2019, Warsaw, Poland
+
+  Topic: **"The Man Who Sold the Amp or How to Process Music with JS"**
+
+  🗂[Slides](https://speakerdeck.com/bobrov1989/the-man-who-sold-the-amp-how-to-process-music-with-js)
 
 - [ngSpain](https://ngspain.com/) -- 20 October 2019, Madrid, Spain
 
@@ -37,7 +39,7 @@ priority: 1.0
 
   Topic: **"WebAssembly-driven CSS"**
 
-  🗂[Slides](https://speakerdeck.com/bobrov1989/webassembly-driven-css-f217fbae-8272-4c00-bf4d-088a04eb4add)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/webassembly-driven-css-f217fbae-8272-4c00-bf4d-088a04eb4add) | 🎬[Video](https://youtu.be/OOQQrWlESMk)
 
 - [JSConf Korea](https://2019.jsconfkorea.com/en/) - 03 September 2019, Seoul, Korea
 
@@ -73,7 +75,7 @@ priority: 1.0
 
   Topic: **"JavaScript, JavaScript…. Rocks You!"**
 
-  🗂[Slides](https://speakerdeck.com/bobrov1989/javascript-javascript-dot-dot-dot-rocks-you)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/javascript-javascript-dot-dot-dot-rocks-you) | 🎬[Video](https://youtu.be/Hn8CvYKEm3E)
 
 - [4Developers](https://4developers.org.pl/) -- 8 April 2019, Warsaw, Poland
 
@@ -121,7 +123,7 @@ priority: 1.0
 
 - [Modern Web Podcast](https://www.thisdot.co/modern-web) -- 1 October 2018, Online
 
-  Topic: **"Houdini"**
+  Topic: **"CSS Houdini"**
 
   🎬[Video](https://youtu.be/QbHJIybbPLM)
 

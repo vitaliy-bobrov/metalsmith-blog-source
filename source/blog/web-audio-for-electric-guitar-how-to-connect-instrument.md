@@ -4,8 +4,8 @@ description: Want to connect your electric guitar in a browser using Web Audio A
 ogimage: images/posts/web-audio-for-electric-guitar-how-to-connect-instrument/web-audio-for-electric-guitar-how-to-connect-instrument-og.jpg
 tumb: /images/posts/web-audio-for-electric-guitar-how-to-connect-instrument/web-audio-for-electric-guitar-how-to-connect-instrument
 created: 2019-06-11
-updated: 2019-06-11
-lastmod: 2019-06-11
+updated: 2019-07-17
+lastmod: 2019-07-17
 categories:
 - Guides
 - Web Audio
@@ -18,6 +18,7 @@ Modern Web becomes more and more powerful, especially with APIs giving developer
 
 1. How to Connect Instrument -- Current
 2. [Cabinet Emulation](https://bobrov.dev/blog/web-audio-for-electric-guitar-cabinet-emulation/)
+3. [Distortion](https://bobrov.dev/blog/web-audio-for-electric-guitar-distortion)
 {post__series}
 
 I am playing a bunch of instruments, including some very unusual, like [bandura](https://en.wikipedia.org/wiki/Bandura) 🤯, but my favorite one is a guitar. At my teenage years, I've used to play at punk-rock bands 🤘 at school and university. I'm not a professional guitarist, and it is just my hobby that helps to relax and clean my mind after work. Web Audio allowed me to combine programming and music, so I've started experimenting with it. The very first task to do that was how to connect my instrument to the laptop.
