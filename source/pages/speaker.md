@@ -4,18 +4,22 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2019-11-24
+lastmod: 2019-12-05
 priority: 1.0
 ---
 ## Upcoming talks:
+
+The future could be exiting...
+
+## Past talks:
+
+### 2019
 
 - [FrontEnd Con](https://frontend-con.io/) -- 26 November 2019, Warsaw, Poland
 
   Topic: **"Running in Parallel: WebAssembly, Web Workers and Worklets"**
 
-## Past talks:
-
-### 2019
+  🗂[Slides](https://speakerdeck.com/bobrov1989/running-in-parallel-webassembly-web-workers-and-worklets)
 
 - [JS Poland](https://js-poland.pl/) - 22 November 2019, Warsaw, Poland
 
