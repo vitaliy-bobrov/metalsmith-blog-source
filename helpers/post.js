@@ -102,7 +102,7 @@ const postShare = (title, siteurl, path, id = 0) => {
               data-share-url="${link}">
         <span class="ripple-ink"></span>
         <svg class="mdl-svg post-share__icon">
-          <use xlink:href="#share"></use>
+          <use xlink:href="/images/sprite.svg#share"></use>
         </svg>
         Share post
       </button>
@@ -113,7 +113,7 @@ const postShare = (title, siteurl, path, id = 0) => {
              target="_blank"
              rel="nofollow noreferrer noopener">
             <svg class="share-menu__icon">
-              <use xlink:href="#facebook"></use>
+              <use xlink:href="/images/sprite.svg#facebook"></use>
             </svg>
             Facebook
           </a>
@@ -124,7 +124,7 @@ const postShare = (title, siteurl, path, id = 0) => {
              target="_blank"
              rel="nofollow noreferrer noopener">
             <svg class="share-menu__icon">
-              <use xlink:href="#twitter"></use>
+              <use xlink:href="/images/sprite.svg#twitter"></use>
             </svg>
             Twitter
           </a>
@@ -135,7 +135,7 @@ const postShare = (title, siteurl, path, id = 0) => {
              target="_blank"
              rel="nofollow noreferrer noopener">
             <svg class="share-menu__icon">
-              <use xlink:href="#linkedin"></use>
+              <use xlink:href="/images/sprite.svg#linkedin"></use>
             </svg>
             LinkedIn
           </a>

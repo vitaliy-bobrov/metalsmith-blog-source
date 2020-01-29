@@ -10,6 +10,7 @@ const assets = require('postcss-assets');
 const autoprefixer = require('autoprefixer');
 const mqpacker = require('css-mqpacker');
 const mqkeyframes = require('postcss-mq-keyframes');
+const systemUiFont = require('postcss-font-family-system-ui');
 const exec = require('child_process').exec;
 const request = require('request');
 const url = require('url');
@@ -58,12 +59,8 @@ const svg = () => gulp.src('images/svg/*.svg')
     mode: {
       defs: {
         dest: './',
-        sprite: '../images/sprites/sprite.svg',
-        inline: true,
-        example: {
-          template: './images/sprites/template.html',
-          dest: 'sprite.html'
-        }
+        sprite: '../images/sprite.svg',
+        inline: true
       }
     }
   }))
@@ -103,7 +100,7 @@ gulp.task('lint', lint);
 
 const webp = () => gulp.src([
     'images/**/*.{jpg,jpeg,png,gif}',
-    '!./images/posts/**/img/*.jpg',
+    '!./images/posts/**/img/*.{jpg,jpeg,png,gif}',
     '!images/icons/**.*',
     '!images/**/*-og.jpg',
     '!images/bg-*.jpg'
@@ -118,7 +115,7 @@ gulp.task('webp', webp);
 
 const images = gulp.series(
   'webp',
-  () => gulp.src('./images/**/*.{jpg,jpeg,png,gif,webp}')
+  () => gulp.src('./images/**/*.{jpg,jpeg,png,gif,webp,svg}')
     .pipe(gulp.dest('build/images'))
     .pipe($.size({title: 'images'}))
 );
@@ -138,6 +135,7 @@ const styles = () => {
       baseUrl: '../',
       loadPaths: ['images/']
     }),
+    systemUiFont,
     autoprefixer,
     mqpacker({sort: true}),
     mqkeyframes
