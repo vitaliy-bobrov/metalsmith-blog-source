@@ -288,7 +288,6 @@ const generateSW = () => {
 
   return workboxBuild.generateSW({
     swDest: filepath,
-    importWorkboxFrom: 'local',
     cacheId: pkg.name,
     offlineGoogleAnalytics: true,
     globDirectory: rootDir,
