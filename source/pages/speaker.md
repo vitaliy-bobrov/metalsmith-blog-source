@@ -4,12 +4,14 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2019-12-05
+lastmod: 2020-01-29
 priority: 1.0
 ---
 ## Upcoming talks:
 
-The future could be exiting...
+- [WebAssembly Live!](http://www.webassembly.live/) -- 20 March 2020, London, UK
+
+  Topic: **"The Future of Audio Processing in the Web"**
 
 ## Past talks:
 
