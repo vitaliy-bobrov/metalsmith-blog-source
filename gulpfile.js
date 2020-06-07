@@ -365,12 +365,11 @@ gulp.task('service-worker', generateSW);
 const defaultTask = gulp.series(
   'clean',
   gulp.parallel(
-    'styles',
     'images',
     'audio',
     gulp.series('lint', gulp.parallel('scripts', 'separateScripts')),
     'service-files',
-    gulp.series('svg', 'metalsmith')
+    gulp.series('svg', 'metalsmith', 'styles',)
   ),
   'service-worker'
 );
