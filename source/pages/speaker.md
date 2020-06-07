@@ -9,7 +9,7 @@ priority: 1.0
 ---
 ## Upcoming talks:
 
-- [WebAssembly Live!](http://www.webassembly.live/) -- 20 March 2020, London, UK
+- [WebAssembly Live!](http://www.webassembly.live/) -- September 2020, London, UK
 
   Topic: **"The Future of Audio Processing in the Web"**
 
