@@ -127,7 +127,14 @@ Metalsmith(__dirname)
     .use(emoji)
   )
   .use($.prism({
-    preLoad: ['bash', 'css-extras', 'json', 'python', 'scss', 'typescript']
+    preLoad: [
+      'bash',
+      'css-extras',
+      'json',
+      'python',
+      'scss',
+      'typescript'
+    ]
   }))
   .use($.permalinks({
     relative: false,

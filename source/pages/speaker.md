@@ -4,16 +4,26 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.html
 twitter: true
-lastmod: 2020-01-29
+lastmod: 2020-08-03
 priority: 1.0
 ---
 ## Upcoming talks:
 
-- [WebAssembly Live!](http://www.webassembly.live/) -- September 2020, London, UK
+- [WebAssembly Live!](http://www.webassembly.live/) -- September 2020, Online
 
   Topic: **"The Future of Audio Processing in the Web"**
 
 ## Past talks:
+
+### 2020
+
+- [EPAM JavaScript Webinar 2020](https://events.epam.com/events/javascript-webinar-2020) -- 4 August 2020, Online
+
+  Topic: **"Job Behind the Scene: Web Worker"**
+
+- [Adventures in Angular](https://devchat.tv/adv-in-angular/) -- 13 July 2020, Online
+
+  Topic: **"Angular and Accessibility"**
 
 ### 2019
 
@@ -33,7 +43,7 @@ priority: 1.0
 
   Topic: **"No Apollo-gies: Making Apps Accessible"**
 
-  🗂[Slides](https://speakerdeck.com/bobrov1989/no-apollogies-making-apps-accessible)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/no-apollogies-making-apps-accessible) | 🎬[Video](https://youtu.be/BRMsXam9__4)
 
 - [JSConf Budapest](https://jsconfbp.com/) -- 26 September 2019, Budapest, Hungary
 
