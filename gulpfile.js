@@ -6,11 +6,13 @@ const del = require('del');
 const once = require('async-once');
 const browserSync = require('browser-sync');
 const gulpLoadPlugins = require('gulp-load-plugins');
+const cssnano = require('cssnano');
 const assets = require('postcss-assets');
 const autoprefixer = require('autoprefixer');
-const mqpacker = require('css-mqpacker');
+const mqpacker = require('postcss-combine-media-query');
 const mqkeyframes = require('postcss-mq-keyframes');
 const systemUiFont = require('postcss-font-family-system-ui');
+const unCSS = require('postcss-uncss');
 const exec = require('child_process').exec;
 const request = require('request');
 const url = require('url');
@@ -137,8 +139,21 @@ const styles = () => {
     }),
     systemUiFont,
     autoprefixer,
-    mqpacker({sort: true}),
-    mqkeyframes
+    mqpacker,
+    mqkeyframes,
+    unCSS({
+      htmlroot: 'build',
+      html: ['build/**/*.html'],
+      ignore: [
+        /^.*is-(compact|small-screen|visible|active|animating|upgraded).*/,
+        /^.*mdl-(menu|button|snackbar).*/,
+        /^.*ripple-ink_animate.*/,
+        /^.*commento-root.*/
+      ]
+    }),
+    cssnano({
+      preset: 'default',
+    })
   ];
 
   return gulp.src('scss/**/*.scss', {sourcemaps: !prod})
@@ -154,16 +169,6 @@ const styles = () => {
       precision: 10
     }).on('error', $.dartSass.logError))
     .pipe($.postcss(processors))
-    .pipe($.if(prod, $.uncss({
-      html: ['build/**/*.html'],
-      ignore: [
-        /^.*is-(compact|small-screen|visible|active|animating|upgraded).*/,
-        /^.*mdl-(menu|button|snackbar).*/,
-        /^.*ripple-ink_animate.*/,
-        /^.*commento-root.*/
-      ]
-    })))
-    .pipe($.if('*.css', $.cssnano()))
     .pipe($.size({title: 'styles'}))
     .pipe(gulp.dest('build/css', {sourcemaps: prod ? false : '.'}));
 };
@@ -224,8 +229,8 @@ gulp.task('bs', bs);
 
 const watch = () => {
   gulp.watch([
-    'layouts/**/*.html',
-    'partials/**/*.html',
+    'layouts/**/*.hbs',
+    'partials/**/*.hbs',
     'source/**/*.md'
   ], gulp.series('metalsmith', reload));
   gulp.watch(['scss/**/*.scss'], gulp.series('styles', reload));
@@ -245,12 +250,12 @@ const minifySW = () => gulp.src('build/service-worker.js')
 gulp.task('minify-sw', minifySW);
 
 const html = () => gulp.src('build/**/*.html')
-  .pipe($.htmlmin({
-    collapseBooleanAttributes: true,
-    collapseWhitespace: true,
-    quoteCharacter: '"',
-    removeComments: true
-  }))
+  // .pipe($.htmlmin({
+  //   collapseBooleanAttributes: true,
+  //   collapseWhitespace: true,
+  //   quoteCharacter: '"',
+  //   removeComments: true
+  // }))
   .pipe(gulp.dest('build'));
 
 gulp.task('html', html);
