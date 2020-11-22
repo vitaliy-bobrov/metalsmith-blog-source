@@ -6,6 +6,7 @@ const extlink = require('remarkable-extlink');
 const classy = require('remarkable-classy');
 const emoji = require('remarkable-emoji');
 const youtube = require('remarkable-youtube');
+const defaultValues = require('@metalsmith/default-values');
 
 const $ = loadPlugins(pkg, 'devDependencies', 'metalsmith-');
 
@@ -42,11 +43,11 @@ Metalsmith(__dirname)
   .use($.updated({
     updatedFile: '../service-files/.updated.json'
   }))
-  .use($.defaultValues([
+  .use(defaultValues([
     {
       pattern: pagesPattern,
       defaults: {
-        layout: 'page.html',
+        layout: 'page.hbs',
         changefreq: 'weekly',
         priority: 0.9
       }
@@ -66,7 +67,10 @@ Metalsmith(__dirname)
   .use($.drafts())
   .use($.discoverPartials({
     directory: 'partials',
-    pattern: /\.html$/
+    pattern: /\.hbs$/
+  }))
+  .use($.registerHelpers({
+    directory: './helpers'
   }))
   .use($.collections({
     pages: {
@@ -97,7 +101,7 @@ Metalsmith(__dirname)
   .use($.pagination({
     'collections.posts': {
       perPage: postsPerPage,
-      layout: 'blog.html',
+      layout: 'blog.hbs',
       first: 'index.html',
       noPageOne: true,
       path: 'blog/page/:num/index.html',
@@ -153,16 +157,13 @@ Metalsmith(__dirname)
     path: 'category/:tag/index.html',
     pathPage: 'category/:tag/:num/index.html',
     perPage: postsPerPage,
-    layout: '../layouts/category.html',
+    layout: '../layouts/category.hbs',
     sortBy: 'created',
     reverse: true,
   }))
-  .use($.registerHelpers({
-    directory: './helpers'
-  }))
   .use($.layouts({
-    engine: 'handlebars',
-    default: 'post.html'
+    default: 'post.hbs',
+    pattern: '**/*.html',
   }))
   .use($.commento({
     cssOverride: `${siteurl}css/commento.css`
