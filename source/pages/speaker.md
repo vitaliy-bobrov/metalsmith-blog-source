@@ -2,24 +2,60 @@
 title: Speaker
 description: Information about upcoming and past talks at tech events by Vitalii Bobrov.
 ogimage: images/pages/about-og.jpg
-layout: page.html
+layout: page.hbs
 twitter: true
-lastmod: 2020-08-03
+lastmod: 2020-11-22
 priority: 1.0
 ---
 ## Upcoming talks:
 
-- [WebAssembly Live!](http://www.webassembly.live/) -- September 2020, Online
+- [ZED Conference](https://community-z.com/events/zed-conference) -- 3 December 2020, Online
 
   Topic: **"The Future of Audio Processing in the Web"**
+
+- [MyWebTech](https://mywebtech.com.ua) -- 5 December 2020, Online
+
+  Topic: **Listen to your UI: Making apps accessible**
+
+- [FrontEnd Con](https://frontend-con.io/) -- 8 December 2020, Online
+
+  Topic: **Listen to your interfaces: Making apps accessible**
+
+- [Global Online Angular Summit](https://geekle.us/angular) -- 4 February 2021, Online
 
 ## Past talks:
 
 ### 2020
 
+- [JS Poland](https://js-poland.pl) -- 20 November 2020, Online
+
+  Topic: **"Job Behind the Scene: Web Worker"**
+
+  🗂[Slides](https://speakerdeck.com/bobrov1989/job-behind-the-scene-web-worker)
+
+- [DevCon Live](https://www.dev-con.ro) -- 10 November 2020, Online
+
+  Topic: **"The Future of Audio Processing in the Web"**
+
+  🗂[Slides](https://speakerdeck.com/bobrov1989/the-future-of-audio-processing-in-the-web)
+
+- [WebAssembly Live!](http://www.webassembly.live) -- 18 September 2020, Online
+
+  Topic: **"The Future of Audio Processing in the Web"**
+
+  🗂[Slides](https://speakerdeck.com/bobrov1989/the-future-of-audio-processing-in-the-web)
+
+- [Vinnytsia JS](http://vinnytsiajs.org/) -- 17 September 2020, Online
+
+  Topic: **"Job Behind the Scene: Web Worker"**
+
+  🗂[Slides](https://speakerdeck.com/bobrov1989/job-behind-the-scene-web-worker) | 🎬[Video (Russian)](https://youtu.be/fEwfwyxDC8k)
+
 - [EPAM JavaScript Webinar 2020](https://events.epam.com/events/javascript-webinar-2020) -- 4 August 2020, Online
 
   Topic: **"Job Behind the Scene: Web Worker"**
+
+  🗂[Slides](https://speakerdeck.com/bobrov1989/job-behind-the-scene-web-worker) | 🎬[Video (Russian)](https://youtu.be/9iAocTSuAKk)
 
 - [Adventures in Angular](https://devchat.tv/adv-in-angular/) -- 13 July 2020, Online
 
@@ -31,13 +67,13 @@ priority: 1.0
 
   Topic: **"Running in Parallel: WebAssembly, Web Workers and Worklets"**
 
-  🗂[Slides](https://speakerdeck.com/bobrov1989/running-in-parallel-webassembly-web-workers-and-worklets)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/running-in-parallel-webassembly-web-workers-and-worklets) | 🎬[Video](https://youtu.be/_cwES4Rl_Xc)
 
 - [JS Poland](https://js-poland.pl/) - 22 November 2019, Warsaw, Poland
 
   Topic: **"The Man Who Sold the Amp or How to Process Music with JS"**
 
-  🗂[Slides](https://speakerdeck.com/bobrov1989/the-man-who-sold-the-amp-how-to-process-music-with-js)
+  🗂[Slides](https://speakerdeck.com/bobrov1989/the-man-who-sold-the-amp-how-to-process-music-with-js) | 🎬[Video](https://youtu.be/tNKw681mUjo)
 
 - [ngSpain](https://ngspain.com/) -- 20 October 2019, Madrid, Spain
 

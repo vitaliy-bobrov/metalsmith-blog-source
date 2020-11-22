@@ -2,7 +2,7 @@
 title: About
 description: "Vitalii Bobrov is the JavaScript Engineer with rich Angular and NgRx experience in enterprise projects. For the last couple of years, he lives in Poland, but Ukraine will live in his heart forever. He is co-organizer of Angular Wroclaw meetup. This guy is not just nerd, but tech speaker, ngGirls mentor, and the father of the excellent little girl."
 ogimage: images/pages/about-og.jpg
-layout: page.html
+layout: page.hbs
 twitter: true
 lastmod: 2019-11-05
 priority: 0.9
