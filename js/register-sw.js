@@ -110,7 +110,7 @@
   }
 
   /**
-   * Shows intall snackbar to the user.
+   * Shows install snackbar to the user.
    */
   function showInstallSnack() {
     const data = {
