@@ -4,28 +4,34 @@ description: Information about upcoming and past talks at tech events by Vitalii
 ogimage: images/pages/about-og.jpg
 layout: page.hbs
 twitter: true
-lastmod: 2020-11-22
+lastmod: 2021-01-02
 priority: 1.0
 ---
 ## Upcoming talks:
-
-- [ZED Conference](https://community-z.com/events/zed-conference) -- 3 December 2020, Online
-
-  Topic: **"The Future of Audio Processing in the Web"**
-
-- [MyWebTech](https://mywebtech.com.ua) -- 5 December 2020, Online
-
-  Topic: **Listen to your UI: Making apps accessible**
-
-- [FrontEnd Con](https://frontend-con.io/) -- 8 December 2020, Online
-
-  Topic: **Listen to your interfaces: Making apps accessible**
 
 - [Global Online Angular Summit](https://geekle.us/angular) -- 4 February 2021, Online
 
 ## Past talks:
 
 ### 2020
+
+- [FrontEnd Con](https://frontend-con.io/) -- 8 December 2020, Online
+
+  Topic: **Listen to your interfaces: Making apps accessible**
+
+   🗂[Slides](https://speakerdeck.com/bobrov1989/listen-to-ui-making-apps-accessible)
+
+- [MyWebTech](https://mywebtech.com.ua) -- 5 December 2020, Online
+
+  Topic: **Listen to your UI: Making apps accessible**
+
+   🗂[Slides](https://speakerdeck.com/bobrov1989/listen-to-ui-making-apps-accessible)
+
+- [ZED Conference](https://community-z.com/events/zed-conference) -- 3 December 2020, Online
+
+  Topic: **"The Future of Audio Processing in the Web"**
+
+  🗂[Slides](https://speakerdeck.com/bobrov1989/the-future-of-audio-processing-in-the-web) | 🎬[Video](https://community-z.com/events/zed-conference/talks/6629)
 
 - [JS Poland](https://js-poland.pl) -- 20 November 2020, Online
 
