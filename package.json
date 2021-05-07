@@ -51,7 +51,7 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-terser": "^2.0.0",
     "gulp-webp": "^4.0.1",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "jstransformer-handlebars": "^1.1.0",
     "metalsmith": "^2.3.0",
     "metalsmith-author": "^1.1.0",
