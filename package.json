@@ -71,7 +71,7 @@
     "metalsmith-tags": "^2.0.0",
     "metalsmith-twitter-card": "^1.0.9",
     "metalsmith-updated": "^0.1.7",
-    "postcss": "^8.1.9",
+    "postcss": "^8.2.10",
     "postcss-assets": "^5.0.0",
     "postcss-combine-media-query": "^1.0.1",
     "postcss-font-family-system-ui": "^5.0.0",
